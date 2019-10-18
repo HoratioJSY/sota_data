@@ -1,0 +1,3392 @@
+{
+    "Language Modeling with Gated Convolutional Networks": [
+        [
+            "method: Gated Convolutional Networks",
+            "task: Language Modeling"
+        ]
+    ],
+    "Higher-Order Coreference Resolution with Coarse-to-Fine Inference": [
+        [
+            "method: Coarse-to-Fine Inference",
+            "task: Higher-Order Coreference Resolution"
+        ]
+    ],
+    "Deep Fusion LSTMs for Text Semantic Matching": [
+        [
+            "method: Deep Fusion LSTMs",
+            "task: Text Semantic Matching"
+        ]
+    ],
+    "Character-Level Language Modeling with Deeper Self-Attention": [
+        [
+            "method: Deeper Self-Attention",
+            "task: Character-Level Language Modeling"
+        ]
+    ],
+    "Multiway Attention Networks for Modeling Sentence Pairs": [
+        [
+            "method: Multiway Attention Networks",
+            "task: Modeling Sentence Pairs"
+        ]
+    ],
+    "Cell-aware Stacked LSTMs for Modeling Sentences": [
+        [
+            "method: Cell-aware Stacked LSTMs",
+            "task: Modeling Sentences"
+        ]
+    ],
+    "DiSAN: Directional Self-Attention Network for RNN/CNN-Free Language Understanding": [
+        [
+            "method:  Directional Self-Attention Network",
+            "task: RNN/CNN-Free Language Understanding"
+        ]
+    ],
+    "Neural Tree Indexers for Text Understanding": [
+        [
+            "method: Neural Tree Indexers",
+            "task: Text Understanding"
+        ]
+    ],
+    "Long Short-Term Memory-Networks for Machine Reading": [
+        [
+            "method: Long Short-Term Memory-Networks",
+            "task: Machine Reading"
+        ]
+    ],
+    "Learning Natural Language Inference with LSTM": [
+        [
+            "method: LSTM",
+            "task: Learning Natural Language Inference"
+        ]
+    ],
+    "Shortcut-Stacked Sentence Encoders for Multi-Domain Inference": [
+        [
+            "method: Shortcut-Stacked Sentence Encoders",
+            "task: Multi-Domain Inference"
+        ]
+    ],
+    "DR-BiLSTM: Dependent Reading Bidirectional LSTM for Natural Language Inference": [
+        [
+            "method:  Dependent Reading Bidirectional LSTM",
+            "task: Natural Language Inference"
+        ]
+    ],
+    "Dynamic Meta-Embeddings for Improved Sentence Representations": [
+        [
+            "method: Dynamic Meta-Embeddings",
+            "task: Improved Sentence Representations"
+        ]
+    ],
+    "Enhancing Sentence Embedding with Generalized Pooling": [
+        [
+            "method: Generalized Pooling",
+            "task: Enhancing Sentence Embedding"
+        ]
+    ],
+    "Enhanced LSTM for Natural Language Inference": [
+        [
+            "method: Enhanced LSTM",
+            "task: Natural Language Inference"
+        ]
+    ],
+    "Attribute-Aware Attention Model for Fine-grained Representation Learning": [
+        [
+            "method: Attribute-Aware Attention Model",
+            "task: Fine-grained Representation Learning"
+        ]
+    ],
+    "Attention-based Ensemble for Deep Metric Learning": [
+        [
+            "method: Attention-based Ensemble",
+            "task: Deep Metric Learning"
+        ]
+    ],
+    "Aggregate channel features for multi-view face detection": [
+        [
+            "method: Aggregate channel features",
+            "task: multi-view face detection"
+        ]
+    ],
+    "Striving for Simplicity: The All Convolutional Net": [
+        [
+            "method: Striving",
+            "task: Simplicity"
+        ]
+    ],
+    "Adaptive Input Representations for Neural Language Modeling": [
+        [
+            "method: Adaptive Input Representations",
+            "task: Neural Language Modeling"
+        ]
+    ],
+    "Iterative Alternating Neural Attention for Machine Reading": [
+        [
+            "method: Iterative Alternating Neural Attention",
+            "task: Machine Reading"
+        ]
+    ],
+    "An All-In-One Convolutional Neural Network for Face Analysis": [
+        [
+            "method: An All-In-One Convolutional Neural Network",
+            "task: Face Analysis"
+        ]
+    ],
+    "A Question-Focused Multi-Factor Attention Network for Question Answering": [
+        [
+            "method: Question-Focused Multi-Factor Attention Network",
+            "task: Question Answering"
+        ]
+    ],
+    "Regularized Evolution for Image Classifier Architecture Search": [
+        [
+            "method: Regularized Evolution",
+            "task: Image Classifier Architecture Search"
+        ]
+    ],
+    "Analogical Inference for Multi-Relational Embeddings": [
+        [
+            "method: Analogical Inference",
+            "task: Multi-Relational Embeddings"
+        ]
+    ],
+    "aNMM: Ranking Short Answer Texts with Attention-Based Neural Matching Model": [
+        [
+            "method: Attention-Based Neural Matching Model",
+            "task:  Ranking Short Answer Texts"
+        ]
+    ],
+    "Attention-over-Attention Neural Networks for Reading Comprehension": [
+        [
+            "method: Attention-over-Attention Neural Networks",
+            "task: Reading Comprehension"
+        ]
+    ],
+    "APAC: Augmented PAttern Classification with Neural Networks": [
+        [
+            "method: Neural Networks",
+            "task:  Augmented PAttern Classification"
+        ]
+    ],
+    "Convolutional Neural Network Architectures for Matching Natural Language Sentences": [
+        [
+            "method: Convolutional Neural Network Architectures",
+            "task: Matching Natural Language Sentences"
+        ]
+    ],
+    "ArcFace: Additive Angular Margin Loss for Deep Face Recognition": [
+        [
+            "method:  Additive Angular Margin Loss",
+            "task: Deep Face Recognition"
+        ]
+    ],
+    "Asymmetric Tri-training for Unsupervised Domain Adaptation": [
+        [
+            "method: Asymmetric Tri-training",
+            "task: Unsupervised Domain Adaptation"
+        ]
+    ],
+    "Edinburgh Neural Machine Translation SystEMs for WMT 16": [
+        [
+            "method: Edinburgh Neural Machine Translation SystEMs",
+            "task: WMT 16"
+        ]
+    ],
+    "Neural Variational Inference for Text Processing": [
+        [
+            "method: Neural Variational Inference",
+            "task: Text Processing"
+        ]
+    ],
+    "AttnGAN: Fine-Grained Text to Image Generation with Attentional Generative Adversarial Networks": [
+        [
+            "method: Attentional Generative Adversarial Networks",
+            "task:  Fine-Grained Text to Image Generation"
+        ]
+    ],
+    "Direct Output Connection for a High-Rank Language Model": [
+        [
+            "method: Direct Output Connection",
+            "task: "
+        ]
+    ],
+    "A Large Self-Annotated Corpus for Sarcasm": [
+        [
+            "method: Large Self-Annotated Corpus",
+            "task: Sarcasm"
+        ]
+    ],
+    "Passage Re-ranking with BERT": [
+        [
+            "method: BERT",
+            "task: Passage Re-ranking"
+        ]
+    ],
+    "A BERT Baseline for the Natural Questions": [
+        [
+            "method: BERT Baseline",
+            "task: the Natural Questions"
+        ]
+    ],
+    "Leveraging Multi-grained Sentiment Lexicon Information for Neural Sequence Models": [
+        [
+            "method: Leveraging Multi-grained Sentiment Lexicon Information",
+            "task: Neural Sequence Models"
+        ]
+    ],
+    "SEMi-supervised Multitask Learning for Sequence Labeling": [
+        [
+            "method: SEMi-supervised Multitask Learning",
+            "task: Sequence Labeling"
+        ]
+    ],
+    "Speech Recognition with Deep Recurrent Neural Networks": [
+        [
+            "method: Deep Recurrent Neural Networks",
+            "task: Speech Recognition"
+        ]
+    ],
+    "Robust Lexical Features for Improved Neural Network Named-Entity Recognition": [
+        [
+            "method: Robust Lexical Features",
+            "task: Improved Neural Network Named-Entity Recognition"
+        ]
+    ],
+    "Neural Sequence Learning Models for Word Sense Disambiguation": [
+        [
+            "method: Neural Sequence Learning Models",
+            "task: Word Sense Disambiguation"
+        ]
+    ],
+    "Attention-Based Models for Speech Recognition": [
+        [
+            "method: Attention-Based Models",
+            "task: Speech Recognition"
+        ]
+    ],
+    "Multi-range Reasoning for Machine Comprehension": [
+        [
+            "method: Multi-range Reasoning",
+            "task: Machine Comprehension"
+        ]
+    ],
+    "Bidirectional Attention Flow for Machine Comprehension": [
+        [
+            "method: Bidirectional Attention Flow",
+            "task: Machine Comprehension"
+        ]
+    ],
+    "Factorization tricks for LSTM networks": [
+        [
+            "method: Factorization tricks",
+            "task: LSTM networks"
+        ]
+    ],
+    "Large Scale GAN Training for High Fidelity Natural Image Synthesis": [
+        [
+            "method: Large Scale GAN Training",
+            "task: High Fidelity Natural Image Synthesis"
+        ]
+    ],
+    "Deep Learning for Answer Sentence Selection": [
+        [
+            "method: Deep Learning",
+            "task: Answer Sentence Selection"
+        ]
+    ],
+    "Edinburgh Neural Machine Translation Systems for WMT 16": [
+        [
+            "method: Edinburgh Neural Machine Translation Systems",
+            "task: WMT 16"
+        ]
+    ],
+    "A Convolutional Encoder Model for Neural Machine Translation": [
+        [
+            "method: Convolutional Encoder Model",
+            "task: Neural Machine Translation"
+        ]
+    ],
+    "Can Syntax Help? Improving an LSTM-based Sentence Compression Model for New Domains": [
+        [
+            "method: LSTM-based Sentence Compression Model",
+            "task: New Domains"
+        ]
+    ],
+    "A Span Selection Model for Semantic Role Labeling": [
+        [
+            "method: Span Selection Model",
+            "task: Semantic Role Labeling"
+        ]
+    ],
+    "Bilateral Multi-Perspective Matching for Natural Language Sentences": [
+        [
+            "method: Bilateral Multi-Perspective Matching",
+            "task: Natural Language Sentences"
+        ]
+    ],
+    "A Language Model based Evaluator for Sentence Compression": [
+        [
+            "method: Language Model based Evaluator",
+            "task: Sentence Compression"
+        ]
+    ],
+    "BiSeNet: Bilateral Segmentation Network for Real-time Semantic Segmentation": [
+        [
+            "method:  Bilateral Segmentation Network",
+            "task: Real-time Semantic Segmentation"
+        ]
+    ],
+    "GPU Kernels for Block-Sparse Weights": [
+        [
+            "method: GPU Kernels",
+            "task: Block-Sparse Weights"
+        ]
+    ],
+    "BoxSup: Exploiting Bounding Boxes to Supervise Convolutional Networks for Semantic Segmentation": [
+        [
+            "method:  Exploiting Bounding Boxes to Supervise Convolutional Networks",
+            "task: Semantic Segmentation"
+        ]
+    ],
+    "Bidirectional Recurrent Convolutional Networks for Multi-Frame Super-Resolution": [
+        [
+            "method: Bidirectional Recurrent Convolutional Networks",
+            "task: Multi-Frame Super-Resolution"
+        ]
+    ],
+    "A C-LSTM Neural Network for Text Classification": [
+        [
+            "method: C-LSTM Neural Network",
+            "task: Text Classification"
+        ]
+    ],
+    "Unsupervised Feature Learning with C-SVDDNet": [
+        [
+            "method: C-SVDDNet",
+            "task: Unsupervised Feature Learning"
+        ]
+    ],
+    "Semi-Supervised Learning with Context-Conditional Generative Adversarial Networks": [
+        [
+            "method: Context-Conditional Generative Adversarial Networks",
+            "task: Semi-Supervised Learning"
+        ]
+    ],
+    "CenterNet: Keypoint Triplets for Object Detection": [
+        [
+            "method:  Keypoint Triplets",
+            "task: Object Detection"
+        ]
+    ],
+    "Coarse-grain Fine-grain Coattention Network for Multi-evidence Question Answering": [
+        [
+            "method: Coarse-grain Fine-grain Coattention Network",
+            "task: Multi-evidence Question Answering"
+        ]
+    ],
+    "Image-to-Image Translation with Conditional Adversarial Networks": [
+        [
+            "method: Conditional Adversarial Networks",
+            "task: Image-to-Image Translation"
+        ]
+    ],
+    "Global Encoding for Abstractive Summarization": [
+        [
+            "method: Global Encoding",
+            "task: Abstractive Summarization"
+        ]
+    ],
+    "Character-level Convolutional Networks for Text Classification": [
+        [
+            "method: Character-level Convolutional Networks",
+            "task: Text Classification"
+        ]
+    ],
+    "A Simple Method for Commonsense Reasoning": [
+        [
+            "method: Simple Method",
+            "task: Commonsense Reasoning"
+        ]
+    ],
+    "SEMi-Supervised Sequence Modeling with Cross-View Training": [
+        [
+            "method: Cross-View Training",
+            "task: SEMi-Supervised Sequence Modeling"
+        ]
+    ],
+    "CMS-RCNN: Contextual Multi-Scale Region-based CNN for Unconstrained Face Detection": [
+        [
+            "method:  Contextual Multi-Scale Region-based CNN",
+            "task: Unconstrained Face Detection"
+        ]
+    ],
+    "A Multilayer Convolutional Encoder-Decoder Neural Network for Grammatical Error Correction": [
+        [
+            "method: Multilayer Convolutional Encoder-Decoder Neural Network",
+            "task: Grammatical Error Correction"
+        ]
+    ],
+    "Convolutional Neural Networks with Recurrent Neural Filters": [
+        [
+            "method: Recurrent Neural Filters",
+            "task: Convolutional Neural Networks"
+        ]
+    ],
+    "Improved Variational Autoencoders for Text Modeling using Dilated Convolutions": [
+        [
+            "method: Improved Variational Autoencoders",
+            "task: Text Modeling"
+        ]
+    ],
+    "Complex Embeddings for Simple Link Prediction": [
+        [
+            "method: Complex Embeddings",
+            "task: Simple Link Prediction"
+        ]
+    ],
+    "Canonical Tensor Decomposition for Knowledge Base Completion": [
+        [
+            "method: Canonical Tensor Decomposition",
+            "task: Knowledge Base Completion"
+        ]
+    ],
+    "Context Based Approach for Second Language Acquisition": [
+        [
+            "method: Context Based Approach",
+            "task: Second Language Acquisition"
+        ]
+    ],
+    "Convolutional Clustering for Unsupervised Learning": [
+        [
+            "method: Convolutional Clustering",
+            "task: Unsupervised Learning"
+        ]
+    ],
+    "Classical Structured Prediction Losses for Sequence to Sequence Learning": [
+        [
+            "method: Classical Structured Prediction Losses",
+            "task: Sequence to Sequence Learning"
+        ]
+    ],
+    "Cut to the Chase: A Context Zoom-in Network for Reading Comprehension": [
+        [
+            "method: Context Zoom-in Network",
+            "task: Reading Comprehension"
+        ]
+    ],
+    "Neural Models for Reasoning over Multiple Mentions using Coreference": [
+        [
+            "method: Neural Models",
+            "task: Reasoning over Multiple Mentions"
+        ]
+    ],
+    "CosFace: Large Margin Cosine Loss for Deep Face Recognition": [
+        [
+            "method:  Large Margin Cosine Loss",
+            "task: Deep Face Recognition"
+        ]
+    ],
+    "Photographic Image Synthesis with Cascaded Refinement Networks": [
+        [
+            "method: Cascaded Refinement Networks",
+            "task: Photographic Image Synthesis"
+        ]
+    ],
+    "Learning Phrase Representations using RNN Encoder-Decoder for Statistical Machine Translation": [
+        [
+            "method: RNN Encoder-Decoder",
+            "task: Statistical Machine Translation"
+        ]
+    ],
+    "Improving End-to-End Speech Recognition with Policy Learning": [
+        [
+            "method: Policy Learning",
+            "task: Improving End-to-End Speech Recognition"
+        ]
+    ],
+    "A Helping Hand: Transfer Learning for Deep Sentiment Analysis": [
+        [
+            "method:  Transfer Learning",
+            "task: Deep Sentiment Analysis"
+        ]
+    ],
+    "Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks": [
+        [
+            "method: Deep Convolutional Generative Adversarial Networks",
+            "task: Unsupervised Representation Learning"
+        ]
+    ],
+    "Densely Connected Attention Propagation for Reading Comprehension": [
+        [
+            "method: Densely Connected Attention Propagation",
+            "task: Reading Comprehension"
+        ]
+    ],
+    "Deep Biaffine Attention for Neural Dependency Parsing": [
+        [
+            "method: Deep Biaffine Attention",
+            "task: Neural Dependency Parsing"
+        ]
+    ],
+    "A Deep Cascade Model for Multi-Document Reading Comprehension": [
+        [
+            "method: Deep Cascade Model",
+            "task: Multi-Document Reading Comprehension"
+        ]
+    ],
+    "Very Deep Multilingual Convolutional Neural Networks for LVCSR": [
+        [
+            "method: Very Deep Multilingual Convolutional Neural Networks",
+            "task: LVCSR"
+        ]
+    ],
+    "Learning Deep CNN Denoiser Prior for Image Restoration": [
+        [
+            "method: Learning Deep CNN Denoiser Prior",
+            "task: Image Restoration"
+        ]
+    ],
+    "Deep Joint Entity Disambiguation with Local Neural Attention": [
+        [
+            "method: Local Neural Attention",
+            "task: Deep Joint Entity Disambiguation"
+        ]
+    ],
+    "Deep Mean-Shift Priors for Image Restoration": [
+        [
+            "method: Deep Mean-Shift Priors",
+            "task: Image Restoration"
+        ]
+    ],
+    "DeepFM: A Factorization-Machine based Neural Network for CTR Prediction": [
+        [
+            "method: Factorization-Machine based Neural Network",
+            "task: CTR Prediction"
+        ]
+    ],
+    "Rethinking Atrous Convolution for Semantic Image Segmentation": [
+        [
+            "method: Rethinking Atrous Convolution",
+            "task: Semantic Image Segmentation"
+        ]
+    ],
+    "Large-Scale Image Retrieval with Attentive Deep Local Features": [
+        [
+            "method: Attentive Deep Local Features",
+            "task: Large-Scale Image Retrieval"
+        ]
+    ],
+    "DeNet: Scalable Real-time Object Detection with Directed Sparse Sampling": [
+        [
+            "method: Directed Sparse Sampling",
+            "task:  Scalable Real-time Object Detection"
+        ]
+    ],
+    "Dense 3D Regression for Hand Pose Estimation": [
+        [
+            "method: Dense 3D Regression",
+            "task: Hand Pose Estimation"
+        ]
+    ],
+    "DeXpression: Deep Convolutional Neural Network for Expression Recognition": [
+        [
+            "method:  Deep Convolutional Neural Network",
+            "task: Expression Recognition"
+        ]
+    ],
+    "Deeply-Learned Part-Aligned Representations for Person Re-Identification": [
+        [
+            "method: Deeply-Learned Part-Aligned Representations",
+            "task: Person Re-Identification"
+        ]
+    ],
+    "Efficient Yet Deep Convolutional Neural Networks for Semantic Segmentation": [
+        [
+            "method: Efficient Yet Deep Convolutional Neural Networks",
+            "task: Semantic Segmentation"
+        ]
+    ],
+    "Deep Interest Network for Click-Through Rate Prediction": [
+        [
+            "method: Deep Interest Network",
+            "task: Click-Through Rate Prediction"
+        ]
+    ],
+    "Deep Image Retrieval: Learning global representations for image search": [
+        [
+            "method:  Learning global representations",
+            "task: image search"
+        ]
+    ],
+    "Discriminative Unsupervised Feature Learning with Convolutional Neural Networks": [
+        [
+            "method: Convolutional Neural Networks",
+            "task: Discriminative Unsupervised Feature Learning"
+        ]
+    ],
+    "Distance-based Self-Attention Network for Natural Language Inference": [
+        [
+            "method: Distance-based Self-Attention Network",
+            "task: Natural Language Inference"
+        ]
+    ],
+    "A Discriminatively Learned CNN Embedding for Person Re-identification": [
+        [
+            "method: Discriminatively Learned CNN Embedding",
+            "task: Person Re-identification"
+        ]
+    ],
+    "Building DNN Acoustic Models for Large Vocabulary Speech Recognition": [
+        [
+            "method: Building DNN Acoustic Models",
+            "task: Large Vocabulary Speech Recognition"
+        ]
+    ],
+    "Learning a Discriminative Null Space for Person Re-identification": [
+        [
+            "method: Discriminative Null Space",
+            "task: Person Re-identification"
+        ]
+    ],
+    "Deep Pyramid Convolutional Neural Networks for Text Categorization": [
+        [
+            "method: Deep Pyramid Convolutional Neural Networks",
+            "task: Text Categorization"
+        ]
+    ],
+    "Deeply-Recursive Convolutional Network for Image Super-Resolution": [
+        [
+            "method: Deeply-Recursive Convolutional Network",
+            "task: Image Super-Resolution"
+        ]
+    ],
+    "Deep Recurrent Generative Decoder for Abstractive Text Summarization": [
+        [
+            "method: Deep Recurrent Generative Decoder",
+            "task: Abstractive Text Summarization"
+        ]
+    ],
+    "A Deep Relevance Matching Model for Ad-hoc Retrieval": [
+        [
+            "method: Deep Relevance Matching Model",
+            "task: Ad-hoc Retrieval"
+        ]
+    ],
+    "Disconnected Recurrent Neural Networks for Text Categorization": [
+        [
+            "method: Disconnected Recurrent Neural Networks",
+            "task: Text Categorization"
+        ]
+    ],
+    "Quantized Densely Connected U-Nets for Efficient Landmark Localization": [
+        [
+            "method: Quantized Densely Connected U-Nets",
+            "task: Efficient Landmark Localization"
+        ]
+    ],
+    "Dual Attention Network for Scene Segmentation": [
+        [
+            "method: Dual Attention Network",
+            "task: Scene Segmentation"
+        ]
+    ],
+    "DualGAN: Unsupervised Dual Learning for Image-to-Image Translation": [
+        [
+            "method:  Unsupervised Dual Learning",
+            "task: Image-to-Image Translation"
+        ]
+    ],
+    "An Updated Duet Model for Passage Re-ranking": [
+        [
+            "method: An Updated Duet Model",
+            "task: Passage Re-ranking"
+        ]
+    ],
+    "Decoders Matter for Semantic Segmentation: Data-Dependent Decoding Enables Flexible Feature Aggregation": [
+        [
+            "method: Decoders Matter",
+            "task: Semantic Segmentation"
+        ]
+    ],
+    "Dynamic Entity Representation with Max-pooling Improves Machine Reading": [
+        [
+            "method: Max-pooling Improves Machine Reading",
+            "task: Dynamic Entity Representation"
+        ]
+    ],
+    "Enhanced Deep Residual Networks for Single Image Super-Resolution": [
+        [
+            "method: Enhanced Deep Residual Networks",
+            "task: Single Image Super-Resolution"
+        ]
+    ],
+    "Context Encoding for Semantic Segmentation": [
+        [
+            "method: Context Encoding",
+            "task: Semantic Segmentation"
+        ]
+    ],
+    "Tracking the World State with Recurrent Entity Networks": [
+        [
+            "method: Recurrent Entity Networks",
+            "task: World State"
+        ]
+    ],
+    "Natural Language Comprehension with the EpiReader": [
+        [
+            "method: the EpiReader",
+            "task: Natural Language Comprehension"
+        ]
+    ],
+    "SWAG: A Large-Scale Adversarial Dataset for Grounded Commonsense Inference": [
+        [
+            "method: Large-Scale Adversarial Dataset",
+            "task: Grounded Commonsense Inference"
+        ]
+    ],
+    "FaceBoxes: A CPU Real-time Face Detector with High Accuracy": [
+        [
+            "method: High Accuracy",
+            "task: CPU Real-time Face Detector"
+        ]
+    ],
+    "Speed/accuracy trade-offs for modern convolutional object detectors": [
+        [
+            "method: Speed/accuracy trade-offs",
+            "task: modern convolutional object detectors"
+        ]
+    ],
+    "Deep Residual Learning for Image Recognition": [
+        [
+            "method: Deep Residual Learning",
+            "task: Image Recognition"
+        ]
+    ],
+    "Feature Pyramid Networks for Object Detection": [
+        [
+            "method: Feature Pyramid Networks",
+            "task: Object Detection"
+        ]
+    ],
+    "Beyond Skip Connections: Top-Down Modulation for Object Detection": [
+        [
+            "method:  Top-Down Modulation",
+            "task: Object Detection"
+        ]
+    ],
+    "The One Hundred Layers Tiramisu: Fully Convolutional DenseNets for Semantic Segmentation": [
+        [
+            "method:  Fully Convolutional DenseNets",
+            "task: Semantic Segmentation"
+        ]
+    ],
+    "Fully Convolutional Networks for Semantic Segmentation": [
+        [
+            "method: Fully Convolutional Networks",
+            "task: Semantic Segmentation"
+        ]
+    ],
+    "A Focused Dynamic Attention Model for Visual Question Answering": [
+        [
+            "method: Focused Dynamic Attention Model",
+            "task: Visual Question Answering"
+        ]
+    ],
+    "Contextual String Embeddings for Sequence Labeling": [
+        [
+            "method: Contextual String Embeddings",
+            "task: Sequence Labeling"
+        ]
+    ],
+    "Neural Ranking Models with Weak Supervision": [
+        [
+            "method: Weak Supervision",
+            "task: Neural Ranking Models"
+        ]
+    ],
+    "FOTS: Fast Oriented Text Spotting with a Unified Network": [
+        [
+            "method: ",
+            "task:  Fast Oriented Text Spotting"
+        ]
+    ],
+    "FacePoseNet: Making a Case for Landmark-Free Face Alignment": [
+        [
+            "method: Case",
+            "task: Landmark-Free Face Alignment"
+        ]
+    ],
+    "Feature Selective Anchor-Free Module for Single-Shot Object Detection": [
+        [
+            "method: Feature Selective Anchor-Free Module",
+            "task: Single-Shot Object Detection"
+        ]
+    ],
+    "Fused Text Segmentation Networks for Multi-oriented Scene Text Detection": [
+        [
+            "method: Fused Text Segmentation Networks",
+            "task: Multi-oriented Scene Text Detection"
+        ]
+    ],
+    "Gated-Attention Readers for Text Comprehension": [
+        [
+            "method: Gated-Attention Readers",
+            "task: Text Comprehension"
+        ]
+    ],
+    "Letter-Based Speech Recognition with Gated ConvNets": [
+        [
+            "method: Gated ConvNets",
+            "task: Letter-Based Speech Recognition"
+        ]
+    ],
+    "Conditional Image Generation with PixelCNN Decoders": [
+        [
+            "method: PixelCNN Decoders",
+            "task: Conditional Image Generation"
+        ]
+    ],
+    "Semi-Supervised Classification with Graph Convolutional Networks": [
+        [
+            "method: Graph Convolutional Networks",
+            "task: Semi-Supervised Classification"
+        ]
+    ],
+    "GhostVLAD for set-based face recognition": [
+        [
+            "method: GhostVLAD",
+            "task: set-based face recognition"
+        ]
+    ],
+    "Git Loss for Deep Face Recognition": [
+        [
+            "method: Git Loss",
+            "task: Deep Face Recognition"
+        ]
+    ],
+    "GLAD: Global-Local-Alignment Descriptor for Pedestrian Retrieval": [
+        [
+            "method:  Global-Local-Alignment Descriptor",
+            "task: Pedestrian Retrieval"
+        ]
+    ],
+    "Glow: Generative Flow with Invertible 1x1 Convolutions": [
+        [
+            "method: Invertible 1x1 Convolutions",
+            "task:  Generative Flow"
+        ]
+    ],
+    "Graph-Structured Representations for Visual Question Answering": [
+        [
+            "method: Graph-Structured Representations",
+            "task: Visual Question Answering"
+        ]
+    ],
+    "A Graph-to-Sequence Model for AMR-to-Text Generation": [
+        [
+            "method: Graph-to-Sequence Model",
+            "task: AMR-to-Text Generation"
+        ]
+    ],
+    "Graph2Seq: Graph to Sequence Learning with Attention-based Neural Networks": [
+        [
+            "method: Attention-based Neural Networks",
+            "task:  Graph to Sequence Learning"
+        ]
+    ],
+    "Learning Graph-Level Representation for Drug Discovery": [
+        [
+            "method: Learning Graph-Level Representation",
+            "task: Drug Discovery"
+        ]
+    ],
+    "GraphGAN: Graph Representation Learning with Generative Adversarial Nets": [
+        [
+            "method: Generative Adversarial Nets",
+            "task:  Graph Representation Learning"
+        ]
+    ],
+    "HD-CNN: Hierarchical Deep Convolutional Neural Network for Large Scale Visual Recognition": [
+        [
+            "method:  Hierarchical Deep Convolutional Neural Network",
+            "task: Large Scale Visual Recognition"
+        ]
+    ],
+    "Story Comprehension for Predicting What Happens Next": [
+        [
+            "method: Story Comprehension",
+            "task: Predicting What Happens Next"
+        ]
+    ],
+    "WaveNet: A Generative Model for Raw Audio": [
+        [
+            "method: Generative Model",
+            "task: Raw Audio"
+        ]
+    ],
+    "Hierarchical Question-Image Co-Attention for Visual Question Answering": [
+        [
+            "method: Hierarchical Question-Image Co-Attention",
+            "task: Visual Question Answering"
+        ]
+    ],
+    "Deep High-Resolution Representation Learning for Human Pose Estimation": [
+        [
+            "method: Deep High-Resolution Representation Learning",
+            "task: Human Pose Estimation"
+        ]
+    ],
+    "Hybrid semi-Markov CRF for Neural Sequence Labeling": [
+        [
+            "method: Hybrid semi-Markov CRF",
+            "task: Neural Sequence Labeling"
+        ]
+    ],
+    "HyperDense-Net: A hyper-densely connected CNN for multi-modal image segmentation": [
+        [
+            "method: hyper-densely connected CNN",
+            "task: multi-modal image segmentation"
+        ]
+    ],
+    "Simple Baseline for Visual Question Answering": [
+        [
+            "method: Simple Baseline",
+            "task: Visual Question Answering"
+        ]
+    ],
+    "Invertible Conditional GANs for image editing": [
+        [
+            "method: Invertible Conditional GANs",
+            "task: image editing"
+        ]
+    ],
+    "Camera Style Adaptation for Person Re-identification": [
+        [
+            "method: Style Adaptation",
+            "task: Person Re-identification"
+        ]
+    ],
+    "Going Deeper with Convolutions": [
+        [
+            "method: Convolutions",
+            "task: Going Deeper"
+        ]
+    ],
+    "Rethinking the Inception Architecture for Computer Vision": [
+        [
+            "method: Inception Architecture",
+            "task: Computer Vision"
+        ]
+    ],
+    "AMR Parsing with an IncrEMental Joint Model": [
+        [
+            "method: an IncrEMental Joint Model",
+            "task: AMR Parsing"
+        ]
+    ],
+    "Product-based Neural Networks for User Response Prediction": [
+        [
+            "method: Product-based Neural Networks",
+            "task: User Response Prediction"
+        ]
+    ],
+    "Joint Maximum Purity Forest with Application to Image Super-Resolution": [
+        [
+            "method: Application to Image Super-Resolution",
+            "task: Joint Maximum Purity Forest"
+        ]
+    ],
+    "A Joint Many-Task Model: Growing a Neural Network for Multiple NLP Tasks": [
+        [
+            "method: Neural Network",
+            "task: Multiple NLP Tasks"
+        ]
+    ],
+    "Key-Value Memory Networks for Directly Reading Documents": [
+        [
+            "method: Key-Value Memory Networks",
+            "task: Directly Reading Documents"
+        ]
+    ],
+    "Neural Natural Language Inference Models Enhanced with External Knowledge": [
+        [
+            "method: External Knowledge",
+            "task: Neural Natural Language Inference Models Enhanced"
+        ]
+    ],
+    "NPRF: A Neural Pseudo Relevance Feedback Framework for Ad-hoc Information Retrieval": [
+        [
+            "method: Neural Pseudo Relevance Feedback Framework",
+            "task: Ad-hoc Information Retrieval"
+        ]
+    ],
+    "L2-constrained Softmax Loss for Discriminative Face Verification": [
+        [
+            "method: L2-constrained Softmax Loss",
+            "task: Discriminative Face Verification"
+        ]
+    ],
+    "Multiplicative LSTM for sequence modelling": [
+        [
+            "method: Multiplicative LSTM",
+            "task: sequence modelling"
+        ]
+    ],
+    "Efficient Contextualized Representation: Language Model Pruning for Sequence Labeling": [
+        [
+            "method:  Language Model Pruning",
+            "task: Sequence Labeling"
+        ]
+    ],
+    "Learning with Recursive Perceptual Representations": [
+        [
+            "method: Recursive Perceptual Representations",
+            "task: Learning"
+        ]
+    ],
+    "Light Gated Recurrent Units for Speech Recognition": [
+        [
+            "method: Light Gated Recurrent Units",
+            "task: Speech Recognition"
+        ]
+    ],
+    "Linguistically-Informed Self-Attention for Semantic Role Labeling": [
+        [
+            "method: Linguistically-Informed Self-Attention",
+            "task: Semantic Role Labeling"
+        ]
+    ],
+    "LiteFlowNet: A Lightweight Convolutional Neural Network for Optical Flow Estimation": [
+        [
+            "method: Lightweight Convolutional Neural Network",
+            "task: Optical Flow Estimation"
+        ]
+    ],
+    "Empower Sequence Labeling with Task-Aware Neural Language Model": [
+        [
+            "method: Task-Aware Neural Language Model",
+            "task: Empower Sequence Labeling"
+        ]
+    ],
+    "LR-GAN: Layered Recursive Generative Adversarial Networks for Image Generation": [
+        [
+            "method:  Layered Recursive Generative Adversarial Networks",
+            "task: Image Generation"
+        ]
+    ],
+    "Sequence to Sequence Learning with Neural Networks": [
+        [
+            "method: Neural Networks",
+            "task: Sequence to Sequence Learning"
+        ]
+    ],
+    "Fast Parametric Learning with Activation MEMorization": [
+        [
+            "method: Activation MEMorization",
+            "task: Fast Parametric Learning"
+        ]
+    ],
+    "Semi-supervised Word Sense Disambiguation with Neural Models": [
+        [
+            "method: Neural Models",
+            "task: Semi-supervised Word Sense Disambiguation"
+        ]
+    ],
+    "Long Short-Term Memory with Dynamic Skip Connections": [
+        [
+            "method: Dynamic Skip Connections",
+            "task: Long Short-Term Memory"
+        ]
+    ],
+    "Neural Architectures for Named Entity Recognition": [
+        [
+            "method: Neural Architectures",
+            "task: Named Entity Recognition"
+        ]
+    ],
+    "Learning Context-Sensitive Convolutional Filters for Text Processing": [
+        [
+            "method: Learning Context-Sensitive Convolutional Filters",
+            "task: Text Processing"
+        ]
+    ],
+    "Beyond Deep Residual Learning for Image Restoration: Persistent Homology-Guided Manifold Simplification": [
+        [
+            "method: Beyond Deep Residual Learning",
+            "task: Image Restoration"
+        ]
+    ],
+    "Multi-column Deep Neural Networks for Image Classification": [
+        [
+            "method: Multi-column Deep Neural Networks",
+            "task: Image Classification"
+        ]
+    ],
+    "A Multi-sentiment-resource Enhanced Attention Network for Sentiment Classification": [
+        [
+            "method: Multi-sentiment-resource Enhanced Attention Network",
+            "task: Sentiment Classification"
+        ]
+    ],
+    "Visual Domain Adaptation with Manifold Embedded Distribution Alignment": [
+        [
+            "method: Manifold Embedded Distribution Alignment",
+            "task: Visual Domain Adaptation"
+        ]
+    ],
+    "MemNet: A Persistent Memory Network for Image Restoration": [
+        [
+            "method: Persistent Memory Network",
+            "task: Image Restoration"
+        ]
+    ],
+    "Large-scale Simple Question Answering with Memory Networks": [
+        [
+            "method: Memory Networks",
+            "task: Large-scale Simple Question Answering"
+        ]
+    ],
+    "Mesh-TensorFlow: Deep Learning for Supercomputers": [
+        [
+            "method:  Deep Learning",
+            "task: Supercomputers"
+        ]
+    ],
+    "Commonsense for Generative Multi-Hop Question Answering Tasks": [
+        [
+            "method: Commonsense",
+            "task: Generative Multi-Hop Question Answering Tasks"
+        ]
+    ],
+    "Improving MMD-GAN Training with Repulsive Loss Function": [
+        [
+            "method: Repulsive Loss Function",
+            "task: Improving MMD-GAN Training"
+        ]
+    ],
+    "Multicolumn Networks for Face Recognition": [
+        [
+            "method: Multicolumn Networks",
+            "task: Face Recognition"
+        ]
+    ],
+    "Reinforced Mnemonic Reader for Machine Reading Comprehension": [
+        [
+            "method: Reinforced Mnemonic Reader",
+            "task: Machine Reading Comprehension"
+        ]
+    ],
+    "MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications": [
+        [
+            "method:  Efficient Convolutional Neural Networks",
+            "task: Mobile Vision Applications"
+        ]
+    ],
+    "Improving Neural Machine Translation Models with Monolingual Data": [
+        [
+            "method: Monolingual Data",
+            "task: Improving Neural Machine Translation Models"
+        ]
+    ],
+    "Neural Message Passing for Quantum Chemistry": [
+        [
+            "method: Neural Message Passing",
+            "task: Quantum Chemistry"
+        ]
+    ],
+    "Multimodal Residual Learning for Visual QA": [
+        [
+            "method: Multimodal Residual Learning",
+            "task: Visual QA"
+        ]
+    ],
+    "A Unified Multi-scale Deep Convolutional Neural Network for Fast Object Detection": [
+        [
+            "method: Unified Multi-scale Deep Convolutional Neural Network",
+            "task: Fast Object Detection"
+        ]
+    ],
+    "MSG-GAN: Multi-Scale Gradient GAN for Stable Image Synthesis": [
+        [
+            "method:  Multi-Scale Gradient GAN",
+            "task: Stable Image Synthesis"
+        ]
+    ],
+    "Mode Seeking Generative Adversarial Networks for Diverse Image Synthesis": [
+        [
+            "method: Mode Seeking Generative Adversarial Networks",
+            "task: Diverse Image Synthesis"
+        ]
+    ],
+    "Single Image Super-Resolution with Dilated Convolution based Multi-Scale Information Learning Inception Module": [
+        [
+            "method: Dilated Convolution based Multi-Scale Information Learning Inception Module",
+            "task: Single Image Super-Resolution"
+        ]
+    ],
+    "Multi-Task Deep Neural Networks for Natural Language Understanding": [
+        [
+            "method: Multi-Task Deep Neural Networks",
+            "task: Natural Language Understanding"
+        ]
+    ],
+    "Meta-Transfer Learning for Few-Shot Learning": [
+        [
+            "method: Meta-Transfer Learning",
+            "task: Few-Shot Learning"
+        ]
+    ],
+    "Multi-Context Attention for Human Pose Estimation": [
+        [
+            "method: Multi-Context Attention",
+            "task: Human Pose Estimation"
+        ]
+    ],
+    "Multi-view to Novel view: Synthesizing Novel Views with Self-Learned Confidence": [
+        [
+            "method: Self-Learned Confidence",
+            "task:  Synthesizing Novel Views"
+        ]
+    ],
+    "Margin-based Parallel Corpus Mining with Multilingual Sentence Embeddings": [
+        [
+            "method: Multilingual Sentence Embeddings",
+            "task: Margin-based Parallel Corpus Mining"
+        ]
+    ],
+    "A MultiPath Network for Object Detection": [
+        [
+            "method: MultiPath Network",
+            "task: Object Detection"
+        ]
+    ],
+    "RefineNet: Multi-Path Refinement Networks for High-Resolution Semantic Segmentation": [
+        [
+            "method:  Multi-Path Refinement Networks",
+            "task: High-Resolution Semantic Segmentation"
+        ]
+    ],
+    "Multi-level Wavelet-CNN for Image Restoration": [
+        [
+            "method: Multi-level Wavelet-CNN",
+            "task: Image Restoration"
+        ]
+    ],
+    "Learning to Reason: End-to-End Module Networks for Visual Question Answering": [
+        [
+            "method:  End-to-End Module Networks",
+            "task: Visual Question Answering"
+        ]
+    ],
+    "Neural Aggregation Network for Video Face Recognition": [
+        [
+            "method: Neural Aggregation Network",
+            "task: Video Face Recognition"
+        ]
+    ],
+    "Neural Architecture Search with Reinforcement Learning": [
+        [
+            "method: Reinforcement Learning",
+            "task: Neural Architecture Search"
+        ]
+    ],
+    "Neural Architecture Search with ReinforcEMent Learning": [
+        [
+            "method: ReinforcEMent Learning",
+            "task: Neural Architecture Search"
+        ]
+    ],
+    "Learning Transferable Architectures for Scalable Image Recognition": [
+        [
+            "method: Learning Transferable Architectures",
+            "task: Scalable Image Recognition"
+        ]
+    ],
+    "Improving Neural Language Models with a Continuous Cache": [
+        [
+            "method: ",
+            "task: Improving Neural Language Models"
+        ]
+    ],
+    "A Neural Transition-based Model for Nested Mention Recognition": [
+        [
+            "method: Neural Transition-based Model",
+            "task: Nested Mention Recognition"
+        ]
+    ],
+    "Deep Convolutional Decision Jungle for Image Classification": [
+        [
+            "method: Deep Convolutional Decision Jungle",
+            "task: Image Classification"
+        ]
+    ],
+    "Non-Local Recurrent Network for Image Restoration": [
+        [
+            "method: Non-Local Recurrent Network",
+            "task: Image Restoration"
+        ]
+    ],
+    "node2vec: Scalable Feature Learning for Networks": [
+        [
+            "method:  Scalable Feature Learning",
+            "task: Networks"
+        ]
+    ],
+    "OCNet: Object Context Network for Scene Parsing": [
+        [
+            "method:  Object Context Network",
+            "task: Scene Parsing"
+        ]
+    ],
+    "Training Region-based Object Detectors with Online Hard Example Mining": [
+        [
+            "method: Online Hard Example Mining",
+            "task: Training Region-based Object Detectors"
+        ]
+    ],
+    "Pedestrian Alignment Network for Large-scale Person Re-identification": [
+        [
+            "method: Pedestrian Alignment Network",
+            "task: Large-scale Person Re-identification"
+        ]
+    ],
+    "Path Aggregation Network for Instance Segmentation": [
+        [
+            "method: Path Aggregation Network",
+            "task: Instance Segmentation"
+        ]
+    ],
+    "Parameter-Free Spatial Attention Network for Person Re-Identification": [
+        [
+            "method: Parameter-Free Spatial Attention Network",
+            "task: Person Re-Identification"
+        ]
+    ],
+    "Parsing R-CNN for Instance-Level Human Analysis": [
+        [
+            "method: Parsing R-CNN",
+            "task: Instance-Level Human Analysis"
+        ]
+    ],
+    "Path-Level Network Transformation for Efficient Architecture Search": [
+        [
+            "method: Path-Level Network Transformation",
+            "task: Efficient Architecture Search"
+        ]
+    ],
+    "PCANet: A Simple Deep Learning Baseline for Image Classification?": [
+        [
+            "method: Simple Deep Learning Baseline",
+            "task: Image Classification?"
+        ]
+    ],
+    "Pose-driven Deep Convolutional Model for Person Re-identification": [
+        [
+            "method: Pose-driven Deep Convolutional Model",
+            "task: Person Re-identification"
+        ]
+    ],
+    "Pervasive Attention: 2D Convolutional Neural Networks for Sequence-to-Sequence Prediction": [
+        [
+            "method:  2D Convolutional Neural Networks",
+            "task: Sequence-to-Sequence Prediction"
+        ]
+    ],
+    "Image Reconstruction with Predictive Filter Flow": [
+        [
+            "method: Predictive Filter Flow",
+            "task: Image Reconstruction"
+        ]
+    ],
+    "Revisiting SEMi-Supervised Learning with Graph EMbeddings": [
+        [
+            "method: Graph EMbeddings",
+            "task: Revisiting SEMi-Supervised Learning"
+        ]
+    ],
+    "Revisiting Semi-Supervised Learning with Graph Embeddings": [
+        [
+            "method: Graph Embeddings",
+            "task: Revisiting Semi-Supervised Learning"
+        ]
+    ],
+    "Pose Guided Structured Region Ensemble Network for Cascaded Hand Pose Estimation": [
+        [
+            "method: Pose Guided Structured Region Ensemble Network",
+            "task: Cascaded Hand Pose Estimation"
+        ]
+    ],
+    "cGANs with Projection Discriminator": [
+        [
+            "method: Projection Discriminator",
+            "task: cGANs"
+        ]
+    ],
+    "Learning Convolutional Neural Networks for Graphs": [
+        [
+            "method: Learning Convolutional Neural Networks",
+            "task: Graphs"
+        ]
+    ],
+    "Shape Robust Text Detection with Progressive Scale Expansion Network": [
+        [
+            "method: Progressive Scale Expansion Network",
+            "task: Shape Robust Text Detection"
+        ]
+    ],
+    "Learning Feature Pyramids for Human Pose Estimation": [
+        [
+            "method: Learning Feature Pyramids",
+            "task: Human Pose Estimation"
+        ]
+    ],
+    "Quality Aware Network for Set to Set Recognition": [
+        [
+            "method: Quality Aware Network",
+            "task: Set to Set Recognition"
+        ]
+    ],
+    "Quaternion Convolutional Neural Networks for End-to-End Automatic Speech Recognition": [
+        [
+            "method: Quaternion Convolutional Neural Networks",
+            "task: End-to-End Automatic Speech Recognition"
+        ]
+    ],
+    "Query-Reduction Networks for Question Answering": [
+        [
+            "method: Query-Reduction Networks",
+            "task: Question Answering"
+        ]
+    ],
+    "R2CNN: Rotational Region CNN for Orientation Robust Scene Text Detection": [
+        [
+            "method:  Rotational Region CNN",
+            "task: Orientation Robust Scene Text Detection"
+        ]
+    ],
+    "Exploring Randomly Wired Neural Networks for Image Recognition": [
+        [
+            "method: Exploring Randomly Wired Neural Networks",
+            "task: Image Recognition"
+        ]
+    ],
+    "Adversarial Ranking for Language Generation": [
+        [
+            "method: Adversarial Ranking",
+            "task: Language Generation"
+        ]
+    ],
+    "Abstractive Sentence Summarization with Attentive Recurrent Neural Networks": [
+        [
+            "method: Attentive Recurrent Neural Networks",
+            "task: Abstractive Sentence Summarization"
+        ]
+    ],
+    "Recurrent Back-Projection Network for Video Super-Resolution": [
+        [
+            "method: Recurrent Back-Projection Network",
+            "task: Video Super-Resolution"
+        ]
+    ],
+    "Residual Dense Network for Image Restoration": [
+        [
+            "method: Residual Dense Network",
+            "task: Image Restoration"
+        ]
+    ],
+    "Residual Dense Network for Image Super-Resolution": [
+        [
+            "method: Residual Dense Network",
+            "task: Image Super-Resolution"
+        ]
+    ],
+    "Re-ranking Person Re-identification with k-reciprocal Encoding": [
+        [
+            "method: k-reciprocal Encoding",
+            "task: Re-ranking Person Re-identification"
+        ]
+    ],
+    "Image Restoration Using Convolutional Auto-encoders with Symmetric Skip Connections": [
+        [
+            "method: Symmetric Skip Connections",
+            "task: Convolutional Auto-encoders"
+        ]
+    ],
+    "Image Restoration Using Very Deep Convolutional Encoder-Decoder Networks with Symmetric Skip Connections": [
+        [
+            "method: Symmetric Skip Connections",
+            "task: Very Deep Convolutional Encoder-Decoder Networks"
+        ]
+    ],
+    "Single-Shot RefinEMent Neural Network for Object Detection": [
+        [
+            "method: Single-Shot RefinEMent Neural Network",
+            "task: Object Detection"
+        ]
+    ],
+    "Read  Verify: Machine Reading Comprehension with Unanswerable Questions": [
+        [
+            "method: Unanswerable Questions",
+            "task:  Machine Reading Comprehension"
+        ]
+    ],
+    "Learning to Compare: Relation Network for Few-Shot Learning": [
+        [
+            "method:  Relation Network",
+            "task: Few-Shot Learning"
+        ]
+    ],
+    "Finding ReMO (Related Memory Object): A Simple Neural Architecture for Text based Reasoning": [
+        [
+            "method: Simple Neural Architecture",
+            "task: Text based Reasoning"
+        ]
+    ],
+    "Region Ensemble Network: Improving Convolutional Network for Hand Pose Estimation": [
+        [
+            "method:  Improving Convolutional Network",
+            "task: Hand Pose Estimation"
+        ]
+    ],
+    "ReSeg: A Recurrent Neural Network-based Model for Semantic Segmentation": [
+        [
+            "method: Recurrent Neural Network-based Model",
+            "task: Semantic Segmentation"
+        ]
+    ],
+    "Deep Residual Networks with Exponential Linear Unit": [
+        [
+            "method: Exponential Linear Unit",
+            "task: Deep Residual Networks"
+        ]
+    ],
+    "Aggregated Residual Transformations for Deep Neural Networks": [
+        [
+            "method: Aggregated Residual Transformations",
+            "task: Deep Neural Networks"
+        ]
+    ],
+    "RetinaMask: Learning to predict masks improves state-of-the-art single-shot detection for free": [
+        [
+            "method:  Learning to predict masks improves state-of-the-art single-shot detection",
+            "task: free"
+        ]
+    ],
+    "Focal Loss for Dense Object Detection": [
+        [
+            "method: Focal Loss",
+            "task: Dense Object Detection"
+        ]
+    ],
+    "Ring loss: Convex Feature Normalization for Face Recognition": [
+        [
+            "method:  Convex Feature Normalization",
+            "task: Face Recognition"
+        ]
+    ],
+    "RMDL: Random Multimodel Deep Learning for Classification": [
+        [
+            "method:  Random Multimodel Deep Learning",
+            "task: Classification"
+        ]
+    ],
+    "Segmental Recurrent Neural Networks for End-to-end Speech Recognition": [
+        [
+            "method: Segmental Recurrent Neural Networks",
+            "task: End-to-end Speech Recognition"
+        ]
+    ],
+    "An Actor-Critic Algorithm for Sequence Prediction": [
+        [
+            "method: An Actor-Critic Algorithm",
+            "task: Sequence Prediction"
+        ]
+    ],
+    "Sentence-State LSTM for Text Representation": [
+        [
+            "method: Sentence-State LSTM",
+            "task: Text Representation"
+        ]
+    ],
+    "Stacked Attention Networks for Image Question Answering": [
+        [
+            "method: Stacked Attention Networks",
+            "task: Image Question Answering"
+        ]
+    ],
+    "Stochastic Answer Networks for Machine Reading Comprehension": [
+        [
+            "method: Stochastic Answer Networks",
+            "task: Machine Reading Comprehension"
+        ]
+    ],
+    "SciBERT: Pretrained Contextualized Embeddings for Scientific Text": [
+        [
+            "method:  Pretrained Contextualized Embeddings",
+            "task: Scientific Text"
+        ]
+    ],
+    "SDNet: Contextualized Attention-based Deep Network for Conversational Question Answering": [
+        [
+            "method:  Contextualized Attention-based Deep Network",
+            "task: Conversational Question Answering"
+        ]
+    ],
+    "Selective Encoding for Abstractive Sentence Summarization": [
+        [
+            "method: Selective Encoding",
+            "task: Abstractive Sentence Summarization"
+        ]
+    ],
+    "SegNet: A Deep Convolutional Encoder-Decoder Architecture for Image Segmentation": [
+        [
+            "method: Deep Convolutional Encoder-Decoder Architecture",
+            "task: Image Segmentation"
+        ]
+    ],
+    "Constituency Parsing with a Self-Attentive Encoder": [
+        [
+            "method: ",
+            "task: Constituency Parsing"
+        ]
+    ],
+    "Entity Commonsense Representation for Neural Abstractive Summarization": [
+        [
+            "method: Entity Commonsense Representation",
+            "task: Neural Abstractive Summarization"
+        ]
+    ],
+    "SeqGAN: Sequence Generative Adversarial Nets with Policy Gradient": [
+        [
+            "method: Policy Gradient",
+            "task:  Sequence Generative Adversarial Nets"
+        ]
+    ],
+    "Greedy Search for Descriptive Spatial Face Features": [
+        [
+            "method: Greedy Search",
+            "task: Descriptive Spatial Face Features"
+        ]
+    ],
+    "SGPN: Similarity Group Proposal Network for 3D Point Cloud Instance Segmentation": [
+        [
+            "method:  Similarity Group Proposal Network",
+            "task: 3D Point Cloud Instance Segmentation"
+        ]
+    ],
+    "ShuffleNet: An Extremely Efficient Convolutional Neural Network for Mobile Devices": [
+        [
+            "method: Extremely Efficient Convolutional Neural Network",
+            "task: Mobile Devices"
+        ]
+    ],
+    "Depthwise Separable Convolutions for Neural Machine Translation": [
+        [
+            "method: Depthwise Separable Convolutions",
+            "task: Neural Machine Translation"
+        ]
+    ],
+    "Sliding Line Point Regression for Shape Robust Scene Text Detection": [
+        [
+            "method: Sliding Line Point Regression",
+            "task: Shape Robust Scene Text Detection"
+        ]
+    ],
+    "I Know What You Want: Semantic Learning for Text Comprehension": [
+        [
+            "method:  Semantic Learning",
+            "task: Text Comprehension"
+        ]
+    ],
+    "Learning a Discriminative Feature Network for Semantic Segmentation": [
+        [
+            "method: Discriminative Feature Network",
+            "task: Semantic Segmentation"
+        ]
+    ],
+    "Spectral Normalization for Generative Adversarial Networks": [
+        [
+            "method: Spectral Normalization",
+            "task: Generative Adversarial Networks"
+        ]
+    ],
+    "Snips Voice Platform: an embedded Spoken Language Understanding system for private-by-design voice interfaces": [
+        [
+            "method: embedded Spoken Language Understanding system",
+            "task: private-by-design voice interfaces"
+        ]
+    ],
+    "Semantic Image Synthesis with Spatially-Adaptive Normalization": [
+        [
+            "method: Spatially-Adaptive Normalization",
+            "task: Semantic Image Synthesis"
+        ]
+    ],
+    "Spectral Representations for Convolutional Neural Networks": [
+        [
+            "method: Spectral Representations",
+            "task: Convolutional Neural Networks"
+        ]
+    ],
+    "SphereFace: Deep Hypersphere Embedding for Face Recognition": [
+        [
+            "method:  Deep Hypersphere Embedding",
+            "task: Face Recognition"
+        ]
+    ],
+    "Feedback Network for Image Super-Resolution": [
+        [
+            "method: Feedback Network",
+            "task: Image Super-Resolution"
+        ]
+    ],
+    "Learning a Single Convolutional Super-Resolution Network for Multiple Degradations": [
+        [
+            "method: Single Convolutional Super-Resolution Network",
+            "task: Multiple Degradations"
+        ]
+    ],
+    "Selective Refinement Network for High Performance Face Detection": [
+        [
+            "method: Selective Refinement Network",
+            "task: High Performance Face Detection"
+        ]
+    ],
+    "RAM: Residual Attention Module for Single Image Super-Resolution": [
+        [
+            "method:  Residual Attention Module",
+            "task: Single Image Super-Resolution"
+        ]
+    ],
+    "Single Shot Text Detector with Regional Attention": [
+        [
+            "method: Regional Attention",
+            "task: Single Shot Text Detector"
+        ]
+    ],
+    "Knowledge-Guided Deep Fractal Neural Networks for Human Pose Estimation": [
+        [
+            "method: Knowledge-Guided Deep Fractal Neural Networks",
+            "task: Human Pose Estimation"
+        ]
+    ],
+    "Stacked Hourglass Networks for Human Pose Estimation": [
+        [
+            "method: Stacked Hourglass Networks",
+            "task: Human Pose Estimation"
+        ]
+    ],
+    "StackGAN++: Realistic Image Synthesis with Stacked Generative Adversarial Networks": [
+        [
+            "method: Stacked Generative Adversarial Networks",
+            "task:  Realistic Image Synthesis"
+        ]
+    ],
+    "StarGAN: Unified Generative Adversarial Networks for Multi-Domain Image-to-Image Translation": [
+        [
+            "method:  Unified Generative Adversarial Networks",
+            "task: Multi-Domain Image-to-Image Translation"
+        ]
+    ],
+    "Supervised Transformer Network for Efficient Face Detection": [
+        [
+            "method: Supervised Transformer Network",
+            "task: Efficient Face Detection"
+        ]
+    ],
+    "Stochastic Answer Networks for Natural Language Inference": [
+        [
+            "method: Stochastic Answer Networks",
+            "task: Natural Language Inference"
+        ]
+    ],
+    "Deep Networks with Stochastic Depth": [
+        [
+            "method: Stochastic Depth",
+            "task: Deep Networks"
+        ]
+    ],
+    "Structure-Infused Copy Mechanisms for Abstractive Summarization": [
+        [
+            "method: Structure-Infused Copy Mechanisms",
+            "task: Abstractive Summarization"
+        ]
+    ],
+    "A Style-Based Generator Architecture for Generative Adversarial Networks": [
+        [
+            "method: Style-Based Generator Architecture",
+            "task: Generative Adversarial Networks"
+        ]
+    ],
+    "Question Answering with Subgraph Embeddings": [
+        [
+            "method: Subgraph Embeddings",
+            "task: Question Answering"
+        ]
+    ],
+    "Squeezed Very Deep Convolutional Neural Networks for Text Classification": [
+        [
+            "method: Squeezed Very Deep Convolutional Neural Networks",
+            "task: Text Classification"
+        ]
+    ],
+    "SVDNet for Pedestrian Retrieval": [
+        [
+            "method: SVDNet",
+            "task: Pedestrian Retrieval"
+        ]
+    ],
+    "Learning Symmetry Consistent Deep CNNs for Face Completion": [
+        [
+            "method: Learning Symmetry Consistent Deep CNNs",
+            "task: Face Completion"
+        ]
+    ],
+    "Semi-supervised sequence tagging with bidirectional language models": [
+        [
+            "method: bidirectional language models",
+            "task: Semi-supervised sequence tagging"
+        ]
+    ],
+    "Deep Semantic Role Labeling with Self-Attention": [
+        [
+            "method: Self-Attention",
+            "task: Deep Semantic Role Labeling"
+        ]
+    ],
+    "Deep Recurrent Neural Networks for Acoustic Modelling": [
+        [
+            "method: Deep Recurrent Neural Networks",
+            "task: Acoustic Modelling"
+        ]
+    ],
+    "Graph Convolutional Networks for Text Classification": [
+        [
+            "method: Graph Convolutional Networks",
+            "task: Text Classification"
+        ]
+    ],
+    "Task-oriented Word Embedding for Text Classification": [
+        [
+            "method: Task-oriented Word Embedding",
+            "task: Text Classification"
+        ]
+    ],
+    "Simple Recurrent Units for Highly Parallelizable Recurrence": [
+        [
+            "method: Simple Recurrent Units",
+            "task: Highly Parallelizable Recurrence"
+        ]
+    ],
+    "Self-Attention with Relative Position Representations": [
+        [
+            "method: Relative Position Representations",
+            "task: Self-Attention"
+        ]
+    ],
+    "Discriminative Transfer Learning with Tree-based Priors": [
+        [
+            "method: Tree-based Priors",
+            "task: Discriminative Transfer Learning"
+        ]
+    ],
+    "Trellis Networks for Sequence Modeling": [
+        [
+            "method: Trellis Networks",
+            "task: Sequence Modeling"
+        ]
+    ],
+    "Scale-Aware Trident Networks for Object Detection": [
+        [
+            "method: Scale-Aware Trident Networks",
+            "task: Object Detection"
+        ]
+    ],
+    "TuckER: Tensor Factorization for Knowledge Graph Completion": [
+        [
+            "method:  Tensor Factorization",
+            "task: Knowledge Graph Completion"
+        ]
+    ],
+    "T-Net: Parametrizing Fully Convolutional Nets with a Single High-Order Tensor": [
+        [
+            "method: ",
+            "task:  Parametrizing Fully Convolutional Nets"
+        ]
+    ],
+    "Understanding Convolution for Semantic Segmentation": [
+        [
+            "method: Understanding Convolution",
+            "task: Semantic Segmentation"
+        ]
+    ],
+    "U-Net: Convolutional Networks for Biomedical Image Segmentation": [
+        [
+            "method:  Convolutional Networks",
+            "task: Biomedical Image Segmentation"
+        ]
+    ],
+    "Universal Language Model Fine-tuning for Text Classification": [
+        [
+            "method: Universal Language Model Fine-tuning",
+            "task: Text Classification"
+        ]
+    ],
+    "U-Net: Machine Reading Comprehension with Unanswerable Questions": [
+        [
+            "method: Unanswerable Questions",
+            "task:  Machine Reading Comprehension"
+        ]
+    ],
+    "Unsupervised Neural Machine Translation with Weight Sharing": [
+        [
+            "method: Weight Sharing",
+            "task: Unsupervised Neural Machine Translation"
+        ]
+    ],
+    "MUTAN: Multimodal Tucker Fusion for Visual Question Answering": [
+        [
+            "method:  Multimodal Tucker Fusion",
+            "task: Visual Question Answering"
+        ]
+    ],
+    "Improved Variational Inference with Inverse Autoregressive Flow": [
+        [
+            "method: Inverse Autoregressive Flow",
+            "task: Improved Variational Inference"
+        ]
+    ],
+    "Very Deep Convolutional Networks for Text Classification": [
+        [
+            "method: Very Deep Convolutional Networks",
+            "task: Text Classification"
+        ]
+    ],
+    "Adversarial Training Methods for Semi-Supervised Text Classification": [
+        [
+            "method: Adversarial Training Methods",
+            "task: Semi-Supervised Text Classification"
+        ]
+    ],
+    "Multi-Passage Machine Reading Comprehension with Cross-Passage Answer Verification": [
+        [
+            "method: Cross-Passage Answer Verification",
+            "task: Multi-Passage Machine Reading Comprehension"
+        ]
+    ],
+    "VoxelNet: End-to-End Learning for Point Cloud Based 3D Object Detection": [
+        [
+            "method:  End-to-End Learning",
+            "task: Point Cloud Based 3D Object Detection"
+        ]
+    ],
+    "Variational Sequential Labelers for Semi-Supervised Learning": [
+        [
+            "method: Variational Sequential Labelers",
+            "task: Semi-Supervised Learning"
+        ]
+    ],
+    "Open Question Answering with Weakly Supervised Embedding Models": [
+        [
+            "method: Weakly Supervised Embedding Models",
+            "task: Open Question Answering"
+        ]
+    ],
+    "Weighted Transformer Network for Machine Translation": [
+        [
+            "method: Weighted Transformer Network",
+            "task: Machine Translation"
+        ]
+    ],
+    "Structured Training for Neural Network Transition-Based Parsing": [
+        [
+            "method: Structured Training",
+            "task: Neural Network Transition-Based Parsing"
+        ]
+    ],
+    "Sequence Level Training with Recurrent Neural Networks": [
+        [
+            "method: Recurrent Neural Networks",
+            "task: Sequence Level Training"
+        ]
+    ],
+    "WordSup: Exploiting Word Annotations for Character based Text Detection": [
+        [
+            "method:  Exploiting Word Annotations",
+            "task: Character based Text Detection"
+        ]
+    ],
+    "Xception: Deep Learning with Depthwise Separable Convolutions": [
+        [
+            "method: Depthwise Separable Convolutions",
+            "task:  Deep Learning"
+        ]
+    ],
+    "Cutting-off Redundant Repeating Generations for Neural Abstractive Summarization": [
+        [
+            "method: Cutting-off Redundant Repeating Generations",
+            "task: Neural Abstractive Summarization"
+        ]
+    ],
+    "Asynchronous Methods for Deep Reinforcement Learning": [
+        [
+            "method: Asynchronous Methods",
+            "task: Deep Reinforcement Learning"
+        ]
+    ],
+    "Count-Based Exploration with Neural Density Models": [
+        [
+            "method: Neural Density Models",
+            "task: Count-Based Exploration"
+        ]
+    ],
+    "Count-Based Exploration with the Successor Representation": [
+        [
+            "method: the Successor Representation",
+            "task: Count-Based Exploration"
+        ]
+    ],
+    "Deep Reinforcement Learning with Double Q-learning": [
+        [
+            "method: Double Q-learning",
+            "task: Deep Reinforcement Learning"
+        ]
+    ],
+    "Dueling Network Architectures for Deep Reinforcement Learning": [
+        [
+            "method: Dueling Network Architectures",
+            "task: Deep Reinforcement Learning"
+        ]
+    ],
+    "IMPALA: Scalable Distributed Deep-RL with Importance Weighted Actor-Learner Architectures": [
+        [
+            "method: Importance Weighted Actor-Learner Architectures",
+            "task:  Scalable Distributed Deep-RL"
+        ]
+    ],
+    "Implicit Quantile Networks for Distributional Reinforcement Learning": [
+        [
+            "method: Implicit Quantile Networks",
+            "task: Distributional Reinforcement Learning"
+        ]
+    ],
+    "Massively Parallel Methods for Deep Reinforcement Learning": [
+        [
+            "method: Massively Parallel Methods",
+            "task: Deep Reinforcement Learning"
+        ]
+    ],
+    "Playing Atari with Deep Reinforcement Learning": [
+        [
+            "method: Deep Reinforcement Learning",
+            "task: Playing Atari"
+        ]
+    ],
+    "The Arcade Learning Environment: An Evaluation Platform for General Agents": [
+        [
+            "method: Evaluation Platform",
+            "task: General Agents"
+        ]
+    ],
+    "XLNet: Generalized Autoregressive Pretraining for Language Understanding": [
+        [
+            "method:  Generalized Autoregressive Pretraining",
+            "task: Language Understanding"
+        ]
+    ],
+    "A Multi-Stage Memory Augmented Neural Network for Machine Reading Comprehension": [
+        [
+            "method: Multi-Stage Memory Augmented Neural Network",
+            "task: Machine Reading Comprehension"
+        ]
+    ],
+    "Contextualized Word Representations for Reading Comprehension": [
+        [
+            "method: Contextualized Word Representations",
+            "task: Reading Comprehension"
+        ]
+    ],
+    "Multi-Perspective Context Matching for Machine Comprehension": [
+        [
+            "method: Multi-Perspective Context Matching",
+            "task: Machine Comprehension"
+        ]
+    ],
+    "Learning Recurrent Span Representations for Extractive Question Answering": [
+        [
+            "method: Learning Recurrent Span Representations",
+            "task: Extractive Question Answering"
+        ]
+    ],
+    "Ruminating Reader: Reasoning with Gated Multi-Hop Attention": [
+        [
+            "method: Gated Multi-Hop Attention",
+            "task:  Reasoning"
+        ]
+    ],
+    "Read + Verify: Machine Reading Comprehension with Unanswerable Questions": [
+        [
+            "method: Unanswerable Questions",
+            "task:  Machine Reading Comprehension"
+        ]
+    ],
+    "Deep Ordinal Regression Network for Monocular Depth Estimation": [
+        [
+            "method: Deep Ordinal Regression Network",
+            "task: Monocular Depth Estimation"
+        ]
+    ],
+    "Semi-Supervised Monocular Depth Estimation with Left-Right Consistency Using Deep Neural Network": [
+        [
+            "method: Left-Right Consistency",
+            "task: Semi-Supervised Monocular Depth Estimation"
+        ]
+    ],
+    "Learn Stereo, Infer Mono: Siamese Networks for Self-Supervised, Monocular, Depth Estimation": [
+        [
+            "method:  Siamese Networks",
+            "task: Self-Supervised, Monocular, Depth Estimation"
+        ]
+    ],
+    "Unsupervised Monocular Depth Estimation with Left-Right Consistency": [
+        [
+            "method: Left-Right Consistency",
+            "task: Unsupervised Monocular Depth Estimation"
+        ]
+    ],
+    "PackNet-SfM: 3D Packing for Self-Supervised Monocular Depth Estimation": [
+        [
+            "method:  3D Packing",
+            "task: Self-Supervised Monocular Depth Estimation"
+        ]
+    ],
+    "Learning monocular depth estimation with unsupervised trinocular assumptions": [
+        [
+            "method: unsupervised trinocular assumptions",
+            "task: Learning monocular depth estimation"
+        ]
+    ],
+    "Geometry-Aware Symmetric Domain Adaptation for Monocular Depth Estimation": [
+        [
+            "method: Geometry-Aware Symmetric Domain Adaptation",
+            "task: Monocular Depth Estimation"
+        ]
+    ],
+    "Attention-based Context Aggregation Network for Monocular Depth Estimation": [
+        [
+            "method: Attention-based Context Aggregation Network",
+            "task: Monocular Depth Estimation"
+        ]
+    ],
+    "Structure-Aware Residual Pyramid Network for Monocular Depth Estimation": [
+        [
+            "method: Structure-Aware Residual Pyramid Network",
+            "task: Monocular Depth Estimation"
+        ]
+    ],
+    "Revisiting Single Image Depth Estimation: Toward Higher Resolution Maps with Accurate Object Boundaries": [
+        [
+            "method: Accurate Object Boundaries",
+            "task:  Toward Higher Resolution Maps"
+        ]
+    ],
+    "Gated Multiple Feedback Network for Image Super-Resolution": [
+        [
+            "method: Gated Multiple Feedback Network",
+            "task: Image Super-Resolution"
+        ]
+    ],
+    "EDVR: Video Restoration with Enhanced Deformable Convolutional Networks": [
+        [
+            "method: Enhanced Deformable Convolutional Networks",
+            "task:  Video Restoration"
+        ]
+    ],
+    "Deep Multi-Center Learning for Face Alignment": [
+        [
+            "method: Deep Multi-Center Learning",
+            "task: Face Alignment"
+        ]
+    ],
+    "Deep Alignment Network: A convolutional neural network for robust face alignment": [
+        [
+            "method: convolutional neural network",
+            "task: robust face alignment"
+        ]
+    ],
+    "Unsupervised Training for 3D Morphable Model Regression": [
+        [
+            "method: Unsupervised Training",
+            "task: 3D Morphable Model Regression"
+        ]
+    ],
+    "Deep Pixel-wise Binary Supervision for Face Presentation Attack Detection": [
+        [
+            "method: Deep Pixel-wise Binary Supervision",
+            "task: Face Presentation Attack Detection"
+        ]
+    ],
+    "Style Aggregated Network for Facial Landmark Detection": [
+        [
+            "method: Style Aggregated Network",
+            "task: Facial Landmark Detection"
+        ]
+    ],
+    "Deep Label Distribution Learning with Label Ambiguity": [
+        [
+            "method: Label Ambiguity",
+            "task: Deep Label Distribution Learning"
+        ]
+    ],
+    "Rank-consistent Ordinal Regression for Neural Networks": [
+        [
+            "method: Rank-consistent Ordinal Regression",
+            "task: Neural Networks"
+        ]
+    ],
+    "Transferring Rich Deep Features for Facial Beauty Prediction": [
+        [
+            "method: Transferring Rich Deep Features",
+            "task: Facial Beauty Prediction"
+        ]
+    ],
+    "SCUT-FBP5500: A Diverse Benchmark Dataset for Multi-Paradigm Facial Beauty Prediction": [
+        [
+            "method: Diverse Benchmark Dataset",
+            "task: Multi-Paradigm Facial Beauty Prediction"
+        ]
+    ],
+    "High-level Semantic Feature Detection: A New Perspective for Pedestrian Detection": [
+        [
+            "method: New Perspective",
+            "task: Pedestrian Detection"
+        ]
+    ],
+    "Learning to Cluster for Proposal-Free Instance Segmentation": [
+        [
+            "method: Learning to Cluster",
+            "task: Proposal-Free Instance Segmentation"
+        ]
+    ],
+    "Semantic Instance Segmentation with a Discriminative Loss Function": [
+        [
+            "method: ",
+            "task: Semantic Instance Segmentation"
+        ]
+    ],
+    "MicronNet: A Highly Compact Deep Convolutional Neural Network Architecture for Real-time Embedded Traffic Sign Classification": [
+        [
+            "method: Highly Compact Deep Convolutional Neural Network Architecture",
+            "task: Real-time Embedded Traffic Sign Classification"
+        ]
+    ],
+    "HydraPlus-Net: Attentive Deep Features for Pedestrian Analysis": [
+        [
+            "method:  Attentive Deep Features",
+            "task: Pedestrian Analysis"
+        ]
+    ],
+    "Learning to Adapt Structured Output Space for Semantic Segmentation": [
+        [
+            "method: Learning to Adapt Structured Output Space",
+            "task: Semantic Segmentation"
+        ]
+    ],
+    "Larger Norm More Transferable: An Adaptive Feature Norm Approach for Unsupervised Domain Adaptation": [
+        [
+            "method: Adaptive Feature Norm Approach",
+            "task: Unsupervised Domain Adaptation"
+        ]
+    ],
+    "Sliced Wasserstein Discrepancy for Unsupervised Domain Adaptation": [
+        [
+            "method: Sliced Wasserstein Discrepancy",
+            "task: Unsupervised Domain Adaptation"
+        ]
+    ],
+    "Interpretable Convolutional Filters with SincNet": [
+        [
+            "method: SincNet",
+            "task: Interpretable Convolutional Filters"
+        ]
+    ],
+    "Adversarial Learning for Neural Dialogue Generation": [
+        [
+            "method: Adversarial Learning",
+            "task: Neural Dialogue Generation"
+        ]
+    ],
+    "Dialogue Act Sequence Labeling using Hierarchical encoder with CRF": [
+        [
+            "method: CRF",
+            "task: Hierarchical encoder"
+        ]
+    ],
+    "MASS: Masked Sequence to Sequence Pre-training for Language Generation": [
+        [
+            "method:  Masked Sequence to Sequence Pre-training",
+            "task: Language Generation"
+        ]
+    ],
+    "SlowFast Networks for Video Recognition": [
+        [
+            "method: SlowFast Networks",
+            "task: Video Recognition"
+        ]
+    ],
+    "Long-Term Feature Banks for Detailed Video Understanding": [
+        [
+            "method: Long-Term Feature Banks",
+            "task: Detailed Video Understanding"
+        ]
+    ],
+    "Asynchronous Temporal Fields for Action Recognition": [
+        [
+            "method: Asynchronous Temporal Fields",
+            "task: Action Recognition"
+        ]
+    ],
+    "Learning Spatial-Temporal Regularized Correlation Filters for Visual Tracking": [
+        [
+            "method: Learning Spatial-Temporal Regularized Correlation Filters",
+            "task: Visual Tracking"
+        ]
+    ],
+    "Distractor-aware Siamese Networks for Visual Object Tracking": [
+        [
+            "method: Distractor-aware Siamese Networks",
+            "task: Visual Object Tracking"
+        ]
+    ],
+    "ECO: Efficient Convolution Operators for Tracking": [
+        [
+            "method:  Efficient Convolution Operators",
+            "task: Tracking"
+        ]
+    ],
+    "Context-aware Deep Feature Compression for High-speed Visual Tracking": [
+        [
+            "method: Context-aware Deep Feature Compression",
+            "task: High-speed Visual Tracking"
+        ]
+    ],
+    "Summarizing Videos with Attention": [
+        [
+            "method: Attention",
+            "task: Summarizing Videos"
+        ]
+    ],
+    "A Read-Write Memory Network for Movie Story Understanding": [
+        [
+            "method: Read-Write Memory Network",
+            "task: Movie Story Understanding"
+        ]
+    ],
+    "Timeception for Complex Action Recognition": [
+        [
+            "method: Timeception",
+            "task: Complex Action Recognition"
+        ]
+    ],
+    "Two-Stream Adaptive Graph Convolutional Networks for Skeleton-Based Action Recognition": [
+        [
+            "method: Two-Stream Adaptive Graph Convolutional Networks",
+            "task: Skeleton-Based Action Recognition"
+        ]
+    ],
+    "SchNet: A continuous-filter convolutional neural network for modeling quantum interactions": [
+        [
+            "method: continuous-filter convolutional neural network",
+            "task: modeling quantum interactions"
+        ]
+    ],
+    "Learning to Rank Question-Answer Pairs using Hierarchical Recurrent Encoder with Latent Topic Clustering": [
+        [
+            "method: Latent Topic Clustering",
+            "task: Hierarchical Recurrent Encoder"
+        ]
+    ],
+    "A Baseline for 3D Multi-Object Tracking": [
+        [
+            "method: Baseline",
+            "task: 3D Multi-Object Tracking"
+        ]
+    ],
+    "Predictive Business Process Monitoring with LSTM Neural Networks": [
+        [
+            "method: LSTM Neural Networks",
+            "task: Predictive Business Process Monitoring"
+        ]
+    ],
+    "Self-Supervised Model Adaptation for Multimodal Semantic Segmentation": [
+        [
+            "method: Self-Supervised Model Adaptation",
+            "task: Multimodal Semantic Segmentation"
+        ]
+    ],
+    "Factorizable Net: An Efficient Subgraph-based Framework for Scene Graph Generation": [
+        [
+            "method: Efficient Subgraph-based Framework",
+            "task: Scene Graph Generation"
+        ]
+    ],
+    "Graph R-CNN for Scene Graph Generation": [
+        [
+            "method: Graph R-CNN",
+            "task: Scene Graph Generation"
+        ]
+    ],
+    "Deep Graph Convolutional Encoders for Structured Data to Text Generation": [
+        [
+            "method: Deep Graph Convolutional Encoders",
+            "task: Structured Dat"
+        ]
+    ],
+    "A Deep Generative Framework for Paraphrase Generation": [
+        [
+            "method: Deep Generative Framework",
+            "task: Paraphrase Generation"
+        ]
+    ],
+    "Automatic skin lesion segmentation with fully convolutional-deconvolutional networks": [
+        [
+            "method: fully convolutional-deconvolutional networks",
+            "task: Automatic skin lesion segmentation"
+        ]
+    ],
+    "Brain Tumor Segmentation with Deep Neural Networks": [
+        [
+            "method: Deep Neural Networks",
+            "task: Brain Tumor Segmentation"
+        ]
+    ],
+    "Autofocus Layer for Semantic Segmentation": [
+        [
+            "method: Autofocus Layer",
+            "task: Semantic Segmentation"
+        ]
+    ],
+    "Attention U-Net: Learning Where to Look for the Pancreas": [
+        [
+            "method:  Learning Where to Look",
+            "task: the Pancreas"
+        ]
+    ],
+    "V-Net: Fully Convolutional Neural Networks for Volumetric Medical Image Segmentation": [
+        [
+            "method:  Fully Convolutional Neural Networks",
+            "task: Volumetric Medical Image Segmentation"
+        ]
+    ],
+    "ESNet: An Efficient Symmetric Network for Real-time Semantic Segmentation": [
+        [
+            "method: Efficient Symmetric Network",
+            "task: Real-time Semantic Segmentation"
+        ]
+    ],
+    "LEDNet: A Lightweight Encoder-Decoder Network for Real-Time Semantic Segmentation": [
+        [
+            "method: Lightweight Encoder-Decoder Network",
+            "task: Real-Time Semantic Segmentation"
+        ]
+    ],
+    "ENet: A Deep Neural Network Architecture for Real-Time Semantic Segmentation": [
+        [
+            "method: Deep Neural Network Architecture",
+            "task: Real-Time Semantic Segmentation"
+        ]
+    ],
+    "3DMV: Joint 3D-Multi-View Prediction for 3D Semantic Scene Segmentation": [
+        [
+            "method:  Joint 3D-Multi-View Prediction",
+            "task: 3D Semantic Scene Segmentation"
+        ]
+    ],
+    "SPLATNet: Sparse Lattice Networks for Point Cloud Processing": [
+        [
+            "method:  Sparse Lattice Networks",
+            "task: Point Cloud Processing"
+        ]
+    ],
+    "Self-produced Guidance for Weakly-supervised Object Localization": [
+        [
+            "method: Self-produced Guidance",
+            "task: Weakly-supervised Object Localization"
+        ]
+    ],
+    "Multimodal Sentiment Analysis using Hierarchical Fusion with Context Modeling": [
+        [
+            "method: Context Modeling",
+            "task: Hierarchical Fusion"
+        ]
+    ],
+    "ICON: Interactive Conversational Memory Network for Multimodal Emotion Detection": [
+        [
+            "method:  Interactive Conversational Memory Network",
+            "task: Multimodal Emotion Detection"
+        ]
+    ],
+    "Deformable GANs for Pose-based Human Image Generation": [
+        [
+            "method: Deformable GANs",
+            "task: Pose-based Human Image Generation"
+        ]
+    ],
+    "Semi-supervised Multitask Learning for Sequence Labeling": [
+        [
+            "method: Semi-supervised Multitask Learning",
+            "task: Sequence Labeling"
+        ]
+    ],
+    "An Integral Pose Regression System for the ECCV2018 PoseTrack Challenge": [
+        [
+            "method: An Integral Pose Regression System",
+            "task: the ECCV2018 PoseTrack Challenge"
+        ]
+    ],
+    "Exploiting temporal information for 3D pose estimation": [
+        [
+            "method: Exploiting temporal information",
+            "task: 3D pose estimation"
+        ]
+    ],
+    "Cascaded Pyramid Network for Multi-Person Pose Estimation": [
+        [
+            "method: Cascaded Pyramid Network",
+            "task: Multi-Person Pose Estimation"
+        ]
+    ],
+    "PifPaf: Composite Fields for Human Pose Estimation": [
+        [
+            "method:  Composite Fields",
+            "task: Human Pose Estimation"
+        ]
+    ],
+    "Generative Partition Networks for Multi-Person Pose Estimation": [
+        [
+            "method: Generative Partition Networks",
+            "task: Multi-Person Pose Estimation"
+        ]
+    ],
+    "Multi-Person Pose Estimation with Local Joint-to-Person Associations": [
+        [
+            "method: Local Joint-to-Person Associations",
+            "task: Multi-Person Pose Estimation"
+        ]
+    ],
+    "PVNet: Pixel-wise Voting Network for 6DoF Pose Estimation": [
+        [
+            "method:  Pixel-wise Voting Network",
+            "task: 6DoF Pose Estimation"
+        ]
+    ],
+    "DeepIM: Deep Iterative Matching for 6D Pose Estimation": [
+        [
+            "method:  Deep Iterative Matching",
+            "task: 6D Pose Estimation"
+        ]
+    ],
+    "Attentional Encoder Network for Targeted Sentiment Classification": [
+        [
+            "method: Attentional Encoder Network",
+            "task: Targeted Sentiment Classification"
+        ]
+    ],
+    "An Interactive Multi-Task Learning Network for End-to-End Aspect-Based Sentiment Analysis": [
+        [
+            "method: An Interactive Multi-Task Learning Network",
+            "task: End-to-End Aspect-Based Sentiment Analysis"
+        ]
+    ],
+    "Hierarchical Attention Based Position-Aware Network for Aspect-Level Sentiment Analysis": [
+        [
+            "method: Hierarchical Attention Based Position-Aware Network",
+            "task: Aspect-Level Sentiment Analysis"
+        ]
+    ],
+    "Learning Latent Opinions for Aspect-Level Sentiment Classification": [
+        [
+            "method: Learning Latent Opinions",
+            "task: Aspect-Level Sentiment Classification"
+        ]
+    ],
+    "Progressive Self-Supervised Attention Learning for Aspect-Level Sentiment Analysis": [
+        [
+            "method: Progressive Self-Supervised Attention Learning",
+            "task: Aspect-Level Sentiment Analysis"
+        ]
+    ],
+    "Aspect Level Sentiment Classification with Attention-over-Attention Neural Networks": [
+        [
+            "method: Attention-over-Attention Neural Networks",
+            "task: Aspect Level Sentiment Classification"
+        ]
+    ],
+    "A Position-aware Bidirectional Attention Network for Aspect-level Sentiment Analysis": [
+        [
+            "method: Position-aware Bidirectional Attention Network",
+            "task: Aspect-level Sentiment Analysis"
+        ]
+    ],
+    "Aspect Level Sentiment Classification with Deep Memory Network": [
+        [
+            "method: Deep Memory Network",
+            "task: Aspect Level Sentiment Classification"
+        ]
+    ],
+    "Transformation Networks for Target-Oriented Sentiment Classification": [
+        [
+            "method: Transformation Networks",
+            "task: Target-Oriented Sentiment Classification"
+        ]
+    ],
+    "Interactive Attention Networks for Aspect-Level Sentiment Classification": [
+        [
+            "method: Interactive Attention Networks",
+            "task: Aspect-Level Sentiment Classification"
+        ]
+    ],
+    "Aspect Based Sentiment Analysis with Gated Convolutional Networks": [
+        [
+            "method: Gated Convolutional Networks",
+            "task: Aspect Based Sentiment Analysis"
+        ]
+    ],
+    "Attention-based LSTM for Aspect-level Sentiment Classification": [
+        [
+            "method: Attention-based LSTM",
+            "task: Aspect-level Sentiment Classification"
+        ]
+    ],
+    "Effective LSTMs for Target-Dependent Sentiment Classification": [
+        [
+            "method: Effective LSTMs",
+            "task: Target-Dependent Sentiment Classification"
+        ]
+    ],
+    "Multi-attention Recurrent Network for Human Communication Comprehension": [
+        [
+            "method: Multi-attention Recurrent Network",
+            "task: Human Communication Comprehension"
+        ]
+    ],
+    "SRL4ORL: Improving Opinion Role Labeling using Multi-task Learning with Semantic Role Labeling": [
+        [
+            "method: Semantic Role Labeling",
+            "task: Multi-task Learning"
+        ]
+    ],
+    "Online Multi-Object Tracking with Dual Matching Attention Networks": [
+        [
+            "method: Dual Matching Attention Networks",
+            "task: Online Multi-Object Tracking"
+        ]
+    ],
+    "Polysemous Visual-Semantic Embedding for Cross-Modal Retrieval": [
+        [
+            "method: Polysemous Visual-Semantic Embedding",
+            "task: Cross-Modal Retrieval"
+        ]
+    ],
+    "GEOMetrics: Exploiting Geometric Structure for Graph-Encoded Objects": [
+        [
+            "method:  Exploiting Geometric Structure",
+            "task: Graph-Encoded Objects"
+        ]
+    ],
+    "HybridSN: Exploring 3D-2D CNN Feature Hierarchy for Hyperspectral Image Classification": [
+        [
+            "method:  Exploring 3D-2D CNN Feature Hierarchy",
+            "task: Hyperspectral Image Classification"
+        ]
+    ],
+    "BASS Net: Band-Adaptive Spectral-Spatial Feature Learning Neural Network for Hyperspectral Image Classification": [
+        [
+            "method:  Band-Adaptive Spectral-Spatial Feature Learning Neural Network",
+            "task: Hyperspectral Image Classification"
+        ]
+    ],
+    "Fine-tune BERT for Extractive Summarization": [
+        [
+            "method: Fine-tune BERT",
+            "task: Extractive Summarization"
+        ]
+    ],
+    "Iterative Document Representation Learning Towards Summarization with Polishing": [
+        [
+            "method: Polishing",
+            "task: Iterative Document Representation Learning Towards Summarization"
+        ]
+    ],
+    "Geometric Matrix Completion with Recurrent Multi-Graph Neural Networks": [
+        [
+            "method: Recurrent Multi-Graph Neural Networks",
+            "task: Geometric Matrix Completion"
+        ]
+    ],
+    "Dictionary Learning for Massive Matrix Factorization": [
+        [
+            "method: Dictionary Learning",
+            "task: Massive Matrix Factorization"
+        ]
+    ],
+    "Towards Amortized Ranking-Critical Training for Collaborative Filtering": [
+        [
+            "method: Towards Amortized Ranking-Critical Training",
+            "task: Collaborative Filtering"
+        ]
+    ],
+    "Variational Autoencoders for Collaborative Filtering": [
+        [
+            "method: Variational Autoencoders",
+            "task: Collaborative Filtering"
+        ]
+    ],
+    "NAS-FPN: Learning Scalable Feature Pyramid Architecture for Object Detection": [
+        [
+            "method:  Learning Scalable Feature Pyramid Architecture",
+            "task: Object Detection"
+        ]
+    ],
+    "BlitzNet: A Real-Time Deep Network for Scene Understanding": [
+        [
+            "method: Real-Time Deep Network",
+            "task: Scene Understanding"
+        ]
+    ],
+    "Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks": [
+        [
+            "method: Region Proposal Networks",
+            "task:  Towards Real-Time Object Detection"
+        ]
+    ],
+    "C-MIL: Continuation Multiple Instance Learning for Weakly Supervised Object Detection": [
+        [
+            "method:  Continuation Multiple Instance Learning",
+            "task: Weakly Supervised Object Detection"
+        ]
+    ],
+    "PCL: Proposal Cluster Learning for Weakly Supervised Object Detection": [
+        [
+            "method:  Proposal Cluster Learning",
+            "task: Weakly Supervised Object Detection"
+        ]
+    ],
+    "Multiple Instance Detection Network with Online Instance Classifier Refinement": [
+        [
+            "method: Online Instance Classifier Refinement",
+            "task: Multiple Instance Detection Network"
+        ]
+    ],
+    "Min-Entropy Latent Model for Weakly Supervised Object Detection": [
+        [
+            "method: Min-Entropy Latent Model",
+            "task: Weakly Supervised Object Detection"
+        ]
+    ],
+    "ContextLocNet: Context-Aware Deep Network Models for Weakly Supervised Localization": [
+        [
+            "method:  Context-Aware Deep Network Models",
+            "task: Weakly Supervised Localization"
+        ]
+    ],
+    "Soft Proposal Networks for Weakly Supervised Object Localization": [
+        [
+            "method: Soft Proposal Networks",
+            "task: Weakly Supervised Object Localization"
+        ]
+    ],
+    "Recurrent Pixel Embedding for Instance Grouping": [
+        [
+            "method: Recurrent Pixel Embedding",
+            "task: Instance Grouping"
+        ]
+    ],
+    "Polarity Loss for Zero-shot Object Detection": [
+        [
+            "method: Polarity Loss",
+            "task: Zero-shot Object Detection"
+        ]
+    ],
+    "Flow-Guided Feature Aggregation for Video Object Detection": [
+        [
+            "method: Flow-Guided Feature Aggregation",
+            "task: Video Object Detection"
+        ]
+    ],
+    "Prototypical Networks for Few-shot Learning": [
+        [
+            "method: Prototypical Networks",
+            "task: Few-shot Learning"
+        ]
+    ],
+    "Matching Networks for One Shot Learning": [
+        [
+            "method: Matching Networks",
+            "task: One Shot Learning"
+        ]
+    ],
+    "Delta-encoder: an effective sample synthesis method for few-shot object recognition": [
+        [
+            "method: effective sample synthesis method",
+            "task: few-shot object recognition"
+        ]
+    ],
+    "Meta-Learning with Differentiable Convex Optimization": [
+        [
+            "method: Differentiable Convex Optimization",
+            "task: Meta-Learning"
+        ]
+    ],
+    "Temporal Ensembling for Semi-Supervised Learning": [
+        [
+            "method: Temporal Ensembling",
+            "task: Semi-Supervised Learning"
+        ]
+    ],
+    "Improved Techniques for Training GANs": [
+        [
+            "method: Improved Techniques",
+            "task: Training GANs"
+        ]
+    ],
+    "Semi-Supervised Learning with Ladder Networks": [
+        [
+            "method: Ladder Networks",
+            "task: Semi-Supervised Learning"
+        ]
+    ],
+    "Data-Efficient Image Recognition with Contrastive Predictive Coding": [
+        [
+            "method: Contrastive Predictive Coding",
+            "task: Data-Efficient Image Recognition"
+        ]
+    ],
+    "Unsupervised Data Augmentation for Consistency Training": [
+        [
+            "method: Augmentation",
+            "task: Consistency Training"
+        ]
+    ],
+    "Pairwise Confusion for Fine-Grained Visual Classification": [
+        [
+            "method: Pairwise Confusion",
+            "task: Fine-Grained Visual Classification"
+        ]
+    ],
+    "Face Attention Network: An Effective Face Detector for the Occluded Faces": [
+        [
+            "method: Effective Face Detector",
+            "task: the Occluded Faces"
+        ]
+    ],
+    "Biometric Face Presentation Attack Detection with Multi-Channel Convolutional Neural Network": [
+        [
+            "method: Multi-Channel Convolutional Neural Network",
+            "task: Biometric Face Presentation Attack Detection"
+        ]
+    ],
+    "PC-DARTS: Partial Channel Connections for Memory-Efficient Differentiable Architecture Search": [
+        [
+            "method:  Partial Channel Connections",
+            "task: Memory-Efficient Differentiable Architecture Search"
+        ]
+    ],
+    "A Mention-Ranking Model for Abstract Anaphora Resolution": [
+        [
+            "method: Mention-Ranking Model",
+            "task: Abstract Anaphor"
+        ]
+    ],
+    "Rethinking Complex Neural Network Architectures for Document Classification": [
+        [
+            "method: Rethinking Complex Neural Network Architectures",
+            "task: Document Classification"
+        ]
+    ],
+    "HDLTex: Hierarchical Deep Learning for Text Classification": [
+        [
+            "method:  Hierarchical Deep Learning",
+            "task: Text Classification"
+        ]
+    ],
+    "FPNN: Field Probing Neural Networks for 3D Data": [
+        [
+            "method:  Field Probing Neural Networks",
+            "task: 3D Data"
+        ]
+    ],
+    "Graph Star Net for Generalized Multi-Task Learning": [
+        [
+            "method: Graph Star Net",
+            "task: Generalized Multi-Task Learning"
+        ]
+    ],
+    "Encoding Robust Representation for Graph Generation": [
+        [
+            "method: Encoding Robust Representation",
+            "task: Graph Generation"
+        ]
+    ],
+    "SpecAugment: A Simple Data Augmentation Method for Automatic Speech Recognition": [
+        [
+            "method: Augmentation Method",
+            "task: Automatic Speech Recognition"
+        ]
+    ],
+    "Attention model for articulatory features detection": [
+        [
+            "method: Attention model",
+            "task: articulatory features detection"
+        ]
+    ],
+    "Tilde's Machine Translation Systems for WMT 2018": [
+        [
+            "method: Tilde's Machine Translation Systems",
+            "task: WMT 2018"
+        ]
+    ],
+    "Semi-Supervised Sequence Modeling with Cross-View Training": [
+        [
+            "method: Cross-View Training",
+            "task: Semi-Supervised Sequence Modeling"
+        ]
+    ],
+    "Deconvolution-Based Global Decoding for Neural Machine Translation": [
+        [
+            "method: Deconvolution-Based Global Decoding",
+            "task: Neural Machine Translation"
+        ]
+    ],
+    "Joint Source-Target Self Attention with Locality Constraints": [
+        [
+            "method: Locality Constraints",
+            "task: Joint Source-Target Self Attention"
+        ]
+    ],
+    "Depth Growing for Neural Machine Translation": [
+        [
+            "method: Depth Growing",
+            "task: Neural Machine Translation"
+        ]
+    ],
+    "Tilde's Machine Translation Systems for WMT 2017": [
+        [
+            "method: Tilde's Machine Translation Systems",
+            "task: WMT 2017"
+        ]
+    ],
+    "KERMIT: Generative Insertion-Based Modeling for Sequences": [
+        [
+            "method:  Generative Insertion-Based Modeling",
+            "task: Sequences"
+        ]
+    ],
+    "Dense Information Flow for Neural Machine Translation": [
+        [
+            "method: Dense Information Flow",
+            "task: Neural Machine Translation"
+        ]
+    ],
+    "Generating Long Sequences with Sparse Transformers": [
+        [
+            "method: Sparse Transformers",
+            "task: Generating Long Sequences"
+        ]
+    ],
+    "AutoGAN: Neural Architecture Search for Generative Adversarial Networks": [
+        [
+            "method:  Neural Architecture Search",
+            "task: Generative Adversarial Networks"
+        ]
+    ],
+    "Omni-Scale Feature Learning for Person Re-Identification": [
+        [
+            "method: Omni-Scale Feature Learning",
+            "task: Person Re-Identification"
+        ]
+    ],
+    "ERNIE: Enhanced Language Representation with Informative Entities": [
+        [
+            "method: Informative Entities",
+            "task:  Enhanced Language Representation"
+        ]
+    ],
+    "ERNIE 2.0: A Continual Pre-training Framework for Language Understanding": [
+        [
+            "method: Continual Pre-training Framework",
+            "task: Language Understanding"
+        ]
+    ],
+    "Dynamically Fused Graph Network for Multi-hop Reasoning": [
+        [
+            "method: Dynamically Fused Graph Network",
+            "task: Multi-hop Reasoning"
+        ]
+    ],
+    "Self-Critical Reasoning for Robust Visual Question Answering": [
+        [
+            "method: Self-Critical Reasoning",
+            "task: Robust Visual Question Answering"
+        ]
+    ],
+    "RelGAN: Relational Generative Adversarial Networks for Text Generation": [
+        [
+            "method:  Relational Generative Adversarial Networks",
+            "task: Text Generation"
+        ]
+    ],
+    "A Decomposable Attention Model for Natural Language Inference": [
+        [
+            "method: Decomposable Attention Model",
+            "task: Natural Language Inference"
+        ]
+    ],
+    "Pyramid Feature Attention Network for Saliency detection": [
+        [
+            "method: Pyramid Feature Attention Network",
+            "task: Saliency detection"
+        ]
+    ],
+    "Feature Denoising for Improving Adversarial Robustness": [
+        [
+            "method: Feature Denoising",
+            "task: Improving Adversarial Robustness"
+        ]
+    ],
+    "Context-Aware Representations for Knowledge Base Relation Extraction": [
+        [
+            "method: Context-Aware Representations",
+            "task: Knowledge Base Relation Extraction"
+        ]
+    ],
+    "Attention Guided Graph Convolutional Networks for Relation Extraction": [
+        [
+            "method: Attention Guided Graph Convolutional Networks",
+            "task: Relation Extraction"
+        ]
+    ],
+    "3D Semantic Segmentation with Submanifold Sparse Convolutional Networks": [
+        [
+            "method: Submanifold Sparse Convolutional Networks",
+            "task: 3D Semantic Segmentation"
+        ]
+    ],
+    "ExFuse: Enhancing Feature Fusion for Semantic Segmentation": [
+        [
+            "method:  Enhancing Feature Fusion",
+            "task: Semantic Segmentation"
+        ]
+    ],
+    "Gated-SCNN: Gated Shape CNNs for Semantic Segmentation": [
+        [
+            "method:  Gated Shape CNNs",
+            "task: Semantic Segmentation"
+        ]
+    ],
+    "GFF: Gated Fully Fusion for Semantic Segmentation": [
+        [
+            "method:  Gated Fully Fusion",
+            "task: Semantic Segmentation"
+        ]
+    ],
+    "DiCENet: Dimension-wise Convolutions for Efficient Networks": [
+        [
+            "method:  Dimension-wise Convolutions",
+            "task: Efficient Networks"
+        ]
+    ],
+    "Convolutional Recurrent Neural Networks for Music Classification": [
+        [
+            "method: Convolutional Recurrent Neural Networks",
+            "task: Music Classification"
+        ]
+    ],
+    "Human Pose Estimation with Spatial Contextual Information": [
+        [
+            "method: Spatial Contextual Information",
+            "task: Human Pose Estimation"
+        ]
+    ],
+    "Harnessing Deep Neural Networks with Logic Rules": [
+        [
+            "method: Logic Rules",
+            "task: Harnessing Deep Neural Networks"
+        ]
+    ],
+    "Sentiment Classification Using Document Embeddings Trained with Cosine Similarity": [
+        [
+            "method: Cosine Similarity",
+            "task: Document Embeddings Trained"
+        ]
+    ],
+    "Using Similarity Measures to Select Pretraining Data for NER": [
+        [
+            "method: Using Similarity Measures to Select Pretraining Data",
+            "task: NER"
+        ]
+    ],
+    "Reliability-aware Dynamic Feature Composition for Name Tagging": [
+        [
+            "method: Reliability-aware Dynamic Feature Composition",
+            "task: Name Tagging"
+        ]
+    ],
+    "Towards Improving Neural Named Entity Recognition with Gazetteers": [
+        [
+            "method: Gazetteers",
+            "task: Towards Improving Neural Named Entity Recognition"
+        ]
+    ],
+    "GRN: Gated Relation Network to Enhance Convolutional Neural Network for Named Entity Recognition": [
+        [
+            "method:  Gated Relation Network to Enhance Convolutional Neural Network",
+            "task: Named Entity Recognition"
+        ]
+    ],
+    "GCDT: A Global Context Enhanced Deep Transition Architecture for Sequence Labeling": [
+        [
+            "method: Global Context Enhanced Deep Transition Architecture",
+            "task: Sequence Labeling"
+        ]
+    ],
+    "Pooled Contextualized Embeddings for Named Entity Recognition": [
+        [
+            "method: Pooled Contextualized Embeddings",
+            "task: Named Entity Recognition"
+        ]
+    ],
+    "Character Region Awareness for Text Detection": [
+        [
+            "method: Character Region Awareness",
+            "task: Text Detection"
+        ]
+    ],
+    "Omnidirectional Scene Text Detection with Sequential-free Box Discretization": [
+        [
+            "method: Sequential-free Box Discretization",
+            "task: Omnidirectional Scene Text Detection"
+        ]
+    ],
+    "Scene Text Detection with Supervised Pyramid Context Network": [
+        [
+            "method: Supervised Pyramid Context Network",
+            "task: Scene Text Detection"
+        ]
+    ],
+    "CEDR: Contextualized Embeddings for Document Ranking": [
+        [
+            "method:  Contextualized Embeddings",
+            "task: Document Ranking"
+        ]
+    ],
+    "PointFlow: 3D Point Cloud Generation with Continuous Normalizing Flows": [
+        [
+            "method: Continuous Normalizing Flows",
+            "task:  3D Point Cloud Generation"
+        ]
+    ],
+    "GEMSEC: Graph Embedding with Self Clustering": [
+        [
+            "method: Self Clustering",
+            "task:  Graph Embedding"
+        ]
+    ],
+    "EdMot: An Edge Enhancement Approach for Motif-aware Community Detection": [
+        [
+            "method: Edge Enhancement Approach",
+            "task: Motif-aware Community Detection"
+        ]
+    ],
+    "Supervised Community Detection with Line Graph Neural Networks": [
+        [
+            "method: Line Graph Neural Networks",
+            "task: Supervised Community Detection"
+        ]
+    ],
+    "iCAN: Instance-Centric Attention Network for Human-Object Interaction Detection": [
+        [
+            "method:  Instance-Centric Attention Network",
+            "task: Human-Object Interaction Detection"
+        ]
+    ],
+    "Balanced Self-Paced Learning for Generative Adversarial Clustering Network": [
+        [
+            "method: Balanced Self-Paced Learning",
+            "task: Generative Adversarial Clustering Network"
+        ]
+    ],
+    "Higher-order Coreference Resolution with Coarse-to-fine Inference": [
+        [
+            "method: Coarse-to-fine Inference",
+            "task: Higher-order Coreference Resolution"
+        ]
+    ],
+    "HolStep: A Machine Learning Dataset for Higher-order Logic Theorem Proving": [
+        [
+            "method: Machine Learning Dataset",
+            "task: Higher-order Logic Theorem Proving"
+        ]
+    ],
+    "Generating Correctness Proofs with Neural Networks": [
+        [
+            "method: Neural Networks",
+            "task: Generating Correctness Proofs"
+        ]
+    ],
+    "Hybrid Task Cascade for Instance Segmentation": [
+        [
+            "method: Hybrid Task Cascade",
+            "task: Instance Segmentation"
+        ]
+    ],
+    "Compact Global Descriptor for Neural Networks": [
+        [
+            "method: Compact Global Descriptor",
+            "task: Neural Networks"
+        ]
+    ],
+    "Learning Data Augmentation Strategies for Object Detection": [
+        [
+            "method: Augmentation Strategies",
+            "task: Object Detection"
+        ]
+    ],
+    "EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks": [
+        [
+            "method:  Rethinking Model Scaling",
+            "task: Convolutional Neural Networks"
+        ]
+    ],
+    "Training Neural Networks with Local Error Signals": [
+        [
+            "method: Local Error Signals",
+            "task: Training Neural Networks"
+        ]
+    ],
+    "Harmonic Networks with Limited Training Samples": [
+        [
+            "method: Limited Training Samples",
+            "task: Harmonic Networks"
+        ]
+    ],
+    "Data-Driven Neuron Allocation for Scale Aggregation Networks": [
+        [
+            "method: Data-Driven Neuron Allocation",
+            "task: Scale Aggregation Networks"
+        ]
+    ],
+    "CutMix: Regularization Strategy to Train Strong Classifiers with Localizable Features": [
+        [
+            "method: Localizable Features",
+            "task:  Regularization Strategy to Train Strong Classifiers"
+        ]
+    ],
+    "MnasNet: Platform-Aware Neural Architecture Search for Mobile": [
+        [
+            "method:  Platform-Aware Neural Architecture Search",
+            "task: Mobile"
+        ]
+    ],
+    "Densely Connected Search Space for More Flexible Neural Architecture Search": [
+        [
+            "method: Densely Connected Search Space",
+            "task: More Flexible Neural Architecture Search"
+        ]
+    ],
+    "Local Relation Networks for Image Recognition": [
+        [
+            "method: Local Relation Networks",
+            "task: Image Recognition"
+        ]
+    ],
+    "ShuffleNet V2: Practical Guidelines for Efficient CNN Architecture Design": [
+        [
+            "method:  Practical Guidelines",
+            "task: Efficient CNN Architecture Design"
+        ]
+    ],
+    "Searching for MobileNetV3": [
+        [
+            "method: Searching",
+            "task: MobileNetV3"
+        ]
+    ],
+    "Very Deep Convolutional Networks for Large-Scale Image Recognition": [
+        [
+            "method: Very Deep Convolutional Networks",
+            "task: Large-Scale Image Recognition"
+        ]
+    ],
+    "Focal Visual-Text Attention for Visual Question Answering": [
+        [
+            "method: Focal Visual-Text Attention",
+            "task: Visual Question Answering"
+        ]
+    ],
+    "Structural Neural Encoders for AMR-to-text Generation": [
+        [
+            "method: Structural Neural Encoders",
+            "task: AMR-to-text Generation"
+        ]
+    ],
+    "Deep Watershed Transform for Instance Segmentation": [
+        [
+            "method: Deep Watershed Transform",
+            "task: Instance Segmentation"
+        ]
+    ],
+    "LightTrack: A Generic Framework for Online Top-Down Human Pose Tracking": [
+        [
+            "method: Generic Framework",
+            "task: Online Top-Down Human Pose Tracking"
+        ]
+    ],
+    "Learning Attraction Field Representation for Robust Line Segment Detection": [
+        [
+            "method: Learning Attraction Field Representation",
+            "task: Robust Line Segment Detection"
+        ]
+    ],
+    "Fast Graph Representation Learning with PyTorch Geometric": [
+        [
+            "method: PyTorch Geometric",
+            "task: Fast Graph Representation Learning"
+        ]
+    ],
+    "Graph Classification with 2D Convolutional Neural Networks": [
+        [
+            "method: 2D Convolutional Neural Networks",
+            "task: Graph Classification"
+        ]
+    ],
+    "GraRep: Learning Graph Representations with Global Structural Information": [
+        [
+            "method: Global Structural Information",
+            "task:  Learning Graph Representations"
+        ]
+    ],
+    "GraphNAS: Graph Neural Architecture Search with Reinforcement Learning": [
+        [
+            "method: Reinforcement Learning",
+            "task:  Graph Neural Architecture Search"
+        ]
+    ],
+    "N-GCN: Multi-scale Graph Convolution for Semi-supervised Node Classification": [
+        [
+            "method:  Multi-scale Graph Convolution",
+            "task: Semi-supervised Node Classification"
+        ]
+    ],
+    "Deep Autoencoder-like Nonnegative Matrix Factorization for Community Detection": [
+        [
+            "method: Deep Autoencoder-like Nonnegative Matrix Factorization",
+            "task: Community Detection"
+        ]
+    ],
+    "Hierarchical Graph Convolutional Networks for Semi-supervised Node Classification": [
+        [
+            "method: Hierarchical Graph Convolutional Networks",
+            "task: Semi-supervised Node Classification"
+        ]
+    ]
+}

@@ -5,23 +5,18 @@ import nltk
 from bs4 import BeautifulSoup
 from urllib import request
 
-# df = pd.read_csv('Sota_Evaluations.csv')
-# url = df['paperurl']
-# u = np.array(url)
-# _, pos_list = zip(*tag)
-# prep_index = [i for i, pos in enumerate(pos_list) if pos=='IN']
-
 title_pattern = re.compile(r'\s(for|with)\s', re.I)
 
 
 class PaperData:
-    def __init__(self, web_url):
+    def __init__(self, web_url=None):
         self.web_url = web_url
-        self.content = self.__get_pages(web_url).dl
         self.abs_list = []
         self.title_list = None
         self.abs_urls = None
         self.pdf_urls = None
+        if web_url is not None:
+            self.content = self.__get_pages(web_url).dl
 
     def __get_pages(self, web_url):
         r = request.urlopen(web_url).read()
@@ -60,28 +55,38 @@ class PaperData:
 
 
 class Analyses(PaperData):
-    def __init__(self, web_url):
+    def __init__(self, web_url=None):
         super(Analyses, self).__init__(web_url)
 
     def easy_title_process(self):
         if self.title_list is None: _ = self.get_title()
         results = {}
-        split_patern = re.compile(r'\s(to|of|using|on|in|and|a|an|the)\s')
+        split_patern = re.compile(r'\s(using|a|an|the|)\s|\:|a\s', re.I)
         for title in self.title_list:
             title_r = []
-            tokens = nltk.word_tokenize(title)
-            if 'for' in tokens:
-                title_split = title.split(' for ')
-                method = split_patern.split(title_split[0])[-1]
-                task = split_patern.split(title_split[1])[0]
-                title_r.append((method, task))
-            elif 'with' in tokens:
-                title_split = title.split(' with ')
-                task = split_patern.split(title_split[0])[-1]
-                method = split_patern.split(title_split[1])[0]
-                title_r.append((method, task))
-            if len(title_r) > 0:
-                results[title] = title_r
+            try:
+                tokens = nltk.word_tokenize(title)
+            except:
+                print(title)
+                print(type(title))
+                quit()
+            tag = nltk.pos_tag(tokens)
+            _, pos_list = zip(*tag)
+            prep_index = [i for i, pos in enumerate(pos_list) if pos == 'IN']
+            conj_index = [i for i, pos in enumerate(pos_list) if pos == 'CC']
+            if len(prep_index) < 2 and len(conj_index) == 0:
+                if 'for' in tokens:
+                    title_split = title.split(' for ')
+                    method = split_patern.split(title_split[0])[-1]
+                    task = split_patern.split(title_split[1])[0]
+                    title_r.append(('method: ' + method, 'task: ' + task))
+                elif 'with' in tokens:
+                    title_split = title.split(' with ')
+                    task = split_patern.split(title_split[0])[-1]
+                    method = split_patern.split(title_split[1])[0]
+                    title_r.append(('method: ' + method, 'task: ' + task))
+                if len(title_r) > 0:
+                    results[title] = title_r
         return results
 
     # test,using pos for extraction
@@ -118,6 +123,9 @@ class Analyses(PaperData):
                 results[title] = title_results
         return results
 
+    def edit_distance(self):
+        pass
+
     def abs_process(self):
         if len(self.abs_list) < 1: _ = self.get_abstract()
         if self.title_list is None: _ = self.get_title()
@@ -148,6 +156,7 @@ class Analyses(PaperData):
 
 if __name__ == '__main__':
     link = Analyses('https://arxiv.org/list/cs.AI/recent')
+    # print(link.easy_title_process())
     # print(link.title_process())
     # print(link.abs_process())
 
