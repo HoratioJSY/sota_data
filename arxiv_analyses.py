@@ -41,14 +41,14 @@ class PaperData:
     def get_abstract(self):
         if self.abs_urls is None: _, _ = self.get_hyperlink()
         try:
-            with open('./saved_abs.p', 'rb') as f:
+            with open('./data/saved_abs.p', 'rb') as f:
                 self.abs_list = pickle.load(f)
         except:
             for url in self.abs_urls:
                 content = self.__get_pages(url)
                 abs_ = content.find('blockquote', attrs={'abstract'}).get_text().strip()[11:]
                 self.abs_list.append(re.sub(r'\n', ' ', abs_))
-            with open('./saved_abs.p', 'wb') as f:
+            with open('./data/saved_abs.p', 'wb') as f:
                 pickle.dump(self.abs_list, f)
 
         return self.abs_list
@@ -79,51 +79,40 @@ class Analyses(PaperData):
                     title_split = title.split(' for ')
                     method = split_patern.split(title_split[0])[-1]
                     task = split_patern.split(title_split[1])[0]
-                    title_r.append(('method: ' + method, 'task: ' + task))
+                    title_r.extend(['method: ' + method, 'task: ' + task])
                 elif 'with' in tokens:
                     title_split = title.split(' with ')
                     task = split_patern.split(title_split[0])[-1]
                     method = split_patern.split(title_split[1])[0]
-                    title_r.append(('method: ' + method, 'task: ' + task))
+                    title_r.extend(['method: ' + method, 'task: ' + task])
                 if len(title_r) > 0:
                     results[title] = title_r
         return results
 
-    # test,using pos for extraction
-    def title_process(self):
-        if self.title_list is None: _ = self.get_title()
-        results = {}
-        for title in self.title_list:
-            title_results = []
-            if title_pattern.findall(title) is not None:
-                key_list = title_pattern.findall(title)
-                tokens = nltk.word_tokenize(title)
-                key_index = [index for index, value in enumerate(tokens) if value in key_list]
-                tag = nltk.pos_tag(tokens)
-                # print(tag)
+    def __levenshtein_distance(self, string_one, string_two):
+        if len(string_one) < len(string_two): return self.__levenshtein_distance(string_two, string_one)
 
-                for index in key_index:
-                    pre_words = []
-                    post_words = []
-                    for i in range(index-1, -1, -1):
-                        if tag[i][1] in ['NNP', 'JJ', 'VBD']:
-                            pre_words.append(tokens[i])
-                        else:
-                            break
-                    for j in range(index+1, len(tokens)):
-                        if tag[j][1] in ['NNP', 'JJ', 'VBD']:
-                            post_words.append(tokens[j])
-                        else:
-                            break
+        # TO DO: normalizing the score of edit distance that take no effects of ranking
+        if len(string_two) == 0: return len(string_one)
 
-                    if len(pre_words) > 0 and len(post_words) > 0:
-                        pre_words.reverse()
-                        title_results.append((' '.join(pre_words), ' '.join(post_words)))
-            if len(title_results) > 0:
-                results[title] = title_results
-        return results
+        previous_row = range(len(string_two) + 1)
+        for index_1, chr_1 in enumerate(string_one):
+            # current_raw[o] equals to chr num in string two
+            current_row = [index_1 + 1]
 
-    def edit_distance(self):
+            for index_2, chr_2 in enumerate(string_two):
+                insertions = previous_row[index_2 + 1] + 1
+                deletions = current_row[index_2] + 1
+
+                # 1 for true, 0 for false
+                substitutions = previous_row[index_2] + (chr_1 != chr_2)
+                current_row.append(min(insertions, deletions, substitutions))
+
+            # after loop, the length of current_raw must equals to len(s2)+1
+            previous_row = current_row
+        return previous_row[-1]
+
+    def title_process_ed(self):
         pass
 
     def abs_process(self):
@@ -160,5 +149,5 @@ if __name__ == '__main__':
     # print(link.title_process())
     # print(link.abs_process())
 
-    with open('./sample.json', 'w', encoding='utf-8') as f:
+    with open('./data/sample.json', 'w', encoding='utf-8') as f:
         json.dump((link.easy_title_process(), link.title_process()), f, indent=4)
