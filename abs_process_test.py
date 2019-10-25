@@ -40,10 +40,15 @@ def abs_filter():
     total_abs = abs_reader()
     print('total abs: ', len(total_abs))
 
-    df_m = pd.read_excel('./data/Metric.xlsx')
-    df_m = df_m.dropna(axis=0)
+    # df_m = pd.read_excel('./data/Metric.xlsx')
+    # df_m = df_m.dropna(axis=0)
+    # metric_name = np.array(df_m['dbtech'])
+    # with open('./data/metric.json', 'w', encoding='utf-8') as f:
+    #     json.dump(list(metric_name), f, indent=4)
 
-    metric_name = np.array(df_m['dbtech'])
+    with open("./data/metric.json", 'r') as f:
+        metric_name = json.load(f)
+
     token_list = ' '.join(metric_name).lower().translate(str.maketrans("（）()", "    ")).split()
     key_words, _ = zip(*collections.Counter(token_list).most_common(20))
 
@@ -76,6 +81,30 @@ def levenshtein_distance(string_one, string_two):
     return previous_row[-1]
 
 
+def string_distance(string, key_list, value_list):
+    key_position = sorted(list(set([np.mean(i.span()) for key in key_list for i in re.finditer(key, string)])))
+    value_position = sorted(list(set([np.mean(i.span()) for value in value_list for i in re.finditer(value, string)])))
+    # assert len(key_position) == len(key_list)
+    # assert len(value_position) == len(value_list)
+    # print(key_position)
+    # print(value_position)
+    if len(key_list) >= len(value_list):
+        index = [np.argmin(np.abs([i - j for j in key_position])) for i in value_position]
+        # print(value_position)
+        # print(key_position)
+        # print([[i - j for j in key_position] for i in value_position])
+        # print([np.abs([i - j for j in key_position]) for i in value_position])
+        # quit()
+        # assert len(index) == len(value_list)
+        matched = zip([key_list[i] for i in index], value_list)
+        # same key indexed by different value
+    else:
+        index = [np.argmin(np.abs([i - j for j in value_position])) for i in key_position]
+        # assert len(index) == len(key_list)
+        matched = zip(key_list, [value_list[i] for i in index])
+    return matched
+
+
 def abs_extraction():
     filted_abs, metric_name = abs_filter()
     num_pattern = re.compile(r'\d+%|\d+\.\d+%|\d+\.\d+')
@@ -100,9 +129,10 @@ def abs_extraction():
             # print(key_list)
             # print(num_list)
 
-            if len(key_list) > len(num_list): key_list = key_list[: len(num_list)]
+            matched = string_distance(informative_line[0], key_list, num_list)
+
             if len(key_list) > 0:
-                result['results: '] = [key_list, num_list]
+                result['results: '] = [key_list, num_list, list(matched)]
 
             extraction_results[url] = result
     return extraction_results
