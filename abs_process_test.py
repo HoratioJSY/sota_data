@@ -50,9 +50,9 @@ def abs_filter():
         metric_name = json.load(f)
 
     token_list = ' '.join(metric_name).lower().translate(str.maketrans("（）()", "    ")).split()
-    key_words, _ = zip(*collections.Counter(token_list).most_common(20))
+    # token_list, _ = zip(*collections.Counter(token_list).most_common(20))
 
-    filter_pattern = re.compile(r'\s(%s)\s' % ('|'.join(key_words)), re.I)
+    filter_pattern = re.compile(r'\s(%s)\s' % ('|'.join(token_list)), re.I)
     filted_abs = [(url_, abs_) for url_, abs_ in total_abs.items() if filter_pattern.search(abs_) is not None]
     print('filted: ', len(filted_abs))
     return filted_abs, metric_name
@@ -90,19 +90,15 @@ def string_distance(string, key_list, value_list):
     # print(value_position)
     if len(key_list) >= len(value_list):
         index = [np.argmin(np.abs([i - j for j in key_position])) for i in value_position]
-        # print(value_position)
-        # print(key_position)
-        # print([[i - j for j in key_position] for i in value_position])
-        # print([np.abs([i - j for j in key_position]) for i in value_position])
-        # quit()
         # assert len(index) == len(value_list)
-        matched = zip([key_list[i] for i in index], value_list)
+        # matched = zip([key_list[i] for i in index], value_list)
         # same key indexed by different value
+        return [key_list[i] for i in index], value_list
     else:
         index = [np.argmin(np.abs([i - j for j in value_position])) for i in key_position]
         # assert len(index) == len(key_list)
-        matched = zip(key_list, [value_list[i] for i in index])
-    return matched
+        # matched = zip(key_list, [value_list[i] for i in index])
+        return key_list, [value_list[i] for i in index]
 
 
 def abs_extraction():
@@ -110,6 +106,10 @@ def abs_extraction():
     num_pattern = re.compile(r'\d+%|\d+\.\d+%|\d+\.\d+')
     # ' '.join(metric_name).split()
     key_pattern = re.compile("\s(%s)(\s|\,|\.)" % ('|'.join(metric_name)), re.I)
+
+    with open('./data/dataset_tag.json', 'r') as f:
+        dataset_name = json.load(f)
+    data_pattern = re.compile('(%s)' % "|".join(dataset_name), re.I)
     valued_abs = [abs_ for abs_ in filted_abs if num_pattern.search(abs_[-1]) is not None]
 
     extraction_results = {}
@@ -126,13 +126,34 @@ def abs_extraction():
 
             key_list = [i.group()[1:-1] for i in key_pattern.finditer(informative_line[0])]
             num_list = [i.group() for i in num_pattern.finditer(informative_line[0])]
-            # print(key_list)
-            # print(num_list)
+            valid_key_list, valid_value_list = string_distance(informative_line[0], key_list, num_list)
 
-            matched = string_distance(informative_line[0], key_list, num_list)
+            if data_pattern.search(informative_line[0]) is not None:
+                dataset_list = [i.group() for i in data_pattern.finditer(informative_line[0])]
+                _, valid_d_list = string_distance(informative_line[0], valid_value_list, dataset_list)
 
-            if len(key_list) > 0:
-                result['results: '] = [key_list, num_list, list(matched)]
+                try:
+                    assert len(valid_d_list) == len(valid_value_list)
+                    matched = zip(valid_key_list, valid_value_list, valid_d_list)
+                except:
+                    matched = zip(valid_key_list, valid_value_list)
+            else:
+                matched = zip(valid_key_list, valid_value_list)
+
+            # matched = zip(valid_key_list, valid_value_list)
+            result['results: '] = [key_list, num_list, list(matched)]
+
+            if re.search(r'\s(by|than|over)\s', informative_line[0], re.I) is not None:
+                str_list = informative_line[0].translate(str.maketrans(',\/:;-=+*#()~', '             ')).split()
+                by_index = [index for index, string in enumerate(str_list)
+                            if string == 'by'
+                            or string == 'than'
+                            or string == 'over']
+                num_index = [str_list.index(value) for value in valid_value_list]
+                min_d = [min([abs(i-j) for j in num_index]) for i in by_index]
+                if True in (np.array(min_d) < 5): result['Need Skip?'] = 'Yes'
+            else:
+                result['Need Skip?'] = 'No'
 
             extraction_results[url] = result
     return extraction_results
