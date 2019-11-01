@@ -1,0 +1,1666 @@
+{
+    "http://arxiv.org/abs/1612.08083v3": {
+        "Table 2: Results on the Google Billion Word test set. The GCNN outperforms the LSTMs with the same output approximation.": [
+            [
+                "Model: Sigmoid-RNN-2048 (Ji et al., 2015)",
+                "Test PPL: 68.3",
+                "Hardware: 1 CPU"
+            ],
+            [
+                "Model: Interpolated KN 5-Gram (Chelba et al., 2013)",
+                "Test PPL: 67.6",
+                "Hardware: 100 CPUs"
+            ],
+            [
+                "Model: Sparse Non-Negative Matrix LM (Shazeer et al., 2014)",
+                "Test PPL: 52.9",
+                "Hardware: -"
+            ],
+            [
+                "Model: RNN-1024 + MaxEnt 9 Gram Features (Chelba et al., 2013)",
+                "Test PPL: 51.3",
+                "Hardware: 24 GPUs"
+            ],
+            [
+                "Model: LSTM-2048-512 (Jozefowicz et al., 2016)",
+                "Test PPL: 43.7",
+                "Hardware: 32 GPUs"
+            ],
+            [
+                "Model: 2-layer LSTM-8192-1024 (Jozefowicz et al., 2016)",
+                "Test PPL: 30.6",
+                "Hardware: 32 GPUs"
+            ],
+            [
+                "Model: BIG GLSTM-G4 (Kuchaiev & Ginsburg, 2017)",
+                "Test PPL: 23.311footnotemark: 1",
+                "Hardware: 8 GPUs"
+            ],
+            [
+                "Model: LSTM-2048 (Grave et al., 2016a)",
+                "Test PPL: 43.9",
+                "Hardware: 1 GPU"
+            ],
+            [
+                "Model: 2-layer LSTM-2048 (Grave et al., 2016a)",
+                "Test PPL: 39.8",
+                "Hardware: 1 GPU"
+            ],
+            [
+                "Model: GCNN-13",
+                "Test PPL: 38.1",
+                "Hardware: 1 GPU"
+            ],
+            [
+                "Model: GCNN-14 Bottleneck",
+                "Test PPL: 31.9",
+                "Hardware: 8 GPUs"
+            ]
+        ],
+        "Table 3: Results for single models on the WikiText-103 dataset.": [
+            [
+                "Model: LSTM-1024 (Grave et al., 2016b)",
+                "Test PPL: 48.7",
+                "Hardware: 1 GPU"
+            ],
+            [
+                "Model: GCNN-8",
+                "Test PPL: 44.9",
+                "Hardware: 1 GPU"
+            ],
+            [
+                "Model: GCNN-14",
+                "Test PPL: 37.2",
+                "Hardware: 4 GPUs"
+            ]
+        ]
+    },
+    "http://arxiv.org/abs/1508.05326v1": {
+        "Table 4:   2-class test accuracy for two simple baseline systems included in the Excitement Open Platform, as well as SICK and RTE results for a model making use of more sophisticated lexical resources.": [
+            [
+                "System: Edit Distance Based",
+                "SNLI: 71.9",
+                "SICK: 65.4",
+                "RTE-3: 61.9"
+            ],
+            [
+                "System: Classifier Based",
+                "SNLI: 72.2",
+                "SICK: 71.4",
+                "RTE-3: 61.5"
+            ],
+            [
+                "System: + Lexical Resources",
+                "SNLI: 75.0",
+                "SICK: 78.8",
+                "RTE-3: 63.6"
+            ],
+            [
+                "Best-System: + Lexical Resources",
+                "Best-SNLI: 75.0",
+                "Best-SICK: 78.8",
+                "Best-RTE-3: 63.6"
+            ]
+        ]
+    },
+    "http://arxiv.org/abs/1802.05365v2": {
+        "Table 3: Development set performance for SQuAD, SNLI and SRL when including ELMo at different locations in the supervised model.": [
+            [
+                "Task: SQuAD",
+                "Input Only: 85.1",
+                "Input & Output: 85.6",
+                "Output Only: 84.8"
+            ],
+            [
+                "Task: SNLI",
+                "Input Only: 88.9",
+                "Input & Output: 89.5",
+                "Output Only: 88.7"
+            ],
+            [
+                "Task: SRL",
+                "Input Only: 84.7",
+                "Input & Output: 84.3",
+                "Output Only: 80.9"
+            ],
+            [
+                "Best-Task: SQuAD",
+                "Best-Input Only: 85.1",
+                "Best-Input & Output: 85.6",
+                "Best-Output Only: 84.8"
+            ],
+            [
+                "Best-Task: SNLI",
+                "Best-Input Only: 88.9",
+                "Best-Input & Output: 89.5",
+                "Best-Output Only: 88.7"
+            ],
+            [
+                "Best-Task: SRL",
+                "Best-Input Only: 84.7",
+                "Best-Input & Output: 84.3",
+                "Best-Output Only: 80.9"
+            ]
+        ],
+        "Table 8: SNLI test set accuracy.444A comprehensive comparison can be found at https://nlp.stanford.edu/projects/snli/Single model results occupy the portion, with ensemble results at the bottom.": [
+            [
+                "Model: Feature based (Bowman et al., 2015)",
+                "Acc.: 78.2"
+            ],
+            [
+                "Model: DIIN (Gong et al., 2018)",
+                "Acc.: 88.0"
+            ],
+            [
+                "Model: BCN+Char+CoVe (McCann et al., 2017)",
+                "Acc.: 88.1"
+            ],
+            [
+                "Model: ESIM (Chen et al., 2017)",
+                "Acc.: 88.0"
+            ],
+            [
+                "Model: ESIM+TreeLSTM (Chen et al., 2017)",
+                "Acc.: 88.6"
+            ],
+            [
+                "Model: ESIM+ELMo",
+                "Acc.: 88.7 ± 0.17"
+            ],
+            [
+                "Model: DIIN ensemble (Gong et al., 2018)",
+                "Acc.: 88.9"
+            ],
+            [
+                "Model: ESIM+ELMo ensemble",
+                "Acc.: 89.3"
+            ],
+            [
+                "Best-Model: ESIM+ELMo",
+                "Best-Acc.: 88.7 ± 0.17"
+            ],
+            [
+                "Best-Model: ESIM+ELMo ensemble",
+                "Best-Acc.: 89.3"
+            ]
+        ],
+        "Table 9: Test set results for SQuAD, showing both Exact Match (EM) and F1. The top half of the table contains single model results with ensembles at the bottom. References provided where available.": [
+            [
+                "Model: BiDAF (Seo et al., 2017)",
+                "EM: 68.0",
+                "F1: 77.3"
+            ],
+            [
+                "Model: BiDAF + Self Attention",
+                "EM: 72.1",
+                "F1: 81.1"
+            ],
+            [
+                "Model: DCN+",
+                "EM: 75.1",
+                "F1: 83.1"
+            ],
+            [
+                "Model: Reg-RaSoR",
+                "EM: 75.8",
+                "F1: 83.3"
+            ],
+            [
+                "Model: FusionNet",
+                "EM: 76.0",
+                "F1: 83.9"
+            ],
+            [
+                "Model: r-net (Wang et al., 2017)",
+                "EM: 76.5",
+                "F1: 84.3"
+            ],
+            [
+                "Model: SAN (Liu et al., 2017)",
+                "EM: 76.8",
+                "F1: 84.4"
+            ],
+            [
+                "Model: BiDAF + Self Attention + ELMo",
+                "EM: 78.6",
+                "F1: 85.8"
+            ],
+            [
+                "Model: DCN+ Ensemble",
+                "EM: 78.9",
+                "F1: 86.0"
+            ],
+            [
+                "Model: FusionNet Ensemble",
+                "EM: 79.0",
+                "F1: 86.0"
+            ],
+            [
+                "Model: Interactive AoA Reader+ Ensemble",
+                "EM: 79.1",
+                "F1: 86.5"
+            ],
+            [
+                "Model: BiDAF + Self Attention + ELMo Ensemble",
+                "EM: 81.0",
+                "F1: 87.4"
+            ],
+            [
+                "Best-Model: BiDAF + Self Attention + ELMo",
+                "Best-EM: 78.6",
+                "Best-F1: 85.8"
+            ],
+            [
+                "Best-Model: BiDAF + Self Attention + ELMo Ensemble",
+                "Best-EM: 81.0",
+                "Best-F1: 87.4"
+            ]
+        ]
+    },
+    "http://arxiv.org/abs/1511.06361v6": {},
+    "http://arxiv.org/abs/1808.04444v2": {},
+    "https://arxiv.org/abs/1901.02860v3": {
+        "Table 1: Comparison with state-of-the-art results on WikiText-103. ⋄ indicates contemporary work.": [
+            [
+                "Model: Grave et al. (2016b) – LSTM",
+                "#Params: -",
+                "Validation PPL: -",
+                "Test PPL: 48.7"
+            ],
+            [
+                "Model: Bai et al. (2018) – TCN",
+                "#Params: -",
+                "Validation PPL: -",
+                "Test PPL: 45.2"
+            ],
+            [
+                "Model: Dauphin et al. (2016) – GCNN-8",
+                "#Params: -",
+                "Validation PPL: -",
+                "Test PPL: 44.9"
+            ],
+            [
+                "Model: Grave et al. (2016b) – LSTM + Neural cache",
+                "#Params: -",
+                "Validation PPL: -",
+                "Test PPL: 40.8"
+            ],
+            [
+                "Model: Dauphin et al. (2016) – GCNN-14",
+                "#Params: -",
+                "Validation PPL: -",
+                "Test PPL: 37.2"
+            ],
+            [
+                "Model: Merity et al. (2018) – 4-layer QRNN",
+                "#Params: 151M",
+                "Validation PPL: 32.0",
+                "Test PPL: 33.0"
+            ],
+            [
+                "Model: Rae et al. (2018) – LSTM + Hebbian + Cache",
+                "#Params: -",
+                "Validation PPL: 29.7",
+                "Test PPL: 29.9"
+            ],
+            [
+                "Model: Ours – Transformer-XL Standard",
+                "#Params: 151M",
+                "Validation PPL: 23.1",
+                "Test PPL: 24.0"
+            ],
+            [
+                "Model: Baevski & Auli (2018) – adaptive input⋄",
+                "#Params: 247M",
+                "Validation PPL: 19.8",
+                "Test PPL: 20.5"
+            ],
+            [
+                "Model: Ours – Transformer-XL Large",
+                "#Params: 257M",
+                "Validation PPL: 17.7",
+                "Test PPL: 18.3"
+            ],
+            [
+                "Best-Model: Ours – Transformer-XL Standard",
+                "Best-#Params: 151M",
+                "Best-Validation PPL: 23.1",
+                "Best-Test PPL: 24.0"
+            ],
+            [
+                "Best-Model: Ours – Transformer-XL Large",
+                "Best-#Params: 257M",
+                "Best-Validation PPL: 17.7",
+                "Best-Test PPL: 18.3"
+            ]
+        ],
+        "Table 2: Comparison with state-of-the-art results on enwiki8.": [
+            [
+                "Model: Ha et al. (2016) – LN HyperNetworks",
+                "#Params: 27M",
+                "Test bpc: 1.34"
+            ],
+            [
+                "Model: Chung et al. (2016) – LN HM-LSTM",
+                "#Params: 35M",
+                "Test bpc: 1.32"
+            ],
+            [
+                "Model: Zilly et al. (2016) – Recurrent highway networks",
+                "#Params: 46M",
+                "Test bpc: 1.27"
+            ],
+            [
+                "Model: Mujika et al. (2017) – Large FS-LSTM-4",
+                "#Params: 47M",
+                "Test bpc: 1.25"
+            ],
+            [
+                "Model: Krause et al. (2016) – Large mLSTM",
+                "#Params: 46M",
+                "Test bpc: 1.24"
+            ],
+            [
+                "Model: Knol (2017) – cmix v13",
+                "#Params: -",
+                "Test bpc: 1.23"
+            ],
+            [
+                "Model: Al-Rfou et al. (2018) – 12-layer Transformer",
+                "#Params: 44M",
+                "Test bpc: 1.11"
+            ],
+            [
+                "Model: Ours – 12-layer Transformer-XL",
+                "#Params: 41M",
+                "Test bpc: 1.06"
+            ],
+            [
+                "Model: Al-Rfou et al. (2018) – 64-layer Transformer",
+                "#Params: 235M",
+                "Test bpc: 1.06"
+            ],
+            [
+                "Model: Ours – 18-layer Transformer-XL",
+                "#Params: 88M",
+                "Test bpc: 1.03"
+            ],
+            [
+                "Model: Ours – 24-layer Transformer-XL",
+                "#Params: 277M",
+                "Test bpc: 0.99"
+            ],
+            [
+                "Best-Model: Ours – 12-layer Transformer-XL",
+                "Best-#Params: 41M",
+                "Best-Test bpc: 1.06"
+            ],
+            [
+                "Best-Model: Ours – 24-layer Transformer-XL",
+                "Best-#Params: 277M",
+                "Best-Test bpc: 0.99"
+            ]
+        ],
+        "Table 3: Comparison with state-of-the-art results on text8.": [
+            [
+                "Model: Cooijmans et al. (2016) – BN-LSTM",
+                "#Params: -",
+                "Test bpc: 1.36"
+            ],
+            [
+                "Model: Chung et al. (2016) – LN HM-LSTM",
+                "#Params: 35M",
+                "Test bpc: 1.29"
+            ],
+            [
+                "Model: Zilly et al. (2016) – Recurrent highway networks",
+                "#Params: 45M",
+                "Test bpc: 1.27"
+            ],
+            [
+                "Model: Krause et al. (2016) – Large mLSTM",
+                "#Params: 45M",
+                "Test bpc: 1.27"
+            ],
+            [
+                "Model: Al-Rfou et al. (2018) – 12-layer Transformer",
+                "#Params: 44M",
+                "Test bpc: 1.18"
+            ],
+            [
+                "Model: Al-Rfou et al. (2018) – 64-layer Transformer",
+                "#Params: 235M",
+                "Test bpc: 1.13"
+            ],
+            [
+                "Model: Ours – 24-layer Transformer-XL",
+                "#Params: 277M",
+                "Test bpc: 1.08"
+            ],
+            [
+                "Best-Model: Ours – 24-layer Transformer-XL",
+                "Best-#Params: 277M",
+                "Best-Test bpc: 1.08"
+            ]
+        ],
+        "Table 4: Comparison with state-of-the-art results on One Billion Word. ⋄ indicates contemporary work.": [
+            [
+                "Model: Shazeer et al. (2014) – Sparse Non-Negative",
+                "#Params: 33B",
+                "PPL: 52.9"
+            ],
+            [
+                "Model: Chelba et al. (2013) – RNN-1024 + 9 Gram",
+                "#Params: 20B",
+                "PPL: 51.3"
+            ],
+            [
+                "Model: Jozefowicz et al. (2016) – LSTM-2048-512",
+                "#Params: 0.83B",
+                "PPL: 43.7"
+            ],
+            [
+                "Model: Kuchaiev & Ginsburg (2017) – BIG G-LSTM-2",
+                "#Params: -",
+                "PPL: 36.0"
+            ],
+            [
+                "Model: Dauphin et al. (2016) – GCNN-14 bottleneck",
+                "#Params: -",
+                "PPL: 31.9"
+            ],
+            [
+                "Model: Jozefowicz et al. (2016) – LSTM-8192-1024",
+                "#Params: 1.8B",
+                "PPL: 30.6"
+            ],
+            [
+                "Model: Jozefowicz et al. (2016) – LSTM-8192-1024 + CNN Input",
+                "#Params: 1.04B",
+                "PPL: 30.0"
+            ],
+            [
+                "Model: Shazeer et al. (2017) – Low-Budget MoE",
+                "#Params: ∼5B",
+                "PPL: 34.1"
+            ],
+            [
+                "Model: Shazeer et al. (2017) – High-Budget MoE",
+                "#Params: ∼5B",
+                "PPL: 28.0"
+            ],
+            [
+                "Model: Shazeer et al. (2018) – Mesh Tensorflow",
+                "#Params: 4.9B",
+                "PPL: 24.0"
+            ],
+            [
+                "Model: Baevski & Auli (2018) – Adaptive Input Large⋄",
+                "#Params: 0.46B",
+                "PPL: 24.1"
+            ],
+            [
+                "Model: Baevski & Auli (2018) – Adaptive Input Very Large⋄",
+                "#Params: 1.0B",
+                "PPL: 23.7"
+            ],
+            [
+                "Model: Ours – Transformer-XL Base",
+                "#Params: 0.46B",
+                "PPL: 23.5"
+            ],
+            [
+                "Model: Ours – Transformer-XL Large",
+                "#Params: 0.8B",
+                "PPL: 21.8"
+            ],
+            [
+                "Best-Model: Ours – Transformer-XL Large",
+                "Best-#Params: 0.8B",
+                "Best-PPL: 21.8"
+            ]
+        ],
+        "Table 5: Comparison with state-of-the-art results on Penn Treebank. † indicates using two-step finetuning.": [
+            [
+                "Model: Inan et al. (2016) – Tied Variational LSTM + augmented loss",
+                "#Params: 24M",
+                "Dev PPL: 75.7",
+                "Test PPL: 73.2"
+            ],
+            [
+                "Model: Zilly et al. (2016) – Variational RHN",
+                "#Params: 23M",
+                "Dev PPL: 67.9",
+                "Test PPL: 65.4"
+            ],
+            [
+                "Model: Zoph & Le (2016) – NAS Cell",
+                "#Params: 25M",
+                "Dev PPL: -",
+                "Test PPL: 64.0"
+            ],
+            [
+                "Model: Merity et al. (2017) – AWD-LSTM",
+                "#Params: 24M",
+                "Dev PPL: 60.7",
+                "Test PPL: 58.8"
+            ],
+            [
+                "Model: Pham et al. (2018) – Efficient NAS",
+                "#Params: 24M",
+                "Dev PPL: 60.8",
+                "Test PPL: 58.6"
+            ],
+            [
+                "Model: Liu et al. (2018) – Differentiable NAS",
+                "#Params: 23M",
+                "Dev PPL: 58.3",
+                "Test PPL: 56.1"
+            ],
+            [
+                "Model: Yang et al. (2017) – AWD-LSTM-MoS",
+                "#Params: 22M",
+                "Dev PPL: 58.08",
+                "Test PPL: 55.97"
+            ],
+            [
+                "Model: Melis et al. (2018) – 2-layer skip-LSTM + dropout tuning",
+                "#Params: 24M",
+                "Dev PPL: 57.1",
+                "Test PPL: 55.3"
+            ],
+            [
+                "Model: Ours – Transformer-XL",
+                "#Params: 24M",
+                "Dev PPL: 56.72",
+                "Test PPL: 54.52"
+            ],
+            [
+                "Model: Merity et al. (2017) – AWD-LSTM + finetuning†",
+                "#Params: 24M",
+                "Dev PPL: 60.0",
+                "Test PPL: 57.3"
+            ],
+            [
+                "Model: Yang et al. (2017) – AWD-LSTM-MoS + finetuning†",
+                "#Params: 22M",
+                "Dev PPL: 56.54",
+                "Test PPL: 54.44"
+            ],
+            [
+                "Best-Model: Ours – Transformer-XL",
+                "Best-#Params: 24M",
+                "Best-Dev PPL: 56.72",
+                "Best-Test PPL: 54.52"
+            ],
+            [
+                "Best-Model: Yang et al. (2017) – AWD-LSTM-MoS + finetuning†",
+                "Best-#Params: 22M",
+                "Best-Dev PPL: 56.54",
+                "Best-Test PPL: 54.44"
+            ]
+        ]
+    },
+    "http://arxiv.org/abs/1609.09106v4": {},
+    "http://arxiv.org/abs/1805.09208v2": {},
+    "http://arxiv.org/abs/1808.07383v1": {},
+    "http://arxiv.org/abs/1803.08240v1": {},
+    "http://arxiv.org/abs/1809.02279v1": {
+        "Table 1: Results of the models on the SNLI dataset.": [
+            [
+                "Model: 300D LSTM [Bowman et al.2016]",
+                "Acc. (%): 80.6",
+                "# Params: 3.0M"
+            ],
+            [
+                "Model: 300D TBCNN [Mou et al.2016]",
+                "Acc. (%): 82.1",
+                "# Params: 3.5M"
+            ],
+            [
+                "Model: 300D SPINN-PI [Bowman et al.2016]",
+                "Acc. (%): 83.2",
+                "# Params: 3.7M"
+            ],
+            [
+                "Model: 600D BiLSTM with intra-attention [Liu et al.2016]",
+                "Acc. (%): 84.2",
+                "# Params: 2.8M"
+            ],
+            [
+                "Model: 4096D BiLSTM with max-pooling [Conneau et al.2017]",
+                "Acc. (%): 84.5",
+                "# Params: 40M"
+            ],
+            [
+                "Model: 300D BiLSTM with gated pooling [Chen et al.2017]",
+                "Acc. (%): 85.5",
+                "# Params: 12M"
+            ],
+            [
+                "Model: 300D Gumbel Tree-LSTM [Choi, Yoo, and Lee2018]",
+                "Acc. (%): 85.6",
+                "# Params: 2.9M"
+            ],
+            [
+                "Model: 600D Shortcut stacked BiLSTM [Nie and Bansal2017]",
+                "Acc. (%): 86.1",
+                "# Params: 140M"
+            ],
+            [
+                "Model: 300D Reinforced self-attention network [Shen et al.2018]",
+                "Acc. (%): 86.3",
+                "# Params: 3.1M"
+            ],
+            [
+                "Model: 600D BiLSTM with generalized pooling [Chen, Ling, and Zhu2018]",
+                "Acc. (%): 86.6",
+                "# Params: 65M"
+            ],
+            [
+                "Model: 300D 2-layer CAS-LSTM (ours)",
+                "Acc. (%): 86.4",
+                "# Params: 2.9M"
+            ],
+            [
+                "Model: 300D 2-layer Bi-CAS-LSTM (ours)",
+                "Acc. (%): 86.8",
+                "# Params: 6.8M"
+            ],
+            [
+                "Model: 300D 3-layer CAS-LSTM (ours)",
+                "Acc. (%): 86.4",
+                "# Params: 4.8M"
+            ],
+            [
+                "Model: 300D 3-layer Bi-CAS-LSTM (ours)",
+                "Acc. (%): 87.0",
+                "# Params: 8.6M"
+            ],
+            [
+                "Best-Model: 300D 3-layer Bi-CAS-LSTM (ours)",
+                "Best-Acc. (%): 87.0",
+                "Best-# Params: 8.6M"
+            ]
+        ],
+        "Table 2: Results of the models on the MultiNLI dataset. ‘In Acc.’ and ‘Cross Acc.’ represent accuracy calculated from the matched and mismatched test set respectively. ∗: SNLI dataset is used as additional training data. ∗∗: computed from hyperparameters provided by the authors.": [
+            [
+                "Model: CBOW [Williams, Nangia, and Bowman2018]",
+                "In Acc. (%): 64.8",
+                "Cross Acc. (%): 64.5",
+                "# Params: -"
+            ],
+            [
+                "Model: BiLSTM [Williams, Nangia, and Bowman2018]",
+                "In Acc. (%): 66.9",
+                "Cross Acc. (%): 66.9",
+                "# Params: -"
+            ],
+            [
+                "Model: Shortcut stacked BiLSTM [Nie and Bansal2017]∗",
+                "In Acc. (%): 74.6",
+                "Cross Acc. (%): 73.6",
+                "# Params: 140M"
+            ],
+            [
+                "Model: BiLSTM with gated pooling [Chen et al.2017]",
+                "In Acc. (%): 73.5",
+                "Cross Acc. (%): 73.6",
+                "# Params: 12M"
+            ],
+            [
+                "Model: BiLSTM with generalized pooling [Chen, Ling, and Zhu2018]",
+                "In Acc. (%): 73.8",
+                "Cross Acc. (%): 74.0",
+                "# Params: 18M∗∗"
+            ],
+            [
+                "Model: 2-layer CAS-LSTM (ours)",
+                "In Acc. (%): 74.0",
+                "Cross Acc. (%): 73.3",
+                "# Params: 2.9M"
+            ],
+            [
+                "Model: 2-layer Bi-CAS-LSTM (ours)",
+                "In Acc. (%): 74.6",
+                "Cross Acc. (%): 73.7",
+                "# Params: 6.8M"
+            ],
+            [
+                "Model: 3-layer CAS-LSTM (ours)",
+                "In Acc. (%): 73.8",
+                "Cross Acc. (%): 73.1",
+                "# Params: 4.8M"
+            ],
+            [
+                "Model: 3-layer Bi-CAS-LSTM (ours)",
+                "In Acc. (%): 74.2",
+                "Cross Acc. (%): 73.4",
+                "# Params: 8.6M"
+            ],
+            [
+                "Best-Model: Shortcut stacked BiLSTM [Nie and Bansal2017]∗",
+                "Best-In Acc. (%): 74.6",
+                "Best-Cross Acc. (%): 73.6",
+                "Best-# Params: 140M"
+            ],
+            [
+                "Best-Model: BiLSTM with generalized pooling [Chen, Ling, and Zhu2018]",
+                "Best-In Acc. (%): 73.8",
+                "Best-Cross Acc. (%): 74.0",
+                "Best-# Params: 18M∗∗"
+            ],
+            [
+                "Best-Model: 2-layer Bi-CAS-LSTM (ours)",
+                "Best-In Acc. (%): 74.6",
+                "Best-Cross Acc. (%): 73.7",
+                "Best-# Params: 6.8M"
+            ]
+        ],
+        "Table 3: Results of the models on the Quora Question Pairs dataset.": [
+            [
+                "Model: CNN [Wang, Hamza, and Florian2017]",
+                "Acc. (%): 79.6"
+            ],
+            [
+                "Model: LSTM [Wang, Hamza, and Florian2017]",
+                "Acc. (%): 82.6"
+            ],
+            [
+                "Model: Multi-Perspective LSTM [Wang, Hamza, and Florian2017]",
+                "Acc. (%): 83.2"
+            ],
+            [
+                "Model: LSTM + ElBiS [Choi, Kim, and Lee2018]",
+                "Acc. (%): 87.3"
+            ],
+            [
+                "Model: REGMAPR (BASE+REG) [Brahma2018]",
+                "Acc. (%): 88.0"
+            ],
+            [
+                "Model: CAS-LSTM (ours)",
+                "Acc. (%): 88.4"
+            ],
+            [
+                "Model: Bi-CAS-LSTM (ours)",
+                "Acc. (%): 88.6"
+            ],
+            [
+                "Best-Model: Bi-CAS-LSTM (ours)",
+                "Best-Acc. (%): 88.6"
+            ]
+        ],
+        "Table 4: Results of the models on the SST dataset. ∗: models pretrained on large external corpora are used.": [
+            [
+                "Model: Recursive Neural Tensor Network [Socher et al.2013]",
+                "SST-2 Acc. (%): 85.4",
+                "SST-5 Acc. (%): 45.7"
+            ],
+            [
+                "Model: Constituency Tree-LSTM [Tai, Socher, and Manning2015]",
+                "SST-2 Acc. (%): 88.0",
+                "SST-5 Acc. (%): 51.0"
+            ],
+            [
+                "Model: Neural Semantic Encoder [Munkhdalai and Yu2017]",
+                "SST-2 Acc. (%): 89.7",
+                "SST-5 Acc. (%): 52.8"
+            ],
+            [
+                "Model: Constituency Tree-LSTM with recurrent dropout [Looks et al.2017]",
+                "SST-2 Acc. (%): 89.4",
+                "SST-5 Acc. (%): 52.3"
+            ],
+            [
+                "Model: byte mLSTM [Radford, Jozefowicz, and Sutskever2017]∗",
+                "SST-2 Acc. (%): 91.8",
+                "SST-5 Acc. (%): 52.9"
+            ],
+            [
+                "Model: Gumbel Tree-LSTM [Choi, Yoo, and Lee2018]",
+                "SST-2 Acc. (%): 90.7",
+                "SST-5 Acc. (%): 53.7"
+            ],
+            [
+                "Model: BCN + Char + ELMo [Peters et al.2018]∗",
+                "SST-2 Acc. (%): -",
+                "SST-5 Acc. (%): 54.7"
+            ],
+            [
+                "Model: CAS-LSTM (ours)",
+                "SST-2 Acc. (%): 91.1",
+                "SST-5 Acc. (%): 53.0"
+            ],
+            [
+                "Model: Bi-CAS-LSTM (ours)",
+                "SST-2 Acc. (%): 91.3",
+                "SST-5 Acc. (%): 53.6"
+            ],
+            [
+                "Best-Model: Gumbel Tree-LSTM [Choi, Yoo, and Lee2018]",
+                "Best-SST-2 Acc. (%): 90.7",
+                "Best-SST-5 Acc. (%): 53.7"
+            ],
+            [
+                "Best-Model: Bi-CAS-LSTM (ours)",
+                "Best-SST-2 Acc. (%): 91.3",
+                "Best-SST-5 Acc. (%): 53.6"
+            ]
+        ],
+        "Table 5: Results of model variants.": [
+            [
+                "Model: Bi-CAS-LSTM (baseline)",
+                "Acc. (%): 87.0",
+                "Δ: "
+            ],
+            [
+                "Model: (i) Plain stacked BiLSTM",
+                "Acc. (%): 86.0",
+                "Δ: -1.0"
+            ],
+            [
+                "Model: (ii) Diverse λ",
+                "Acc. (%): ",
+                "Δ: "
+            ],
+            [
+                "Model: (a) λi=0.25",
+                "Acc. (%): 86.8",
+                "Δ: -0.2"
+            ],
+            [
+                "Model: (b) λi=0.75",
+                "Acc. (%): 86.8",
+                "Δ: -0.2"
+            ],
+            [
+                "Model: (c) Trainable λ",
+                "Acc. (%): 86.9",
+                "Δ: -0.1"
+            ],
+            [
+                "Model: (iii) No λ",
+                "Acc. (%): 86.6",
+                "Δ: -0.4"
+            ],
+            [
+                "Model: (iv) Integration through peepholes",
+                "Acc. (%): 86.5",
+                "Δ: -0.5"
+            ]
+        ]
+    },
+    "http://arxiv.org/abs/1801.00102v2": {},
+    "http://arxiv.org/abs/1709.04696v3": {
+        "Table 1: Experimental results of different methods on SNLI. |θ|: number of parameters (excluding word embedding part). T(s)/epoch: average time (second) per epoch.  Train Accu(%) and Test Accu(%): accuracy on training and test set.": [
+            [
+                "Model Name: Unlexicalized features [Bowman et al.2015]",
+                "|θ|: ",
+                "T(s)/epoch: ",
+                "Train Accu(%): 49.4",
+                "Test Accu(%): 50.4"
+            ],
+            [
+                "Model Name: + Unigram and bigram features [Bowman et al.2015]",
+                "|θ|: ",
+                "T(s)/epoch: ",
+                "Train Accu(%): 99.7",
+                "Test Accu(%): 78.2"
+            ],
+            [
+                "Model Name: 100D LSTM encoders [Bowman et al.2015]",
+                "|θ|: 0.2m",
+                "T(s)/epoch: ",
+                "Train Accu(%): 84.8",
+                "Test Accu(%): 77.6"
+            ],
+            [
+                "Model Name: 300D LSTM encoders [Bowman et al.2016]",
+                "|θ|: 3.0m",
+                "T(s)/epoch: ",
+                "Train Accu(%): 83.9",
+                "Test Accu(%): 80.6"
+            ],
+            [
+                "Model Name: 1024D GRU encoders [Vendrov et al.2016]",
+                "|θ|: 15m",
+                "T(s)/epoch: ",
+                "Train Accu(%): 98.8",
+                "Test Accu(%): 81.4"
+            ],
+            [
+                "Model Name: 300D Tree-based CNN encoders [Mou et al.2016]",
+                "|θ|: 3.5m",
+                "T(s)/epoch: ",
+                "Train Accu(%): 83.3",
+                "Test Accu(%): 82.1"
+            ],
+            [
+                "Model Name: 300D SPINN-PI encoders [Bowman et al.2016]",
+                "|θ|: 3.7m",
+                "T(s)/epoch: ",
+                "Train Accu(%): 89.2",
+                "Test Accu(%): 83.2"
+            ],
+            [
+                "Model Name: 600D Bi-LSTM encoders [Liu et al.2016]",
+                "|θ|: 2.0m",
+                "T(s)/epoch: ",
+                "Train Accu(%): 86.4",
+                "Test Accu(%): 83.3"
+            ],
+            [
+                "Model Name: 300D NTI-SLSTM-LSTM encoders [Munkhdalai and Yu2017b]",
+                "|θ|: 4.0m",
+                "T(s)/epoch: ",
+                "Train Accu(%): 82.5",
+                "Test Accu(%): 83.4"
+            ],
+            [
+                "Model Name: 600D Bi-LSTM encoders+intra-attention [Liu et al.2016]",
+                "|θ|: 2.8m",
+                "T(s)/epoch: ",
+                "Train Accu(%): 84.5",
+                "Test Accu(%): 84.2"
+            ],
+            [
+                "Model Name: 300D NSE encoders [Munkhdalai and Yu2017a]",
+                "|θ|: 3.0m",
+                "T(s)/epoch: ",
+                "Train Accu(%): 86.2",
+                "Test Accu(%): 84.6"
+            ],
+            [
+                "Model Name: Word Embedding with additive attention",
+                "|θ|: 0.45m",
+                "T(s)/epoch: 216",
+                "Train Accu(%): 82.39",
+                "Test Accu(%): 79.81"
+            ],
+            [
+                "Model Name: Word Embedding with multi-dimensional attention",
+                "|θ|: 0.54m",
+                "T(s)/epoch: 261",
+                "Train Accu(%): 86.22",
+                "Test Accu(%): 83.12"
+            ],
+            [
+                "Model Name: 600D Bi-LSTM encoders with multi-dimensional attention",
+                "|θ|: 2.88m",
+                "T(s)/epoch: 2080",
+                "Train Accu(%): 90.39",
+                "Test Accu(%): 84.53"
+            ],
+            [
+                "Model Name: Two self-attention with multi-dimensional attention",
+                "|θ|: 2.35m",
+                "T(s)/epoch: 592",
+                "Train Accu(%): 90.18",
+                "Test Accu(%): 84.66"
+            ],
+            [
+                "Model Name: Directional self-attention network (DiSAN)",
+                "|θ|: 2.35m",
+                "T(s)/epoch: 587",
+                "Train Accu(%): 91.08",
+                "Test Accu(%): 85.57"
+            ],
+            [
+                "Best-Model Name: Directional self-attention network (DiSAN)",
+                "Best-|θ|: 2.35m",
+                "Best-T(s)/epoch: 587",
+                "Best-Train Accu(%): 91.08",
+                "Best-Test Accu(%): 85.57"
+            ]
+        ],
+        "Table 4: Experimental results of different methods on SICK sentence relatedness.": [
+            [
+                "Method: Meaning Factory [Bjerva et al.2014]",
+                "Pearson’s r: 0.8268",
+                "Spearman’s ρ: 0.7721",
+                "MSE: 0.3224"
+            ],
+            [
+                "Method: ECNU [Zhao, Zhu, and Lan2014]",
+                "Pearson’s r: 0.8414",
+                "Spearman’s ρ: -",
+                "MSE: -"
+            ],
+            [
+                "Method: DT-RNN [Socher et al.2014]",
+                "Pearson’s r: 0.7923",
+                "Spearman’s ρ: 0.7319",
+                "MSE: 0.3822"
+            ],
+            [
+                "Method: SDT-RNN [Socher et al.2014]",
+                "Pearson’s r: 0.7900",
+                "Spearman’s ρ: 0.7304",
+                "MSE: 0.3848"
+            ],
+            [
+                "Method: LSTM [Tai, Socher, and Manning2015]",
+                "Pearson’s r: 0.8528",
+                "Spearman’s ρ: 0.7911",
+                "MSE: 0.2831"
+            ],
+            [
+                "Method: Bidirectional LSTM [Tai, Socher, and Manning2015]",
+                "Pearson’s r: 0.8567",
+                "Spearman’s ρ: 0.7966",
+                "MSE: 0.2736"
+            ],
+            [
+                "Method: Skip-Thought [Kiros et al.2015]",
+                "Pearson’s r: 0.8655",
+                "Spearman’s ρ: 0.7995",
+                "MSE: 0.2561"
+            ],
+            [
+                "Method: Constituency Tree-LSTM [Tai, Socher, and Manning2015]",
+                "Pearson’s r: 0.8582",
+                "Spearman’s ρ: 0.7966",
+                "MSE: 0.2734"
+            ],
+            [
+                "Method: Dependency Tree-LSTM [Tai, Socher, and Manning2015]",
+                "Pearson’s r: 0.8676",
+                "Spearman’s ρ: 0.8083",
+                "MSE: 0.2532"
+            ],
+            [
+                "Method: DiSAN",
+                "Pearson’s r: 0.8704",
+                "Spearman’s ρ: 0.8164",
+                "MSE: 0.2861"
+            ],
+            [
+                "Best-Method: Dependency Tree-LSTM [Tai, Socher, and Manning2015]",
+                "Best-Pearson’s r: 0.8676",
+                "Best-Spearman’s ρ: 0.8083",
+                "Best-MSE: 0.2532"
+            ],
+            [
+                "Best-Method: DiSAN",
+                "Best-Pearson’s r: 0.8704",
+                "Best-Spearman’s ρ: 0.8164",
+                "Best-MSE: 0.2861"
+            ]
+        ],
+        "Table 5: Experimental results of different methods on TREC question-type classification dataset.": [
+            [
+                "Method: cBoW [Zhao, Lu, and Poupart2015]",
+                "Test Accu: 87.3"
+            ],
+            [
+                "Method: RNN [Zhao, Lu, and Poupart2015]",
+                "Test Accu: 90.2"
+            ],
+            [
+                "Method: CNN [Kim2014]",
+                "Test Accu: 93.6"
+            ],
+            [
+                "Method: AdaSent [Zhao, Lu, and Poupart2015]",
+                "Test Accu: 92.4"
+            ],
+            [
+                "Method: Skip-Thought [Kiros et al.2015]",
+                "Test Accu: 92.2"
+            ],
+            [
+                "Method: DiSAN",
+                "Test Accu: 94.4"
+            ],
+            [
+                "Best-Method: DiSAN",
+                "Best-Test Accu: 94.4"
+            ]
+        ],
+        "Table 6: Experimental results of prediction accuracy of different methods on MultiNLI.": [
+            [
+                "Method: cBoW",
+                "Matched: 0.65200",
+                "Mismatched: 0.64759"
+            ],
+            [
+                "Method: Bi-LSTM",
+                "Matched: 0.67507",
+                "Mismatched: 0.67248"
+            ],
+            [
+                "Method: DiSAN",
+                "Matched: 0.70977",
+                "Mismatched: 0.71402"
+            ],
+            [
+                "Best-Method: DiSAN",
+                "Best-Matched: 0.70977",
+                "Best-Mismatched: 0.71402"
+            ]
+        ]
+    },
+    "http://arxiv.org/abs/1607.04492v2": {
+        "Table 2: Test set performance on answer sentence selection.": [
+            [
+                "Model: Classifier with features \\shortciteyih13",
+                "MAP: 0.5993",
+                "MRR: 0.6068"
+            ],
+            [
+                "Model: Paragraph Vector \\shortcitele2014",
+                "MAP: 0.5110",
+                "MRR: 0.5160"
+            ],
+            [
+                "Model: Bigram-CNN \\shortciteyu2014",
+                "MAP: 0.6190",
+                "MRR: 0.6281"
+            ],
+            [
+                "Model: 3-layer LSTM \\shortcitemiao2016",
+                "MAP: 0.6552",
+                "MRR: 0.6747"
+            ],
+            [
+                "Model: 3-layer LSTM attention \\shortcitemiao2016",
+                "MAP: 0.6639",
+                "MRR: 0.6828"
+            ],
+            [
+                "Model: NASM \\shortcitemiao2016",
+                "MAP: 0.6705",
+                "MRR: 0.6914"
+            ],
+            [
+                "Model: NTI (Ours)",
+                "MAP: 0.6742",
+                "MRR: 0.6884"
+            ],
+            [
+                "Best-Model: NASM \\shortcitemiao2016",
+                "Best-MAP: 0.6705",
+                "Best-MRR: 0.6914"
+            ],
+            [
+                "Best-Model: NTI (Ours)",
+                "Best-MAP: 0.6742",
+                "Best-MRR: 0.6884"
+            ]
+        ]
+    },
+    "http://arxiv.org/abs/1707.02786v4": {},
+    "http://arxiv.org/abs/1603.06021v3": {},
+    "http://arxiv.org/abs/1601.06733v7": {},
+    "http://arxiv.org/abs/1512.08849v2": {
+        "Table 1: Experiment results in terms of accuracy. d is the dimension of the hidden states. |θ|W+M is the total number of parameters and |θ|M is the number of parameters excluding the word embeddings. Note that the five models in the last section were implemented by us while the other results were taken directly from previous papers. Note also that for the five models in the last section, we do not update word embeddings so |θ|W+M is the same as |θ|M. The three columns on the right are the accuracies of the trained models on the training data, the development data and the test data, respectively.": [
+            [
+                "Model: LSTM [\\newcitebowman:emnlp15]",
+                "d: 100",
+                "|θ|W+M: 10M",
+                "|θ|M: 221K",
+                "Train: 84.4",
+                "Dev: -",
+                "Test: 77.6"
+            ],
+            [
+                "Model: Classifier [\\newcitebowman:emnlp15]",
+                "d: -",
+                "|θ|W+M: -",
+                "|θ|M: -",
+                "Train: 99.7",
+                "Dev: -",
+                "Test: 78.2"
+            ],
+            [
+                "Model: LSTM shared [\\newciterocktaschel:iclr16]",
+                "d: 159",
+                "|θ|W+M: 3.9M",
+                "|θ|M: 252K",
+                "Train: 84.4",
+                "Dev: 83.0",
+                "Test: 81.4"
+            ],
+            [
+                "Model: Word-by-word attention [\\newciterocktaschel:iclr16]",
+                "d: 100",
+                "|θ|W+M: 3.9M",
+                "|θ|M: 252K",
+                "Train: 85.3",
+                "Dev: 83.7",
+                "Test: 83.5"
+            ],
+            [
+                "Model: Word-by-word attention (our implementation)",
+                "d: 150",
+                "|θ|W+M: 340K",
+                "|θ|M: 340K",
+                "Train: 85.5",
+                "Dev: 83.3",
+                "Test: 82.6"
+            ],
+            [
+                "Model: mLSTM",
+                "d: 150",
+                "|θ|W+M: 544K",
+                "|θ|M: 544K",
+                "Train: 91.0",
+                "Dev: 86.2",
+                "Test: 85.7"
+            ],
+            [
+                "Model: mLSTM with bi-LSTM sentence modeling",
+                "d: 150",
+                "|θ|W+M: 1.4M",
+                "|θ|M: 1.4M",
+                "Train: 91.3",
+                "Dev: 86.6",
+                "Test: 86.0"
+            ],
+            [
+                "Model: mLSTM",
+                "d: 300",
+                "|θ|W+M: 1.9M",
+                "|θ|M: 1.9M",
+                "Train: 92.0",
+                "Dev: 86.9",
+                "Test: 86.1"
+            ],
+            [
+                "Model: mLSTM with word embedding",
+                "d: 300",
+                "|θ|W+M: 1.3M",
+                "|θ|M: 1.3M",
+                "Train: 88.6",
+                "Dev: 85.4",
+                "Test: 85.3"
+            ],
+            [
+                "Best-Model: mLSTM",
+                "Best-d: 300",
+                "Best-|θ|W+M: 1.9M",
+                "Best-|θ|M: 1.9M",
+                "Best-Train: 92.0",
+                "Best-Dev: 86.9",
+                "Best-Test: 86.1"
+            ]
+        ]
+    },
+    "http://arxiv.org/abs/1607.04315v3": {
+        "Table 2: Experiment results on answer sentence selection.": [
+            [
+                "Model: Classifier with features yih13",
+                "MAP: 0.5993",
+                "MRR: 0.6068"
+            ],
+            [
+                "Model: Paragraph Vector le2014",
+                "MAP: 0.5110",
+                "MRR: 0.5160"
+            ],
+            [
+                "Model: Bigram-CNN yu2014",
+                "MAP: 0.6190",
+                "MRR: 0.6281"
+            ],
+            [
+                "Model: 3-layer LSTM miao2016",
+                "MAP: 0.6552",
+                "MRR: 0.6747"
+            ],
+            [
+                "Model: 3-layer LSTM attention miao2016",
+                "MAP: 0.6639",
+                "MRR: 0.6828"
+            ],
+            [
+                "Model: NASM miao2016",
+                "MAP: 0.6705",
+                "MRR: 0.6914"
+            ],
+            [
+                "Model: MMA-NSE attention",
+                "MAP: 0.6811",
+                "MRR: 0.6993"
+            ],
+            [
+                "Best-Model: MMA-NSE attention",
+                "Best-MAP: 0.6811",
+                "Best-MRR: 0.6993"
+            ]
+        ]
+    },
+    "http://arxiv.org/abs/1801.10296v2": {
+        "Table 1: Experimental results for different methods on SNLI. |θ|: the number of parameters (excluding word embedding part). T(s)/epoch: average training time (second) per epoch. Inference T(s): average inference time (second) for all dev data on SNLI with a batch size of 100.": [
+            [
+                "Model: 300D LSTM encoders [Bowman et al.2016]",
+                "|θ|: 3.0m",
+                "T(s)/epoch: ",
+                "Inference T(s): ",
+                "Train Accuracy: 83.9",
+                "Test Accuracy: 80.6"
+            ],
+            [
+                "Model: 300D SPINN-PI encoders [Bowman et al.2016]",
+                "|θ|: 3.7m",
+                "T(s)/epoch: ",
+                "Inference T(s): ",
+                "Train Accuracy: 89.2",
+                "Test Accuracy: 83.2"
+            ],
+            [
+                "Model: 600D Bi-LSTM encoders [Liu et al.2016]",
+                "|θ|: 2.0m",
+                "T(s)/epoch: ",
+                "Inference T(s): ",
+                "Train Accuracy: 86.4",
+                "Test Accuracy: 83.3"
+            ],
+            [
+                "Model: 600D Bi-LSTM +intra-attention [Liu et al.2016]",
+                "|θ|: 2.8m",
+                "T(s)/epoch: ",
+                "Inference T(s): ",
+                "Train Accuracy: 84.5",
+                "Test Accuracy: 84.2"
+            ],
+            [
+                "Model: 300D NSE encoders [Munkhdalai and Yu2017]",
+                "|θ|: 3.0m",
+                "T(s)/epoch: ",
+                "Inference T(s): ",
+                "Train Accuracy: 86.2",
+                "Test Accuracy: 84.6"
+            ],
+            [
+                "Model: 600D Deep Gated Attn. [Chen et al.2017]",
+                "|θ|: 11.6m",
+                "T(s)/epoch: ",
+                "Inference T(s): ",
+                "Train Accuracy: 90.5",
+                "Test Accuracy: 85.5"
+            ],
+            [
+                "Model: 600D Gumbel TreeLSTM encoders [Choi et al.2017b]",
+                "|θ|: 10m",
+                "T(s)/epoch: ",
+                "Inference T(s): ",
+                "Train Accuracy: 93.1",
+                "Test Accuracy: 86.0"
+            ],
+            [
+                "Model: 600D Residual stacked encoders [Nie and Bansal2017]",
+                "|θ|: 29m",
+                "T(s)/epoch: ",
+                "Inference T(s): ",
+                "Train Accuracy: 91.0",
+                "Test Accuracy: 86.0"
+            ],
+            [
+                "Model: Bi-LSTM [Graves et al.2013]",
+                "|θ|: 2.9m",
+                "T(s)/epoch: 2080",
+                "Inference T(s): 9.2",
+                "Train Accuracy: 90.4",
+                "Test Accuracy: 85.0"
+            ],
+            [
+                "Model: Bi-GRU [Chung et al.2014]",
+                "|θ|: 2.5m",
+                "T(s)/epoch: 1728",
+                "Inference T(s): 9.3",
+                "Train Accuracy: 91.9",
+                "Test Accuracy: 84.9"
+            ],
+            [
+                "Model: Multi-window CNN [Kim2014]",
+                "|θ|: 1.4m",
+                "T(s)/epoch: 284",
+                "Inference T(s): 2.4",
+                "Train Accuracy: 89.3",
+                "Test Accuracy: 83.2"
+            ],
+            [
+                "Model: Hierarchical CNN [Gehring et al.2017]",
+                "|θ|: 3.4m",
+                "T(s)/epoch: 343",
+                "Inference T(s): 2.9",
+                "Train Accuracy: 91.3",
+                "Test Accuracy: 83.9"
+            ],
+            [
+                "Model: Multi-head [Vaswani et al.2017]",
+                "|θ|: 2.0m",
+                "T(s)/epoch: 345",
+                "Inference T(s): 3.0",
+                "Train Accuracy: 89.6",
+                "Test Accuracy: 84.2"
+            ],
+            [
+                "Model: DiSAN [Shen et al.2017a]",
+                "|θ|: 2.4m",
+                "T(s)/epoch: 587",
+                "Inference T(s): 7.0",
+                "Train Accuracy: 91.1",
+                "Test Accuracy: 85.6"
+            ],
+            [
+                "Model: 300D ReSAN",
+                "|θ|: 3.1m",
+                "T(s)/epoch: 622",
+                "Inference T(s): 5.5",
+                "Train Accuracy: 92.6",
+                "Test Accuracy: 86.3"
+            ],
+            [
+                "Best-Model: 300D ReSAN",
+                "Best-|θ|: 3.1m",
+                "Best-T(s)/epoch: 622",
+                "Best-Inference T(s): 5.5",
+                "Best-Train Accuracy: 92.6",
+                "Best-Test Accuracy: 86.3"
+            ]
+        ],
+        "Table 3:  Experimental results for different methods on SICK semantic relatedness dataset. The reported accuracies are the mean of five runs (standard deviations in parentheses). Cons. and Dep. represent Constituency and Dependency, respectively. a[Bjerva et al.2014], b[Zhao et al.2014], c[Socher et al.2014], d[Tai et al.2015]": [
+            [
+                "Model: Meaning Factorya",
+                "Pearson’s r: .8268",
+                "Spearman’s ρ: .7721",
+                "MSE: .3224"
+            ],
+            [
+                "Model: ECNUb",
+                "Pearson’s r: .8414",
+                "Spearman’s ρ: /",
+                "MSE: /"
+            ],
+            [
+                "Model: DT-RNNc",
+                "Pearson’s r: .7923 (.0070)",
+                "Spearman’s ρ: .7319 (.0071)",
+                "MSE: .3822 (.0137)"
+            ],
+            [
+                "Model: SDT-RNNc",
+                "Pearson’s r: .7900 (.0042)",
+                "Spearman’s ρ: .7304 (.0042)",
+                "MSE: .3848 (.0042)"
+            ],
+            [
+                "Model: Cons. Tree-LSTMd",
+                "Pearson’s r: .8582 (.0038)",
+                "Spearman’s ρ: .7966 (.0053)",
+                "MSE: .2734 (.0108)"
+            ],
+            [
+                "Model: Dep. Tree-LSTMd",
+                "Pearson’s r: .8676 (.0030)",
+                "Spearman’s ρ: .8083 (.0042)",
+                "MSE: .2532 (.0052)"
+            ],
+            [
+                "Model: Bi-LSTM",
+                "Pearson’s r: .8473 (.0013)",
+                "Spearman’s ρ: .7913 (.0019)",
+                "MSE: .3276 (.0087)"
+            ],
+            [
+                "Model: Bi-GRU",
+                "Pearson’s r: .8572 (.0022)",
+                "Spearman’s ρ: .8026 (.0014)",
+                "MSE: .3079 (.0069)"
+            ],
+            [
+                "Model: Multi-window CNN",
+                "Pearson’s r: .8374 (.0021)",
+                "Spearman’s ρ: .7793 (.0028)",
+                "MSE: .3395 (.0086)"
+            ],
+            [
+                "Model: Hierarchical CNN",
+                "Pearson’s r: .8436 (.0014)",
+                "Spearman’s ρ: .7874 (.0022)",
+                "MSE: .3162 (.0058)"
+            ],
+            [
+                "Model: Multi-head",
+                "Pearson’s r: .8521 (.0013)",
+                "Spearman’s ρ: .7942 (.0050)",
+                "MSE: .3258 (.0149)"
+            ],
+            [
+                "Model: DiSAN",
+                "Pearson’s r: .8695 (.0012)",
+                "Spearman’s ρ: .8139 (.0012)",
+                "MSE: .2879 (.0036)"
+            ],
+            [
+                "Model: ReSAN",
+                "Pearson’s r: .8720 (.0014)",
+                "Spearman’s ρ: .8163 (.0018)",
+                "MSE: .2623 (.0053)"
+            ],
+            [
+                "Best-Model: Dep. Tree-LSTMd",
+                "Best-Pearson’s r: .8676 (.0030)",
+                "Best-Spearman’s ρ: .8083 (.0042)",
+                "Best-MSE: .2532 (.0052)"
+            ],
+            [
+                "Best-Model: ReSAN",
+                "Best-Pearson’s r: .8720 (.0014)",
+                "Best-Spearman’s ρ: .8163 (.0018)",
+                "Best-MSE: .2623 (.0053)"
+            ]
+        ]
+    },
+    "http://arxiv.org/abs/1708.02312v2": {},
+    "http://arxiv.org/abs/1512.08422v3": {},
+    "http://arxiv.org/abs/1603.08182v3": {
+        "Table 2: Performance of geometric registration algorithms between fused fragments of synthetic scans.": [
+            [
+                "Method: Drost et al. [10]",
+                "Recall (%): 5.3",
+                "Precision (%): 1.6"
+            ],
+            [
+                "Method: Mellado et al. [24]",
+                "Recall (%): 17.8",
+                "Precision (%): 10.4"
+            ],
+            [
+                "Method: Rusu et al. [28]",
+                "Recall (%): 44.9",
+                "Precision (%): 14.0"
+            ],
+            [
+                "Method: Choi et al. [5]",
+                "Recall (%): 59.2",
+                "Precision (%): 19.6"
+            ],
+            [
+                "Method: Zhou et al. [44]",
+                "Recall (%): 51.1",
+                "Precision (%): 23.2"
+            ],
+            [
+                "Method: Rusu et al. [28] + RANSAC",
+                "Recall (%): 46.1",
+                "Precision (%): 19.1"
+            ],
+            [
+                "Method: Johnson et al. [19] + RANSAC",
+                "Recall (%): 52.0",
+                "Precision (%): 21.7"
+            ],
+            [
+                "Method: Ours + RANSAC",
+                "Recall (%): 65.1",
+                "Precision (%): 25.2"
+            ],
+            [
+                "Best-Method: Ours + RANSAC",
+                "Best-Recall (%): 65.1",
+                "Best-Precision (%): 25.2"
+            ]
+        ],
+        "Table 3:  Performance of geometric registration algorithms between fused fragments of real-world scans.": [
+            [
+                "Method: Rusu et al. [28] + RANSAC",
+                "Recall (%): 44.2",
+                "Precision (%): 30.7"
+            ],
+            [
+                "Method: Johnson et al. [19] + RANSAC",
+                "Recall (%): 51.8",
+                "Precision (%): 31.6"
+            ],
+            [
+                "Method: Ours + RANSAC",
+                "Recall (%): 60.1",
+                "Precision (%): 36.0"
+            ],
+            [
+                "Best-Method: Ours + RANSAC",
+                "Best-Recall (%): 60.1",
+                "Best-Precision (%): 36.0"
+            ]
+        ],
+        "Table 4:  Performance of geometric registration algorithms for model-fitting. Numbers are reported in terms of average % correct rotation and translation predictions.": [
+            [
+                "Method: Baseline [43]",
+                "Rotation (%): 49.0",
+                "Translation (%): 67.6"
+            ],
+            [
+                "Method: Johnson et al. [19] + RANSAC",
+                "Rotation (%): 45.5",
+                "Translation (%): 65.9"
+            ],
+            [
+                "Method: Rusu et al. [28] + RANSAC",
+                "Rotation (%): 43.5",
+                "Translation (%): 65.6"
+            ],
+            [
+                "Method: Ours (no pretrain) + RANSAC",
+                "Rotation (%): 53.8",
+                "Translation (%): 69.1"
+            ],
+            [
+                "Method: Ours + RANSAC",
+                "Rotation (%): 61.0",
+                "Translation (%): 71.7"
+            ],
+            [
+                "Best-Method: Ours + RANSAC",
+                "Best-Rotation (%): 61.0",
+                "Best-Translation (%): 71.7"
+            ]
+        ]
+    },
+    "http://arxiv.org/abs/1612.04904v1": {},
+    "http://arxiv.org/abs/1705.02364v5": {},
+    "http://arxiv.org/abs/1709.04348v2": {}
+}
