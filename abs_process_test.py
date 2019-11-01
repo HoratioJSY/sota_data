@@ -46,7 +46,7 @@ def abs_filter():
     # with open('./data/metric.json', 'w', encoding='utf-8') as f:
     #     json.dump(list(metric_name), f, indent=4)
 
-    with open("./data/metric.json", 'r') as f:
+    with open("./data/metric_tag.json", 'r') as f:
         metric_name = json.load(f)
 
     token_list = ' '.join(metric_name).lower().translate(str.maketrans("（）()", "    ")).split()
@@ -54,7 +54,7 @@ def abs_filter():
 
     filter_pattern = re.compile(r'\s(%s)\s' % ('|'.join(token_list)), re.I)
     filted_abs = [(url_, abs_) for url_, abs_ in total_abs.items() if filter_pattern.search(abs_) is not None]
-    print('filted: ', len(filted_abs))
+    print('filtered: ', len(filted_abs))
     return filted_abs, metric_name
 
 
@@ -82,8 +82,10 @@ def levenshtein_distance(string_one, string_two):
 
 
 def string_distance(string, key_list, value_list):
-    key_position = sorted(list(set([np.mean(i.span()) for key in key_list for i in re.finditer(key, string)])))
-    value_position = sorted(list(set([np.mean(i.span()) for value in value_list for i in re.finditer(value, string)])))
+    key_position = sorted(list(set([np.mean(i.span()) for key in key_list
+                                    for i in re.finditer(key, string)])))
+    value_position = sorted(list(set([np.mean(i.span()) for value in value_list
+                                      for i in re.finditer(value, string)])))
     # assert len(key_position) == len(key_list)
     # assert len(value_position) == len(value_list)
     # print(key_position)
@@ -101,11 +103,42 @@ def string_distance(string, key_list, value_list):
         return key_list, [value_list[i] for i in index]
 
 
+def metric_reconmand(sentence, key, metric_list):
+    one_key_pattern = re.compile("\s(%s)(\s|\,|\.\()" % key, re.I)
+    key_span = [i.span() for i in one_key_pattern.finditer(sentence)]
+
+    extend_length = 0
+    for i, one_span in enumerate(key_span):
+        if one_span[0] > extend_length:
+            l_span = one_span[0] - extend_length
+        else:
+            l_span = 0
+        if one_span[1] < len(sentence) - extend_length:
+            r_span = one_span[1] + extend_length
+        else:
+            r_span = len(sentence)
+        key_span[i] = (l_span, r_span)
+
+    reconmand_list = []
+    reconmand_score = []
+    for extend_span in key_span:
+        string = "".join(list(sentence)[extend_span[0]:extend_span[1]])
+        string = [string] * len(metric_list)
+
+        scores = list(map(levenshtein_distance, string, metric_list))
+        index_s = np.argmin(np.array(scores))
+        reconmand_list.append(metric_list[index_s])
+        reconmand_score.append(scores[index_s])
+    final_index = np.argmin(np.array(reconmand_score))
+
+    return reconmand_list[final_index], reconmand_score[final_index]
+
+
 def abs_extraction():
     filted_abs, metric_name = abs_filter()
     num_pattern = re.compile(r'\d+%|\d+\.\d+%|\d+\.\d+')
     # ' '.join(metric_name).split()
-    key_pattern = re.compile("\s(%s)(\s|\,|\.)" % ('|'.join(metric_name)), re.I)
+    key_pattern = re.compile("\s(%s)(\s|\,|\.\()" % ('|'.join(metric_name)), re.I)
 
     with open('./data/dataset_tag.json', 'r') as f:
         dataset_name = json.load(f)
@@ -115,6 +148,7 @@ def abs_extraction():
     extraction_results = {}
     for url, abs_ in valued_abs:
         result = {}
+        result['reconmand metric'] = []
         lines = re.split(r'\.\s', abs_)
 
         informative_line = [line for line in lines
@@ -127,6 +161,10 @@ def abs_extraction():
             key_list = [i.group()[1:-1] for i in key_pattern.finditer(informative_line[0])]
             num_list = [i.group() for i in num_pattern.finditer(informative_line[0])]
             valid_key_list, valid_value_list = string_distance(informative_line[0], key_list, num_list)
+
+            for valid_key in valid_key_list:
+                rec_key, rec_key_score = metric_reconmand(informative_line[0], valid_key, metric_name)
+                result['reconmand metric'].append(rec_key + " " + str(rec_key_score))
 
             if data_pattern.search(informative_line[0]) is not None:
                 dataset_list = [i.group() for i in data_pattern.finditer(informative_line[0])]
@@ -144,7 +182,8 @@ def abs_extraction():
             result['results: '] = [key_list, num_list, list(matched)]
 
             if re.search(r'\s(by|than|over)\s', informative_line[0], re.I) is not None:
-                str_list = informative_line[0].translate(str.maketrans(',\/:;-=+*#()~', '             ')).split()
+                r_tokens = ',\/:;-=+*#()~'
+                str_list = informative_line[0].translate(str.maketrans(r_tokens, ' '*len(r_tokens))).split()
                 by_index = [index for index, string in enumerate(str_list)
                             if string == 'by'
                             or string == 'than'
