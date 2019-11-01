@@ -14,13 +14,28 @@ def read_tag():
     return tag_list
 
 
+def get_counts(driver, num_pattern):
+    try:
+        _ = driver.find_element_by_class_name("original")
+        counts = 0
+    except:
+        try:
+            _ = driver.find_element_by_class_name("bold")
+            counts = 0
+        except:
+            counts = driver.find_element_by_class_name("result-count").text.replace(',', '')
+            counts = num_pattern.search(counts).group()
+            counts = int(counts)
+    return counts
+
+
 def s_scholar_scraper():
     driver = webdriver.Chrome()
     num_pattern = re.compile(r'\d+')
     base_url = 'https://www.semanticscholar.org/search?'
 
     total_counts = {}
-    for tag in tqdm(read_tag()):
+    for tag in tqdm(read_tag()[30:32]):
         one_tech = {}
         driver.get("https://www.semanticscholar.org/")
         time.sleep(2)
@@ -42,14 +57,15 @@ def s_scholar_scraper():
 
                 try:
                     driver.get(url)
-                    time.sleep(2)
-                    counts = driver.find_element_by_class_name("result-count").text.replace(',', '')
-                    counts = num_pattern.search(counts).group()
-                    one_tech[str(i)] = int(counts)
-                except BaseException as e:
-                    one_tech[str(i)] = 0
-                    print(e)
-                    continue
+                    time.sleep(1)
+                    one_tech[str(i)] = get_counts(driver, num_pattern)
+                except:
+                    time.sleep(3)
+                    try:
+                        one_tech[str(i)] = get_counts(driver, num_pattern)
+                    except:
+                        one_tech[str(i)] = 'err'
+                        continue
             total_counts[tag] = one_tech
 
             # buckets = driver.find_element_by_class_name("buckets")
