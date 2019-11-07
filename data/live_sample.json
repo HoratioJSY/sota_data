@@ -1,0 +1,34 @@
+{
+    "https://arxiv.org/abs/1911.02377": "no informative table",
+    "https://arxiv.org/abs/1911.02257": {
+        "Table 4: F1 scores on CoNLL-2002.": [
+            [
+                "Models: Gillick et al. (2015)",
+                "F1: 82.95"
+            ],
+            [
+                "Models: Lample et al. (2016)",
+                "F1: 85.75"
+            ],
+            [
+                "Models: Yang et al. (2017b)",
+                "F1: 85.77"
+            ],
+            [
+                "Models: Xin et al. (2018)",
+                "F1: 86.68 ± 0.35"
+            ],
+            [
+                "Models: Ours",
+                "F1: 87.08 ± 0.16"
+            ],
+            [
+                "Best-Models: Ours",
+                "Best-F1: 87.08 ± 0.16"
+            ]
+        ]
+    },
+    "https://arxiv.org/abs/1911.02085": "no informative table",
+    "https://arxiv.org/abs/1911.02557": "no informative table",
+    "https://arxiv.org/abs/1911.02254": "no informative table"
+}

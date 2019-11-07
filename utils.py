@@ -1,6 +1,9 @@
 import re
-import numpy as np
+import sys
 import json
+import numpy as np
+import urllib.request
+from bs4 import BeautifulSoup
 
 
 class Distance(object):
@@ -53,15 +56,142 @@ class AbsUtils(object):
     def abs_filter(total_abs):
 
         try:
-            with open("./data/metric.json", 'r') as f:
+            with open("./data/metric_tag.json", 'r') as f:
                 metric_name = json.load(f)
-        except:
-            print('failed to load metric tags')
+        except BaseException as e:
+            print('failed to load metric tags\n', e)
             quit()
 
         token_list = ' '.join(metric_name).lower().translate(str.maketrans("（）()", "    ")).split()
+        metric_name.extend(['sota', 'state of the art', 'benchmark'])
 
-        filter_pattern = re.compile(r'\s(%s)\s' % ('|'.join(token_list)), re.I)
+        filter_pattern = re.compile(r'\s(%s)\s' % ('|'.join(metric_name)), re.I)
         filted_abs = [(url_, abs_) for url_, abs_ in total_abs.items() if filter_pattern.search(abs_) is not None]
         print('filtered: ', len(filted_abs))
         return filted_abs, metric_name
+
+
+class ContentReader(object):
+
+    @staticmethod
+    def arxiv_vanity_reader(url):
+        headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) '
+                                 'AppleWebKit/537.36 (KHTML, like Gecko) '
+                                 'Chrome/78.0.3904.70 Safari/537.36'}
+
+        pattern = re.compile(r'\d+\.[\dv]+')
+        if url.find('arxiv') > -1:
+            err_num = 1
+            while True:
+                try:
+                    key_phrase = pattern.search(url)
+                    key_phrase = key_phrase.group()
+                    if key_phrase is not None:
+                        u = 'https://www.arxiv-vanity.com/papers/' + key_phrase
+                        print(u)
+                        request_ = urllib.request.Request(url=u, headers=headers)
+                        r = urllib.request.urlopen(request_, timeout=120).read()
+                        content = BeautifulSoup(r, features='html.parser')
+                        return content
+                except BaseException as e:
+                    print(e)
+                    if err_num < 5:
+                        err_num += 1
+                        continue
+                    else:
+                        break
+        return None
+
+    @staticmethod
+    def reporthook(block_num, block_size, total_size):
+        readsofar = block_num * block_size
+        if total_size > 0:
+            percent = readsofar * 1e2 / total_size
+            s = "\r%5.1f%% %*d / %d" % (
+                percent, len(str(total_size)), readsofar, total_size)
+            sys.stderr.write(s)
+            # near the end
+            if readsofar >= total_size:
+                sys.stderr.write("\n")
+        # total size is unknown
+        else:
+            sys.stderr.write("read %d\n" % (readsofar,))
+
+    @staticmethod
+    def raw_data_reader(url):
+        import tarfile
+
+        base_url = "https://arxiv.org/e-print/"
+        pattern = re.compile(r'\d+\.[\dv]+')
+        if url.find('arxiv') > -1:
+            err_num = 1
+            while True:
+                try:
+                    key_phrase = pattern.search(url)
+                    key_phrase = key_phrase.group()
+                    if key_phrase is not None:
+                        u = base_url + key_phrase
+
+                        urllib.request.urlretrieve(u, './data/papers.tar.gz', reporthook=ContentReader.reporthook)
+                        tar = tarfile.open('./data/papers.tar.gz', 'r')
+                        # print(tar.getnames())
+                        data = {}
+                        for name in tar.getnames():
+                            if re.search(r'\.tex', name, re.I) is not None:
+                                data[name] = tar.extractfile(name).read().decode('utf-8')
+                        return data
+                except BaseException as e:
+                    print(e)
+                    if err_num < 5:
+                        err_num += 1
+                        continue
+                    else:
+                        return None
+
+
+class ContentProcess(object):
+    @staticmethod
+    def regular_table_check(table):
+        # check if every row kept same num of elements
+        coloumn_num = [len(i.find_all(class_='ltx_td')) for i in table.find_all(class_='ltx_tr')]
+        coloumn_num = len(set(coloumn_num))
+        if coloumn_num == 1:
+            return True
+        else:
+            return False
+
+    @staticmethod
+    def get_informative_table(content_xml, key_name):
+        table_list = content_xml.find_all("figure", attrs={'class': 'ltx_table'})
+        table_content = {}
+        for table in table_list:
+            try:
+                table_array = []
+                bold_array = []
+                captions = table.find_all('figcaption')[-1].get_text().strip().replace('\n', ' ')
+
+                if re.search(r'\s(%s)(\s|\,|\.\()' % '|'.join(key_name), captions, re.I) is not None and \
+                                re.search(r'\s(ablation)(\s|\,|\.\()', captions, re.I) is None:
+                    table = table.find('table')
+                    if ContentProcess.regular_table_check(table):
+                        for row_index, row in enumerate(table.find_all('tr')):
+                            # table_array.append([' '.join([span.get_text().strip().replace('\n', ' ')
+                            #                               for span in element.find_all(attrs={"class":'ltx_text'})])
+                            #                     for element in row.find_all(class_='ltx_td')])
+                            table_array.append([element.get_text().strip().replace('\n', ' ')
+                                                for element in row.find_all(class_='ltx_td')])
+                            for column_index, element in enumerate(row.find_all(class_='ltx_td')):
+                                if element.find(class_="ltx_font_bold") is not None \
+                                        and row_index > 0 \
+                                        and column_index > 0:
+                                    item_one = "Best-%s: %s" % (table_array[0][0], table_array[row_index][0])
+                                    item_two = "Best-%s: %s" % (
+                                    table_array[0][column_index], table_array[row_index][column_index])
+                                    bold_array.append([item_one, item_two])
+
+                        table_content[captions] = [table_array, bold_array]
+
+            except BaseException as e:
+                print(e)
+                continue
+        return table_content

@@ -4,36 +4,47 @@ import json
 import nltk
 import numpy as np
 from bs4 import BeautifulSoup
-from urllib import request
-from .utils import Distance, AbsUtils
+import urllib.request
+from tqdm import tqdm
+from utils import Distance, AbsUtils, ContentReader, ContentProcess
 
 title_pattern = re.compile(r'\s(for|with)\s', re.I)
 
 
 class PaperData:
+    """
+    get data from arxiv daily update
+    """
     def __init__(self, web_url=None):
         self.web_url = web_url
-        self.abs_list = []
+        self.abs_list = {}
         self.title_list = None
         self.abs_urls = None
         self.pdf_urls = None
-        if web_url is not None:
-            self.content = self.__get_pages(web_url).dl
+        self.content = None
 
     def __get_pages(self, web_url):
-        r = request.urlopen(web_url).read()
+        headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) '
+                                 'AppleWebKit/537.36 (KHTML, like Gecko) '
+                                 'Chrome/78.0.3904.70 Safari/537.36'}
+        request_ = urllib.request.Request(url=web_url, headers=headers)
+        r = urllib.request.urlopen(request_, timeout=120).read()
         content = BeautifulSoup(r, features='html.parser')
         return content
 
     def get_title(self):
+        if self.content is None:
+            self.content = self.__get_pages(self.web_url).dl
         title_list = self.content.find_all("div", attrs={'class': 'list-title'})
         self.title_list = [title.get_text().strip()[7:] for title in title_list]
         return self.title_list
 
     def get_hyperlink(self):
+        if self.content is None:
+            self.content = self.__get_pages(self.web_url).dl
         abs_urls = self.content.find_all("a", attrs={'title': 'Abstract'})
         self.abs_urls = ['https://arxiv.org' + url['href'].strip() for url in abs_urls]
-        self.abs_urls.append('https://arxiv.org/abs/1902.01069')
+        # self.abs_urls.append('https://arxiv.org/abs/1902.01069')
 
         pdf_urls = self.content.find_all("a", attrs={'title': 'Download PDF'})
         self.pdf_urls = ['https://arxiv.org' + url["href"].strip() + '.pdf' for url in pdf_urls]
@@ -41,15 +52,15 @@ class PaperData:
         return self.abs_urls, self.pdf_urls
 
     def get_abstract(self):
-        if self.abs_urls is None: _, _ = self.get_hyperlink()
         try:
             with open('./data/saved_abs.p', 'rb') as f:
                 self.abs_list = pickle.load(f)
         except:
-            for url in self.abs_urls:
+            if self.abs_urls is None: _, _ = self.get_hyperlink()
+            for url in tqdm(self.abs_urls):
                 content = self.__get_pages(url)
                 abs_ = content.find('blockquote', attrs={'abstract'}).get_text().strip()[11:]
-                self.abs_list.append(re.sub(r'\n', ' ', abs_))
+                self.abs_list[url] = re.sub(r'\n', ' ', abs_)
             with open('./data/saved_abs.p', 'wb') as f:
                 pickle.dump(self.abs_list, f)
 
@@ -57,6 +68,12 @@ class PaperData:
 
 
 class Analyses(PaperData):
+    """
+    get information from title, abstract, paper content
+     - task and method from paper title
+     - metric, datasets, value from abstraction
+     - table, best methods and value from paper content
+    """
     def __init__(self, web_url=None):
         super(Analyses, self).__init__(web_url)
 
@@ -119,8 +136,7 @@ class Analyses(PaperData):
 
     def abs_extraction(self):
         if len(self.abs_list) < 1: _ = self.get_abstract()
-        if self.title_list is None: _ = self.get_title()
-        total_abs = dict(zip(self.title_list, self.abs_list))
+        total_abs = self.abs_list
         filted_abs, metric_name = AbsUtils.abs_filter(total_abs)
 
         num_pattern = re.compile(r'\d+%|\d+\.\d+%|\d+\.\d+')
@@ -178,15 +194,50 @@ class Analyses(PaperData):
                 extraction_results[url] = result
         return extraction_results
 
-    def pdf_process(self):
-        pass
+    def pdf_process(self, url):
+        # if self.abs_urls is None: _, _ = self.get_hyperlink()
+        # url = self.abs_urls
+
+        results = {}
+        for u in tqdm(url):
+            content_xml = ContentReader.arxiv_vanity_reader(u)
+            if content_xml is None:
+                continue
+            else:
+                with open("./data/table_key_tag.json", 'r') as f:
+                    key_name = json.load(f)
+                informative_table = ContentProcess.get_informative_table(content_xml, key_name)
+
+                merged_table = {}
+                for one_caption, one_table in informative_table.items():
+                    merged_ = []
+                    for row in one_table[0][1:]:
+                        merged_.append([": ".join(i) for i in zip(one_table[0][0], row)])
+                    if len(one_table[-1]) > 0:
+                        merged_.extend(one_table[-1])
+                    merged_table[one_caption] = merged_
+
+            if len(merged_table) > 0:
+                results[u] = merged_table
+            else:
+                results[u] = 'no informative table'
+        return results
+
+
+def get_sota_data(recent_url):
+    analysis = Analyses(recent_url)
+    if len(analysis.abs_list) < 1: _ = analysis.get_abstract()
+    total_abs = analysis.abs_list
+    filted_abs, metric_name = AbsUtils.abs_filter(total_abs)
+    filted_url, _ = zip(*filted_abs)
+    print('total papers in one day: %d, useful papers: %d' % (len(total_abs), len(filted_abs)))
+
+    results = analysis.pdf_process(filted_url)
+    return results
 
 
 if __name__ == '__main__':
-    link = Analyses('https://arxiv.org/list/cs.AI/recent')
-    # print(link.easy_title_process())
-    # print(link.title_process())
-    # print(link.abs_process())
+    results = get_sota_data('https://arxiv.org/list/cs.AI/recent')
 
     with open('./data/sample.json', 'w', encoding='utf-8') as f:
-        json.dump((link.easy_title_process(), link.title_process()), f, indent=4)
+        json.dump(results, f, ensure_ascii=False, indent=4)
