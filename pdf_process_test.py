@@ -10,7 +10,12 @@ import subprocess
 
 
 class ArxivReader(object):
-
+    """
+    methods for reading paper content, including:
+     - pdf reader by open source lib
+     - XML reader by arxiv vanity
+     - LaTex source code reader
+    """
     @staticmethod
     def py2pdf_reader():
         from PyPDF2 import PdfFileReader
@@ -128,26 +133,65 @@ def regular_table_check(table):
         return False
 
 
+def construct_column_tree(table):
+    column_tree = {}
+    first_column = [row.find(class_='ltx_td').get_text().replace('\n', ' ')
+                    for row_index, row in enumerate(table.find_all('tr'))
+                    if row_index > 0]
+    for i in first_column:
+        if re.search(r'^\s+', i) is not None:
+            column_tree[i.strip()] = len(re.search(r'^\s+', i).group())
+        else:
+            column_tree[i.strip()] = 0
+
+    span_num = column_tree.values()
+    if len(set(span_num)) == 1:
+        for key, value in column_tree.items():
+            column_tree[key] = 0
+    else:
+        num_index = sorted(list(set(span_num)))
+        for key, value in column_tree.items():
+            column_tree[key] = num_index.index(value)
+    return column_tree
+
+
 def get_informative_table(content_xml, key_name):
     table_list = content_xml.find_all("figure", attrs={'class':'ltx_table'})
     table_content = {}
+    plus_pattern = re.compile(r'(\s+|^)(\+|-)(.+)')
     for table in table_list:
         try:
             table_array = []
             bold_array = []
             captions = table.find_all('figcaption')[-1].get_text().strip().replace('\n', ' ')
 
-            if re.search(r'\s(%s|performance|results)(\s|\,|\.\()' % '|'.join(key_name), captions, re.I) is not None and\
+            if re.search(r'\s(%s)(\s|\,|\.\()' % '|'.join(key_name), captions, re.I) is not None and\
                 re.search(r'\s(ablation)(\s|\,|\.\()', captions, re.I) is None:
                 table = table.find('table')
                 if regular_table_check(table):
+                    column_tree = construct_column_tree(table)
                     for row_index, row in enumerate(table.find_all('tr')):
                         table_array.append([element.get_text().strip().replace('\n', ' ')
                                             for element in row.find_all(class_='ltx_td')])
-                        for element in row.find_all(class_='ltx_td'):
-                            if element.find(class_="ltx_font_bold") is not None and row_index > 0:
-                                bold_array.append(["Best-" + ": ".join(i) for i in zip(table_array[0], table_array[row_index])])
-                                break
+
+                        # process different rank of first column
+                        if plus_pattern.search(table_array[-1][0]) is not None:
+                            rank = column_tree.get(table_array[-1][0])
+                            for index in range(len(table_array)-2, -1, -1):
+                                if column_tree.get(table_array[index][0], 5) < rank:
+                                    table_array[-1][0] = table_array[index][0] + table_array[-1][0]
+                                    column_tree[table_array[-1][0]] = rank
+                                    break
+
+                        for column_index, element in enumerate(row.find_all(class_='ltx_td')):
+                            if element.find(class_="ltx_font_bold") is not None \
+                                    and row_index > 0 \
+                                    and column_index > 0:
+                                item_one = "Best-%s: %s" % (table_array[0][0], table_array[row_index][0])
+                                item_two = "Best-%s: %s" % (table_array[0][column_index], table_array[row_index][column_index])
+                                bold_array.append([item_one, item_two])
+                                # bold_array.append(["Best-" + ": ".join(i) for i in zip(table_array[0], table_array[row_index])])
+                                # break
                     table_content[captions] = [table_array, bold_array]
 
         except BaseException as e:
@@ -156,17 +200,28 @@ def get_informative_table(content_xml, key_name):
     return table_content
 
 
+def raw_content_process(content_raw):
+    table_pattern = re.compile(r'\\begin{table}.+\\end{table}')
+    for key, value in content_raw.items():
+        table_num = len(table_pattern.findall(value))
+        print(table_num)
+    pass
+
+
 def get_paper_txt():
     df = pd.read_csv('./data/Sota_Evaluations.csv')
     df = df.dropna(axis=0)
-    url = df['paperurl']
+    url = ['https://arxiv.org/abs/1906.02448']
+    url.extend(df['paperurl'])
 
     results = {}
-    for u in url[0:50]:
+    for u in url[0:5]:
         content_xml = ArxivReader.arxiv_vanity_reader(u)
         if content_xml is None:
             continue
             # content_raw = ArxivReader.raw_data_reader(u)
+            # raw_content_process(content_raw)
+            # merged_table = content_raw
         else:
             with open("./data/table_key_tag.json", 'r') as f:
                 key_name = json.load(f)
@@ -181,7 +236,10 @@ def get_paper_txt():
                     merged_.extend(one_table[-1])
                 merged_table[one_caption] = merged_
 
-        results[u] = merged_table
+        if len(merged_table) > 0:
+            results[u] = merged_table
+        else:
+            results[u] = 'no informative table'
     with open("./data/sample.json", 'w', encoding='utf-8') as f:
         json.dump(results, f, ensure_ascii=False, indent=4)
 
