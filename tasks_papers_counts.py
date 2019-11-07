@@ -15,6 +15,14 @@ def read_tag():
 
 
 def get_counts(driver, num_pattern):
+    """
+    :param driver: selenium webdriver objects
+    :param num_pattern: RE pattern to extracting num only
+    :return: paper counts in target domain
+             - return 0, if web change to fuzzy matching
+             - return 0, if web find nothing
+             - return counts, if find something in exactly mode
+    """
     try:
         _ = driver.find_element_by_class_name("original")
         counts = 0
@@ -30,6 +38,9 @@ def get_counts(driver, num_pattern):
 
 
 def s_scholar_scraper():
+    """
+    using selenium to scraping SemanticScholar data
+    """
     driver = webdriver.Chrome()
     num_pattern = re.compile(r'\d+')
     base_url = 'https://www.semanticscholar.org/search?'
