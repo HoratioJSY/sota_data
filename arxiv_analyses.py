@@ -2,10 +2,12 @@ import re
 import pickle
 import json
 import nltk
+import time
+import urllib.request
 import numpy as np
 from bs4 import BeautifulSoup
-import urllib.request
 from tqdm import tqdm
+from selenium import webdriver
 from utils import Distance, AbsUtils, ContentReader, ContentProcess
 
 title_pattern = re.compile(r'\s(for|with)\s', re.I)
@@ -22,26 +24,44 @@ class PaperData:
         self.abs_urls = None
         self.pdf_urls = None
         self.content = None
+        self.title_index = {}
+        self.date_index = {}
 
     def __get_pages(self, web_url):
-        headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) '
-                                 'AppleWebKit/537.36 (KHTML, like Gecko) '
-                                 'Chrome/78.0.3904.70 Safari/537.36'}
-        request_ = urllib.request.Request(url=web_url, headers=headers)
-        r = urllib.request.urlopen(request_, timeout=120).read()
-        content = BeautifulSoup(r, features='html.parser')
+        try:
+            headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) '
+                                     'AppleWebKit/537.36 (KHTML, like Gecko) '
+                                     'Chrome/78.0.3904.70 Safari/537.36'}
+            request_ = urllib.request.Request(url=web_url, headers=headers)
+            r = urllib.request.urlopen(request_, timeout=120).read()
+            content = BeautifulSoup(r, features='html.parser')
+        except BaseException as e:
+            print(e, '\n using selenium to get pages\' content')
+            driver = webdriver.Chrome()
+            driver.get(web_url)
+            time.sleep(8)
+            content = driver.find_element_by_xpath("//*").get_attribute("outerHTML")
+            content = BeautifulSoup(content, features='html.parser')
+            driver.close()
         return content
 
-    def get_title(self):
-        if self.content is None:
-            self.content = self.__get_pages(self.web_url).dl
-        title_list = self.content.find_all("div", attrs={'class': 'list-title'})
-        self.title_list = [title.get_text().strip()[7:] for title in title_list]
-        return self.title_list
+    def get_title(self, url_=None, title_process=False):
+        if title_process:
+            if self.content is None:
+                self.content = self.__get_pages(self.web_url)
+            title_list = self.content.find_all("div", attrs={'class': 'list-title'})
+            self.title_list = [title.get_text().strip()[7:] for title in title_list]
+            return self.title_list
+        elif url_ is not None:
+            content = self.__get_pages(url_)
+            title = content.find(class_='title').get_text().strip()[7:]
+
+            dateline = content.find(class_='dateline').get_text().strip()[1:-1]
+            return title, dateline
 
     def get_hyperlink(self):
         if self.content is None:
-            self.content = self.__get_pages(self.web_url).dl
+            self.content = self.__get_pages(self.web_url)
         abs_urls = self.content.find_all("a", attrs={'title': 'Abstract'})
         self.abs_urls = ['https://arxiv.org' + url['href'].strip() for url in abs_urls]
         # self.abs_urls.append('https://arxiv.org/abs/1902.01069')
@@ -54,15 +74,17 @@ class PaperData:
     def get_abstract(self):
         try:
             with open('./data/saved_abs.p', 'rb') as f:
-                self.abs_list = pickle.load(f)
+                self.abs_list, self.title_index, self.date_index = pickle.load(f)
         except:
             if self.abs_urls is None: _, _ = self.get_hyperlink()
             for url in tqdm(self.abs_urls):
                 content = self.__get_pages(url)
                 abs_ = content.find('blockquote', attrs={'abstract'}).get_text().strip()[11:]
                 self.abs_list[url] = re.sub(r'\n', ' ', abs_)
+                self.title_index[url] = content.find(class_='title').get_text().strip()[6:]
+                self.date_index[url] = content.find(class_='dateline').get_text().strip()[1:-1]
             with open('./data/saved_abs.p', 'wb') as f:
-                pickle.dump(self.abs_list, f)
+                pickle.dump((self.abs_list, self.title_index, self.date_index), f)
 
         return self.abs_list
 
@@ -78,7 +100,7 @@ class Analyses(PaperData):
         super(Analyses, self).__init__(web_url)
 
     def easy_title_process(self):
-        if self.title_list is None: _ = self.get_title()
+        if self.title_list is None: _ = self.get_title(title_process=True)
         results = {}
         split_patern = re.compile(r'\s(using|a|an|the|)\s|\:|a\s', re.I)
         for title in self.title_list:
@@ -220,7 +242,7 @@ class Analyses(PaperData):
             if len(merged_table) > 0:
                 results[u] = merged_table
             else:
-                results[u] = 'no informative table'
+                results[u] = {"paper's table": 'no informative table'}
         return results
 
 
@@ -228,16 +250,42 @@ def get_sota_data(recent_url):
     analysis = Analyses(recent_url)
     if len(analysis.abs_list) < 1: _ = analysis.get_abstract()
     total_abs = analysis.abs_list
-    filted_abs, metric_name = AbsUtils.abs_filter(total_abs)
-    filted_url, _ = zip(*filted_abs)
-    print('total papers in one day: %d, useful papers: %d' % (len(total_abs), len(filted_abs)))
+    filtered_abs, filtered_lines, _ = AbsUtils.abs_filter(total_abs, evidence=True)
+    filtered_url, _ = zip(*filtered_abs)
+    print('\ntotal papers: %d, useful papers: %d' % (len(total_abs), len(filtered_abs)))
 
-    results = analysis.pdf_process(filted_url)
+    results = analysis.pdf_process(filtered_url)
+
+    title_list = []
+    date_list = []
+    for u in filtered_url:
+        title = analysis.title_index.get(u)
+        date = analysis.date_index.get(u)
+
+        if title is None or date is None:
+            title, date = analysis.get_title(filtered_url)
+            title_list.append(title)
+            date_list.append(date)
+        else:
+            title_list.append(title)
+            date_list.append(date)
+
+    filtered_title = list(zip(["paper"]*len(title_list), title_list))
+    filtered_date = list(zip(["dateline"]*len(date_list), date_list))
+
+    i = 0
+    for key, value in results.items():
+        final_item = []
+        final_item.append(filtered_title[i])
+        final_item.append(filtered_date[i])
+        results[key] = dict(final_item,
+                            **{"Selected Reason": filtered_lines[i]}, **value)
+        i += 1
     return results
 
 
 if __name__ == '__main__':
-    results = get_sota_data('https://arxiv.org/list/cs.AI/recent')
+    results = get_sota_data('https://arxiv.org/list/cs.AI/pastweek?skip=0&show=50')
 
     with open('./data/sample.json', 'w', encoding='utf-8') as f:
         json.dump(results, f, ensure_ascii=False, indent=4)

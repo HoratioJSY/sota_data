@@ -53,7 +53,7 @@ class AbsUtils(object):
         pass
 
     @staticmethod
-    def abs_filter(total_abs):
+    def abs_filter(total_abs, evidence=False):
 
         try:
             with open("./data/metric_tag.json", 'r') as f:
@@ -62,13 +62,27 @@ class AbsUtils(object):
             print('failed to load metric tags\n', e)
             quit()
 
-        token_list = ' '.join(metric_name).lower().translate(str.maketrans("（）()", "    ")).split()
-        metric_name.extend(['sota', 'state of the art', 'benchmark'])
+        # token_list = ' '.join(metric_name).lower().translate(str.maketrans("（）()", "    ")).split()
+        metric_name.extend(['sota', 'state(\s|-)of(\s|-)the(\s|-)art', 'benchmark', 'experiment', 'experimental'])
 
         filter_pattern = re.compile(r'\s(%s)\s' % ('|'.join(metric_name)), re.I)
-        filted_abs = [(url_, abs_) for url_, abs_ in total_abs.items() if filter_pattern.search(abs_) is not None]
-        print('filtered: ', len(filted_abs))
-        return filted_abs, metric_name
+        filtered_abs = []
+        filtered_lines = []
+
+        # whether we should output evidence lines that filtering abstract
+        if evidence:
+            for url_, abs_ in total_abs.items():
+                lines = re.split(r'\.\s', abs_)
+                evidence_line = [line for line in lines if filter_pattern.search(line) is not None]
+                if len(evidence_line) > 0:
+                    filtered_abs.append((url_, abs_))
+                    filtered_lines.append(evidence_line)
+            assert len(filtered_abs) == len(filtered_lines)
+
+            return filtered_abs, filtered_lines, metric_name
+        else:
+            filtered_abs = [(url_, abs_) for url_, abs_ in total_abs.items() if filter_pattern.search(abs_) is not None]
+            return filtered_abs, metric_name
 
 
 class ContentReader(object):

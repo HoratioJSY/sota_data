@@ -1,6 +1,18 @@
 {
-    "https://arxiv.org/abs/1911.02377": "no informative table",
+    "https://arxiv.org/abs/1911.02377": {
+        "paper": "Searching to Exploit Memorization Effect in Learning from Corrupted Labels",
+        "dateline": "Submitted on 6 Nov 2019",
+        "Selected Reason": [
+            "Finally, extensive experiments on both synthetic data sets and benchmark data sets demonstrate that the proposed method can not only be much efficient than existing AutoML algorithms but can also achieve much better performance than the state-of-the-art approaches for learning from corrupted labels."
+        ],
+        "paper's table": "no informative table"
+    },
     "https://arxiv.org/abs/1911.02257": {
+        "paper": "Hierarchical Contextualized Representation for Named Entity Recognition",
+        "dateline": "Submitted on 6 Nov 2019",
+        "Selected Reason": [
+            "The experimental results on three benchmark NER datasets (CoNLL-2003 and Ontonotes 5.0 English datasets, CoNLL-2002 Spanish dataset) show that we establish new state-of-the-art results on these benchmarks."
+        ],
         "Table 4: F1 scores on CoNLL-2002.": [
             [
                 "Models: Gillick et al. (2015)",
@@ -28,7 +40,877 @@
             ]
         ]
     },
-    "https://arxiv.org/abs/1911.02085": "no informative table",
-    "https://arxiv.org/abs/1911.02557": "no informative table",
-    "https://arxiv.org/abs/1911.02254": "no informative table"
+    "https://arxiv.org/abs/1911.02168": {
+        "paper": "CoKE: Contextualized Knowledge Graph Embedding",
+        "dateline": "Submitted on 6 Nov 2019",
+        "Selected Reason": [
+            "It performs consistently better than, or at least equally well as current state-of-the-art in almost every case, in particular offering an absolute improvement of 19.7% in H@10 on path query answering"
+        ],
+        "paper's table": "no informative table"
+    },
+    "https://arxiv.org/abs/1911.02559": {
+        "paper": "SCL: Towards Accurate Domain Adaptive Object Detection via Gradient Detach Based Stacked Complementary Losses",
+        "dateline": "Submitted on 6 Nov 2019",
+        "Selected Reason": [
+            "We conduct comprehensive experiments on seven datasets, the results demonstrate that our method performs favorably better than the state-of-the-art methods by a large margin"
+        ],
+        "Table 2: Adaptation results between KITTI and Cityscapes. We report AP of Car on both directions, including: K→C and C→K. We re-implemented DA [4] and Weak-Strong [26] based on the same Faster RCNN framework [25].": [
+            [
+                "Method: Faster RCNN",
+                "K→C: 30.2",
+                "C→K: 53.5"
+            ],
+            [
+                "Method: DA [4]",
+                "K→C: 38.5",
+                "C→K: 64.1"
+            ],
+            [
+                "Method: DA (Our impl.) [4]",
+                "K→C: 35.6",
+                "C→K: 70.8"
+            ],
+            [
+                "Method: WS (Our impl.) [26]",
+                "K→C: 37.9",
+                "C→K: 71.0"
+            ],
+            [
+                "Method: Ours",
+                "K→C: 41.9",
+                "C→K: 72.7"
+            ],
+            [
+                "Best-Method: Ours",
+                "Best-K→C: 41.9"
+            ],
+            [
+                "Best-Method: Ours",
+                "Best-C→K: 72.7"
+            ]
+        ],
+        "Table 4: Results on adaptation from PASCAL VOC to Clipart Dataset. Average precision (%) is evaluated on target images.": [
+            [
+                "Method: Faster (Non-adapted)",
+                "aero: 35.6",
+                "bcycle: 52.5",
+                "bird: 24.3",
+                "boat: 23.0",
+                "bottle: 20.0",
+                "bus: 43.9",
+                "car: 32.8",
+                "cat: 10.7",
+                "chair: 30.6",
+                "cow: 11.7",
+                "table: 13.8",
+                "dog: 6.0",
+                "hrs: 36.8",
+                "bike: 45.9",
+                "prsn: 48.7",
+                "plnt: 41.9",
+                "sheep: 16.5",
+                "sofa: 7.3",
+                "train: 22.9",
+                "tv: 32.0",
+                "mAP: 27.8"
+            ],
+            [
+                "Method: BDC-Faster",
+                "aero: 20.2",
+                "bcycle: 46.4",
+                "bird: 20.4",
+                "boat: 19.3",
+                "bottle: 18.7",
+                "bus: 41.3",
+                "car: 26.5",
+                "cat: 6.4",
+                "chair: 33.2",
+                "cow: 11.7",
+                "table: 26.0",
+                "dog: 1.7",
+                "hrs: 36.6",
+                "bike: 41.5",
+                "prsn: 37.7",
+                "plnt: 44.5",
+                "sheep: 10.6",
+                "sofa: 20.4",
+                "train: 33.3",
+                "tv: 15.5",
+                "mAP: 25.6"
+            ],
+            [
+                "Method: DA",
+                "aero: 15.0",
+                "bcycle: 34.6",
+                "bird: 12.4",
+                "boat: 11.9",
+                "bottle: 19.8",
+                "bus: 21.1",
+                "car: 23.2",
+                "cat: 3.1",
+                "chair: 22.1",
+                "cow: 26.3",
+                "table: 10.6",
+                "dog: 10.0",
+                "hrs: 19.6",
+                "bike: 39.4",
+                "prsn: 34.6",
+                "plnt: 29.3",
+                "sheep: 1.0",
+                "sofa: 17.1",
+                "train: 19.7",
+                "tv: 24.8",
+                "mAP: 19.8"
+            ],
+            [
+                "Method: WST-BSR [16]",
+                "aero: 28.0",
+                "bcycle: 64.5",
+                "bird: 23.9",
+                "boat: 19.0",
+                "bottle: 21.9",
+                "bus: 64.3",
+                "car: 43.5",
+                "cat: 16.4",
+                "chair: 42.2",
+                "cow: 25.9",
+                "table: 30.5",
+                "dog: 7.9",
+                "hrs: 25.5",
+                "bike: 67.6",
+                "prsn: 54.5",
+                "plnt: 36.4",
+                "sheep: 10.3",
+                "sofa: 31.2",
+                "train: 57.4",
+                "tv: 43.5",
+                "mAP: 35.7"
+            ],
+            [
+                "Method: Strong-Weak [26]",
+                "aero: 26.2",
+                "bcycle: 48.5",
+                "bird: 32.6",
+                "boat: 33.7",
+                "bottle: 38.5",
+                "bus: 54.3",
+                "car: 37.1",
+                "cat: 18.6",
+                "chair: 34.8",
+                "cow: 58.3",
+                "table: 17.0",
+                "dog: 12.5",
+                "hrs: 33.8",
+                "bike: 65.5",
+                "prsn: 61.6",
+                "plnt: 52.0",
+                "sheep: 9.3",
+                "sofa: 24.9",
+                "train: 54.1",
+                "tv: 49.1",
+                "mAP: 38.1"
+            ],
+            [
+                "Method: Ours w/LILoss=FL",
+                "aero: 33.4",
+                "bcycle: 49.2",
+                "bird: 36.0",
+                "boat: 27.1",
+                "bottle: 38.4",
+                "bus: 55.7",
+                "car: 38.7",
+                "cat: 15.9",
+                "chair: 39.0",
+                "cow: 59.2",
+                "table: 18.8",
+                "dog: 23.7",
+                "hrs: 36.9",
+                "bike: 70.0",
+                "prsn: 60.6",
+                "plnt: 49.7",
+                "sheep: 25.8",
+                "sofa: 34.8",
+                "train: 47.2",
+                "tv: 51.2",
+                "mAP: 40.6"
+            ],
+            [
+                "Method: Ours w/LILoss=CE",
+                "aero: 44.7",
+                "bcycle: 50.0",
+                "bird: 33.6",
+                "boat: 27.4",
+                "bottle: 42.2",
+                "bus: 55.6",
+                "car: 38.3",
+                "cat: 19.2",
+                "chair: 37.9",
+                "cow: 69.0",
+                "table: 30.1",
+                "dog: 26.3",
+                "hrs: 34.4",
+                "bike: 67.3",
+                "prsn: 61.0",
+                "plnt: 47.9",
+                "sheep: 21.4",
+                "sofa: 26.3",
+                "train: 50.1",
+                "tv: 47.3",
+                "mAP: 41.5"
+            ],
+            [
+                "Best-Method: Faster (Non-adapted)",
+                "Best-hrs: 36.8"
+            ],
+            [
+                "Best-Method: WST-BSR [16]",
+                "Best-bcycle: 64.5"
+            ],
+            [
+                "Best-Method: WST-BSR [16]",
+                "Best-bus: 64.3"
+            ],
+            [
+                "Best-Method: WST-BSR [16]",
+                "Best-car: 43.5"
+            ],
+            [
+                "Best-Method: WST-BSR [16]",
+                "Best-chair: 42.2"
+            ],
+            [
+                "Best-Method: WST-BSR [16]",
+                "Best-table: 30.5"
+            ],
+            [
+                "Best-Method: WST-BSR [16]",
+                "Best-sofa: 31.2"
+            ],
+            [
+                "Best-Method: WST-BSR [16]",
+                "Best-train: 57.4"
+            ],
+            [
+                "Best-Method: Strong-Weak [26]",
+                "Best-boat: 33.7"
+            ],
+            [
+                "Best-Method: Strong-Weak [26]",
+                "Best-prsn: 61.6"
+            ],
+            [
+                "Best-Method: Strong-Weak [26]",
+                "Best-plnt: 52.0"
+            ],
+            [
+                "Best-Method: Strong-Weak [26]",
+                "Best-tv: 49.1"
+            ],
+            [
+                "Best-Method: Ours w/LILoss=CE",
+                "Best-aero: 44.7"
+            ],
+            [
+                "Best-Method: Ours w/LILoss=CE",
+                "Best-bottle: 42.2"
+            ],
+            [
+                "Best-Method: Ours w/LILoss=CE",
+                "Best-cat: 19.2"
+            ],
+            [
+                "Best-Method: Ours w/LILoss=CE",
+                "Best-cow: 69.0"
+            ],
+            [
+                "Best-Method: Ours w/LILoss=CE",
+                "Best-dog: 26.3"
+            ],
+            [
+                "Best-Method: Ours w/LILoss=CE",
+                "Best-mAP: 41.5"
+            ]
+        ],
+        "Table 6: Adaptation results on Car from Sim10k to Cityscapes Dataset (%). Source Only indicates the non-adapted results (λ=0.1 and γ=2.0 are used).": [
+            [
+                "Method: Faster",
+                "AP on Car: 34.6"
+            ],
+            [
+                "Method: DA",
+                "AP on Car: 38.9"
+            ],
+            [
+                "Method: Strong-Weak",
+                "AP on Car: 40.1"
+            ],
+            [
+                "Method: Ours",
+                "AP on Car: 42.6"
+            ],
+            [
+                "Best-Method: Ours",
+                "Best-AP on Car: 42.6"
+            ]
+        ],
+        "Table 13: AP (%) on adpatation from PASCAL VOC to Clipart Dataset. Results are evaluated on target images.": [
+            [
+                "Method: LS—CE—CE—FL",
+                "aero: 24.2",
+                "bcycle: 48.3",
+                "bird: 32.6",
+                "boat: 26.0",
+                "bottle: 31.2",
+                "bus: 55.3",
+                "car: 37.6",
+                "cat: 12.1",
+                "chair: 33.0",
+                "cow: 47.1",
+                "table: 23.1",
+                "dog: 17.0",
+                "hrs: 23.4",
+                "bike: 57.4",
+                "prsn: 57.3",
+                "plnt: 43.8",
+                "sheep: 19.9",
+                "sofa: 31.7",
+                "train: 48.2",
+                "tv: 42.7",
+                "mAP: 35.4"
+            ],
+            [
+                "Method: LS—CE—FL—CE",
+                "aero: 44.7",
+                "bcycle: 50.0",
+                "bird: 33.6",
+                "boat: 27.4",
+                "bottle: 42.2",
+                "bus: 55.6",
+                "car: 38.3",
+                "cat: 19.2",
+                "chair: 37.9",
+                "cow: 69.0",
+                "table: 30.1",
+                "dog: 26.3",
+                "hrs: 34.4",
+                "bike: 67.3",
+                "prsn: 61.0",
+                "plnt: 47.9",
+                "sheep: 21.4",
+                "sofa: 26.3",
+                "train: 50.1",
+                "tv: 47.3",
+                "mAP: 41.5"
+            ],
+            [
+                "Method: LS—FL—FL—FL",
+                "aero: 31.4",
+                "bcycle: 52.4",
+                "bird: 31.5",
+                "boat: 27.5",
+                "bottle: 39.5",
+                "bus: 56.9",
+                "car: 38.4",
+                "cat: 13.6",
+                "chair: 38.3",
+                "cow: 45.5",
+                "table: 23.9",
+                "dog: 15.8",
+                "hrs: 33.7",
+                "bike: 73.1",
+                "prsn: 64.6",
+                "plnt: 49.5",
+                "sheep: 19.3",
+                "sofa: 26.8",
+                "train: 55.0",
+                "tv: 49.9",
+                "mAP: 39.3"
+            ],
+            [
+                "Method: LS—LS—FL—FL",
+                "aero: 32.3",
+                "bcycle: 56.8",
+                "bird: 33.2",
+                "boat: 23.8",
+                "bottle: 39.6",
+                "bus: 46.0",
+                "car: 39.6",
+                "cat: 17.6",
+                "chair: 38.7",
+                "cow: 52.4",
+                "table: 14.7",
+                "dog: 21.2",
+                "hrs: 33.0",
+                "bike: 72.0",
+                "prsn: 59.6",
+                "plnt: 46.7",
+                "sheep: 21.9",
+                "sofa: 26.9",
+                "train: 49.2",
+                "tv: 51.8",
+                "mAP: 38.9"
+            ],
+            [
+                "Method: LS—CE—FL—FL",
+                "aero: 33.4",
+                "bcycle: 49.2",
+                "bird: 36.0",
+                "boat: 27.1",
+                "bottle: 38.4",
+                "bus: 55.7",
+                "car: 38.7",
+                "cat: 15.9",
+                "chair: 39.0",
+                "cow: 59.2",
+                "table: 18.8",
+                "dog: 23.7",
+                "hrs: 36.9",
+                "bike: 70.0",
+                "prsn: 60.6",
+                "plnt: 49.7",
+                "sheep: 25.8",
+                "sofa: 34.8",
+                "train: 47.2",
+                "tv: 51.2",
+                "mAP: 40.6"
+            ],
+            [
+                "Method: W/O Detach",
+                "aero: 33.1",
+                "bcycle: 54.5",
+                "bird: 33.9",
+                "boat: 28.2",
+                "bottle: 45.3",
+                "bus: 59.4",
+                "car: 31.4",
+                "cat: 17.4",
+                "chair: 34.7",
+                "cow: 39.9",
+                "table: 9.8",
+                "dog: 20.8",
+                "hrs: 33.5",
+                "bike: 63.0",
+                "prsn: 60.3",
+                "plnt: 40.8",
+                "sheep: 18.7",
+                "sofa: 20.6",
+                "train: 51.8",
+                "tv: 45.6",
+                "mAP: 37.1"
+            ],
+            [
+                "Method: W/O ILoss",
+                "aero: 27.2",
+                "bcycle: 54.0",
+                "bird: 31.9",
+                "boat: 24.7",
+                "bottle: 38.6",
+                "bus: 53.7",
+                "car: 36.9",
+                "cat: 15.1",
+                "chair: 40.2",
+                "cow: 52.4",
+                "table: 12.4",
+                "dog: 29.6",
+                "hrs: 36.5",
+                "bike: 69.3",
+                "prsn: 63.6",
+                "plnt: 43.3",
+                "sheep: 20.2",
+                "sofa: 26.9",
+                "train: 50.6",
+                "tv: 44.3",
+                "mAP: 38.6"
+            ],
+            [
+                "Method: W/O Context&ILoss",
+                "aero: 38.3",
+                "bcycle: 65.4",
+                "bird: 25.4",
+                "boat: 24.6",
+                "bottle: 35.2",
+                "bus: 47.7",
+                "car: 40.9",
+                "cat: 20.9",
+                "chair: 32.6",
+                "cow: 29.6",
+                "table: 4.6",
+                "dog: 14.7",
+                "hrs: 26.5",
+                "bike: 85.2",
+                "prsn: 60.9",
+                "plnt: 46.6",
+                "sheep: 17.4",
+                "sofa: 22.5",
+                "train: 43.9",
+                "tv: 50.2",
+                "mAP: 36.7"
+            ],
+            [
+                "Method: W/O Context",
+                "aero: 22.5",
+                "bcycle: 50.8",
+                "bird: 33.8",
+                "boat: 23.5",
+                "bottle: 37.6",
+                "bus: 48.3",
+                "car: 39.4",
+                "cat: 16.4",
+                "chair: 38.5",
+                "cow: 55.7",
+                "table: 16.0",
+                "dog: 23.8",
+                "hrs: 33.0",
+                "bike: 62.8",
+                "prsn: 59.8",
+                "plnt: 48.4",
+                "sheep: 17.3",
+                "sofa: 28.6",
+                "train: 47.6",
+                "tv: 46.5",
+                "mAP: 37.5"
+            ],
+            [
+                "Method: W/O CLoss (L2)",
+                "aero: 33.1",
+                "bcycle: 57.0",
+                "bird: 32.5",
+                "boat: 24.6",
+                "bottle: 39.0",
+                "bus: 55.9",
+                "car: 37.3",
+                "cat: 15.7",
+                "chair: 39.5",
+                "cow: 50.7",
+                "table: 20.5",
+                "dog: 19.8",
+                "hrs: 37.7",
+                "bike: 75.3",
+                "prsn: 60.8",
+                "plnt: 43.9",
+                "sheep: 21.1",
+                "sofa: 26.2",
+                "train: 42.9",
+                "tv: 45.6",
+                "mAP: 39.0"
+            ],
+            [
+                "Best-Method: LS—CE—FL—CE",
+                "Best-aero: 44.7"
+            ],
+            [
+                "Best-Method: LS—CE—FL—CE",
+                "Best-cow: 69.0"
+            ],
+            [
+                "Best-Method: LS—CE—FL—CE",
+                "Best-table: 30.1"
+            ],
+            [
+                "Best-Method: LS—CE—FL—CE",
+                "Best-mAP: 41.5"
+            ],
+            [
+                "Best-Method: LS—FL—FL—FL",
+                "Best-prsn: 64.6"
+            ],
+            [
+                "Best-Method: LS—FL—FL—FL",
+                "Best-train: 55.0"
+            ],
+            [
+                "Best-Method: LS—LS—FL—FL",
+                "Best-tv: 51.8"
+            ],
+            [
+                "Best-Method: LS—CE—FL—FL",
+                "Best-bird: 36.0"
+            ],
+            [
+                "Best-Method: LS—CE—FL—FL",
+                "Best-plnt: 49.7"
+            ],
+            [
+                "Best-Method: LS—CE—FL—FL",
+                "Best-sheep: 25.8"
+            ],
+            [
+                "Best-Method: LS—CE—FL—FL",
+                "Best-sofa: 34.8"
+            ],
+            [
+                "Best-Method: W/O Detach",
+                "Best-boat: 28.2"
+            ],
+            [
+                "Best-Method: W/O Detach",
+                "Best-bottle: 45.3"
+            ],
+            [
+                "Best-Method: W/O Detach",
+                "Best-bus: 59.4"
+            ],
+            [
+                "Best-Method: W/O ILoss",
+                "Best-chair: 40.2"
+            ],
+            [
+                "Best-Method: W/O ILoss",
+                "Best-dog: 29.6"
+            ],
+            [
+                "Best-Method: W/O Context&ILoss",
+                "Best-bcycle: 65.4"
+            ],
+            [
+                "Best-Method: W/O Context&ILoss",
+                "Best-car: 40.9"
+            ],
+            [
+                "Best-Method: W/O Context&ILoss",
+                "Best-cat: 20.9"
+            ],
+            [
+                "Best-Method: W/O Context&ILoss",
+                "Best-bike: 85.2"
+            ],
+            [
+                "Best-Method: W/O CLoss (L2)",
+                "Best-hrs: 37.7"
+            ]
+        ]
+    },
+    "https://arxiv.org/abs/1911.02514": {
+        "paper": "Fuzzy Inference Procedure for Intelligent and Automated Control of Refrigerant Charging",
+        "dateline": "Submitted on 2 Nov 2019",
+        "Selected Reason": [
+            "The elements that affect the experimental charging and the optimization of the performance of refrigerators are fuzzified and used in an inference model"
+        ],
+        "Table 3: Energy consumption per test for the worst and best times for both of crisp and fuzzy controllers. The maximum test setup time is considered 15 minutes, while the power consumption is 2.5 kW. The results shown are for one unit.": [
+            [
+                "Controller: Crisp (Equation 7) - Best",
+                "Test Time in minutes: 20",
+                "No. of Tests in 12 Hours: 20",
+                "E per Test kWh/test: 1.5"
+            ],
+            [
+                "Controller: Crisp (Equation 7) - Worst",
+                "Test Time in minutes: 30",
+                "No. of Tests in 12 Hours: 16",
+                "E per Test kWh/test: 1.87"
+            ],
+            [
+                "Controller: Fuzzy (Trapezoidal MFs) - Best",
+                "Test Time in minutes: 8.8",
+                "No. of Tests in 12 Hours: 30",
+                "E per Test kWh/test: 1"
+            ],
+            [
+                "Controller: Fuzzy (Trapezoidal MFs) - Worst",
+                "Test Time in minutes: 27",
+                "No. of Tests in 12 Hours: 17",
+                "E per Test kWh/test: 1.76"
+            ],
+            [
+                "Controller: ",
+                "Test Time in minutes: ",
+                "No. of Tests in 12 Hours: ",
+                "E per Test kWh/test: "
+            ]
+        ]
+    },
+    "https://arxiv.org/abs/1911.02475": {
+        "paper": "Unimodal-uniform Constrained Wasserstein Training for Medical Diagnosis",
+        "dateline": "Submitted on 3 Nov 2019",
+        "Selected Reason": [
+            "We evaluate our method on several medical diagnosis tasks (e.g., Diabetic Retinopathy and Ultrasound Breast dataset) and achieve state-of-the-art performance."
+        ],
+        "paper's table": "no informative table"
+    },
+    "https://arxiv.org/abs/1911.02133": {
+        "paper": "Interpretable Self-Attention Temporal Reasoning for Driving Behavior Understanding",
+        "dateline": "Submitted on 6 Nov 2019",
+        "Selected Reason": [
+            "In this work, we investigated how state-of-the-art 3D Convolutional Neural Networks (CNNs) perform on classifying driving behaviors based on causal reasoning",
+            "With the TRB models, we achieved the accuracy of $\\mathbf{86.3\\%}$, which outperform the state-of-the-art 3D CNNs from previous works"
+        ],
+        "paper's table": "no informative table"
+    },
+    "https://arxiv.org/abs/1911.00792": {
+        "paper": "Contextual Grounding of Natural Language Entities in Images",
+        "dateline": "Submitted on 5 Nov 2019",
+        "Selected Reason": [
+            "In the evaluation, we show that our model achieves the state-of-the-art grounding accuracy of 71.36% over the Flickr30K Entities dataset"
+        ],
+        "Table 2: Test set accuracy, parameters, and number of training epochs of models with state-of-the-art performance on smallNORB.": [
+            [
+                ": Model",
+                "Test Set: Accuracy",
+                "No. of: Params",
+                "Train: Epochs"
+            ],
+            [
+                ": Sabour et al. (2017)",
+                "Test Set: 97.3",
+                "No. of: 8200K",
+                "Train: N/A"
+            ],
+            [
+                ": Cireşan et al. (2011)*",
+                "Test Set: 97.4",
+                "No. of: 2700K",
+                "Train: N/A"
+            ],
+            [
+                ": Hinton et al. (2018)",
+                "Test Set: 98.2",
+                "No. of: 310K",
+                "Train: 300"
+            ],
+            [
+                ": Hinton et al. (2018)**",
+                "Test Set: 98.6",
+                "No. of: 310K",
+                "Train: 300"
+            ],
+            [
+                ": Our Model",
+                "Test Set: 99.1",
+                "No. of: 272K",
+                "Train: 50"
+            ],
+            [
+                "Best-: Model",
+                "Best-Test Set: Accuracy"
+            ],
+            [
+                "Best-: Model",
+                "Best-No. of: Params"
+            ],
+            [
+                "Best-: Model",
+                "Best-Train: Epochs"
+            ],
+            [
+                "Best-: Our Model",
+                "Best-Test Set: 99.1"
+            ],
+            [
+                "Best-: Our Model",
+                "Best-No. of: 272K"
+            ],
+            [
+                "Best-: Our Model",
+                "Best-Train: 50"
+            ]
+        ]
+    },
+    "https://arxiv.org/abs/1911.01875": {
+        "paper": "An Algorithm for Routing Capsules in All Domains",
+        "dateline": "Submitted on 2 Nov 2019 (v1), last revised 5 Nov 2019 (this version, v2)",
+        "Selected Reason": [
+            "The first network achieves new state-of-the-art accuracy of 99.1% on the smallNORB visual recognition task with fewer parameters and an order of magnitude less training than previous capsule models, and we find evidence that it learns to perform a form of ``reverse graphics.'' The second network achieves new state-of-the-art accuracies on the root sentences of the Stanford Sentiment Treebank: 58.5% on fine-grained and 95.6% on binary labels with a single-task model that routes frozen embeddings from a pretrained transformer as capsules"
+        ],
+        "Table 2: Effect of WS353 precision on measuring four systems. The min, max, mean, stdev of each system’s ρ score vs. each WS353 rater, and the originally reported ρ vs. the rater means. The four systems’ scores are not significantly different.": [
+            [
+                "exp: ESA",
+                "min: 0.263",
+                "max: 0.632",
+                "mean: 0.498",
+                "stdev: 0.108",
+                "WS353-ρ: 0.739"
+            ],
+            [
+                "exp: TSA",
+                "min: 0.268",
+                "max: 0.644",
+                "mean: 0.519",
+                "stdev: 0.114",
+                "WS353-ρ: 0.784"
+            ],
+            [
+                "exp: CLEAR",
+                "min: 0.294",
+                "max: 0.704",
+                "mean: 0.544",
+                "stdev: 0.127",
+                "WS353-ρ: 0.810"
+            ],
+            [
+                "exp: CLEAR+TSA",
+                "min: 0.293",
+                "max: 0.703",
+                "mean: 0.562",
+                "stdev: 0.125",
+                "WS353-ρ: 0.841"
+            ]
+        ],
+        "Table 5: Spearman’s rank correlation of each system’s predictions to the mean rater scores of the original and two subsequent reproductions of the WS353 measurements. While the relative order of the system scores remain the same within each reproduced measurement, the scores change by far more than the differences between systems.": [
+            [
+                "Sys: ESA",
+                "WS353: 0.739",
+                "WS353r: 0.643",
+                "WS353r2: 0.563"
+            ],
+            [
+                "Sys: TSA",
+                "WS353: 0.784",
+                "WS353r: 0.706",
+                "WS353r2: 0.635"
+            ],
+            [
+                "Sys: CLEAR",
+                "WS353: 0.810",
+                "WS353r: 0.715",
+                "WS353r2: 0.642"
+            ],
+            [
+                "Sys: CLEAR+TSA",
+                "WS353: 0.841",
+                "WS353r: 0.748",
+                "WS353r2: 0.670"
+            ]
+        ]
+    },
+    "https://arxiv.org/abs/1911.01547": {
+        "paper": "Metrology for AI: From Benchmarks to Instruments",
+        "dateline": "Submitted on 5 Nov 2019",
+        "Selected Reason": [
+            "One does not report mass, speed, or length, for example, of a studied object without disclosing the precision (measurement variance) and resolution (smallest detectable change) of the instrument used",
+            "To illustrate the adoption of metrology to benchmark datasets we use the word similarity benchmark WS353 and several previously published experiments that use it for evaluation."
+        ],
+        "paper's table": "no informative table"
+    },
+    "https://arxiv.org/abs/1911.01474": {
+        "paper": "The Measure of Intelligence",
+        "dateline": "Submitted on 5 Nov 2019",
+        "Selected Reason": [
+            "Using this definition, we propose a set of guidelines for what a general AI benchmark should look like",
+            "Finally, we present a benchmark closely following these guidelines, the Abstraction and Reasoning Corpus (ARC), built upon an explicit set of priors designed to be as close as possible to innate human priors"
+        ],
+        "Table 1. Performance of Object Detection Networks on the RICO dataset": [
+            [
+                "Network: RetinaNet",
+                "[email protected][.5:.95]): 58.49",
+                "[email protected]: 85.04",
+                "[email protected]: 60.46",
+                "Inference Time: 52 ms/img"
+            ],
+            [
+                "Network: YOLOv3",
+                "[email protected][.5:.95]): 27.99",
+                "[email protected]: 73.58",
+                "[email protected]: 17.72",
+                "Inference Time: 23 ms/img"
+            ]
+        ]
+    },
+    "https://arxiv.org/abs/1911.01157": {
+        "paper": "Assessing Social and Intersectional Biases in Contextualized Word Representations",
+        "dateline": "Submitted on 4 Nov 2019",
+        "Selected Reason": [
+            "In this paper, we analyze the extent to which state-of-the-art models for contextual word representations, such as BERT and GPT-2, encode biases with respect to gender, race, and intersectional identities"
+        ],
+        "paper's table": "no informative table"
+    }
 }
