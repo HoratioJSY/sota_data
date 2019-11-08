@@ -2,11 +2,9 @@ import re
 import sys
 import json
 import pandas as pd
-import numpy as np
 from bs4 import BeautifulSoup
 from urllib import request
 from tqdm import tqdm
-import subprocess
 
 
 class ArxivReader(object):

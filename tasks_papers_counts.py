@@ -1,7 +1,7 @@
 import json
 import re
 import time
-from bs4 import BeautifulSoup
+import multiprocessing as mp
 from urllib import request
 from tqdm import tqdm
 from selenium import webdriver
@@ -9,8 +9,8 @@ from selenium.webdriver.common.keys import Keys
 
 
 def read_tag():
-    with open('./data/TechField.json', 'r') as f:
-        tag_list = json.load(f)
+    with open('./data/tech_tag.json', 'r') as f:
+        tag_list = list(set(json.load(f)))
     return tag_list
 
 
@@ -37,16 +37,17 @@ def get_counts(driver, num_pattern):
     return counts
 
 
-def s_scholar_scraper():
+def s_scholar_scraper(start):
     """
     using selenium to scraping SemanticScholar data
     """
+    items_per_processing = 20
     driver = webdriver.Chrome()
     num_pattern = re.compile(r'\d+')
     base_url = 'https://www.semanticscholar.org/search?'
 
     total_counts = {}
-    for tag in tqdm(read_tag()[30:32]):
+    for tag in tqdm(read_tag()[start*items_per_processing:(start+1)*items_per_processing]):
         one_tech = {}
         driver.get("https://www.semanticscholar.org/")
         time.sleep(2)
@@ -71,29 +72,24 @@ def s_scholar_scraper():
                     time.sleep(1)
                     one_tech[str(i)] = get_counts(driver, num_pattern)
                 except:
-                    time.sleep(3)
+                    time.sleep(4)
                     try:
                         one_tech[str(i)] = get_counts(driver, num_pattern)
                     except:
                         one_tech[str(i)] = 'err'
                         continue
-            total_counts[tag] = one_tech
-
-            # buckets = driver.find_element_by_class_name("buckets")
-            # years = buckets.find_elements_by_tag_name("rect")
-            # for y in years:
-            #     y.click()
-            #     time.sleep(2)
-
+            # total_counts[tag] = one_tech
+            with open('./data/papers_counts.json', 'a', encoding='utf-8') as f:
+                json.dump({tag: one_tech}, f, indent=4)
         except BaseException as e:
             print(e)
             continue
     driver.close()
-    with open('./data/papers_counts.json', 'w', encoding='utf-8') as f:
-        json.dump(total_counts, f, indent=4)
+    return None
 
 
 def s_scholar_scraper_test():
+    from bs4 import BeautifulSoup
     base_url = 'https://www.semanticscholar.org/search?'
     headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) '
                              'AppleWebKit/537.36 (KHTML, like Gecko) '
@@ -113,5 +109,16 @@ def s_scholar_scraper_test():
         print(total_num)
 
 
+def collect_result(result):
+    global results
+    results.append(result)
+
+
 if __name__ == "__main__":
-    s_scholar_scraper()
+    pool = mp.Pool(16)
+    print(mp.cpu_count())
+    for i in range(16):
+        pool.apply_async(s_scholar_scraper, args=(i,), callback=collect_result)
+    pool.close()
+    pool.join()
+    quit()
