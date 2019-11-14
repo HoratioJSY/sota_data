@@ -1,0 +1,1010 @@
+{
+    "Latent Predictor Networks for Code Generation": {
+        "Latent Predictor Networks for Code Generation": [
+            "https://www.semanticscholar.org/paper/Latent-Predictor-Networks-for-Code-Generation-Ling-Grefenstette/e957747f4f8600940be4c5bb001aa70c84e53a53",
+            "https://arxiv.org/pdf/1603.06744.pdf"
+        ]
+    },
+    "Generating Sequences With Recurrent Neural Networks": {
+        "Generating Sequences With Recurrent Neural Networks": [
+            "https://www.semanticscholar.org/paper/Generating-Sequences-With-Recurrent-Neural-Networks-Graves/89b1f4740ae37fd04f6ac007577bdd34621f0861",
+            "https://arxiv.org/pdf/1308.0850.pdf"
+        ]
+    },
+    "A Machine Learning-based Method for Question Type Classification in Biomedical Question Answering": {
+        "A Machine Learning-based Method for Question Type Classification in Biomedical Question Answering.": [
+            "https://www.semanticscholar.org/paper/A-Machine-Learning-based-Method-for-Question-Type-Sarrouti-Alaoui/03f9c69d12dca1e571dd23be1042da11e121208d",
+            "https://www.ncbi.nlm.nih.gov/pubmed/28361158"
+        ]
+    },
+    "Dilated Recurrent Neural Networks": {
+        "Dilated Recurrent Neural Networks": [
+            "https://www.semanticscholar.org/paper/Dilated-Recurrent-Neural-Networks-Chang-Zhang/2dad7e558a1e2982d0d42042021f4cde4af04abf",
+            "https://arxiv.org/pdf/1710.02224.pdf"
+        ]
+    },
+    "Gated-Attention Readers for Text Comprehension": {
+        "Gated-Attention Readers for Text Comprehension": [
+            "https://www.semanticscholar.org/paper/Gated-Attention-Readers-for-Text-Comprehension-Dhingra-Liu/0f2ea810c16275dc74e880296e20dbd83b1bae1c",
+            "https://arxiv.org/pdf/1606.01549.pdf"
+        ]
+    },
+    "TypeSQL: Knowledge-based Type-Aware Neural Text-to-SQL Generation": {
+        "TypeSQL: Knowledge-Based Type-Aware Neural Text-to-SQL Generation": [
+            "https://www.semanticscholar.org/paper/TypeSQL%3A-Knowledge-Based-Type-Aware-Neural-Yu-Li/c81fcde61fb6038e8756c74e17294d4d1ba6d48d",
+            "https://arxiv.org/pdf/1804.09769.pdf"
+        ]
+    },
+    "Speaker Diarization with LSTM": {
+        "Speaker Diarization with LSTM": [
+            "https://www.semanticscholar.org/paper/Speaker-Diarization-with-LSTM-Wang-Downey/507271f26a1c40bb128d8e09289e2054d304e49c",
+            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8462628"
+        ]
+    },
+    "Learning multi-grained aspect target sequence for Chinese sentiment analysis": {
+        "Learning multi-grained aspect target sequence for Chinese sentiment analysis": [
+            "https://www.semanticscholar.org/paper/Learning-multi-grained-aspect-target-sequence-for-Peng-Ma/718b71c93ea49b36eb2110a494416c4a439a24b9",
+            "https://doi.org/10.1016/j.knosys.2018.02.034"
+        ]
+    },
+    "Tips and Tricks for Visual Question Answering: Learnings from the 2017 Challenge": {
+        "Tips and Tricks for Visual Question Answering: Learnings from the 2017 Challenge": [
+            "https://www.semanticscholar.org/paper/Tips-and-Tricks-for-Visual-Question-Answering%3A-from-Teney-Anderson/b14a60a1c3e6bb45baddd754a1cfe83ffc1bbb81",
+            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8578542"
+        ]
+    },
+    "Sparse Subspace Clustering: Algorithm, Theory, and Applications": {
+        "Sparse Subspace Clustering: Algorithm, Theory, and Applications": [
+            "https://www.semanticscholar.org/paper/Sparse-Subspace-Clustering%3A-Algorithm%2C-Theory%2C-and-Elhamifar-Vidal/b19d27e1bda4d039f9eaf2b2eb9d47f75abe9d75",
+            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6482137"
+        ]
+    },
+    "Abstract syntax networks for code generation and semantic parsing": {
+        "Abstract Syntax Networks for Code Generation and Semantic Parsing": [
+            "https://www.semanticscholar.org/paper/Abstract-Syntax-Networks-for-Code-Generation-and-Rabinovich-Stern/2c1e874c3b67510a3215e535f5646b362de5bc89",
+            "https://arxiv.org/pdf/1704.07535.pdf"
+        ]
+    },
+    "Named Entity Recognition in Twitter using Images and Text": {
+        "Named Entity Recognition in Twitter using Images and Text": [
+            "https://www.semanticscholar.org/paper/Named-Entity-Recognition-in-Twitter-using-Images-Esteves-Peres/4fa3ef4c2cdb3b931339e4b2ee37051cc4e2d808",
+            "https://arxiv.org/pdf/1710.11027.pdf"
+        ]
+    },
+    "ChemInform Abstract: Chemistry of Lipid A: At the Heart of Innate Immunity": null,
+    "Bidirectional Recurrent Convolutional Neural Network for Relation Classification": {
+        "Bidirectional Recurrent Convolutional Neural Network for Relation Classification": [
+            "https://www.semanticscholar.org/paper/Bidirectional-Recurrent-Convolutional-Neural-for-Cai-Zhang/08b63b1f9a770c1b6f8545c2e1e4a9bfb6a2de6d",
+            "https://pdfs.semanticscholar.org/08b6/3b1f9a770c1b6f8545c2e1e4a9bfb6a2de6d.pdf"
+        ]
+    },
+    "Semi-Supervised Sequence Modeling with Cross-View Training": {
+        "Semi-Supervised Sequence Modeling with Cross-View Training": [
+            "https://www.semanticscholar.org/paper/Semi-Supervised-Sequence-Modeling-with-Cross-View-Clark-Luong/0c47cad9729c38d9db1f75491b1ee4bd883a5d4e",
+            "https://arxiv.org/pdf/1809.08370.pdf"
+        ]
+    },
+    "Neural Turing Machines": {
+        "Neural Turing Machines": [
+            "https://www.semanticscholar.org/paper/Neural-Turing-Machines-Graves-Wayne/c3823aacea60bc1f2cabb9283144690a3d015db5",
+            "https://arxiv.org/pdf/1410.5401.pdf"
+        ]
+    },
+    "Neuro-symbolic program synthesis": {
+        "Neuro-Symbolic Program Synthesis": [
+            "https://www.semanticscholar.org/paper/Neuro-Symbolic-Program-Synthesis-Parisotto-Mohamed/644ca74f80463415613847ab01cff067fb58f0ad",
+            "https://arxiv.org/pdf/1611.01855.pdf"
+        ]
+    },
+    "Program Synthesis By Sketching": {
+        "Program synthesis by sketching": [
+            "https://www.semanticscholar.org/paper/Program-synthesis-by-sketching-Bod%C3%ADk-Solar-Lezama/ae74531e6e73afaffb264b4e536b8fde95d03202",
+            "https://pdfs.semanticscholar.org/379b/242fcc606c2a43278630a97430f750654896.pdf"
+        ]
+    },
+    "Programming with a Differentiable Forth Interpreter": {
+        "Programming with a Differentiable Forth Interpreter": [
+            "https://www.semanticscholar.org/paper/Programming-with-a-Differentiable-Forth-Interpreter-Bosnjak-Rockt%C3%A4schel/68647069407a278d4adc343c6d5313dd0904788d",
+            "https://arxiv.org/pdf/1605.06640.pdf"
+        ]
+    },
+    "Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Path": {
+        "Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Paths": [
+            "https://www.semanticscholar.org/paper/Classifying-Relations-via-Long-Short-Term-Memory-Xu-Mou/032fbcb58e2282f02426a0f09c6d5b42787936ec",
+            "https://arxiv.org/pdf/1508.03720.pdf"
+        ]
+    },
+    "Relation Classification via Multi-Level Attention CNNs": {
+        "Relation Classification via Multi-Level Attention CNNs": [
+            "https://www.semanticscholar.org/paper/Relation-Classification-via-Multi-Level-Attention-Wang-Cao/d00c31df3c50cd57eba2ad39709e1cb14a208246",
+            "https://pdfs.semanticscholar.org/59b4/cf8ee4076f25bcfa1b9b43c53de38ba77194.pdf"
+        ]
+    },
+    "Multi-Granular Sequence Encoding via Dilated Compositional Units for Reading Comprehension": {
+        "Multi-Granular Sequence Encoding via Dilated Compositional Units for Reading Comprehension": [
+            "https://www.semanticscholar.org/paper/Multi-Granular-Sequence-Encoding-via-Dilated-Units-Tay-Luu/c3a2623cebd9ad68f0c383805c1862a4c5139093",
+            "https://pdfs.semanticscholar.org/c3a2/623cebd9ad68f0c383805c1862a4c5139093.pdf"
+        ]
+    },
+    "Towards AI-Complete Question Answering: A Set of Prerequisite Toy Tasks": {
+        "Towards AI-Complete Question Answering: A Set of Prerequisite Toy Tasks": [
+            "https://www.semanticscholar.org/paper/Towards-AI-Complete-Question-Answering%3A-A-Set-of-Weston-Bordes/abb33d75dc297993fcc3fb75e0f4498f413eb4f6",
+            "https://arxiv.org/pdf/1502.05698.pdf"
+        ]
+    },
+    "A Theoretically Grounded Application of Dropout in Recurrent Neural Networks": {
+        "A Theoretically Grounded Application of Dropout in Recurrent Neural Networks": [
+            "https://www.semanticscholar.org/paper/A-Theoretically-Grounded-Application-of-Dropout-in-Gal-Ghahramani/0c1f9ca23f4f09ecfc44bcc8ca1c2736624f4652",
+            "https://arxiv.org/pdf/1512.05287.pdf"
+        ]
+    },
+    "Exploring the limits of language modeling.": {
+        "Exploring the Limits of Language Modeling": [
+            "https://www.semanticscholar.org/paper/Exploring-the-Limits-of-Language-Modeling-J%C3%B3zefowicz-Vinyals/2f2d8f8072e5cc9b296fad551f65f183bdbff7aa",
+            "https://arxiv.org/pdf/1602.02410.pdf"
+        ]
+    },
+    "Neural headline generation with minimum risk training.": {
+        "Neural Headline Generation with Minimum Risk Training": [
+            "https://www.semanticscholar.org/paper/Neural-Headline-Generation-with-Minimum-Risk-Ayana-Shen/2aacacb684ea755702c034bca794f35518b471c5",
+            "https://arxiv.org/pdf/1604.01904.pdf"
+        ]
+    },
+    "A tale of two parsers": null,
+    "GraphVAE: Towards Generation of Small Graphs Using Variational Autoencoders": {
+        "GraphVAE: Towards Generation of Small Graphs Using Variational Autoencoders": [
+            "https://www.semanticscholar.org/paper/GraphVAE%3A-Towards-Generation-of-Small-Graphs-Using-Simonovsky-Komodakis/8913c23081e46a41cc7ced3c2ff379d9cd7afcde",
+            "https://arxiv.org/pdf/1802.03480.pdf"
+        ]
+    },
+    "Deep Biaffine Attention for Neural Dependency Parsing": {
+        "Deep Biaffine Attention for Neural Dependency Parsing": [
+            "https://www.semanticscholar.org/paper/Deep-Biaffine-Attention-for-Neural-Dependency-Dozat-Manning/8cbef23c9ee2ae7c35cc691a0c1d713a6377c9f2",
+            "https://arxiv.org/pdf/1611.01734.pdf"
+        ]
+    },
+    "Learning to Infer Graphics Programs from Hand-Drawn Images": {
+        "Learning to Infer Graphics Programs from Hand-Drawn Images": [
+            "https://www.semanticscholar.org/paper/Learning-to-Infer-Graphics-Programs-from-Hand-Drawn-Ellis-Ritchie/9f0b217cb21ec8c19610e28bd0805d7871456e4b",
+            "https://arxiv.org/pdf/1707.09627.pdf"
+        ]
+    },
+    "Recurrent Neural Network-Based Sentence Encoder with Gated Attention for Natural Language Inference": {
+        "Recurrent Neural Network-Based Sentence Encoder with Gated Attention for Natural Language Inference": [
+            "https://www.semanticscholar.org/paper/Recurrent-Neural-Network-Based-Sentence-Encoder-for-Chen-Zhu/ceb7dddbd0c51f511c4ba97d328b48fd10d2a7fc",
+            "https://arxiv.org/pdf/1708.01353.pdf"
+        ]
+    },
+    "Approximating Real-Time Recurrent Learning with Random Kronecker Factors": {
+        "Approximating Real-Time Recurrent Learning with Random Kronecker Factors": [
+            "https://www.semanticscholar.org/paper/Approximating-Real-Time-Recurrent-Learning-with-Mujika-Meier/db16b4354649325c2f4e148065c7e6e612fc8c05",
+            "https://arxiv.org/pdf/1805.10842.pdf"
+        ]
+    },
+    "Attention-Based Convolutional Neural Networks for Sentence Classification": {
+        "Attention-Based Convolutional Neural Networks for Sentence Classification": [
+            "https://www.semanticscholar.org/paper/Attention-Based-Convolutional-Neural-Networks-for-Zhao-Wu/fe888bd5f170d0e4c0a6eca0a508b4681bcfdb95",
+            "https://pdfs.semanticscholar.org/fe88/8bd5f170d0e4c0a6eca0a508b4681bcfdb95.pdf"
+        ]
+    },
+    "Enhanced LSTM for natural language inference": {
+        "Enhanced LSTM for Natural Language Inference": [
+            "https://www.semanticscholar.org/paper/Enhanced-LSTM-for-Natural-Language-Inference-Chen-Zhu/83e7654d545fbbaaf2328df365a781fb67b841b4",
+            "https://pdfs.semanticscholar.org/9b84/3ea293e72d83c14a7a6ee8165037a9cc484a.pdf"
+        ]
+    },
+    "nlnet (single model)": null,
+    "Solving general arithmetic word problems": {
+        "Solving General Arithmetic Word Problems": [
+            "https://www.semanticscholar.org/paper/Solving-General-Arithmetic-Word-Problems-Roy-Roth/4c6fe6179c408e1fbb3871af13d1a8e64f766e54",
+            "https://arxiv.org/pdf/1608.01413.pdf"
+        ]
+    },
+    "Revisiting Autotagging Toward Faultless Instrumental Playlists Generation": {
+        "Revisiting Autotagging Toward Faultless Instrumental Playlists Generation": [
+            "https://www.semanticscholar.org/paper/Revisiting-Autotagging-Toward-Faultless-Playlists-Bayle-Hanna/1a609bf4378ed464557c24a124d7fe9b306f8193",
+            "https://arxiv.org/pdf/1706.07613.pdf"
+        ]
+    },
+    "Deep Subspace Clustering Networks": {
+        "Deep Subspace Clustering Networks": [
+            "https://www.semanticscholar.org/paper/Deep-Subspace-Clustering-Networks-Ji-Zhang/da0ae07cafd76210fed537e4a776cb52b3c50174",
+            "https://arxiv.org/pdf/1709.02508.pdf"
+        ]
+    },
+    "On multiplicative integration with recurrent neural networks": {
+        "On Multiplicative Integration with Recurrent Neural Networks": [
+            "https://www.semanticscholar.org/paper/On-Multiplicative-Integration-with-Recurrent-Neural-Wu-Zhang/136cf66392f1d6bf42da4cc070888996dc472b91",
+            "https://arxiv.org/pdf/1606.06630.pdf"
+        ]
+    },
+    "Neural Architecture Search with Reinforcement Learning": {
+        "Neural Architecture Search with Reinforcement Learning": [
+            "https://www.semanticscholar.org/paper/Neural-Architecture-Search-with-Reinforcement-Zoph-Le/67d968c7450878190e45ac7886746de867bf673d",
+            "https://arxiv.org/pdf/1611.01578.pdf"
+        ]
+    },
+    "A Syntactic Neural Model for General-Purpose Code Generation": {
+        "A Syntactic Neural Model for General-Purpose Code Generation": "https://arxiv.org/abs/1704.01696"
+    },
+    "Attentive Convolution: Equipping CNNs with RNN-style Attention Mechanisms": {
+        "Attentive Convolution: Equipping CNNs with RNN-style Attention Mechanisms": [
+            "https://www.semanticscholar.org/paper/Attentive-Convolution%3A-Equipping-CNNs-with-Yin-Sch%C3%BCtze/7fd49178dd454b622fcc7680e70bf613fa2d81ab",
+            "https://doi.org/10.1162/tacl_a_00249"
+        ]
+    },
+    "Learning General Purpose Distributed Sentence Representations via Large Scale Multi-task Learning": {
+        "Learning General Purpose Distributed Sentence Representations via Large Scale Multi-task Learning": [
+            "https://www.semanticscholar.org/paper/Learning-General-Purpose-Distributed-Sentence-via-Subramanian-Trischler/afc2850945a871e72c245818f9bc141bd659b453",
+            "https://arxiv.org/pdf/1804.00079.pdf"
+        ]
+    },
+    "Entity Linking": null,
+    "Neural-Guided Deductive Search for Real-Time Program Synthesis from Examples": {
+        "Neural-Guided Deductive Search for Real-Time Program Synthesis from Examples": [
+            "https://www.semanticscholar.org/paper/Neural-Guided-Deductive-Search-for-Real-Time-from-Kalyan-Mohta/85bdb70962147cd3586d99f50328025c82c9ac8e",
+            "https://arxiv.org/pdf/1804.01186.pdf"
+        ]
+    },
+    "Generic Sentence Fusion is an Ill-Defined Summarization Task": {
+        "Generic Sentence Fusion Is An Ill-Defined Summarization Task": [
+            "https://www.semanticscholar.org/paper/Generic-Sentence-Fusion-Is-An-Ill-Defined-Task-Daum%C3%A9-Hal/fa1213ed45b539ab10a87ebf0608368e8716b64e",
+            "https://pdfs.semanticscholar.org/e04f/041a5795953be4026c7f772c6af88f0931cf.pdf"
+        ]
+    },
+    "Unsupervised Neural Machine Translation with Weight Sharing": {
+        "Unsupervised Neural Machine Translation with Weight Sharing": [
+            "https://www.semanticscholar.org/paper/Unsupervised-Neural-Machine-Translation-with-Weight-Yang-Chen/f3035aa7da6b7772b3f036cb405a4b128b2a00ef",
+            "https://arxiv.org/pdf/1804.09057.pdf"
+        ]
+    },
+    "Oxford at SemEval-2017 Task 9: Neural AMR Parsing with Pointer-Augmented Attention": {
+        "Oxford at SemEval-2017 Task 9: Neural AMR Parsing with Pointer-Augmented Attention": [
+            "https://www.semanticscholar.org/paper/Oxford-at-SemEval-2017-Task-9%3A-Neural-AMR-Parsing-Buys-Blunsom/88b22926a205a531bccf29ddc00bdc5febeec4eb",
+            "https://pdfs.semanticscholar.org/88b2/2926a205a531bccf29ddc00bdc5febeec4eb.pdf"
+        ]
+    },
+    "Complex embeddings for simple link prediction": {
+        "Complex Embeddings for Simple Link Prediction": [
+            "https://www.semanticscholar.org/paper/Complex-Embeddings-for-Simple-Link-Prediction-Trouillon-Welbl/2218e2e1df2c3adfb70e0def2e326a39928aacfc",
+            "https://arxiv.org/pdf/1606.06357.pdf"
+        ]
+    },
+    "Using Distant Supervision and Paragraph Vector for Large Scale Relation Extraction": null,
+    "Abstractive Document Summarization with a Graph-Based Attentional Neural Model": {
+        "Abstractive Document Summarization with a Graph-Based Attentional Neural Model": [
+            "https://www.semanticscholar.org/paper/Abstractive-Document-Summarization-with-a-Neural-Tan-Wan/c624c38e53f321a6df2d16bd707499ce744ca114",
+            "https://pdfs.semanticscholar.org/c624/c38e53f321a6df2d16bd707499ce744ca114.pdf"
+        ]
+    },
+    "Multiplicative lstm for sequence modelling": {
+        "Multiplicative LSTM for sequence modelling": [
+            "https://www.semanticscholar.org/paper/Multiplicative-LSTM-for-sequence-modelling-Krause-Lu/55cf59bfbb25d6363cab87cb747648ebe8a096e5",
+            "https://arxiv.org/pdf/1609.07959.pdf"
+        ]
+    },
+    "On Evaluation Validity in Music Autotagging": {
+        "On Evaluation Validity in Music Autotagging": [
+            "https://www.semanticscholar.org/paper/On-Evaluation-Validity-in-Music-Autotagging-Gouyon-Sturm/600709361311792ade7f8949e3c6bc4dfd4d67bf",
+            "https://arxiv.org/pdf/1410.0001.pdf"
+        ]
+    },
+    "The Microsoft 2016 Conversational Speech Recognition System": {
+        "The microsoft 2016 conversational speech recognition system": [
+            "https://www.semanticscholar.org/paper/The-microsoft-2016-conversational-speech-system-Xiong-Droppo/ac94ef90be9b0c3bf744d6744e47b38855f9a4c7",
+            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7953159"
+        ]
+    },
+    "Linguistic Knowledge as Memory for Recurrent Neural Networks": {
+        "Linguistic Knowledge as Memory for Recurrent Neural Networks": [
+            "https://www.semanticscholar.org/paper/Linguistic-Knowledge-as-Memory-for-Recurrent-Neural-Dhingra-Yang/e4c8447e56fc9cc3867087748acc4b259b9efe19",
+            "https://arxiv.org/pdf/1703.02620.pdf"
+        ]
+    },
+    "Learning structured output representation using deep conditional generative models": {
+        "Learning Structured Output Representation using Deep Conditional Generative Models": [
+            "https://www.semanticscholar.org/paper/Learning-Structured-Output-Representation-using-Sohn-Lee/3f25e17eb717e5894e0404ea634451332f85d287",
+            "https://pdfs.semanticscholar.org/3f25/e17eb717e5894e0404ea634451332f85d287.pdf"
+        ]
+    },
+    "Shortcut-Stacked Sentence Encoders for Multi-Domain Inference": {
+        "Shortcut-Stacked Sentence Encoders for Multi-Domain Inference": [
+            "https://www.semanticscholar.org/paper/Shortcut-Stacked-Sentence-Encoders-for-Multi-Domain-Nie-Bansal/26fe009b958e8728382d9d764bd7153632f0b869",
+            "https://arxiv.org/pdf/1708.02312.pdf"
+        ]
+    },
+    "Learning Recurrent Span Representations for Extractive Question Answering": {
+        "Learning Recurrent Span Representations for Extractive Question Answering": [
+            "https://www.semanticscholar.org/paper/Learning-Recurrent-Span-Representations-for-Lee-Kwiatkowski/97e6ed1f7e5de0034f71c370c01f59c87aaf9a72",
+            "https://arxiv.org/pdf/1611.01436.pdf"
+        ]
+    },
+    "From Characters to Time Intervals: New Paradigms for Evaluation and Neural Parsing of Time Normalizations": {
+        "From Characters to Time Intervals: New Paradigms for Evaluation and Neural Parsing of Time Normalizations": [
+            "https://www.semanticscholar.org/paper/From-Characters-to-Time-Intervals%3A-New-Paradigms-of-Laparra-Xu/cf10f4696ad89f894d332ba3f064b99484127dee",
+            "https://doi.org/10.1162/tacl_a_00025"
+        ]
+    },
+    "A Thorough Examination of the CNN/Daily Mail Reading Comprehension Task": {
+        "A Thorough Examination of the CNN/Daily Mail Reading Comprehension Task": [
+            "https://www.semanticscholar.org/paper/A-Thorough-Examination-of-the-CNN%2FDaily-Mail-Task-Chen-Bolton/b1e20420982a4f923c08652941666b189b11b7fe",
+            "https://arxiv.org/pdf/1606.02858.pdf"
+        ]
+    },
+    "How to Construct Deep Recurrent Neural Networks": {
+        "How to Construct Deep Recurrent Neural Networks": [
+            "https://www.semanticscholar.org/paper/How-to-Construct-Deep-Recurrent-Neural-Networks-Pascanu-G%C3%BCl%C3%A7ehre/533ee188324b833e059cb59b654e6160776d5812",
+            "https://arxiv.org/pdf/1312.6026.pdf"
+        ]
+    },
+    "Bottom-Up Abstractive Summarization": {
+        "Bottom-Up Abstractive Summarization": [
+            "https://www.semanticscholar.org/paper/Bottom-Up-Abstractive-Summarization-Gehrmann-Deng/7af89df3691d8c33aaf1858f7cc51da1bc9549a9",
+            "https://arxiv.org/pdf/1808.10792.pdf"
+        ]
+    },
+    "Guiding Generation for Abstractive Text Summarization Based on Key Information Guide Network": {
+        "Guiding Generation for Abstractive Text Summarization Based on Key Information Guide Network": [
+            "https://www.semanticscholar.org/paper/Guiding-Generation-for-Abstractive-Text-Based-on-Li-Xu/2770a733eecdda23c1b3f9408c9202efec4f0da0",
+            "https://pdfs.semanticscholar.org/2770/a733eecdda23c1b3f9408c9202efec4f0da0.pdf"
+        ]
+    },
+    "A Reinforced Topic-Aware Convolutional Sequence-to-Sequence Model for Abstractive Text Summarization": {
+        "A Reinforced Topic-Aware Convolutional Sequence-to-Sequence Model for Abstractive Text Summarization": [
+            "https://www.semanticscholar.org/paper/A-Reinforced-Topic-Aware-Convolutional-Model-for-Wang-Yao/7b614fef7c94690b0cde89e965be946b283c2cef",
+            "https://arxiv.org/pdf/1805.03616.pdf"
+        ]
+    },
+    "Speaker Diarization Using Convolutional Neural Network for Statistics Accumulation Refinement": {
+        "Speaker Diarization Using Convolutional Neural Network for Statistics Accumulation Refinement": [
+            "https://www.semanticscholar.org/paper/Speaker-Diarization-Using-Convolutional-Neural-for-Zaj%C3%ADc-Hr%C3%BAz/35c40fde977932d8a3cd24f5a1724c9dbca8b38d",
+            "https://pdfs.semanticscholar.org/35c4/0fde977932d8a3cd24f5a1724c9dbca8b38d.pdf"
+        ]
+    },
+    "Deep Communicating Agents for Abstractive Summarization": {
+        "Deep Communicating Agents for Abstractive Summarization": [
+            "https://www.semanticscholar.org/paper/Deep-Communicating-Agents-for-Abstractive-%C3%87elikyilmaz-Bosselut/05b1127ee39504516009b25384ca2bd7f2e1b9d9",
+            "https://arxiv.org/pdf/1803.10357.pdf"
+        ]
+    },
+    "Multi-view Matrix Factorization for Linear Dynamical System Estimation": {
+        "Multi-view Matrix Factorization for Linear Dynamical System Estimation": [
+            "https://www.semanticscholar.org/paper/Multi-view-Matrix-Factorization-for-Linear-System-Karami-White/cf51fad494aa5a762ec702ed374caa36786316c1",
+            "https://pdfs.semanticscholar.org/7345/37d36f017addb2c65816ad48fab5c53e522a.pdf"
+        ]
+    },
+    "Read + Verify: Machine Reading Comprehension with Unanswerable Questions": {
+        "Read + Verify: Machine Reading Comprehension with Unanswerable Questions": [
+            "https://www.semanticscholar.org/paper/Read-%2B-Verify%3A-Machine-Reading-Comprehension-with-Hu-Wei/9a5ba9aee44ab873f3d60b05e2773c693707da88",
+            "https://arxiv.org/pdf/1808.05759.pdf"
+        ]
+    },
+    "Twitie: An open-source information extraction pipeline for microblog text": {
+        "TwitIE: An Open-Source Information Extraction Pipeline for Microblog Text": [
+            "https://www.semanticscholar.org/paper/TwitIE%3A-An-Open-Source-Information-Extraction-for-Bontcheva-Derczynski/2b84b1660760e7363b1b64f3e28e393ced83551d",
+            "https://pdfs.semanticscholar.org/d71b/97a3401dd49e5758ca2ef2373eaac4abea62.pdf"
+        ]
+    },
+    "Efficient dense subspace clustering": {
+        "Efficient dense subspace clustering": [
+            "https://www.semanticscholar.org/paper/Efficient-dense-subspace-clustering-Ji-Salzmann/4e46301327280138c49f3ca4c268dba6a9cd4da9",
+            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6836065"
+        ]
+    },
+    "From extractive to abstractive meeting summaries": null,
+    "Gated Feedback Recurrent Neural Networks": {
+        "Gated Feedback Recurrent Neural Networks": [
+            "https://www.semanticscholar.org/paper/Gated-Feedback-Recurrent-Neural-Networks-Chung-G%C3%BCl%C3%A7ehre/d14c7e5f5cace4c925abc74c88baa474e9f31a28",
+            "https://arxiv.org/pdf/1502.02367.pdf"
+        ]
+    },
+    "Fast-slow recurrent neural networks": {
+        "Fast-Slow Recurrent Neural Networks": [
+            "https://www.semanticscholar.org/paper/Fast-Slow-Recurrent-Neural-Networks-Mujika-Meier/87a913817503379547bec61a5f010abac5b0f76b",
+            "https://arxiv.org/pdf/1705.08639.pdf"
+        ]
+    },
+    "Joint Learning of the Embedding of Words and Entities for Named Entity Disambiguation": {
+        "Joint Learning of the Embedding of Words and Entities for Named Entity Disambiguation": [
+            "https://www.semanticscholar.org/paper/Joint-Learning-of-the-Embedding-of-Words-and-for-Yamada-Shindo/9a501e501a60b431b6031f81dc2c19b390b0aff3",
+            "https://arxiv.org/pdf/1601.01343.pdf"
+        ]
+    },
+    "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding": {
+        "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding": [
+            "https://www.semanticscholar.org/paper/BERT%3A-Pre-training-of-Deep-Bidirectional-for-Devlin-Chang/df2b0e26d0599ce3e70df8a9da02e51594e0e992",
+            "https://arxiv.org/pdf/1810.04805.pdf"
+        ]
+    },
+    "Hypernetworks": null,
+    "Learning Structured Text Representations": {
+        "Learning Structured Text Representations": [
+            "https://www.semanticscholar.org/paper/Learning-Structured-Text-Representations-Liu-Lapata/29219d826ead654f2b863de6eceb69811850b7d4",
+            "https://doi.org/10.1162/tacl_a_00005"
+        ]
+    },
+    "Natural Language Inference over Interaction Space": {
+        "Natural Language Inference over Interaction Space": [
+            "https://www.semanticscholar.org/paper/Natural-Language-Inference-over-Interaction-Space-Gong-Luo/1778e32c18bd611169e64c1805a51abff341ca53",
+            "https://arxiv.org/pdf/1709.04348.pdf"
+        ]
+    },
+    "Modelling Reciprocating Relationships with Hawkes Processes": {
+        "Modelling Reciprocating Relationships with Hawkes Processes": [
+            "https://www.semanticscholar.org/paper/Modelling-Reciprocating-Relationships-with-Hawkes-Blundell-Heller/5272b166b2931439ddd2ef9a756907d46684c186",
+            "https://pdfs.semanticscholar.org/5272/b166b2931439ddd2ef9a756907d46684c186.pdf"
+        ]
+    },
+    "A Broad-Coverage Challenge Corpus for Sentence Understanding through Inference.": {
+        "A Broad-Coverage Challenge Corpus for Sentence Understanding through Inference": [
+            "https://www.semanticscholar.org/paper/A-Broad-Coverage-Challenge-Corpus-for-Sentence-Williams-Nangia/5ded2b8c64491b4a67f6d39ce473d4b9347a672e",
+            "https://arxiv.org/pdf/1704.05426.pdf"
+        ]
+    },
+    "RobustFill: Neural Program Learning under Noisy I/O": {
+        "RobustFill: Neural Program Learning under Noisy I/O": [
+            "https://www.semanticscholar.org/paper/RobustFill%3A-Neural-Program-Learning-under-Noisy-I%2FO-Devlin-Uesato/3ff0af64279929a952ee340e645256b7e0580f65",
+            "https://arxiv.org/pdf/1703.07469.pdf"
+        ]
+    },
+    "CMU at SemEval-2016 Task 8: Graph-based AMR Parsing with Infinite Ramp Loss": {
+        "CMU at SemEval-2016 Task 8: Graph-based AMR Parsing with Infinite Ramp Loss": [
+            "https://www.semanticscholar.org/paper/CMU-at-SemEval-2016-Task-8%3A-Graph-based-AMR-Parsing-Flanigan-Dyer/c68d7aaf6ca32272f3f1e5c7b47c0e405dd43742",
+            "https://pdfs.semanticscholar.org/21a8/2bdf47fddf900e86fb4ab6a823290e171bd5.pdf"
+        ]
+    },
+    "End-to-end differentiable proving": {
+        "End-to-end Differentiable Proving": [
+            "https://www.semanticscholar.org/paper/End-to-end-Differentiable-Proving-Rockt%C3%A4schel-Riedel/5889e9afbcc3935867f9ae16fe46c71b9f2b071f",
+            "https://arxiv.org/pdf/1705.11040.pdf"
+        ]
+    },
+    "Latent predictor networks for code generation": {
+        "Latent Predictor Networks for Code Generation": [
+            "https://www.semanticscholar.org/paper/Latent-Predictor-Networks-for-Code-Generation-Ling-Grefenstette/e957747f4f8600940be4c5bb001aa70c84e53a53",
+            "https://arxiv.org/pdf/1603.06744.pdf"
+        ]
+    },
+    "Neural Semantic Parsing by Character-based Translation: Experiments with Abstract Meaning Representations": {
+        "Neural Semantic Parsing by Character-based Translation: Experiments with Abstract Meaning Representations": [
+            "https://www.semanticscholar.org/paper/Neural-Semantic-Parsing-by-Character-based-with-Noord-Bos/8caf40fc92d595a902c376779ee859e5b6014a83",
+            "https://arxiv.org/pdf/1705.09980.pdf"
+        ]
+    },
+    "Chrono at SemEval-2018 Task 6: A System for Normalizing Temporal Expressions": {
+        "Chrono at SemEval-2018 Task 6: A System for Normalizing Temporal Expressions": [
+            "https://www.semanticscholar.org/paper/Chrono-at-SemEval-2018-Task-6%3A-A-System-for-Olex-Maffey/11f1eec20b319e31a369d7103ee8978858392b69",
+            "https://pdfs.semanticscholar.org/11f1/eec20b319e31a369d7103ee8978858392b69.pdf"
+        ]
+    },
+    "End-To-End Memory Networks": {
+        "End-To-End Memory Networks": [
+            "https://www.semanticscholar.org/paper/End-To-End-Memory-Networks-Sukhbaatar-Szlam/4f10b9f47c5bb6b54dd4f5ca8d9fa2c0bbd7ec5e",
+            "https://pdfs.semanticscholar.org/d065/727aa583c9651078c9bc53235ef4b5734748.pdf"
+        ]
+    },
+    "Refining Raw Sentence Representations for Textual Entailment Recognition via Attention": {
+        "Refining Raw Sentence Representations for Textual Entailment Recognition via Attention": [
+            "https://www.semanticscholar.org/paper/Refining-Raw-Sentence-Representations-for-Textual-Balazs-Marrese-Taylor/5e0ebbf28e7f250982b0f48df530f3df7ae08da3",
+            "https://arxiv.org/pdf/1707.03103.pdf"
+        ]
+    },
+    "DeepType: Multilingual Entity Linking by Neural Type System Evolution": {
+        "DeepType: Multilingual Entity Linking by Neural Type System Evolution": [
+            "https://www.semanticscholar.org/paper/DeepType%3A-Multilingual-Entity-Linking-by-Neural-Raiman-Raiman/919bace2acf13bc2580222bb16c0454eb792ae93",
+            "https://arxiv.org/pdf/1802.01021.pdf"
+        ]
+    },
+    "Improving Neural Machine Translation with Conditional Sequence Generative Adversarial Nets": {
+        "Improving Neural Machine Translation with Conditional Sequence Generative Adversarial Nets": [
+            "https://www.semanticscholar.org/paper/Improving-Neural-Machine-Translation-with-Sequence-Yang-Chen/0f62050a1a58f45fba1cd1a6adad74a427f20438",
+            "https://arxiv.org/pdf/1703.04887.pdf"
+        ]
+    },
+    "FlashMeta: A framework for inductive program synthesis": {
+        "FlashMeta: a framework for inductive program synthesis": [
+            "https://www.semanticscholar.org/paper/FlashMeta%3A-a-framework-for-inductive-program-Polozov-Gulwani/7f6245d527e84092111a6adb0f1939d0209d3360",
+            "http://dl.acm.org/citation.cfm?id=2814310"
+        ]
+    },
+    "An Analysis of Neural Language Modeling at Multiple Scales": {
+        "An Analysis of Neural Language Modeling at Multiple Scales": [
+            "https://www.semanticscholar.org/paper/An-Analysis-of-Neural-Language-Modeling-at-Multiple-Merity-Keskar/680aafd3d51e666b297e27b93d9554cc2caf1c4d",
+            "https://arxiv.org/pdf/1803.08240.pdf"
+        ]
+    },
+    "Ranking Sentences for Extractive Summarization with Reinforcement Learning": {
+        "Ranking Sentences for Extractive Summarization with Reinforcement Learning": [
+            "https://www.semanticscholar.org/paper/Ranking-Sentences-for-Extractive-Summarization-with-Narayan-Cohen/59562be2cf8e01e8b7bb7560cef56158ea171227",
+            "https://arxiv.org/pdf/1802.08636.pdf"
+        ]
+    },
+    "Language to logical form with neural attention.": {
+        "Language to Logical Form with Neural Attention": [
+            "https://www.semanticscholar.org/paper/Language-to-Logical-Form-with-Neural-Attention-Dong-Lapata/558ac446dc26bee9789d660a251b75728cb6eeb2",
+            "https://arxiv.org/pdf/1601.01280.pdf"
+        ]
+    },
+    "A Pilot Study of Domain Adaptation Effect for Neural Abstractive Summarization": {
+        "A Pilot Study of Domain Adaptation Effect for Neural Abstractive Summarization": [
+            "https://www.semanticscholar.org/paper/A-Pilot-Study-of-Domain-Adaptation-Effect-for-Hua-Wang/14e3ee5d9e640ac364a1908b8d0d6923cfec1cb0",
+            "https://arxiv.org/pdf/1707.07062.pdf"
+        ]
+    },
+    "Graph-based ranking algorithms for sentence extraction, applied to text summarization": {
+        "Graph-based Ranking Algorithms for Sentence Extraction, Applied to Text Summarization": [
+            "https://www.semanticscholar.org/paper/Graph-based-Ranking-Algorithms-for-Sentence-Applied-Mihalcea/2aeb08c93d6db8f305c015e593f753e2115a8750",
+            "https://pdfs.semanticscholar.org/0678/c73ff855c93f238538735fcecc1ee6bc8379.pdf"
+        ]
+    },
+    "A shortest path dependency kernel for relation extraction": {
+        "A Shortest Path Dependency Kernel for Relation Extraction": [
+            "https://www.semanticscholar.org/paper/A-Shortest-Path-Dependency-Kernel-for-Relation-Bunescu-Mooney/8a8832216fa59867aab8bb98270763fc2de3d8d8",
+            "https://pdfs.semanticscholar.org/b8d8/02570458793c270b618e54fb29c507674cf5.pdf"
+        ]
+    },
+    "Novel Text Summarization Techniques for Contextual Advertising": {
+        "Novel Text Summarization Techniques for Contextual Advertising": [
+            "https://www.semanticscholar.org/paper/Novel-Text-Summarization-Techniques-for-Contextual-Armano-Giuliani/765980621b1beeb7dee0f9aef3c92325ac4ae3d0",
+            "https://pdfs.semanticscholar.org/f317/e806367a919a5846399e6f3fee945524e31d.pdf"
+        ]
+    },
+    "Unsupervised Methods for Speaker Diarization: An Integrated and Iterative Approach": {
+        "Unsupervised Methods for Speaker Diarization: An Integrated and Iterative Approach": [
+            "https://www.semanticscholar.org/paper/Unsupervised-Methods-for-Speaker-Diarization%3A-An-Shum-Dehak/6de99515ff86b42abb1107f920109cbee6037f81",
+            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6518171"
+        ]
+    },
+    "Dual PECCS: a cognitive system for conceptual representation and categorization": {
+        "Dual PECCS: a cognitive system for conceptual representation and categorization": [
+            "https://www.semanticscholar.org/paper/Dual-PECCS%3A-a-cognitive-system-for-conceptual-and-Lieto-Radicioni/de7839351ccd3b4d0ed9fe97a058adb2e967524c",
+            "https://doi.org/10.1080/0952813x.2016.1198934"
+        ]
+    },
+    "Multi-Reward Reinforced Summarization with Saliency and Entailment": {
+        "Multi-Reward Reinforced Summarization with Saliency and Entailment": [
+            "https://www.semanticscholar.org/paper/Multi-Reward-Reinforced-Summarization-with-Saliency-Pasunuru-Bansal/46d8767a078778aaa00d436b671a78f90667ebff",
+            "https://arxiv.org/pdf/1804.06451.pdf"
+        ]
+    },
+    "Improving Language Understanding by Generative Pre-Training": {
+        "Improving Language Understanding by Generative Pre-Training": [
+            "https://www.semanticscholar.org/paper/Improving-Language-Understanding-by-Generative-Radford/cd18800a0fe0b668a1cc19f2ec95b5003d0a5035",
+            "https://pdfs.semanticscholar.org/cd18/800a0fe0b668a1cc19f2ec95b5003d0a5035.pdf"
+        ]
+    },
+    "Distant supervision for relation extraction without labeled data": {
+        "Distant supervision for relation extraction without labeled data": [
+            "https://www.semanticscholar.org/paper/Distant-supervision-for-relation-extraction-without-Mintz-Bills/d84b57362e2010f6f65357267df7e0157af30684",
+            "https://pdfs.semanticscholar.org/a541/6479a410fe4654f80247a459ef11a10d6094.pdf"
+        ]
+    },
+    "Achieving Human Parity in Conversational Speech Recognition": {
+        "Achieving Human Parity in Conversational Speech Recognition": [
+            "https://www.semanticscholar.org/paper/Achieving-Human-Parity-in-Conversational-Speech-Xiong-Droppo/579e0077a3810510a7965224a8782ecc01766ea0",
+            "https://arxiv.org/pdf/1610.05256.pdf"
+        ]
+    },
+    "SummaRuNNer: A Recurrent Neural Network based Sequence Model for Extractive Summarization of Documents": {
+        "SummaRuNNer: A Recurrent Neural Network Based Sequence Model for Extractive Summarization of Documents": [
+            "https://www.semanticscholar.org/paper/SummaRuNNer%3A-A-Recurrent-Neural-Network-Based-Model-Nallapati-Zhai/1bc49abe5145055f1fa259bd4e700b1eb6b7f08d",
+            "https://arxiv.org/pdf/1611.04230.pdf"
+        ]
+    },
+    "Question Answering via Integer Programming over Semi-Structured Knowledge": {
+        "Question Answering via Integer Programming over Semi-Structured Knowledge": [
+            "https://www.semanticscholar.org/paper/Question-Answering-via-Integer-Programming-over-Khashabi-Khot/a5ae605457fd8c1c5cc2675417d44f8f59fc7c33",
+            "https://arxiv.org/pdf/1604.06076.pdf"
+        ]
+    },
+    "Go for a Walk and Arrive at the Answer: Reasoning Over Paths in Knowledge Bases using Reinforcement Learning": {
+        "Go for a Walk and Arrive at the Answer: Reasoning Over Paths in Knowledge Bases using Reinforcement Learning": [
+            "https://www.semanticscholar.org/paper/Go-for-a-Walk-and-Arrive-at-the-Answer%3A-Reasoning-Das-Dhuliawala/e9f32b34fde7d0034a147d5996470634c9e19002",
+            "https://arxiv.org/pdf/1711.05851.pdf"
+        ]
+    },
+    "Mnemonic Reader for Machine Comprehension": {
+        "Mnemonic Reader for Machine Comprehension": "https://www.semanticscholar.org/paper/Mnemonic-Reader-for-Machine-Comprehension-Hu-Peng/525f65936c331b0b766c7aea0eae64c595704c50"
+    },
+    "A Baseline Temporal Tagger for all Languages": {
+        "A Baseline Temporal Tagger for all Languages": [
+            "https://www.semanticscholar.org/paper/A-Baseline-Temporal-Tagger-for-all-Languages-Str%C3%B6tgen-Gertz/6757a1bb4a5aed16d209958217a55aab69aaccea",
+            "https://pdfs.semanticscholar.org/5200/c5dfe6d5b7ec9ed17c0a61eac9a8c9a45aee.pdf"
+        ]
+    },
+    "Type-driven incremental semantic parsing with polymorphism.": {
+        "Type-Driven Incremental Semantic Parsing with Polymorphism": [
+            "https://www.semanticscholar.org/paper/Type-Driven-Incremental-Semantic-Parsing-with-Zhao-Huang/42f571fc75ccf57b44c1b9eeead67c84ee9d5979",
+            "https://arxiv.org/pdf/1411.5379.pdf"
+        ]
+    },
+    "Teaching Machines to Read and Comprehend": {
+        "Teaching Machines to Read and Comprehend": [
+            "https://www.semanticscholar.org/paper/Teaching-Machines-to-Read-and-Comprehend-Hermann-Kocisk%C3%BD/d1505c6123c102e53eb19dff312cb25cea840b72",
+            "https://arxiv.org/pdf/1506.03340.pdf"
+        ]
+    },
+    "SemEval-2010 task 8": null,
+    "Kernel sparse subspace clustering": {
+        "Kernel sparse subspace clustering": [
+            "https://www.semanticscholar.org/paper/Kernel-sparse-subspace-clustering-Patel-Vidal/d35b1d30f70daf4685118b12391bd3b24988b09c",
+            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7025576"
+        ]
+    },
+    "A syntactic neural model for general-purpose code generation.": {
+        "A Syntactic Neural Model for General-Purpose Code Generation": [
+            "https://www.semanticscholar.org/paper/A-Syntactic-Neural-Model-for-General-Purpose-Code-Yin-Neubig/c8d0e13de2eaa09a928eff36b99d63f494c2f5ec",
+            "https://arxiv.org/pdf/1704.01696.pdf"
+        ]
+    },
+    "Get To The Point: Summarization with Pointer-Generator Networks": {
+        "Get To The Point: Summarization with Pointer-Generator Networks": [
+            "https://www.semanticscholar.org/paper/Get-To-The-Point%3A-Summarization-with-Networks-See-Liu/668db48c6a79826456341680ee1175dfc4cced71",
+            "https://arxiv.org/pdf/1704.04368.pdf"
+        ]
+    },
+    "REGMAPR - Text Matching Made Easy": {
+        "REGMAPR - Text Matching Made Easy": [
+            "https://www.semanticscholar.org/paper/REGMAPR-Text-Matching-Made-Easy-Brahma/01868e24533189310d3fb79a9a0319de2fb3a924",
+            "https://arxiv.org/pdf/1808.04343.pdf"
+        ]
+    },
+    "Differentiable Learning of Logical Rules for Knowledge Base Reasoning": {
+        "Differentiable Learning of Logical Rules for Knowledge Base Reasoning": [
+            "https://www.semanticscholar.org/paper/Differentiable-Learning-of-Logical-Rules-for-Base-Yang-Yang/23e42bc79f10234bdceef31441be39a2d9d2a9a0",
+            "https://pdfs.semanticscholar.org/7e76/0a7479034c4ce352276fa4f6350ad0e8f6c5.pdf"
+        ]
+    },
+    "Grid Long Short-Term Memory": {
+        "Grid Long Short-Term Memory": [
+            "https://www.semanticscholar.org/paper/Grid-Long-Short-Term-Memory-Kalchbrenner-Danihelka/5b791cd374c7109693aaddee2c12d659ae4e3ec0",
+            "https://arxiv.org/pdf/1507.01526.pdf"
+        ]
+    },
+    "Question answering with subgraph embeddings": {
+        "Question Answering with Subgraph Embeddings": [
+            "https://www.semanticscholar.org/paper/Question-Answering-with-Subgraph-Embeddings-Bordes-Chopra/33261d252218007147a71e40f8367ed152fa2fe0",
+            "https://arxiv.org/pdf/1406.3676.pdf"
+        ]
+    },
+    "Pointer Sentinel Mixture Models": {
+        "Pointer Sentinel Mixture Models": [
+            "https://www.semanticscholar.org/paper/Pointer-Sentinel-Mixture-Models-Merity-Xiong/efbd381493bb9636f489b965a2034d529cd56bcd",
+            "https://arxiv.org/pdf/1609.07843.pdf"
+        ]
+    },
+    "A Bidirectional Hierarchical Skip-Gram model for text topic embedding": {
+        "A Bidirectional Hierarchical Skip-Gram model for text topic embedding": [
+            "https://www.semanticscholar.org/paper/A-Bidirectional-Hierarchical-Skip-Gram-model-for-Zheng-Bao/79950dc94eb82e216edeba86f715e784b4db0ccf",
+            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7727289"
+        ]
+    },
+    "SWAG: A Large-Scale Adversarial Dataset for Grounded Commonsense Inference": {
+        "SWAG: A Large-Scale Adversarial Dataset for Grounded Commonsense Inference": [
+            "https://www.semanticscholar.org/paper/SWAG%3A-A-Large-Scale-Adversarial-Dataset-for-Zellers-Bisk/af5c4b80fbf847f69a202ba5a780a3dd18c1a027",
+            "https://arxiv.org/pdf/1808.05326.pdf"
+        ]
+    },
+    "AMR Parsing as Graph Prediction with Latent Alignment": {
+        "AMR Parsing as Graph Prediction with Latent Alignment": [
+            "https://www.semanticscholar.org/paper/AMR-Parsing-as-Graph-Prediction-with-Latent-Lyu-Titov/63ef50238ba765edf47c86e3e3fe9f608d8ea00b",
+            "https://arxiv.org/pdf/1805.05286.pdf"
+        ]
+    },
+    "A general reinforcement learning algorithm that masters chess, shogi, and Go through self-play": {
+        "A general reinforcement learning algorithm that masters chess, shogi, and Go through self-play": [
+            "https://www.semanticscholar.org/paper/A-general-reinforcement-learning-algorithm-that-and-Silver-Hubert/f9717d29840f4d8f1cc19d1b1e80c5d12ec40608",
+            "https://doi.org/10.1126/science.aar6404"
+        ]
+    },
+    "Fraternal Dropout": {
+        "Fraternal Dropout": [
+            "https://www.semanticscholar.org/paper/Fraternal-Dropout-Zolna-Arpit/415f18130edbe06e3e4806dfb0a1edcab6c241eb",
+            "https://arxiv.org/pdf/1711.00066.pdf"
+        ]
+    },
+    "Key-value memory networks for directly reading documents": {
+        "Key-Value Memory Networks for Directly Reading Documents": [
+            "https://www.semanticscholar.org/paper/Key-Value-Memory-Networks-for-Directly-Reading-Miller-Fisch/bba5f2852b1db8a18004eb7328efa5e1d57cc62a",
+            "https://arxiv.org/pdf/1606.03126.pdf"
+        ]
+    },
+    "Ruminating Reader: Reasoning with Gated Multi-Hop Attention": {
+        "Ruminating Reader: Reasoning with Gated Multi-hop Attention": [
+            "https://www.semanticscholar.org/paper/Ruminating-Reader%3A-Reasoning-with-Gated-Multi-hop-Gong-Bowman/c50cd7df4271ef94a0a60894f0e2cf4ef89fb912",
+            "https://arxiv.org/pdf/1704.07415.pdf"
+        ]
+    },
+    "CCG Supertagging with a Recurrent Neural Network": {
+        "CCG Supertagging with a Recurrent Neural Network": [
+            "https://www.semanticscholar.org/paper/CCG-Supertagging-with-a-Recurrent-Neural-Network-Xu-Auli/f5d93f0b6d77e2681072e0bd79735a3b0c457c1b",
+            "https://pdfs.semanticscholar.org/f5d9/3f0b6d77e2681072e0bd79735a3b0c457c1b.pdf"
+        ]
+    },
+    "A Neural Attention Model for Abstractive Sentence Summarization": {
+        "A Neural Attention Model for Abstractive Sentence Summarization": [
+            "https://www.semanticscholar.org/paper/A-Neural-Attention-Model-for-Abstractive-Sentence-Rush-Chopra/5082a1a13daea5c7026706738f8528391a1e6d59",
+            "https://arxiv.org/pdf/1509.00685.pdf"
+        ]
+    },
+    "Convolutional Sequence to Sequence Learning": {
+        "Convolutional Sequence to Sequence Learning": [
+            "https://www.semanticscholar.org/paper/Convolutional-Sequence-to-Sequence-Learning-Gehring-Auli/43428880d75b3a14257c3ee9bda054e61eb869c0",
+            "https://arxiv.org/pdf/1705.03122.pdf"
+        ]
+    },
+    "A Convolution BiLSTM Neural Network Model for Chinese Event Extraction": {
+        "A Convolution BiLSTM Neural Network Model for Chinese Event Extraction": [
+            "https://www.semanticscholar.org/paper/A-Convolution-BiLSTM-Neural-Network-Model-for-Event-Zeng-Yang/508485dcbc1adcbab2353efc59cdfeabe6a34574",
+            "https://doi.org/10.1007/978-3-319-50496-4_23"
+        ]
+    },
+    "Learning Natural Language Inference with LSTM": {
+        "Learning Natural Language Inference with LSTM": [
+            "https://www.semanticscholar.org/paper/Learning-Natural-Language-Inference-with-LSTM-Wang-Jiang/7940c720a0cbbb03df45769eeb18a12cd397502d",
+            "https://arxiv.org/pdf/1512.08849.pdf"
+        ]
+    },
+    "Seq2SQL: Generating Structured Queries from Natural Language using Reinforcement Learning": {
+        "Seq2SQL: Generating Structured Queries from Natural Language using Reinforcement Learning": "https://www.semanticscholar.org/paper/Seq2SQL%3A-Generating-Structured-Queries-from-Natural-Zhong-Xiong/116a877c774969b53399b1ccaa34d51bfb492ee4"
+    },
+    "Mastering the game of Go without human knowledge": {
+        "Mastering the game of Go without human knowledge": [
+            "https://www.semanticscholar.org/paper/Mastering-the-game-of-Go-without-human-knowledge-Silver-Schrittwieser/c27db32efa8137cbf654902f8f728f338e55cd1c",
+            "https://doi.org/10.1038/nature24270"
+        ]
+    },
+    "context2vec: Learning Generic Context Embedding with Bidirectional LSTM": {
+        "context2vec: Learning Generic Context Embedding with Bidirectional LSTM": [
+            "https://www.semanticscholar.org/paper/context2vec%3A-Learning-Generic-Context-Embedding-Melamud-Goldberger/59761abc736397539bdd01ad7f9d91c8607c0457",
+            "https://pdfs.semanticscholar.org/0a73/a15bf53da196363058196961cd21bc262e8f.pdf"
+        ]
+    },
+    "A Question-Focused Multi-Factor Attention Network for Question Answering": {
+        "A Question-Focused Multi-Factor Attention Network for Question Answering": [
+            "https://www.semanticscholar.org/paper/A-Question-Focused-Multi-Factor-Attention-Network-Kundu-Ng/dabf6549dd2bddd610434d1184f80a0c76d4df26",
+            "https://arxiv.org/pdf/1801.08290.pdf"
+        ]
+    },
+    "Coarse-to-Fine Decoding for Neural Semantic Parsing": {
+        "Coarse-to-Fine Decoding for Neural Semantic Parsing": [
+            "https://www.semanticscholar.org/paper/Coarse-to-Fine-Decoding-for-Neural-Semantic-Parsing-Dong-Lapata/fd04e31c25451f9103a0ac2220ac8d7e7884c343",
+            "https://arxiv.org/pdf/1805.04793.pdf"
+        ]
+    },
+    "Bottom-Up and Top-Down Attention for Image Captioning and VQA": {
+        "Bottom-Up and Top-Down Attention for Image Captioning and VQA": "https://www.semanticscholar.org/paper/Bottom-Up-and-Top-Down-Attention-for-Image-and-VQA-Anderson-He/a79b694bd4ef51207787da1948ed473903b751ef"
+    },
+    "Shape and Material from Sound": {
+        "Shape and Material from Sound": [
+            "https://www.semanticscholar.org/paper/Shape-and-Material-from-Sound-Zhang-Li/34356e364b988e9a1c5c1152df653183b79625a4",
+            "https://pdfs.semanticscholar.org/3435/6e364b988e9a1c5c1152df653183b79625a4.pdf"
+        ]
+    },
+    "Abstractive Text Summarization using Sequence-to-sequence RNNs and Beyond": {
+        "Abstractive Text Summarization using Sequence-to-sequence RNNs and Beyond": [
+            "https://www.semanticscholar.org/paper/Abstractive-Text-Summarization-using-RNNs-and-Nallapati-Zhou/f37076f426023241f19cdc2fb0a0fd733a6fa7fa",
+            "https://arxiv.org/pdf/1602.06023.pdf"
+        ]
+    },
+    "Densely Connected Attention Propagation for Reading Comprehension": {
+        "Densely Connected Attention Propagation for Reading Comprehension": [
+            "https://www.semanticscholar.org/paper/Densely-Connected-Attention-Propagation-for-Reading-Tay-Tuan/baca3fb4f55bc8d3bf853eb6e970086017ecc79c",
+            "https://arxiv.org/pdf/1811.04210.pdf"
+        ]
+    },
+    "Reasoning about entailment with neural attention": {
+        "Reasoning about Entailment with Neural Attention": [
+            "https://www.semanticscholar.org/paper/Reasoning-about-Entailment-with-Neural-Attention-Rockt%C3%A4schel-Grefenstette/2846e83d405cbe3bf2f0f3b5f635dd8b3c680c45",
+            "https://arxiv.org/pdf/1509.06664.pdf"
+        ]
+    },
+    "Grammar Variational Autoencoder": {
+        "Grammar Variational Autoencoder": [
+            "https://www.semanticscholar.org/paper/Grammar-Variational-Autoencoder-Kusner-Paige/222928303a72d1389b0add8032a31abccbba41b3",
+            "https://arxiv.org/pdf/1703.01925.pdf"
+        ]
+    },
+    "Improved Language Modeling by Decoding the Past": {
+        "Improved Language Modeling by Decoding the Past": [
+            "https://www.semanticscholar.org/paper/Improved-Language-Modeling-by-Decoding-the-Past-Brahma/f0ccb215faaeb1e9e86af5827b76c27a8d04e5a7",
+            "https://arxiv.org/pdf/1808.05908.pdf"
+        ]
+    },
+    "Hierarchical Multiscale Recurrent Neural Networks": {
+        "Hierarchical Multiscale Recurrent Neural Networks": [
+            "https://www.semanticscholar.org/paper/Hierarchical-Multiscale-Recurrent-Neural-Networks-Chung-Ahn/65eee67dee969fdf8b44c87c560d66ad4d78e233",
+            "https://arxiv.org/pdf/1609.01704.pdf"
+        ]
+    },
+    "Neural network approach for classification using features extracted by a mapping": {
+        "Neural network approach for classification using features extracted by a mapping": [
+            "https://www.semanticscholar.org/paper/Neural-network-approach-for-classification-using-by-Sun/c24ef8b700d2364aa2a9a674b9ef58a281db5d22",
+            "https://doi.org/10.1016/0167-8655%2893%2990056-J"
+        ]
+    },
+    "DeepCoder: Learning to Write Programs": {
+        "DeepCoder: Learning to Write Programs": [
+            "https://www.semanticscholar.org/paper/DeepCoder%3A-Learning-to-Write-Programs-Balog-Gaunt/8a25c9403d8a0e2fb8ca362a1b26262afd57417f",
+            "https://arxiv.org/pdf/1611.01989.pdf"
+        ]
+    },
+    "Memory Networks": {
+        "Memory Networks": [
+            "https://www.semanticscholar.org/paper/Memory-Networks-Weston-Chopra/71ae756c75ac89e2d731c9c79649562b5768ff39",
+            "https://arxiv.org/pdf/1410.3916.pdf"
+        ]
+    },
+    "Neural Sketch Learning for Conditional Program Generation": {
+        "Neural Sketch Learning for Conditional Program Generation": [
+            "https://www.semanticscholar.org/paper/Neural-Sketch-Learning-for-Conditional-Program-Murali-Qi/d11777ca327c6d91de34d1d2ac50316b905578b2",
+            "https://openreview.net/forum?id=HkfXMz-Ab"
+        ]
+    },
+    "Attention-over-Attention Neural Networks for Reading Comprehension": {
+        "Attention-over-Attention Neural Networks for Reading Comprehension": [
+            "https://www.semanticscholar.org/paper/Attention-over-Attention-Neural-Networks-for-Cui-Chen/c6e5df6322659276da6133f9b734a389d7a255e8",
+            "https://arxiv.org/pdf/1607.04423.pdf"
+        ]
+    },
+    "Embedding entities and relations for learning and inference in knowledge bases": {
+        "Embedding Entities and Relations for Learning and Inference in Knowledge Bases": [
+            "https://www.semanticscholar.org/paper/Embedding-Entities-and-Relations-for-Learning-and-Yang-Yih/86412306b777ee35aba71d4795b02915cb8a04c3",
+            "https://arxiv.org/pdf/1412.6575.pdf"
+        ]
+    },
+    "Text Understanding with the Attention Sum Reader Network": {
+        "Text Understanding with the Attention Sum Reader Network": [
+            "https://www.semanticscholar.org/paper/Text-Understanding-with-the-Attention-Sum-Reader-Kadlec-Schmid/54fb788650fdbaeb5ab1401800f5d2e1f5c9b0d0",
+            "https://arxiv.org/pdf/1603.01547.pdf"
+        ]
+    },
+    "SQLNet: Generating Structured Queries From Natural Language Without Reinforcement Learning": {
+        "SQLNet: Generating Structured Queries From Natural Language Without Reinforcement Learning": [
+            "https://www.semanticscholar.org/paper/SQLNet%3A-Generating-Structured-Queries-From-Natural-Xu-Liu/47f65c165f7ccedd4c18189d4690eec5369dd9c5",
+            "https://arxiv.org/pdf/1711.04436.pdf"
+        ]
+    },
+    "When is self-training effective for parsing?": {
+        "When is Self-Training Effective for Parsing?": [
+            "https://www.semanticscholar.org/paper/When-is-Self-Training-Effective-for-Parsing-McClosky-Charniak/13392a6b2d27a7c8c79b3dbe9be7b3f42e42c24c",
+            "https://pdfs.semanticscholar.org/5cff/a816ef614bcc65ae6625b3c96fc3cb5ad21c.pdf"
+        ]
+    },
+    "YARCS (ensemble)": null,
+    "Finding function in form: Compositional character models for open vocabulary word representation": {
+        "Finding Function in Form: Compositional Character Models for Open Vocabulary Word Representation": [
+            "https://www.semanticscholar.org/paper/Finding-Function-in-Form%3A-Compositional-Character-Ling-Dyer/6dab1c6491929d396e9e5463bc2e87af88602aa2",
+            "https://arxiv.org/pdf/1508.02096.pdf"
+        ]
+    },
+    "Modelling sparsity, heterogeneity, reciprocity and community structure in temporal interaction data": {
+        "Modelling sparsity, heterogeneity, reciprocity and community structure in temporal interaction data": [
+            "https://www.semanticscholar.org/paper/Modelling-sparsity%2C-heterogeneity%2C-reciprocity-and-Miscouridou-Caron/35edfd05e2d9ced87744680e87df0e20b243a5e2",
+            "https://arxiv.org/pdf/1803.06070.pdf"
+        ]
+    },
+    "FACTORIZATION TRICKS FOR LSTM NETWORKS": {
+        "Factorization tricks for LSTM networks": [
+            "https://www.semanticscholar.org/paper/Factorization-tricks-for-LSTM-networks-Kuchaiev-Ginsburg/79baf48bd560060549998d7b61751286de062e2a",
+            "https://arxiv.org/pdf/1703.10722.pdf"
+        ]
+    },
+    "A fast unified model for parsing and sentence understanding": {
+        "A Fast Unified Model for Parsing and Sentence Understanding": [
+            "https://www.semanticscholar.org/paper/A-Fast-Unified-Model-for-Parsing-and-Sentence-Bowman-Gauthier/36c097a225a95735271960e2b63a2cb9e98bff83",
+            "https://arxiv.org/pdf/1603.06021.pdf"
+        ]
+    },
+    "Deep contextualized word representations.": {
+        "Deep Contextualized Word Representations": [
+            "https://www.semanticscholar.org/paper/Deep-Contextualized-Word-Representations-Peters-Neumann/3febb2bed8865945e7fddc99efd791887bb7e14f",
+            "https://arxiv.org/pdf/1802.05365.pdf"
+        ]
+    },
+    "Word Sense Disambiguation: A Unified Evaluation Framework and Empirical Comparison": {
+        "Word Sense Disambiguation: A Unified Evaluation Framework and Empirical Comparison": [
+            "https://www.semanticscholar.org/paper/Word-Sense-Disambiguation%3A-A-Unified-Evaluation-and-Navigli-Camacho-Collados/2df6ae1725ade4249aa961c34da329bdc4761f10",
+            "https://pdfs.semanticscholar.org/e2ef/04c43744761ba3501b2fbb17fc753e9bb271.pdf"
+        ]
+    },
+    "MEMEN: Multi-layer Embedding with Memory Networks for Machine Comprehension": {
+        "MEMEN: Multi-layer Embedding with Memory Networks for Machine Comprehension": [
+            "https://www.semanticscholar.org/paper/MEMEN%3A-Multi-layer-Embedding-with-Memory-Networks-Pan-Li/12e20e4ea572dbe476fd894c5c9a9930cf250dd2",
+            "https://arxiv.org/pdf/1707.09098.pdf"
+        ]
+    },
+    "Nerit: Named Entity Recognition for Informal Text": {
+        "Nerit: Named Entity Recognition for Informal Text": [
+            "https://www.semanticscholar.org/paper/Nerit%3A-Named-Entity-Recognition-for-Informal-Text-Etter-Ferraro/5920903e1c2c7ea165ad84a8fe6dbafdd586cbe7",
+            "https://pdfs.semanticscholar.org/5920/903e1c2c7ea165ad84a8fe6dbafdd586cbe7.pdf"
+        ]
+    },
+    "Globally Normalized Transition-Based Neural Networks": {
+        "Globally Normalized Transition-Based Neural Networks": [
+            "https://www.semanticscholar.org/paper/Globally-Normalized-Transition-Based-Neural-Andor-Alberti/4be0dd53aa1c751219fa6f19fed8a6324f6d2766",
+            "https://arxiv.org/pdf/1603.06042.pdf"
+        ]
+    },
+    "Learning dependency-based compositional semantics.": {
+        "Learning Dependency-Based Compositional Semantics": [
+            "https://www.semanticscholar.org/paper/Learning-Dependency-Based-Compositional-Semantics-Liang-Jordan/3ecd3e00bbbfd94446c3adc9c6878de27e250f7c",
+            "https://doi.org/10.1162/COLI_a_00127"
+        ]
+    },
+    "SQuAD: 100,000+ Questions for Machine Comprehension of Text": {
+        "SQuAD: 100, 000+ Questions for Machine Comprehension of Text": [
+            "https://www.semanticscholar.org/paper/SQuAD%3A-100%2C-000%2B-Questions-for-Machine-of-Text-Rajpurkar-Zhang/05dd7254b632376973f3a1b4d39485da17814df5",
+            "https://arxiv.org/pdf/1606.05250.pdf"
+        ]
+    },
+    "Recurrent Highway Networks": {
+        "Recurrent Highway Networks": [
+            "https://www.semanticscholar.org/paper/Recurrent-Highway-Networks-Zilly-Srivastava/7dba53e72c182e25e98e8f73a99d75ff69dda0c2",
+            "https://arxiv.org/pdf/1607.03474.pdf"
+        ]
+    },
+    "Termination as a therapeutic intervention when treating children who have experienced multiple losses": null,
+    "Unsupervised machine translation using monolingual corpora only": {
+        "Unsupervised Machine Translation Using Monolingual Corpora Only": [
+            "https://www.semanticscholar.org/paper/Unsupervised-Machine-Translation-Using-Monolingual-Lample-Denoyer/e3d772986d176057aca2f5e3eb783da53b559134",
+            "https://arxiv.org/pdf/1711.00043.pdf"
+        ]
+    },
+    "Neural Machine Translation in Linear Time": {
+        "Neural Machine Translation in Linear Time": [
+            "https://www.semanticscholar.org/paper/Neural-Machine-Translation-in-Linear-Time-Kalchbrenner-Espeholt/98445f4172659ec5e891e031d8202c102135c644",
+            "https://arxiv.org/pdf/1610.10099.pdf"
+        ]
+    },
+    "HyperNetworks": null,
+    "A decomposable attention model for natural language inference": {
+        "A Decomposable Attention Model for Natural Language Inference": [
+            "https://www.semanticscholar.org/paper/A-Decomposable-Attention-Model-for-Natural-Language-Parikh-T%C3%A4ckstr%C3%B6m/2cd8e8f510c89c7c18268e8ad51c061e459ad321",
+            "https://arxiv.org/pdf/1606.01933.pdf"
+        ]
+    },
+    "Low rank subspace clustering": null,
+    "An Efficient Gradient-Based Algorithm for On-Line Training of Recurrent Network Trajectories": {
+        "An Efficient Gradient-Based Algorithm for On-Line Training of Recurrent Network Trajectories": [
+            "https://www.semanticscholar.org/paper/An-Efficient-Gradient-Based-Algorithm-for-On-Line-Williams-Peng/26bc0449360d7016f684eafae5b5d2feded32041",
+            "https://doi.org/10.1162/neco.1990.2.4.490"
+        ]
+    },
+    "Ask Me Anything: Dynamic Memory Networks for Natural Language Processing": {
+        "Ask Me Anything: Dynamic Memory Networks for Natural Language Processing": [
+            "https://www.semanticscholar.org/paper/Ask-Me-Anything%3A-Dynamic-Memory-Networks-for-Kumar-Irsoy/452059171226626718eb677358836328f884298e",
+            "https://arxiv.org/pdf/1506.07285.pdf"
+        ]
+    },
+    "Exploring Question Understanding and Adaptation in Neural-Network-Based Question Answering": {
+        "Exploring Question Understanding and Adaptation in Neural-Network-Based Question Answering": [
+            "https://www.semanticscholar.org/paper/Exploring-Question-Understanding-and-Adaptation-in-Zhang-Zhu/62f88e8fc3b44c5627f2b4721b08498d78103893",
+            "https://arxiv.org/pdf/1703.04617.pdf"
+        ]
+    },
+    "Recurrent Batch Normalization": {
+        "Recurrent Batch Normalization": [
+            "https://www.semanticscholar.org/paper/Recurrent-Batch-Normalization-Cooijmans-Ballas/952454718139dba3aafc6b3b67c4f514ac3964af",
+            "https://arxiv.org/pdf/1603.09025.pdf"
+        ]
+    },
+    "CAMR at SemEval-2016 Task 8: An Extended Transition-based AMR Parser": {
+        "CAMR at SemEval-2016 Task 8: An Extended Transition-based AMR Parser": [
+            "https://www.semanticscholar.org/paper/CAMR-at-SemEval-2016-Task-8%3A-An-Extended-AMR-Parser-Wang-Pradhan/f417e2860170f2fd3ac17bc8eaa9f4eda27b39bc",
+            "https://pdfs.semanticscholar.org/ac5a/f1749381b4ebd9dd354c235f0ec7764298d8.pdf"
+        ]
+    },
+    "Abstract Meaning Representation Parsing using LSTM Recurrent Neural Networks": {
+        "Abstract Meaning Representation Parsing using LSTM Recurrent Neural Networks": [
+            "https://www.semanticscholar.org/paper/Abstract-Meaning-Representation-Parsing-using-LSTM-Foland-Martin/fae09c567258a17c6964f0271af76eb5c2081500",
+            "https://doi.org/10.18653/v1%2Fp17-1043"
+        ]
+    },
+    "Learning to generate textual data": {
+        "Learning to Generate Textual Data": [
+            "https://www.semanticscholar.org/paper/Learning-to-Generate-Textual-Data-Bouchard-Stenetorp/328d1e5dfe956021ac172760242f7fc8743b90ea",
+            "https://pdfs.semanticscholar.org/328d/1e5dfe956021ac172760242f7fc8743b90ea.pdf"
+        ]
+    }
+}
