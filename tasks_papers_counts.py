@@ -14,6 +14,17 @@ def read_tag():
     return tag_list
 
 
+def isElementPresent(driver, value):
+    from selenium.common.exceptions import NoSuchElementException
+    try:
+        element = driver.find_element_by_class_name(value=value)
+    except NoSuchElementException as e:
+        print(e)
+        return False
+    else:
+        return True
+
+
 def get_counts(driver, num_pattern):
     """
     :param driver: selenium webdriver objects
@@ -23,6 +34,16 @@ def get_counts(driver, num_pattern):
              - return 0, if web find nothing
              - return counts, if find something in exactly mode
     """
+
+    # if isElementPresent(driver, "original"):
+    #     counts = 0
+    # elif isElementPresent(driver, "bold"):
+    #     counts = 0
+    # else:
+    #     counts = driver.find_element_by_class_name("result-count").text.replace(',', '')
+    #     counts = num_pattern.search(counts).group()
+    #     counts = int(counts)
+
     try:
         _ = driver.find_element_by_class_name("original")
         counts = 0
@@ -41,12 +62,10 @@ def s_scholar_scraper(start):
     """
     using selenium to scraping SemanticScholar data
     """
-    items_per_processing = 20
+    items_per_processing = 1
     driver = webdriver.Chrome()
     num_pattern = re.compile(r'\d+')
     base_url = 'https://www.semanticscholar.org/search?'
-
-    total_counts = {}
     for tag in tqdm(read_tag()[start*items_per_processing:(start+1)*items_per_processing]):
         one_tech = {}
         driver.get("https://www.semanticscholar.org/")
@@ -78,9 +97,11 @@ def s_scholar_scraper(start):
                     except:
                         one_tech[str(i)] = 'err'
                         continue
-            # total_counts[tag] = one_tech
-            with open('./data/papers_counts.json', 'a', encoding='utf-8') as f:
-                json.dump({tag: one_tech}, f, indent=4)
+            with open('./data/papers_counts.json', 'r', encoding='utf-8') as f:
+                total_counts = json.load(f)
+            total_counts.update({tag: one_tech})
+            with open('./data/papers_counts.json', 'w', encoding='utf-8') as f:
+                json.dump(total_counts, f, ensure_ascii=False, indent=4)
         except BaseException as e:
             print(e)
             continue
@@ -115,10 +136,9 @@ def collect_result(result):
 
 
 if __name__ == "__main__":
-    pool = mp.Pool(16)
-    print(mp.cpu_count())
-    for i in range(16):
-        pool.apply_async(s_scholar_scraper, args=(i,), callback=collect_result)
+    pool = mp.Pool(1)
+    for i in range(1):
+        pool.apply_async(s_scholar_scraper, args=(i,))
     pool.close()
     pool.join()
     quit()
