@@ -11,43 +11,6 @@ from selenium import webdriver
 
 dataframe = pd.read_csv('./data/Sota_Evaluations.csv')
 
-# use google to search papers
-# for title in tqdm(papers):
-#     driver.get('https://www.google.com/')
-#     time.sleep(2)
-#     input_s = driver.find_element_by_class_name('gLFyf')
-#     input_s.clear()
-#     input_s.send_keys("\"%s\"" % title)
-#     input_s.send_keys(Keys.ENTER)
-#     time.sleep(3)
-#
-#     try:
-#         _ = driver.find_element_by_id('captcha-form')
-#         a = input()
-#         search_items = driver.find_elements_by_class_name('g')
-#
-#         title_url = collections.OrderedDict()
-#         for element in search_items:
-#             title_ = element.find_element_by_tag_name('h3').text
-#             url_ = element.find_element_by_tag_name('a').get_attribute("href")
-#             title_url[title_] = url_
-#
-#         results[title] = title_url
-#
-#     except:
-#
-#         try:
-#             search_items = driver.find_elements_by_class_name('g')
-#
-#             title_url = collections.OrderedDict()
-#             for element in search_items:
-#                 title_ = element.find_element_by_tag_name('h3').text
-#                 url_ = element.find_element_by_tag_name('a').get_attribute("href")
-#                 title_url[title_] = url_
-#
-#             results[title] = title_url
-#         except:
-#             continue
 
 def levenshtein_distance(string_one, string_two):
     if len(string_one) < len(string_two): return levenshtein_distance(string_two, string_one)
