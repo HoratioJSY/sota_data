@@ -1,183 +1,39 @@
 {
-    "https://arxiv.org/abs/1906.02448": {
-        "Table 2: Factor analysis on Zh→En translation, the results are average BLEU scores on MT03∼06 datasets.": [
+    "https://arxiv.org/abs/1508.05326v1": {
+        "caption{ \\label{tab:eopresults} 2-class test accuracy for two simple baseline systems included in the   Excitement Open Platform, as well as SICK and RTE results for   a model making use of more sophisticated lexical resources. %All RTE results are 2-class accuracy. %The transformation-based model allows for 3-class predictions on our %  corpus and SICK; these are reported in the last row. } \\end{table}": [
             [
-                "Systems: RNNsearch",
-                "Average: 37.73"
+                {
+                    "System": "Edit Distance Based",
+                    "SNLI": "71.9",
+                    "SICK": "65.4",
+                    "RTE-3": "61.9"
+                },
+                {
+                    "System": "Classifier Based",
+                    "SNLI": "72.2",
+                    "SICK": "71.4",
+                    "RTE-3": "61.5"
+                },
+                {
+                    "System": "$~~~$ + Lexical Resources",
+                    "SNLI": "75.0",
+                    "SICK": "78.8",
+                    "RTE-3": "63.6"
+                }
             ],
             [
-                "Systems: RNNsearch+ word oracle",
-                "Average: 38.94"
-            ],
-            [
-                "Systems: RNNsearch+ word oracle+ noise",
-                "Average: 39.50"
-            ],
-            [
-                "Systems: RNNsearch+ sentence oracle",
-                "Average: 39.56"
-            ],
-            [
-                "Systems: RNNsearch+ sentence oracle+ noise",
-                "Average: 40.09"
-            ],
-            [
-                "Best-Systems: RNNsearch+ sentence oracle+ noise",
-                "Best-Average: 40.09"
-            ]
-        ],
-        "Table 3: Case-sensitive BLEU scores (%) on En→De task. The “‡” indicates the results are significantly better (p<0.01) than RNNsearch and Transformer.": [
-            [
-                "Systems: RNNsearch",
-                "newstest2014: 25.82"
-            ],
-            [
-                "Systems: RNNsearch+ SS-NMT",
-                "newstest2014: 26.50"
-            ],
-            [
-                "Systems: RNNsearch+ MIXER",
-                "newstest2014: 26.76"
-            ],
-            [
-                "Systems: RNNsearch+ OR-NMT",
-                "newstest2014: 27.41‡"
-            ],
-            [
-                "Systems: Transformer (base)",
-                "newstest2014: 27.34"
-            ],
-            [
-                "Systems: Transformer (base)+ SS-NMT",
-                "newstest2014: 28.05"
-            ],
-            [
-                "Systems: Transformer (base)+ MIXER",
-                "newstest2014: 27.98"
-            ],
-            [
-                "Systems: Transformer (base)+ OR-NMT",
-                "newstest2014: 28.65‡"
-            ],
-            [
-                "Best-Systems: RNNsearch+ OR-NMT",
-                "Best-newstest2014: 27.41‡"
-            ],
-            [
-                "Best-Systems: Transformer (base)+ OR-NMT",
-                "Best-newstest2014: 28.65‡"
-            ]
-        ]
-    },
-    "http://arxiv.org/abs/1612.08083v3": {
-        "Table 2: Results on the Google Billion Word test set. The GCNN outperforms the LSTMs with the same output approximation.": [
-            [
-                "Model: Sigmoid-RNN-2048 (Ji et al., 2015)",
-                "Test PPL: 68.3",
-                "Hardware: 1 CPU"
-            ],
-            [
-                "Model: Interpolated KN 5-Gram (Chelba et al., 2013)",
-                "Test PPL: 67.6",
-                "Hardware: 100 CPUs"
-            ],
-            [
-                "Model: Sparse Non-Negative Matrix LM (Shazeer et al., 2014)",
-                "Test PPL: 52.9",
-                "Hardware: -"
-            ],
-            [
-                "Model: RNN-1024 + MaxEnt 9 Gram Features (Chelba et al., 2013)",
-                "Test PPL: 51.3",
-                "Hardware: 24 GPUs"
-            ],
-            [
-                "Model: LSTM-2048-512 (Jozefowicz et al., 2016)",
-                "Test PPL: 43.7",
-                "Hardware: 32 GPUs"
-            ],
-            [
-                "Model: 2-layer LSTM-8192-1024 (Jozefowicz et al., 2016)",
-                "Test PPL: 30.6",
-                "Hardware: 32 GPUs"
-            ],
-            [
-                "Model: BIG GLSTM-G4 (Kuchaiev & Ginsburg, 2017)",
-                "Test PPL: 23.311footnotemark: 1",
-                "Hardware: 8 GPUs"
-            ],
-            [
-                "Model: LSTM-2048 (Grave et al., 2016a)",
-                "Test PPL: 43.9",
-                "Hardware: 1 GPU"
-            ],
-            [
-                "Model: 2-layer LSTM-2048 (Grave et al., 2016a)",
-                "Test PPL: 39.8",
-                "Hardware: 1 GPU"
-            ],
-            [
-                "Model: GCNN-13",
-                "Test PPL: 38.1",
-                "Hardware: 1 GPU"
-            ],
-            [
-                "Model: GCNN-14 Bottleneck",
-                "Test PPL: 31.9",
-                "Hardware: 8 GPUs"
-            ]
-        ],
-        "Table 3: Results for single models on the WikiText-103 dataset.": [
-            [
-                "Model: LSTM-1024 (Grave et al., 2016b)",
-                "Test PPL: 48.7",
-                "Hardware: 1 GPU"
-            ],
-            [
-                "Model: GCNN-8",
-                "Test PPL: 44.9",
-                "Hardware: 1 GPU"
-            ],
-            [
-                "Model: GCNN-14",
-                "Test PPL: 37.2",
-                "Hardware: 4 GPUs"
-            ]
-        ]
-    },
-    "http://arxiv.org/abs/1704.03915v2": "no informative table",
-    "http://arxiv.org/abs/1711.08028v4": "no informative table",
-    "http://arxiv.org/abs/1508.05326v1": {
-        "Table 4:   2-class test accuracy for two simple baseline systems included in the Excitement Open Platform, as well as SICK and RTE results for a model making use of more sophisticated lexical resources.": [
-            [
-                "System: Edit Distance Based",
-                "SNLI: 71.9",
-                "SICK: 65.4",
-                "RTE-3: 61.9"
-            ],
-            [
-                "System: Classifier Based",
-                "SNLI: 72.2",
-                "SICK: 71.4",
-                "RTE-3: 61.5"
-            ],
-            [
-                "System: Classifier Based+ Lexical Resources",
-                "SNLI: 75.0",
-                "SICK: 78.8",
-                "RTE-3: 63.6"
-            ],
-            [
-                "Best-System: Classifier Based+ Lexical Resources",
-                "Best-SNLI: 75.0"
-            ],
-            [
-                "Best-System: Classifier Based+ Lexical Resources",
-                "Best-SICK: 78.8"
-            ],
-            [
-                "Best-System: Classifier Based+ Lexical Resources",
-                "Best-RTE-3: 63.6"
+                [
+                    "Best-System: $~~~$ + Lexical Resources",
+                    "Best-SNLI: 75.0"
+                ],
+                [
+                    "Best-System: $~~~$ + Lexical Resources",
+                    "Best-SICK: 78.8"
+                ],
+                [
+                    "Best-System: $~~~$ + Lexical Resources",
+                    "Best-RTE-3: 63.6"
+                ]
             ]
         ]
     }

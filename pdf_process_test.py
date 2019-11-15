@@ -108,7 +108,7 @@ class ArxivReader(object):
                 if key_phrase is not None:
                     u = base_url + key_phrase
 
-                    urllib.request.urlretrieve(u, './data/papers.tar.gz', reporthook=ArxivReader.reporthook)
+                    # urllib.request.urlretrieve(u, './data/papers.tar.gz', reporthook=ArxivReader.reporthook)
                     tar = tarfile.open('./data/papers.tar.gz', 'r')
                     # print(tar.getnames())
                     data = {}
@@ -198,29 +198,78 @@ def get_informative_table(content_xml, key_name):
     return table_content
 
 
-def raw_content_process(content_raw):
-    table_pattern = re.compile(r'\\begin{table}.+\\end{table}')
+def raw_content_process(content_raw, key_name):
+    """
+    :param content_raw: {file_name: raw latex code}
+    :return: table content
+    """
+    table_pattern = re.compile(r'{table}.+?{table}')
+    informative_table = {}
+    bold_list = []
+
     for key, value in content_raw.items():
-        table_num = len(table_pattern.findall(value))
-        print(table_num)
-    pass
+        tables = table_pattern.findall(value.replace('\n', '@$@$@'), re.I)
+
+        for table in tables:
+
+            table_list = []
+
+            captions = re.findall(r'caption{.+}', table, re.I)
+            if re.search(r'\s(%s)(\s|\,|\.\()' % '|'.join(key_name), captions[0], re.I) is not None and \
+                            re.search(r'\s(ablation)(\s|\,|\.\()', captions[0], re.I) is None:
+                table_content = re.search(r'{tabular}.+?{tabular}', table).group().replace('@$@$@', '\n')
+
+                print(table_content)
+
+                for line in table_content.split('\n'):
+                    # drop the documenting line
+                    if line.startswith('%'):
+                        continue
+                    elif line.find("&") > -1:
+                        items = re.findall(r'{.+?}', line)
+                        items = [i[1:-1] for i in items]
+                        table_list.append(items)
+                        if re.search(r'b{.+?}', line) is not None:
+                            bold_list.extend(re.findall(r'b{.+?}', line))
+            if len(table_list) > 0 and len(set([len(i) for i in table_list])) == 1:
+                informative_table[captions[0].replace('@$@$@', " ")] = table_list
+
+    for ca, ta in informative_table.items():
+        merged_lines = [dict(zip(ta[0], i)) for i in ta[1:]]
+        best_record = []
+
+        for r_index, line in enumerate(ta):
+            for c_index, element in enumerate(line):
+                if c_index == 0 or r_index == 0: continue
+                else:
+                    score = sorted([i.find(element) for i in bold_list], reverse=True)
+                    if score[0] > -1:
+                        item_one = "Best-%s: %s" % (ta[0][0], ta[r_index][0])
+                        item_two = "Best-%s: %s" % (ta[0][c_index], ta[r_index][c_index])
+                        best_record.append([item_one, item_two])
+
+        informative_table[ca] = [merged_lines, best_record]
+    return informative_table
 
 
 def get_paper_txt():
     df = pd.read_csv('./data/Sota_Evaluations.csv')
     df = df.dropna(axis=0)
     url = ['https://arxiv.org/abs/1906.02448']
+    url = ['https://arxiv.org/abs/1508.05326v1']
     url.extend(df['paperurl'])
 
     results = {}
-    for u in url[0:5]:
+    for u in url[0:1]:
+        print(u)
         content_xml = ArxivReader.arxiv_vanity_reader(u)
-        if content_xml is None:
-            continue
-            # content_raw = ArxivReader.raw_data_reader(u)
-            # raw_content_process(content_raw)
-            # merged_table = content_raw
+        if content_xml is not None:
+            with open("./data/table_key_tag.json", 'r') as f:
+                key_name = json.load(f)
+            content_raw = ArxivReader.raw_data_reader(u)
+            merged_table = raw_content_process(content_raw, key_name)
         else:
+            continue
             with open("./data/table_key_tag.json", 'r') as f:
                 key_name = json.load(f)
             informative_table = get_informative_table(content_xml, key_name)
