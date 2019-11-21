@@ -65,8 +65,8 @@ class Title2Link(object):
         base_url = 'https://www.semanticscholar.org/search?'
         for title in tqdm(self.papers_list):
 
-            if self.filtered_df.loc[self.filtered_df['paper']==title, 'date'].any() and use_date:
-                year_ = int(self.filtered_df.loc[self.filtered_df['paper']==title, 'date'].any()[:4])
+            if self.filtered_df.loc[self.filtered_df['paper'] == title, 'date'].any() and use_date:
+                year_ = int(self.filtered_df.loc[self.filtered_df['paper'] == title, 'date'].any()[:4])
                 year_url = 'year[0]=%d&year[1]=%d&' % (year_, year_)
                 query = base_url + year_url + 'q=\"%s\"' % title + "&sort=relevance&fos=computer-science"
             else:
@@ -115,19 +115,23 @@ class Key2Link(object):
         self.filtered_df = None
         self.results = {}
         self.filtered_results = {}
-        self.driver = webdriver.Chrome()
+        self.driver = None
         self.replace_pattern = re.compile(r'(（|\().+?(\)|）)')
         self.author_pattern = re.compile(r'(\()([a-zA-Z\-]+\set\sal)')
 
     def re_raw_model(self, model):
         raw_list = [key for key in self.filtered_df['model'] if key.find(model) > -1]
-        raw_model_name, _ = collections.Counter(raw_list).most_common(1)[0]
-        return raw_model_name
+        if len(raw_list) > 0:
+            raw_model_name, _ = collections.Counter(raw_list).most_common(1)[0]
+            return raw_model_name
+        else:
+            return None
 
     def _pre_process(self):
-        self.filtered_df = self.df.loc[self.df['paperurl'].isnull(), :]
-        self.filtered_df = self.filtered_df.loc[self.filtered_df['paper'].isnull(), :]
-        raw_models = list(self.filtered_df['model'])[4:300]
+        if self.filtered_df is None:
+            self.filtered_df = self.df.loc[self.df['paperurl'].isnull(), :]
+            self.filtered_df = self.filtered_df.loc[self.filtered_df['paper'].isnull(), :]
+        raw_models = list(self.filtered_df['model'])[4:]
         raw_models = [key for key in raw_models if re.search(r'^[a-zA-Z\-]+\set\sal', key) is None]
         models = [self.replace_pattern.sub(r'', keyword).strip() for keyword in raw_models]
 
@@ -139,49 +143,63 @@ class Key2Link(object):
             else:
                 authors.append('')
         assert len(models) == len(authors)
-        # reee = collections.Counter(" ".join(models).split()).most_common(200)
-        # print(reee)
 
+        # dictionary for index
         task_dict = {}
+        metric_dict = {}
+        dataset_dict = {}
         raw_name_dict = {}
-        for model in models:
-            try:
-                raw_name = self.re_raw_model(model)
-                task = list(self.filtered_df.loc[self.filtered_df['model']==raw_name, 'task'])
-                task_dict[model] = task[0]
-                raw_name_dict[model] = raw_name
-            except:
-                task_dict[model] = 'deep learning'
 
-        return models, authors, task_dict, raw_name_dict
+        for model in models:
+            raw_name = self.re_raw_model(model)
+
+            if raw_name is not None:
+                task = list(self.filtered_df.loc[self.filtered_df['model'] == raw_name, 'task'])
+                dataset = list(self.filtered_df.loc[self.filtered_df['model'] == raw_name, 'dataset'])
+                metric = list(self.filtered_df.loc[self.filtered_df['model'] == raw_name, 'metric'])
+                task_dict[model] = task[0]
+                metric_dict[model] = metric[0]
+                dataset_dict[model] = dataset
+                raw_name_dict[model] = raw_name
+
+        return models, authors, task_dict, raw_name_dict, metric_dict, dataset_dict
 
     @staticmethod
-    def _read_results(driver):
+    def _read_results(driver, model_phrase):
         search_items = driver.find_elements_by_class_name('search-result')
 
         title_abs_url = collections.OrderedDict()
         for element in search_items:
             title_ = element.find_element_by_class_name('search-result-title').text.strip()
             url_ = element.find_element_by_tag_name('a').get_attribute("href")
-            abs_ = element.find_element_by_class_name("search-result-abstract").text.strip()
+            abs_ = element.find_element_by_class_name("search-result-abstract")
+
             try:
-                pdf_url = element.find_element_by_class_name('paper-link').get_attribute("href")
-                title_abs_url[title_] = {"abs": abs_, 'url':[url_, pdf_url]}
+                abs_.find_element_by_class_name("more").click()
+                abs_ = abs_.text.strip()
             except:
-                title_abs_url[title_] = {"abs": abs_, 'url': [url_]}
+                abs_ = abs_.text.strip()
+
+            if title_.lower().find(model_phrase.lower()) > -1 \
+                    or abs_.lower().find(model_phrase.lower()) > -1:
+                try:
+                    pdf_url = element.find_element_by_class_name('paper-link').get_attribute("href")
+                    title_abs_url[title_] = {"abs": abs_, 'url': [url_, pdf_url]}
+                except:
+                    title_abs_url[title_] = {"abs": abs_, 'url': [url_]}
         return title_abs_url
 
     def get_papers(self, use_date=False, use_author=False, use_task=False):
-        models, authors, task_dict, raw_name_dict = self._pre_process()
+        models, authors, task_dict, raw_name_dict, _, _ = self._pre_process()
         base_url = 'https://www.semanticscholar.org/search?'
+        self.driver = webdriver.Chrome()
 
         for index, model in enumerate(tqdm(models)):
             if raw_name_dict.get(model) is None: continue
 
             # use date to enforce search
             if use_date:
-                print(raw_name_dict.get(model))
-                year_ = self.filtered_df.loc[self.filtered_df['paper'] == raw_name_dict.get(model), 'date'].any()
+                year_ = self.filtered_df.loc[self.filtered_df['model'] == raw_name_dict.get(model), 'date'].any()
                 if year_ == False:
                     year_url = 'year[0]=2010&year[1]=2019&'
                 else:
@@ -213,11 +231,12 @@ class Key2Link(object):
                         _ = self.driver.find_element_by_class_name("bold")
                         continue
                     except:
-                        title_url = self._read_results(self.driver)
+                        title_url = self._read_results(self.driver, model)
                         if len(title_url) < 1:
                             time.sleep(6)
-                            title_url = self._read_results(self.driver)
-                        self.results[model] = title_url
+                            title_url = self._read_results(self.driver, model)
+                        if len(title_url) > 0:
+                            self.results[model] = title_url
             except BaseException as e:
                 print(e)
                 continue
@@ -226,24 +245,34 @@ class Key2Link(object):
 
     def filter_paper(self):
         if len(self.results) < 1: self.get_papers()
+        _, _, task_dict, raw_name_dict, metric_dict, dataset_dict = self._pre_process()
 
+        # model_name was preprocessed
         for model_name, value in self.results.items():
-            if len(model_name) < 5: continue
+            if len(model_name) < 3: continue
+            eval_list = []
 
+            # key_list: paper's title in searched results
             key_list = list(value.keys())
             abs_list = [i.get("abs") for i in value.values()]
             url_list = [i.get("url") for i in value.values()]
             assert len(key_list) == len(abs_list) == len(url_list)
 
-            one_filtered = {}
-            for index in range(len(key_list)):
-                if key_list[index].lower().find(model_name.lower()) > -1:
-                    one_filtered.update({key_list[index]: url_list[index]})
-                elif abs_list[index].lower().find(model_name.lower()) > -1:
-                    one_filtered.update({key_list[index]: url_list[index]})
-                else:
-                    continue
-                self.filtered_results[model_name] = one_filtered
+            eval_list.extend(re.findall(r'\d+\.\d+', str(metric_dict.get(model_name))))
+            eval_list.extend(dataset_dict.get(model_name))
+            # eval_list.append(task_dict.get(model_name))
+
+            if len(key_list) == 1:
+                self.filtered_results[model_name] = {key_list[0]: url_list[0]}
+            else:
+                # continue
+                for index in range(len(key_list)):
+                    for eval_key in eval_list:
+                        if key_list[index].lower().find(eval_key.lower()) > -1 \
+                                or abs_list[index].lower().find(eval_key.lower()) > -1:
+                            self.filtered_results[model_name] = {key_list[index]: url_list[index]}
+                            break
+
         return self.filtered_results
 
 
@@ -260,9 +289,13 @@ if __name__ == '__main__':
     #     json.dump(total_results, f, ensure_ascii=False, indent=4)
 
     K2L = Key2Link(dataframe)
-    results = K2L.get_papers()
-    with open('./data/papers_complete_test.json', 'w', encoding='utf-8') as f:
-        json.dump(results, f, ensure_ascii=False, indent=4)
+    # results = K2L.get_papers(use_date=True)
+    # with open('./data/papers_complete_test.json', 'w', encoding='utf-8') as f:
+    #     json.dump(results, f, ensure_ascii=False, indent=4)
+
+    with open('./data/papers_complete_test.json', 'r') as f:
+        results = json.load(f)
+    K2L.results = results
 
     total_results = K2L.filter_paper()
 

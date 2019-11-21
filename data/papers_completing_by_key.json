@@ -1,0 +1,506 @@
+{
+    "BERT": {
+        "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding": [
+            "https://www.semanticscholar.org/paper/BERT%3A-Pre-training-of-Deep-Bidirectional-for-Devlin-Chang/df2b0e26d0599ce3e70df8a9da02e51594e0e992",
+            "https://arxiv.org/pdf/1810.04805.pdf"
+        ]
+    },
+    "bidaf": {
+        "Bidirectional Attention Flow for Machine Comprehension": [
+            "https://www.semanticscholar.org/paper/Bidirectional-Attention-Flow-for-Machine-Seo-Kembhavi/3a7b63b50c64f4ec3358477790e84cbd6be2a0b4",
+            "https://arxiv.org/pdf/1611.01603.pdf"
+        ]
+    },
+    "BISAN": {
+        "Penerapan Go+ Berbasis Web untuk Meningkatkan Mutu Pelayanan Lembaga Keuangan Mahasisiwa": [
+            "https://www.semanticscholar.org/paper/Penerapan-Go%2B-Berbasis-Web-untuk-Meningkatkan-Mutu-Tiara-Nurhaeni/c60caa775735a3dc6ff7dc919c4a286cd59bb14c",
+            "https://doi.org/10.33050/tmj.v1i2.15"
+        ]
+    },
+    "CatGAN": {
+        "Unsupervised and Semi-supervised Learning with Categorical Generative Adversarial Networks": [
+            "https://www.semanticscholar.org/paper/Unsupervised-and-Semi-supervised-Learning-with-Springenberg/543f21d81bbea89f901dfcc01f4e332a9af6682d",
+            "https://arxiv.org/pdf/1511.06390.pdf"
+        ]
+    },
+    "context2vec": {
+        "context2vec: Learning Generic Context Embedding with Bidirectional LSTM": [
+            "https://www.semanticscholar.org/paper/context2vec%3A-Learning-Generic-Context-Embedding-Melamud-Goldberger/59761abc736397539bdd01ad7f9d91c8607c0457",
+            "https://pdfs.semanticscholar.org/0a73/a15bf53da196363058196961cd21bc262e8f.pdf"
+        ]
+    },
+    "coupled ensemble": {
+        "Coupled Ensembles of Neural Networks": [
+            "https://www.semanticscholar.org/paper/Coupled-Ensembles-of-Neural-Networks-Dutt-Pellerin/f1c55047a7b8f177f874e7968186e5915e061aa1",
+            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8516453"
+        ]
+    },
+    "DBN": {
+        "The cross-field DBN for image recognition": [
+            "https://www.semanticscholar.org/paper/The-cross-field-DBN-for-image-recognition-Cheng/f9645b05acbf42fb9f9575581880ef28ce47eba3",
+            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7489814"
+        ]
+    },
+    "DCN+": {
+        "DCN+: Mixed Objective and Deep Residual Coattention for Question Answering": [
+            "https://www.semanticscholar.org/paper/DCN%2B%3A-Mixed-Objective-and-Deep-Residual-Coattention-Xiong-Zhong/0342f5bf7f7b8f26ff4380846f9e577ae6fdd88a",
+            "https://arxiv.org/pdf/1711.00106.pdf"
+        ]
+    },
+    "Deep Learning of Invariant Features via Simulated Fixations in Video": {
+        "Deep Learning of Invariant Features via Simulated Fixations in Video": [
+            "https://www.semanticscholar.org/paper/Deep-Learning-of-Invariant-Features-via-Simulated-Zou-Ng/aefc7c708269b874182a5c877fb6dae06da210d4",
+            "https://pdfs.semanticscholar.org/f6f4/60d4a4a5b4c077ab3ac7a972f52af17a4241.pdf"
+        ]
+    },
+    "Deep learning via semi-supervised embedding": {
+        "Deep Learning via Semi-supervised Embedding": [
+            "https://www.semanticscholar.org/paper/Deep-Learning-via-Semi-supervised-Embedding-Weston-Ratle/e5013a8b793bc3f9f08411a1b37e571d72491a2a",
+            "https://doi.org/10.1007/978-3-642-35289-8_34"
+        ]
+    },
+    "Deep Representation Learning with Target Coding": {
+        "Deep Representation Learning with Target Coding": [
+            "https://www.semanticscholar.org/paper/Deep-Representation-Learning-with-Target-Coding-Yang-Luo/9f829eb41c2ecb850fe20329e7da06eb369151f9",
+            "https://pdfs.semanticscholar.org/ed0c/7a2c3a9d9d2ebe40316d92e917c7074f2373.pdf"
+        ]
+    },
+    "Deformation Models": {
+        "Deformation Models for Image Recognition": [
+            "https://www.semanticscholar.org/paper/Deformation-Models-for-Image-Recognition-Keysers-Deselaers/675ec5a4542f28fa8c9dbee4b4b6f844a444cac5",
+            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4250467"
+        ]
+    },
+    "drl": {
+        "DRL: A New Mobility Model in Mobile Social Networks": [
+            "https://www.semanticscholar.org/paper/DRL%3A-A-New-Mobility-Model-in-Mobile-Social-Networks-Jing-Zhang/249052944fe77dd9415c45bb407d83f263d78f4b",
+            "https://doi.org/10.1007/978-3-319-21837-3_26"
+        ]
+    },
+    "dvae": {
+        "Noisy image classification using hybrid deep learning methods": [
+            "https://www.semanticscholar.org/paper/Noisy-image-classification-using-hybrid-deep-Roy-Ahmed/0451234eb6eeba8798b7a2533ed82f4fba641b9a",
+            "https://pdfs.semanticscholar.org/0451/234eb6eeba8798b7a2533ed82f4fba641b9a.pdf"
+        ]
+    },
+    "dvae#": {
+        "DVAE#: Discrete Variational Autoencoders with Relaxed Boltzmann Priors": [
+            "https://www.semanticscholar.org/paper/DVAE%23%3A-Discrete-Variational-Autoencoders-with-Vahdat-Andriyash/c940cec9b56a5766c316fb6fc1e4195d70d39ecf",
+            "https://arxiv.org/pdf/1805.07445.pdf"
+        ]
+    },
+    "EraseReLU": {
+        "EraseReLU: A Simple Way to Ease the Training of Deep Convolution Neural Networks": [
+            "https://www.semanticscholar.org/paper/EraseReLU%3A-A-Simple-Way-to-Ease-the-Training-of-Dong-Kang/2cd040a8cdf13abb0aa2543f79324dad1c5e850d",
+            "https://arxiv.org/pdf/1709.07634.pdf"
+        ]
+    },
+    "full-capacity unitary recurrent neural networks": {
+        "Full-Capacity Unitary Recurrent Neural Networks": [
+            "https://www.semanticscholar.org/paper/Full-Capacity-Unitary-Recurrent-Neural-Networks-Wisdom-Powers/79c78c98ea317ba8cdf25a9783ef4b8a7552db75",
+            "https://arxiv.org/pdf/1611.00035.pdf"
+        ]
+    },
+    "Full-capacity uRNN": {
+        "Full-Capacity Unitary Recurrent Neural Networks": [
+            "https://www.semanticscholar.org/paper/Full-Capacity-Unitary-Recurrent-Neural-Networks-Wisdom-Powers/79c78c98ea317ba8cdf25a9783ef4b8a7552db75",
+            "https://arxiv.org/pdf/1611.00035.pdf"
+        ]
+    },
+    "gan": {
+        "Generative Adversarial Nets": [
+            "https://www.semanticscholar.org/paper/Generative-Adversarial-Nets-Goodfellow-Pouget-Abadie/54e325aee6b2d476bbbb88615ac15e251c6e8214",
+            "https://pdfs.semanticscholar.org/6de2/b1058c5b717878cce4e7e50d3a372cc4aaa6.pdf"
+        ]
+    },
+    "gumbolt": {
+        "GumBolt: Extending Gumbel trick to Boltzmann priors": [
+            "https://www.semanticscholar.org/paper/GumBolt%3A-Extending-Gumbel-trick-to-Boltzmann-priors-Khoshaman-Amin/037f36390bc61b4cc03eb646a7c00ddddef01d61",
+            "https://arxiv.org/pdf/1805.07349.pdf"
+        ]
+    },
+    "hcrf": {
+        "Highlight events detection in soccer video using HCRF": [
+            "https://www.semanticscholar.org/paper/Highlight-events-detection-in-soccer-video-using-Qian-Liu/99fef30f1afa7e8c485e40aac74f7d8923dc892f",
+            "http://dl.acm.org/citation.cfm?id=1937769"
+        ]
+    },
+    "Hierarchical Kernel Descriptors": {
+        "Object recognition with hierarchical kernel descriptors": [
+            "https://www.semanticscholar.org/paper/Object-recognition-with-hierarchical-kernel-Bo-Lai/7c610a7d6f5c89c40fde6b777cae29e45fdb1e30",
+            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5995719"
+        ]
+    },
+    "introvae": {
+        "IntroVAE: Introspective Variational Autoencoders for Photographic Image Synthesis": [
+            "https://www.semanticscholar.org/paper/IntroVAE%3A-Introspective-Variational-Autoencoders-Huang-Li/ce36b3448cfaf7b5e771fce8aa84475293c51f51",
+            "https://arxiv.org/pdf/1807.06358.pdf"
+        ]
+    },
+    "invariant feature hierarchies": {
+        "Unsupervised Learning of Invariant Feature Hierarchies with Applications to Object Recognition": [
+            "https://www.semanticscholar.org/paper/Unsupervised-Learning-of-Invariant-Feature-with-to-Ranzato-Huang/ccd52aff02b0f902f4ce7247c4fee7273014c41c",
+            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4270182"
+        ]
+    },
+    "Invariant Representations with Local Transformations": {
+        "Learning Invariant Representations with Local Transformations": [
+            "https://www.semanticscholar.org/paper/Learning-Invariant-Representations-with-Local-Sohn-Lee/8f7214bafbed6d4dfd397c35315c7275d5608f61",
+            "https://arxiv.org/pdf/1206.6418.pdf"
+        ]
+    },
+    "l2-constrained softmax loss for discriminative face verification": {
+        "L2-constrained Softmax Loss for Discriminative Face Verification": [
+            "https://www.semanticscholar.org/paper/L2-constrained-Softmax-Loss-for-Discriminative-Face-Ranjan-Castillo/57a807f65e61bbba0ea3ba02572cc5843ecef2b6",
+            "https://arxiv.org/pdf/1703.09507.pdf"
+        ]
+    },
+    "ladder networks": {
+        "Semi-supervised Learning with Ladder Networks": [
+            "https://www.semanticscholar.org/paper/Semi-supervised-Learning-with-Ladder-Networks-Rasmus-Berglund/99487be08cab00554c5c8db73161b2615c694f71",
+            "https://pdfs.semanticscholar.org/64fd/6b7139be4b8b104a9aed768deaf62f71f5c0.pdf"
+        ]
+    },
+    "learning to model the tail": {
+        "Learning to Model the Tail": [
+            "https://www.semanticscholar.org/paper/Learning-to-Model-the-Tail-Wang-Ramanan/93f9607034c9b7b7693c60e9d2631adc15a2a524",
+            "https://pdfs.semanticscholar.org/93f9/607034c9b7b7693c60e9d2631adc15a2a524.pdf"
+        ]
+    },
+    "end-to-end uniform": {
+        "Time Division Multiplexing Elastic Waveband Switching Algorithm Using Markov Data Prediction": [
+            "https://www.semanticscholar.org/paper/Time-Division-Multiplexing-Elastic-Waveband-Using-Fan-bo-Yuyang/7acbac8c457414b5dda2398c6c95385774ea418e",
+            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7917209"
+        ]
+    },
+    "Local Transformations": {
+        "Learning Invariant Representations with Local Transformations": [
+            "https://www.semanticscholar.org/paper/Learning-Invariant-Representations-with-Local-Sohn-Lee/8f7214bafbed6d4dfd397c35315c7275d5608f61",
+            "https://arxiv.org/pdf/1206.6418.pdf"
+        ]
+    },
+    "Mask R-CNN": {
+        "Mask R-CNN": [
+            "https://www.semanticscholar.org/paper/Mask-R-CNN-He-Gkioxari/ea99a5535388196d0d44be5b4d7dd02029a43bb2",
+            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8237584"
+        ]
+    },
+    "memn2n": {
+        "Learning Personalized End-to-End Goal-Oriented Dialog": [
+            "https://www.semanticscholar.org/paper/Learning-Personalized-End-to-End-Goal-Oriented-Luo-Huang/5039b2348379e002b34d589f92c78ba5c9f8e392",
+            "https://arxiv.org/pdf/1811.04604.pdf"
+        ]
+    },
+    "MFS baseline": {
+        "Unsupervised Most Frequent Sense Detection using Word Embeddings": [
+            "https://www.semanticscholar.org/paper/Unsupervised-Most-Frequent-Sense-Detection-using-Bhingardive-Singh/b58e477022d79562ce1c5e76218bb328c8fb7c3c",
+            "https://pdfs.semanticscholar.org/b58e/477022d79562ce1c5e76218bb328c8fb7c3c.pdf"
+        ]
+    },
+    "mt-based": {
+        "MT-based artificial hypothesis generation for unsupervised discriminative language modeling": [
+            "https://www.semanticscholar.org/paper/MT-based-artificial-hypothesis-generation-for-Dikici-Sara%C3%A7lar/2b9129f5f657c54b7aed88f3158f17648c675bf3",
+            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7362614"
+        ]
+    },
+    "MultiR": {
+        "Disseny d'un prototipus de xarxa MESH sense fils multir\\'adio i multicanal sobre OLSR modificat amb canal de senyalitzaci\\'o dedicat": [
+            "https://www.semanticscholar.org/paper/Disseny-d'un-prototipus-de-xarxa-MESH-sense-fils-i-Jaume-Paradells/b92d357b223ba682e3ce7563e4362fb0ff0b28bd",
+            "https://arxiv.org/pdf/1112.5959.pdf"
+        ]
+    },
+    "Nonnegativity Constraints": {
+        "Stable and Efficient Representation Learning with Nonnegativity Constraints": [
+            "https://www.semanticscholar.org/paper/Stable-and-Efficient-Representation-Learning-with-Lin-Kung/ecb9200691f97de4c17243eb73f5fa6a33656827",
+            "https://pdfs.semanticscholar.org/5805/481c3f75279506553f5542d3a47889ae6227.pdf"
+        ]
+    },
+    "PatchMatchGraph": {
+        "PatchMatchGraph: Building a Graph of Dense Patch Correspondences for Label Transfer": [
+            "https://www.semanticscholar.org/paper/PatchMatchGraph%3A-Building-a-Graph-of-Dense-Patch-Gould-Zhang/178325cb252775dcd6783a753544ba7b73a4b073",
+            "https://doi.org/10.1007/978-3-642-33715-4_32"
+        ]
+    },
+    "pea": {
+        "Quality Grading of a Pea Using Artificial Intelligence": [
+            "https://www.semanticscholar.org/paper/Quality-Grading-of-a-Pea-Using-Artificial-Pal-Singh/4185dafc8c9f6915934de9c8a961ef0360de19d3",
+            "https://pdfs.semanticscholar.org/3dbf/d46acd744ffd4b6f0a4a71e37d78813b7371.pdf"
+        ]
+    },
+    "PGGAN": {
+        "Progressive Growing of GANs for Improved Quality, Stability, and Variation": [
+            "https://www.semanticscholar.org/paper/Progressive-Growing-of-GANs-for-Improved-Quality%2C-Karras-Aila/744fe47157477235032f7bb3777800f9f2f45e52",
+            "https://arxiv.org/pdf/1710.10196.pdf"
+        ]
+    },
+    "PolyNet": {
+        "Beyond Finite Layer Neural Networks: Bridging Deep Architectures and Numerical Differential Equations": [
+            "https://www.semanticscholar.org/paper/PolyNet%3A-A-Pursuit-of-Structural-Diversity-in-Very-Zhang-Li/aad34665649953fa4bbacdc6eff4edb5408df6b3",
+            "https://ieeexplore.ieee.org/document/8099898/"
+        ]
+    },
+    "Pooling-Invariant": {
+        "Pooling-Invariant Image Feature Learning": [
+            "https://www.semanticscholar.org/paper/Pooling-Invariant-Image-Feature-Learning-Jia-Vinyals/990626a7db4207e044695ba082f9987f07a674a3",
+            "https://arxiv.org/pdf/1302.5056.pdf"
+        ]
+    },
+    "praline": {
+        "PSI/TM-Coffee: a web server for fast and accurate multiple sequence alignments of regular and transmembrane proteins using homology extension on reduced databases": [
+            "https://www.semanticscholar.org/paper/PSI%2FTM-Coffee%3A-a-web-server-for-fast-and-accurate-Floden-Tommaso/39a4b9d1bd38c50aaebf611b517d424010c56595",
+            "https://pdfs.semanticscholar.org/f5b9/57b5a145a0ffad0b6851212c2b8e3a0f5bc3.pdf"
+        ]
+    },
+    "QRN": {
+        "Query-Regression Networks for Machine Comprehension": [
+            "https://www.semanticscholar.org/paper/Query-Regression-Networks-for-Machine-Comprehension-Seo-Hajishirzi/50959348844c9018061723ba537c1a7d27203957",
+            "https://arxiv.org/pdf/1606.04582.pdf"
+        ]
+    },
+    "r-net": {
+        "Dynamic Zoom-in Network for Fast Object Detection in Large Images": [
+            "https://www.semanticscholar.org/paper/Dynamic-Zoom-in-Network-for-Fast-Object-Detection-Gao-Yu/14a48ff22f852379eb8a62e18a5c66bc9b60f2c7",
+            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8578822"
+        ]
+    },
+    "ReasoNet": {
+        "ReasoNet: Learning to Stop Reading in Machine Comprehension": [
+            "https://www.semanticscholar.org/paper/ReasoNet%3A-Learning-to-Stop-Reading-in-Machine-Shen-Huang/c636a2dd242908fe2e598a1077c0c57bfdea8633",
+            "http://dl.acm.org/citation.cfm?id=3098177"
+        ]
+    },
+    "recurrent dropout without memory loss": {
+        "Recurrent Dropout without Memory Loss": [
+            "https://www.semanticscholar.org/paper/Recurrent-Dropout-without-Memory-Loss-Semeniuta-Severyn/cf76789618f5db929393c1187514ce6c3502c3cd",
+            "https://arxiv.org/pdf/1603.05118.pdf"
+        ]
+    },
+    "Regularization of Neural Networks using DropConnect": {
+        "Regularization of Neural Networks using DropConnect": [
+            "https://www.semanticscholar.org/paper/Regularization-of-Neural-Networks-using-DropConnect-Wan-Zeiler/38f35dd624cd1cf827416e31ac5e0e0454028eca",
+            "https://pdfs.semanticscholar.org/6604/d4556b31c4ed3964dec0f08dc51d18c38c7e.pdf"
+        ]
+    },
+    "relation networks": {
+        "A simple neural network module for relational reasoning": [
+            "https://www.semanticscholar.org/paper/A-simple-neural-network-module-for-relational-Santoro-Raposo/007112213ece771be72cbecfd59f048209facabd",
+            "https://arxiv.org/pdf/1706.01427.pdf"
+        ]
+    },
+    "RNNLM": {
+        "Context dependent recurrent neural network language model": [
+            "https://www.semanticscholar.org/paper/Context-dependent-recurrent-neural-network-language-Mikolov-Zweig/d1275b2a2ab53013310e759e5c6878b96df643d4",
+            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6424228"
+        ]
+    },
+    "Self-attention": {
+        "DiSAN: Directional Self-Attention Network for RNN/CNN-free Language Understanding": [
+            "https://www.semanticscholar.org/paper/DiSAN%3A-Directional-Self-Attention-Network-for-Shen-Zhou/adc276e6eae7051a027a4c269fb21dae43cadfed",
+            "https://arxiv.org/pdf/1709.04696.pdf"
+        ]
+    },
+    "Self-trained parser": {
+        "Parser Self-Training for Syntax-Based Machine Translation": [
+            "https://www.semanticscholar.org/paper/Parser-Self-Training-for-Syntax-Based-Machine-Morishita-Akabe/3429a6b440fb6f71990bbeda9d097d709634a913",
+            "https://pdfs.semanticscholar.org/a11d/5353996d334e72d30cbb9c4b0f89ddd1437d.pdf"
+        ]
+    },
+    "SemBERT": {
+        "Semantics-aware BERT for Language Understanding": [
+            "https://www.semanticscholar.org/paper/Semantics-aware-BERT-for-Language-Understanding-Zhang-Wu/fbace1600c2f58a2f39640c49fd7dab5fd4a1e49",
+            "https://arxiv.org/pdf/1909.02209.pdf"
+        ]
+    },
+    "sgn": {
+        "SGN: Sequential Grouping Networks for Instance Segmentation": [
+            "https://www.semanticscholar.org/paper/SGN%3A-Sequential-Grouping-Networks-for-Instance-Liu-Jia/ede3af38e30ca332af0c1ce3bd5144070f7fb7f3",
+            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8237640"
+        ]
+    },
+    "shake-shake": {
+        "Shake-Shake regularization of 3-branch residual networks": [
+            "https://www.semanticscholar.org/paper/Shake-Shake-regularization-of-3-branch-residual-Gastaldi/22aa426aeffb77339646cc03da8e94de22396efc",
+            "https://pdfs.semanticscholar.org/22aa/426aeffb77339646cc03da8e94de22396efc.pdf"
+        ]
+    },
+    "Simulated Fixations": {
+        "Deep Learning of Invariant Features via Simulated Fixations in Video": [
+            "https://www.semanticscholar.org/paper/Deep-Learning-of-Invariant-Features-via-Simulated-Zou-Ng/aefc7c708269b874182a5c877fb6dae06da210d4",
+            "https://pdfs.semanticscholar.org/f6f4/60d4a4a5b4c077ab3ac7a972f52af17a4241.pdf"
+        ]
+    },
+    "Smooth Pooling Regions": {
+        "Learning Smooth Pooling Regions for Visual Recognition": [
+            "https://www.semanticscholar.org/paper/Learning-Smooth-Pooling-Regions-for-Visual-Malinowski-Fritz/7bf8ba8c7fff5e8aa23b5bc68aa1756f6a55bfc0",
+            "https://pdfs.semanticscholar.org/7bf8/ba8c7fff5e8aa23b5bc68aa1756f6a55bfc0.pdf"
+        ]
+    },
+    "speaker factors and eigenvoices": {
+        "Stream-based speaker segmentation using speaker factors and eigenvoices": [
+            "https://www.semanticscholar.org/paper/Stream-based-speaker-segmentation-using-speaker-and-Castaldo-Colibro/238bf06690018dd3c49742c37d7a555afae9c404",
+            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4518564"
+        ]
+    },
+    "stockfish": {
+        "Development of games for users with visual impairment": [
+            "https://www.semanticscholar.org/paper/Development-of-games-for-users-with-visual-Dina/3e2661d03ffd0a53847369d936a228de0e09381d",
+            "https://pdfs.semanticscholar.org/3e26/61d03ffd0a53847369d936a228de0e09381d.pdf"
+        ]
+    },
+    "Supervised Translation-Invariant Sparse Coding": {
+        "Supervised translation-invariant sparse coding": [
+            "https://www.semanticscholar.org/paper/Supervised-translation-invariant-sparse-coding-Yang-Yu/c65be1f97642510843667d36e399de58837d3419",
+            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5539958"
+        ]
+    },
+    "surprisal-driven zoneout": {
+        "Surprisal-Driven Zoneout": [
+            "https://www.semanticscholar.org/paper/Surprisal-Driven-Zoneout-Rocki-Kornuta/5b4cef5ce21753a38234740b3d5bf5ff0f7d9b3a",
+            "https://arxiv.org/pdf/1610.07675.pdf"
+        ]
+    },
+    "The Best Multi-Stage Architecture": {
+        "What is the best multi-stage architecture for object recognition?": [
+            "https://www.semanticscholar.org/paper/What-is-the-best-multi-stage-architecture-for-Jarrett-Kavukcuoglu/1f88427d7aa8225e47f946ac41a0667d7b69ac52",
+            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5459469"
+        ]
+    },
+    "timen": {
+        "TIMEN: An Open Temporal Expression Normalisation Resource": [
+            "https://www.semanticscholar.org/paper/TIMEN%3A-An-Open-Temporal-Expression-Normalisation-Llorens-Derczynski/d7d23d9a478deab912c71358ae21f735b041e7b4",
+            "https://pdfs.semanticscholar.org/d7d2/3d9a478deab912c71358ae21f735b041e7b4.pdf"
+        ]
+    },
+    "Trainable feature extractor": {
+        "A trainable feature extractor for handwritten digit recognition": [
+            "https://www.semanticscholar.org/paper/A-trainable-feature-extractor-for-handwritten-digit-Lauer-Suen/70bae88192de8a63dc14be588cbd6b471297968f",
+            "https://doi.org/10.1016/j.patcog.2006.10.011"
+        ]
+    },
+    "uis-rnn": {
+        "Fully Supervised Speaker Diarization": [
+            "https://www.semanticscholar.org/paper/Fully-Supervised-Speaker-Diarization-Zhang-Wang/1f010dd1226834f16515a6610ea57b480266ef2d",
+            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8683892"
+        ]
+    },
+    "unLOL": {
+        "A Log-Linear Model for Unsupervised Text Normalization": [
+            "https://www.semanticscholar.org/paper/A-Log-Linear-Model-for-Unsupervised-Text-Yang-Eisenstein/b98193d497341b36daef6a3bf379f34f05c6b7b0",
+            "https://pdfs.semanticscholar.org/cdf3/1a04d7859bd3e5d7ef704e6346095f157cf3.pdf"
+        ]
+    },
+    "uoro": {
+        "Approximating Real-Time Recurrent Learning with Random Kronecker Factors": [
+            "https://www.semanticscholar.org/paper/Approximating-Real-Time-Recurrent-Learning-with-Mujika-Meier/db16b4354649325c2f4e148065c7e6e612fc8c05",
+            "https://arxiv.org/pdf/1805.10842.pdf"
+        ]
+    },
+    "urnn": {
+        "Full-Capacity Unitary Recurrent Neural Networks": [
+            "https://www.semanticscholar.org/paper/Full-Capacity-Unitary-Recurrent-Neural-Networks-Wisdom-Powers/79c78c98ea317ba8cdf25a9783ef4b8a7552db75",
+            "https://arxiv.org/pdf/1611.00035.pdf"
+        ]
+    },
+    "vae": {
+        "Auto-Encoding Variational Bayes": [
+            "https://www.semanticscholar.org/paper/Auto-Encoding-Variational-Bayes-Kingma-Welling/5f5dc5b9a2ba710937e2c413b37b053cd673df02",
+            "https://arxiv.org/pdf/1312.6114.pdf"
+        ]
+    },
+    "wavenet: a generative model for raw audio": {
+        "WaveNet: A Generative Model for Raw Audio": [
+            "https://www.semanticscholar.org/paper/WaveNet%3A-A-Generative-Model-for-Raw-Audio-Oord-Dieleman/df0402517a7338ae28bc54acaac400de6b456a46",
+            "https://arxiv.org/pdf/1609.03499.pdf"
+        ]
+    },
+    "WGAN-GP": {
+        "Improved Training of Wasserstein GANs": [
+            "https://www.semanticscholar.org/paper/Improved-Training-of-Wasserstein-GANs-Gulrajani-Ahmed/edf73ab12595c6709f646f542a0d2b33eb20a3f4",
+            "https://arxiv.org/pdf/1704.00028.pdf"
+        ]
+    },
+    "KT-NET": {
+        "Enhancing Pre-Trained Language Representations with Rich Knowledge for Machine Reading Comprehension": [
+            "https://www.semanticscholar.org/paper/Enhancing-Pre-Trained-Language-Representations-with-Yang-Wang/e7046bf945ad6326537a1ac78a96fd2f45acc900",
+            "https://pdfs.semanticscholar.org/e704/6bf945ad6326537a1ac78a96fd2f45acc900.pdf"
+        ]
+    },
+    "nlnet": {
+        "GCNet: Non-local Networks Meet Squeeze-Excitation Networks and Beyond": [
+            "https://www.semanticscholar.org/paper/GCNet%3A-Non-local-Networks-Meet-Squeeze-Excitation-Cao-Xu/66143960c0325c70329a3869cc8052f0416b87aa",
+            "https://arxiv.org/pdf/1904.11492.pdf"
+        ]
+    },
+    "smarnet": {
+        "Smarnet: Teaching Machines to Read and Comprehend Like Human": [
+            "https://www.semanticscholar.org/paper/Smarnet%3A-Teaching-Machines-to-Read-and-Comprehend-Chen-Yang/5e585d1fadffa2c25a297f988554c2e0e3373840",
+            "https://arxiv.org/pdf/1710.02772.pdf"
+        ]
+    },
+    "Iterative Co-attention Network": {
+        "The Resale Price Prediction of Secondhand Jewelry Items Using a Multi-modal Deep Model with Iterative Co-Attention": [
+            "https://www.semanticscholar.org/paper/The-Resale-Price-Prediction-of-Secondhand-Jewelry-a-Yamaura-Kanemaki/75952cb7d5945d001d0758a994eb8017ddca3733",
+            "https://arxiv.org/pdf/1907.00661.pdf"
+        ]
+    },
+    "BiLSTM-Attention": {
+        "NLP at IEST 2018: BiLSTM-Attention and LSTM-Attention via Soft Voting in Emotion Classification": [
+            "https://www.semanticscholar.org/paper/NLP-at-IEST-2018%3A-BiLSTM-Attention-and-via-Soft-in-Zhou-Wu/be2b2b74b50a3f6d779dd7a9651f28b622f6dcf4",
+            "https://pdfs.semanticscholar.org/be2b/2b74b50a3f6d779dd7a9651f28b622f6dcf4.pdf"
+        ]
+    },
+    "SpanBERT": {
+        "SpanBERT: Improving Pre-training by Representing and Predicting Spans": [
+            "https://www.semanticscholar.org/paper/SpanBERT%3A-Improving-Pre-training-by-Representing-Joshi-Chen/81f5810fbbab9b7203b9556f4ce3c741875407bc",
+            "https://arxiv.org/pdf/1907.10529.pdf"
+        ]
+    },
+    "bert": {
+        "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding": [
+            "https://www.semanticscholar.org/paper/BERT%3A-Pre-training-of-Deep-Bidirectional-for-Devlin-Chang/df2b0e26d0599ce3e70df8a9da02e51594e0e992",
+            "https://arxiv.org/pdf/1810.04805.pdf"
+        ]
+    },
+    "Describing the Scene as a Whole: Joint Object Detection, Scene Classification and Semantic Segmentation": {
+        "Describing the scene as a whole: Joint object detection, scene classification and semantic segmentation": [
+            "https://www.semanticscholar.org/paper/Describing-the-scene-as-a-whole%3A-Joint-object-scene-Yao-Fidler/8687d2dc63fa7b9d085712910d0e3b663b76ca0c",
+            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6247739"
+        ]
+    },
+    "Are Spatial and Global Constraints Really Necessary for Segmentation?": {
+        "Are spatial and global constraints really necessary for segmentation?": [
+            "https://www.semanticscholar.org/paper/Are-spatial-and-global-constraints-really-necessary-Lucchi-Li/31f1c4cf34ce0bb35382c35b2f468cf72bffae0b",
+            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6126219"
+        ]
+    },
+    "Convolutional neural networks applied to house numbers digit classification": {
+        "Convolutional neural networks applied to house numbers digit classification": [
+            "https://www.semanticscholar.org/paper/Convolutional-neural-networks-applied-to-house-Sermanet-Chintala/9f7f9aba0a6a966ce04e29e401ea28f9eae82f02",
+            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6460867"
+        ]
+    },
+    "Discriminative Learning of Sum-Product Networks": {
+        "Discriminative Learning of Sum-Product Networks": [
+            "https://www.semanticscholar.org/paper/Discriminative-Learning-of-Sum-Product-Networks-Gens-Domingos/4d5a4be73432faa7b7a141ce2b988a3a750829d6",
+            "https://pdfs.semanticscholar.org/adaf/a5773a58a41d1a878c99b1db6ea0f3a860ac.pdf"
+        ]
+    },
+    "DropConnect": {
+        "Regularization of Neural Networks using DropConnect": [
+            "https://www.semanticscholar.org/paper/Regularization-of-Neural-Networks-using-DropConnect-Wan-Zeiler/38f35dd624cd1cf827416e31ac5e0e0454028eca",
+            "https://pdfs.semanticscholar.org/6604/d4556b31c4ed3964dec0f08dc51d18c38c7e.pdf"
+        ]
+    },
+    "Stable and Efficient Representation Learning with Nonnegativity Constraints": {
+        "Stable and Efficient Representation Learning with Nonnegativity Constraints": [
+            "https://www.semanticscholar.org/paper/Stable-and-Efficient-Representation-Learning-with-Lin-Kung/ecb9200691f97de4c17243eb73f5fa6a33656827",
+            "https://pdfs.semanticscholar.org/5805/481c3f75279506553f5542d3a47889ae6227.pdf"
+        ]
+    },
+    "Deep Boltzmann Machines": {
+        "Deep Boltzmann Machines": [
+            "https://www.semanticscholar.org/paper/Deep-Boltzmann-Machines-Salakhutdinov-Hinton/85021c84383d18a7a4434d76dc8135fc6bdc0aa6",
+            "https://pdfs.semanticscholar.org/ddc4/5fad8d15771d9f1f8579331458785b2cdd93.pdf"
+        ]
+    }
+}
