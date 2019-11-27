@@ -217,32 +217,35 @@ class Analyses(PaperData):
         return extraction_results
 
     def pdf_process(self, url):
-        # if self.abs_urls is None: _, _ = self.get_hyperlink()
-        # url = self.abs_urls
 
         results = {}
-        for u in tqdm(url):
-            content_xml = ContentReader.arxiv_vanity_reader(u)
-            if content_xml is None:
-                continue
+        for index, u in enumerate(tqdm(url)):
+            content_vanity = ContentReader.arxiv_vanity_reader(u)
+            with open("./data/table_key_tag.json", 'r') as f:
+                key_name = json.load(f)
+
+            if content_vanity is None:
+                content_raw = ContentReader.raw_data_reader(u)
+                if content_raw is not None:
+                    informative_table, html_list = ContentProcess.get_informative_table(content_raw, key_name, raw_data=True)
+                else:
+                    informative_table = []
+                    html_list = []
             else:
-                with open("./data/table_key_tag.json", 'r') as f:
-                    key_name = json.load(f)
-                informative_table = ContentProcess.get_informative_table(content_xml, key_name)
+                informative_table, html_list = ContentProcess.get_informative_table(content_vanity, key_name)
 
-                merged_table = {}
-                for one_caption, one_table in informative_table.items():
-                    merged_ = []
-                    for row in one_table[0][1:]:
-                        merged_.append([": ".join(i) for i in zip(one_table[0][0], row)])
-                    if len(one_table[-1]) > 0:
-                        merged_.extend(one_table[-1])
-                    merged_table[one_caption] = merged_
-
-            if len(merged_table) > 0:
-                results[u] = merged_table
+            if len(informative_table) > 0:
+                with open("./data/html/%d.html" % index, 'w', encoding='utf-8') as f:
+                    f.write("\n".join(html_list))
+                results[u] = {"informative table": "http://jiangsiyuan.com/table/%d" % index}
+                results[u].update(informative_table)
+            elif len(html_list) > 2:
+                with open("./data/html/%d.html" % index, 'w', encoding='utf-8') as f:
+                    f.write("\n".join(html_list))
+                results[u] = {"informative table": "http://jiangsiyuan.com/table/%d" % index}
             else:
                 results[u] = {"paper's table": 'no informative table'}
+
         return results
 
 
@@ -252,6 +255,7 @@ def get_sota_data(recent_url):
     total_abs = analysis.abs_list
     filtered_abs, filtered_lines, _ = AbsUtils.abs_filter(total_abs, evidence=True)
     filtered_url, _ = zip(*filtered_abs)
+    print(filtered_url)
     print('\ntotal papers: %d, useful papers: %d' % (len(total_abs), len(filtered_abs)))
 
     results = analysis.pdf_process(filtered_url)
@@ -285,7 +289,7 @@ def get_sota_data(recent_url):
 
 
 if __name__ == '__main__':
-    results = get_sota_data('https://arxiv.org/list/cs.AI/pastweek?skip=0&show=50')
+    results = get_sota_data('https://arxiv.org/list/cs.AI/pastweek?skip=0&show=100')
 
     with open('./data/sample.json', 'w', encoding='utf-8') as f:
         json.dump(results, f, ensure_ascii=False, indent=4)

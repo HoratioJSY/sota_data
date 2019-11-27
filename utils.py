@@ -53,17 +53,18 @@ class AbsUtils(object):
         pass
 
     @staticmethod
-    def abs_filter(total_abs, evidence=False):
+    def abs_filter(total_abs, evidence=False, strict_mode=True):
 
         try:
             with open("./data/metric_tag.json", 'r') as f:
                 metric_name = json.load(f)
         except BaseException as e:
-            print('failed to load metric tags\n', e)
+            print('failed to load sota tags\n', e)
             quit()
 
-        # token_list = ' '.join(metric_name).lower().translate(str.maketrans("（）()", "    ")).split()
-        metric_name.extend(['sota', 'state(\s|-)of(\s|-)the(\s|-)art', 'benchmark', 'experiment', 'experimental'])
+        if strict_mode: metric_name = []
+
+        metric_name.extend(['sota', 'state(\s|-)of(\s|-)the(\s|-)art'])
 
         filter_pattern = re.compile(r'\s(%s)\s' % ('|'.join(metric_name)), re.I)
         filtered_abs = []
@@ -109,7 +110,7 @@ class ContentReader(object):
                         return content
                 except BaseException as e:
                     print(e)
-                    if err_num < 5:
+                    if err_num < 2:
                         err_num += 1
                         continue
                     else:
@@ -134,33 +135,45 @@ class ContentReader(object):
     @staticmethod
     def raw_data_reader(url):
         import tarfile
+        import os
+        import urllib.request
 
         base_url = "https://arxiv.org/e-print/"
         pattern = re.compile(r'\d+\.[\dv]+')
         if url.find('arxiv') > -1:
-            err_num = 1
-            while True:
-                try:
-                    key_phrase = pattern.search(url)
-                    key_phrase = key_phrase.group()
-                    if key_phrase is not None:
-                        u = base_url + key_phrase
+            key_phrase = pattern.search(url)
+            key_phrase = key_phrase.group()
+            if key_phrase is not None:
+                u = base_url + key_phrase
 
-                        urllib.request.urlretrieve(u, './data/papers.tar.gz', reporthook=ContentReader.reporthook)
-                        tar = tarfile.open('./data/papers.tar.gz', 'r')
-                        # print(tar.getnames())
-                        data = {}
-                        for name in tar.getnames():
-                            if re.search(r'\.tex', name, re.I) is not None:
-                                data[name] = tar.extractfile(name).read().decode('utf-8')
-                        return data
-                except BaseException as e:
-                    print(e)
-                    if err_num < 5:
-                        err_num += 1
-                        continue
-                    else:
-                        return None
+                urllib.request.urlretrieve(u, './data/papers.tar.gz', reporthook=ContentReader.reporthook)
+                tar = tarfile.open('./data/papers.tar.gz', 'r')
+                # try:
+                #     tar = tarfile.open('./data/papers/%s.tar.gz' % key_phrase, 'r')
+                # except:
+                #     return None
+                data = {}
+                for name in tar.getnames():
+                    if re.search(r'\.tex', name, re.I) is not None:
+                        tmp_data = tar.extractfile(name).read().decode('utf-8', "ignore").replace('\n', '@$@$@')
+                        if re.search(r'{table}.+?{table}', tmp_data, re.I) is not None:
+                            try:
+                                with open('./tmp.tex', 'w', encoding="utf-8") as f:
+                                    f.write(tmp_data.replace('@$@$@', '\n'))
+                                os.system('latexml --dest=./tmp.xml ./tmp.tex')
+                                os.system('latexmlpost --dest=./tmp.html --nopictureimages --nographicimages --novalidate tmp.xml')
+                                with open('./tmp.html', 'r', encoding="utf-8") as f:
+                                    r = f.read()
+                                data[name] = BeautifulSoup(r, features='html.parser')
+                            except:
+                                continue
+                os.remove('./tmp.html')
+                os.remove("./tmp.tex")
+                os.remove("./tmp.xml")
+                if len(data) > 0:
+                    return data
+                else:
+                    return None
 
 
 class ContentProcess(object):
@@ -175,25 +188,71 @@ class ContentProcess(object):
             return False
 
     @staticmethod
-    def get_informative_table(content_xml, key_name):
-        table_list = content_xml.find_all("figure", attrs={'class': 'ltx_table'})
+    def construct_column_tree(table):
+        column_tree = {}
+        first_column = [row.find(class_='ltx_td').get_text().replace('\n', ' ')
+                        for row_index, row in enumerate(table.find_all('tr'))
+                        if row_index > 0]
+        for i in first_column:
+            if re.search(r'^\s+', i) is not None:
+                column_tree[i.strip()] = len(re.search(r'^\s+', i).group())
+            else:
+                column_tree[i.strip()] = 0
+
+        span_num = column_tree.values()
+        if len(set(span_num)) == 1:
+            for key, value in column_tree.items():
+                column_tree[key] = 0
+        else:
+            num_index = sorted(list(set(span_num)))
+            for key, value in column_tree.items():
+                column_tree[key] = num_index.index(value)
+        return column_tree
+
+    @staticmethod
+    def get_informative_table(content, key_name, raw_data=False):
+
+        if raw_data:
+            table_list = []
+            for key, value in content.items():
+                table_list.extend(value.find_all("figure", attrs={'class': 'ltx_table'}))
+        else:
+            table_list = content.find_all("figure", attrs={'class': 'ltx_table'})
         table_content = {}
+        plus_pattern = re.compile(r'(\s+|^)(\+|-)(.+)')
+
+        with open('./data/test.html', 'r', encoding='utf-8') as f:
+            html_file = f.read().split('<!---split-position--->')
+        table_html = []
+        table_html.append(html_file[0])
+
         for table in table_list:
             try:
                 table_array = []
                 bold_array = []
                 captions = table.find_all('figcaption')[-1].get_text().strip().replace('\n', ' ')
 
-                if re.search(r'\s(%s)(\s|\,|\.\()' % '|'.join(key_name), captions, re.I) is not None and \
+                if re.search(r'\s(%s)(\s|,|\.|\()' % '|'.join(key_name), captions, re.I) is not None and \
                                 re.search(r'\s(ablation)(\s|\,|\.\()', captions, re.I) is None:
+                    table_html.append(str(table))
+
                     table = table.find('table')
+                    if table is None: continue
                     if ContentProcess.regular_table_check(table):
+                        column_tree = ContentProcess.construct_column_tree(table)
                         for row_index, row in enumerate(table.find_all('tr')):
-                            # table_array.append([' '.join([span.get_text().strip().replace('\n', ' ')
-                            #                               for span in element.find_all(attrs={"class":'ltx_text'})])
-                            #                     for element in row.find_all(class_='ltx_td')])
                             table_array.append([element.get_text().strip().replace('\n', ' ')
                                                 for element in row.find_all(class_='ltx_td')])
+
+                            # process different rank of first column
+                            if plus_pattern.search(table_array[-1][0]) is not None:
+                                rank = column_tree.get(table_array[-1][0])
+                                for index in range(len(table_array) - 2, -1, -1):
+                                    if column_tree.get(table_array[index][0], 5) < rank:
+                                        table_array[-1][0] = table_array[index][0] + table_array[-1][0]
+                                        column_tree[table_array[-1][0]] = rank
+                                        break
+
                             for column_index, element in enumerate(row.find_all(class_='ltx_td')):
                                 if element.find(class_="ltx_font_bold") is not None \
                                         and row_index > 0 \
@@ -202,10 +261,10 @@ class ContentProcess(object):
                                     item_two = "Best-%s: %s" % (
                                     table_array[0][column_index], table_array[row_index][column_index])
                                     bold_array.append([item_one, item_two])
-
-                        table_content[captions] = [table_array, bold_array]
-
+                        if len(bold_array) > 0:
+                            table_content[captions] = bold_array
             except BaseException as e:
                 print(e)
                 continue
-        return table_content
+        table_html.append(html_file[-1])
+        return table_content, table_html
