@@ -1,104 +1,237 @@
 {
-    "https://arxiv.org/abs/1906.02448": [
-        "informative table: http://jiangsiyuan.com/table/0",
-        {
-            "Table 2: Factor analysis on Zh→En translation, the results are average BLEU scores on MT03∼06 datasets.": [
-                [
-                    "Best-Systems: RNNsearch+ sentence oracle+ noise",
-                    "Best-Average: 40.09"
-                ]
+    "https://arxiv.org/abs/1911.09074": {
+        "paper": "Search to Distill: Pearls are Everywhere but not the Eyes",
+        "dateline": "Submitted on 20 Nov 2019",
+        "Selected Reason": [
+            "Experimental results show our proposed AKD consistently outperforms the conventional NAS plus KD approach, and achieves state-of-the-art results on the ImageNet classification task under various latency settings"
+        ],
+        "informative table": "https://horatiojsy.github.io/0",
+        "Table 4: Relative performance gain between KD(AKDNet) and KD(NASNet) during different searching stages.": [
+            [
+                "Best-Generation: Wining ratio",
+                "Best-∼10k: 18 / 20"
             ],
-            "Table 3: Case-sensitive BLEU scores (%) on En→De task. The “‡” indicates the results are significantly better (p<0.01) than RNNsearch and Transformer.": [
-                [
-                    "Best-Systems: RNNsearch+ OR-NMT",
-                    "Best-newstest2014: 27.41‡"
-                ],
-                [
-                    "Best-Systems: Transformer (base)+ OR-NMT",
-                    "Best-newstest2014: 28.65‡"
-                ]
+            [
+                "Best-Generation: Average gain",
+                "Best-∼10k: 1.05"
             ]
-        }
-    ],
-    "http://arxiv.org/abs/1612.08083v3": [
-        "informative table: http://jiangsiyuan.com/table/1"
-    ],
-    "http://arxiv.org/abs/1508.05326v1": [
-        "informative table: http://jiangsiyuan.com/table/9",
-        {
-            "Table 4:   2-class test accuracy for two simple baseline systems included in the Excitement Open Platform, as well as SICK and RTE results for a model making use of more sophisticated lexical resources.": [
-                [
-                    "Best-System: Classifier Based+ Lexical Resources",
-                    "Best-SNLI: 75.0"
-                ],
-                [
-                    "Best-System: Classifier Based+ Lexical Resources",
-                    "Best-SICK: 78.8"
-                ],
-                [
-                    "Best-System: Classifier Based+ Lexical Resources",
-                    "Best-RTE-3: 63.6"
-                ]
+        ]
+    },
+    "https://arxiv.org/abs/1911.09058": {
+        "paper": "Fine-grained Synthesis of Unrestricted Adversarial Examples",
+        "dateline": "Submitted on 20 Nov 2019",
+        "Selected Reason": [
+            "Unlike existing unrestricted attacks that typically hand-craft geometric transformations, we learn stylistic and stochastic modifications leveraging state-of-the-art generative models"
+        ],
+        "informative table": "https://horatiojsy.github.io/table/1"
+    },
+    "https://arxiv.org/abs/1911.08995": {
+        "paper": "Unsupervised Monocular Depth Prediction for Indoor Continuous Video Streams",
+        "dateline": "Submitted on 20 Nov 2019",
+        "Selected Reason": [
+            "Therefore, this work focuses on narrowing the gap by firstly evaluating existing approaches in the indoor environments and then improving the state-of-the-art design of architecture",
+            "The results have shown that both approaches outperform the previous state-of-the-art unsupervised learning approaches."
+        ],
+        "paper's table": "no informative table"
+    },
+    "https://arxiv.org/abs/1911.08947": {
+        "paper": "Real-time Scene Text Detection with Differentiable Binarization",
+        "dateline": "Submitted on 20 Nov 2019",
+        "Selected Reason": [
+            "Based on a simple segmentation network, we validate the performance improvements of DB on five benchmark datasets, which consistently achieves state-of-the-art results, in terms of both detection accuracy and speed"
+        ],
+        "informative table": "https://horatiojsy.github.io/table/4",
+        "Table 3: Detection results on the Total-Text dataset. The values in the bracket mean the height of the input images. “*” indicates testing with multiple scales. “MTS” and “PSE” are short for Mask TextSpotter and PSENet.": [
+            [
+                "Best-Method: DB-ResNet-18 (800)",
+                "Best-P: 88.3"
+            ],
+            [
+                "Best-Method: DB-ResNet-18 (800)",
+                "Best-FPS: 50"
+            ],
+            [
+                "Best-Method: DB-ResNet-50 (800)",
+                "Best-R: 82.5"
+            ],
+            [
+                "Best-Method: DB-ResNet-50 (800)",
+                "Best-F: 84.7"
             ]
-        }
-    ],
-    "http://arxiv.org/abs/1802.05365v2": [
-        "informative table: http://jiangsiyuan.com/table/6",
-        {
-            "Table 3: Development set performance for SQuAD, SNLI and SRL when including ELMo at different locations in the supervised model.": [
-                [
-                    "Best-Task: SQuAD",
-                    "Best-Input & Output: 85.6"
-                ],
-                [
-                    "Best-Task: SNLI",
-                    "Best-Input & Output: 89.5"
-                ],
-                [
-                    "Best-Task: SRL",
-                    "Best-Input Only: 84.7"
-                ]
+        ],
+        "Table 4: Detection results on CTW1500. The methods with “*” are collected from [ctw1500]. The values in the bracket mean the height of the input images.": [
+            [
+                "Best-Method: TextSnake [long2018textsnake]",
+                "Best-R: 85.3"
             ],
-            "Table 5: All-words fine grained WSD F1. For CoVe and the biLM, we report scores for both the first and second layer biLSTMs.": [
-                [
-                    "Best-Model: Iacobacci et al. (2016)",
-                    "Best-F1: 70.1"
-                ]
+            [
+                "Best-Method: Ours-ResNet18 (1024)",
+                "Best-FPS: 55"
             ],
-            "Table 6: Test set POS tagging accuracies for PTB. For CoVe and the biLM, we report scores for both the first and second layer biLSTMs.": [
-                [
-                    "Best-Model: Ling et al. (2015)",
-                    "Best-Acc.: 97.8"
-                ]
+            [
+                "Best-Method: Ours-ResNet50 (1024)",
+                "Best-P: 86.9"
             ],
-            "Table 8: SNLI test set accuracy.444A comprehensive comparison can be found at https://nlp.stanford.edu/projects/snli/4Single model results occupy the portion, with ensemble results at the bottom.": [
-                [
-                    "Best-Model: ESIM+ELMo",
-                    "Best-Acc.: 88.7 ± 0.17"
-                ],
-                [
-                    "Best-Model: ESIM+ELMo ensemble",
-                    "Best-Acc.: 89.3"
-                ]
-            ],
-            "Table 9: Test set results for SQuAD, showing both Exact Match (EM) and F1. The top half of the table contains single model results with ensembles at the bottom. References provided where available.": [
-                [
-                    "Best-Model: BiDAF + Self Attention + ELMo",
-                    "Best-EM: 78.6"
-                ],
-                [
-                    "Best-Model: BiDAF + Self Attention + ELMo",
-                    "Best-F1: 85.8"
-                ],
-                [
-                    "Best-Model: BiDAF + Self Attention + ELMo Ensemble",
-                    "Best-EM: 81.0"
-                ],
-                [
-                    "Best-Model: BiDAF + Self Attention + ELMo Ensemble",
-                    "Best-F1: 87.4"
-                ]
+            [
+                "Best-Method: Ours-ResNet50 (1024)",
+                "Best-F: 83.4"
             ]
-        }
-    ]
+        ],
+        "Table 5: Detection results on the ICDAR 2015 dataset. The values in the bracket mean the height of the input images. “TB” and “PSE” are short for TextBoxes++ and PSENet.": [
+            [
+                "Best-Method: Corner [lyu2018multi]",
+                "Best-P: 94.1"
+            ],
+            [
+                "Best-Method: SPCNet [spc]",
+                "Best-R: 85.8"
+            ],
+            [
+                "Best-Method: DB-ResNet-18 (736)",
+                "Best-FPS: 48"
+            ],
+            [
+                "Best-Method: DB-ResNet-50 (1152)",
+                "Best-F: 87.3"
+            ]
+        ],
+        "Table 6: Detection results on the MSRA-TD500 dataset. The values in the bracket mean the height of the input images.": [
+            [
+                "Best-Method: DB-ResNet-18 (512)",
+                "Best-FPS: 82"
+            ],
+            [
+                "Best-Method: DB-ResNet-50 (736)",
+                "Best-P: 91.5"
+            ],
+            [
+                "Best-Method: DB-ResNet-50 (736)",
+                "Best-R: 79.2"
+            ],
+            [
+                "Best-Method: DB-ResNet-50 (736)",
+                "Best-F: 84.9"
+            ]
+        ],
+        "Table 7: Detection results on the MLT-2017 dataset. Methods with “*” are collected from [lyu2018multi]. The images in the MLT-2017 dataset are re-sized to 768×1024 in our method. “PSE” is short for PSENet.": [
+            [
+                "Best-Method: Sensetime_OCR*",
+                "Best-R: 69.4"
+            ],
+            [
+                "Best-Method: DB-ResNet-18",
+                "Best-FPS: 41"
+            ],
+            [
+                "Best-Method: DB-ResNet-50",
+                "Best-P: 83.1"
+            ],
+            [
+                "Best-Method: DB-ResNet-50",
+                "Best-F: 74.7"
+            ]
+        ]
+    },
+    "https://arxiv.org/abs/1911.08941": {
+        "paper": "Fast and Deep Graph Neural Networks",
+        "dateline": "Submitted on 20 Nov 2019",
+        "Selected Reason": [
+            "Through experimental results, we show that even without training of the recurrent connections, the architecture of small deep GNN is surprisingly able to achieve or improve the state-of-the-art performance on a significant set of tasks in the field of graphs classification."
+        ],
+        "informative table": "https://horatiojsy.github.io/table/5"
+    },
+    "https://arxiv.org/abs/1911.08938": {
+        "paper": "Issues with SZZ: An empirical assessment of the state of practice of defect prediction data collection",
+        "dateline": "Submitted on 20 Nov 2019",
+        "Selected Reason": [
+            "Thus, problems with the SZZ algorithm may have a strong indirect impact on almost the complete state of the art of defect prediction"
+        ],
+        "paper's table": "no informative table"
+    },
+    "https://arxiv.org/abs/1911.08935": {
+        "paper": "Rule-Guided Compositional Representation Learning on Knowledge Graphs",
+        "dateline": "Submitted on 20 Nov 2019",
+        "Selected Reason": [
+            "Extensive experimental results illustrate that RPJE outperforms other state-of-the-art baselines on KG completion task, which also demonstrate the superiority of utilizing logic rules as well as paths for improving the accuracy and explainability of representation learning."
+        ],
+        "informative table": "https://horatiojsy.github.io/table/7",
+        "Table 8: Link prediction results on FB15K-237.": [
+            [
+                "Best-Models: RPJE",
+                "Best-MR: 207"
+            ],
+            [
+                "Best-Models: RPJE",
+                "Best-MRR: 0.470"
+            ],
+            [
+                "Best-Models: RPJE",
+                "Best-Hits@10(%): 62.5"
+            ]
+        ]
+    },
+    "https://arxiv.org/abs/1911.08928": {
+        "paper": "A Human Action Descriptor Based on Motion Coordination",
+        "dateline": "Submitted on 20 Nov 2019",
+        "Selected Reason": [
+            "The performance of CODE is tested on two public datasets, namely HDM05 and Berkeley MHAD, and compared with state-of-the-art approaches, showing recognition results."
+        ],
+        "paper's table": "no informative table"
+    },
+    "https://arxiv.org/abs/1911.08907": {
+        "paper": "Auto-Precision Scaling for Distributed Deep Learning",
+        "dateline": "Submitted on 20 Nov 2019",
+        "Selected Reason": [
+            "However, state-of-the-art systems have some limitations that lower the efficiency of developers and researchers"
+        ],
+        "informative table": "https://horatiojsy.github.io/table/9"
+    },
+    "https://arxiv.org/abs/1911.08896": {
+        "paper": "Shift Convolution Network for Stereo Matching",
+        "dateline": "Submitted on 20 Nov 2019",
+        "Selected Reason": [
+            "It achieves state-of-the-art results on the benchmark dataset"
+        ],
+        "paper's table": "no informative table"
+    },
+    "https://arxiv.org/abs/1911.08870": {
+        "paper": "A Comparative Study on End-to-end Speech to Text Translation",
+        "dateline": "Submitted on 20 Nov 2019",
+        "Selected Reason": [
+            "We also show improvements over the current end-to-end state-of-the-art systems on both tasks."
+        ],
+        "informative table": "https://horatiojsy.github.io/table/11"
+    },
+    "https://arxiv.org/abs/1911.08868": {
+        "paper": "Partially Permuted Multi-Trellis Belief Propagation for Polar Codes",
+        "dateline": "Submitted on 20 Nov 2019",
+        "Selected Reason": [
+            "However, because of the presence of error floor due to cycles and stopping sets in the factor graph, the performance of the BP decoder is far from the performance of state of the art cyclic redundancy check (CRC) aided successive cancellation list (CA-SCL) decoders"
+        ],
+        "paper's table": "no informative table"
+    },
+    "https://arxiv.org/abs/1911.08862": {
+        "paper": "D3S -- A Discriminative Single Shot Segmentation Tracker",
+        "dateline": "Submitted on 20 Nov 2019",
+        "Selected Reason": [
+            "Without per-dataset finetuning and trained only for segmentation as the primary output, D3S outperforms all trackers on VOT2016, VOT2018 and GOT-10k benchmarks and performs close to the state-of-the-art trackers on the TrackingNet"
+        ],
+        "informative table": "https://horatiojsy.github.io/table/13"
+    },
+    "https://arxiv.org/abs/1911.08855": {
+        "paper": "RefineDetLite: A Lightweight One-stage Object Detection Framework for CPU-only Devices",
+        "dateline": "Submitted on 20 Nov 2019",
+        "Selected Reason": [
+            "Previous state-of-the-art real-time object detectors have been reported on GPUs which are extremely expensive for processing massive data and in resource-restricted scenarios"
+        ],
+        "paper's table": "no informative table"
+    },
+    "https://arxiv.org/abs/1911.08836": {
+        "paper": "Table-Of-Contents generation on contemporary documents",
+        "dateline": "Submitted on 20 Nov 2019",
+        "Selected Reason": [
+            "The proposed method shows better performance than the state-of-the-art on a public data set and on the newly released data set."
+        ],
+        "informative table": "https://horatiojsy.github.io/table/15"
+    }
 }
