@@ -1,10 +1,12 @@
 import re
 import sys
 import json
+import time
 import pandas as pd
 from bs4 import BeautifulSoup
 from urllib import request
 from tqdm import tqdm
+from selenium import webdriver
 
 
 class ArxivReader(object):
@@ -54,13 +56,13 @@ class ArxivReader(object):
 
     @staticmethod
     def arxiv_vanity_reader(url):
-        headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) '
-                                 'AppleWebKit/537.36 (KHTML, like Gecko) '
-                                 'Chrome/78.0.3904.70 Safari/537.36'}
+        try:
+            headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) '
+                                     'AppleWebKit/537.36 (KHTML, like Gecko) '
+                                     'Chrome/78.0.3904.70 Safari/537.36'}
 
-        pattern = re.compile(r'\d+\.[\dv]+')
-        if url.find('arxiv') > -1:
-            try:
+            pattern = re.compile(r'\d+\.[\dv]+')
+            if url.find('arxiv') > -1:
                 key_phrase = pattern.search(url)
                 key_phrase = key_phrase.group()
                 if key_phrase is not None:
@@ -70,8 +72,21 @@ class ArxivReader(object):
                     r = request.urlopen(request_, timeout=60).read()
                     content = BeautifulSoup(r, features='html.parser')
                     return content
-            except BaseException as e:
-                print(e)
+        except:
+            return None
+            pattern = re.compile(r'\d+\.[\dv]+')
+            if url.find('arxiv') > -1:
+                key_phrase = pattern.search(url)
+                key_phrase = key_phrase.group()
+                if key_phrase is not None:
+                    u = 'https://www.arxiv-vanity.com/papers/' + key_phrase
+                    driver = webdriver.Chrome()
+                    driver.get(u)
+                    time.sleep(10)
+                    content = driver.find_element_by_xpath("//*").get_attribute("outerHTML")
+                    content = BeautifulSoup(content, features='html.parser')
+                    driver.close()
+                    return content
         return None
 
     @staticmethod
@@ -153,10 +168,16 @@ def construct_column_tree(table):
     return column_tree
 
 
-def get_informative_table(content_xml, key_name):
+def get_informative_table(content_xml, key_name, print_table=False):
     table_list = content_xml.find_all("figure", attrs={'class':'ltx_table'})
     table_content = {}
     plus_pattern = re.compile(r'(\s+|^)(\+|-)(.+)')
+
+    with open('./data/test.html', 'r', encoding='utf-8') as f:
+        html_file = f.read().split('<!---splite-position--->')
+    table_html = []
+    table_html.append(html_file[0])
+
     for table in table_list:
         try:
             table_array = []
@@ -165,6 +186,8 @@ def get_informative_table(content_xml, key_name):
 
             if re.search(r'\s(%s)(\s|\,|\.\()' % '|'.join(key_name), captions, re.I) is not None and\
                 re.search(r'\s(ablation)(\s|\,|\.\()', captions, re.I) is None:
+                table_html.append(str(table))
+
                 table = table.find('table')
                 if regular_table_check(table):
                     column_tree = construct_column_tree(table)
@@ -190,12 +213,15 @@ def get_informative_table(content_xml, key_name):
                                 bold_array.append([item_one, item_two])
                                 # bold_array.append(["Best-" + ": ".join(i) for i in zip(table_array[0], table_array[row_index])])
                                 # break
-                    table_content[captions] = [table_array, bold_array]
-
+                    if print_table:
+                        table_content[captions] = [table_array, bold_array]
+                    elif len(bold_array) > 0:
+                        table_content[captions] = bold_array
         except BaseException as e:
             print(e)
             continue
-    return table_content
+    table_html.append(html_file[-1])
+    return table_content, table_html
 
 
 def raw_content_process(content_raw, key_name):
@@ -252,39 +278,47 @@ def raw_content_process(content_raw, key_name):
     return informative_table
 
 
-def get_paper_txt():
+def get_paper_txt(print_table=False):
     df = pd.read_csv('./data/Sota_Evaluations.csv')
     df = df.dropna(axis=0)
     url = ['https://arxiv.org/abs/1906.02448']
-    url = ['https://arxiv.org/abs/1508.05326v1']
+    # url = ['https://arxiv.org/abs/1508.05326v1']
     url.extend(df['paperurl'])
 
     results = {}
-    for u in url[0:1]:
+    for index, u in enumerate(tqdm(url[0:5])):
         print(u)
         content_xml = ArxivReader.arxiv_vanity_reader(u)
-        if content_xml is not None:
+        if content_xml is None:
+
             with open("./data/table_key_tag.json", 'r') as f:
                 key_name = json.load(f)
             content_raw = ArxivReader.raw_data_reader(u)
             merged_table = raw_content_process(content_raw, key_name)
         else:
-            continue
             with open("./data/table_key_tag.json", 'r') as f:
                 key_name = json.load(f)
-            informative_table = get_informative_table(content_xml, key_name)
+            informative_table, html_list = get_informative_table(content_xml, key_name, print_table)
 
-            merged_table = {}
-            for one_caption, one_table in informative_table.items():
-                merged_ = []
-                for row in one_table[0][1:]:
-                    merged_.append([": ".join(i) for i in zip(one_table[0][0], row)])
-                if len(one_table[-1]) > 0:
-                    merged_.extend(one_table[-1])
-                merged_table[one_caption] = merged_
+            if print_table:
+                merged_table = {}
+                for one_caption, one_table in informative_table.items():
+                    merged_ = []
+                    for row in one_table[0][1:]:
+                        merged_.append([": ".join(i) for i in zip(one_table[0][0], row)])
+                    if len(one_table[-1]) > 0:
+                        merged_.extend(one_table[-1])
+                    merged_table[one_caption] = merged_
+            else:
+                with open("./data/html/%d.html"%index , 'w', encoding='utf-8') as f :
+                    f.write("\n".join(html_list))
+                merged_table = informative_table
 
         if len(merged_table) > 0:
-            results[u] = merged_table
+            results[u] = ["informative table: %d.html"%index]
+            results[u].append(merged_table)
+        elif len(html_list) > 2:
+            results[u] = ["informative table: %d.html"%index]
         else:
             results[u] = 'no informative table'
     with open("./data/sample.json", 'w', encoding='utf-8') as f:
@@ -292,4 +326,4 @@ def get_paper_txt():
 
 
 if __name__ == '__main__':
-    get_paper_txt()
+    get_paper_txt(print_table=True)

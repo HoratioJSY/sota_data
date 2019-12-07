@@ -42,7 +42,7 @@ class Title2Link(object):
     def __init__(self, df):
         self.filtered_df = df.loc[df['paperurl'].isnull(), :]
         self.filtered_df = self.filtered_df.loc[self.filtered_df['paper'].notnull(), :]
-        self.papers_list = list(set(self.filtered_df['paper']))[0:5]
+        self.papers_list = list(set(self.filtered_df['paper']))
         self.driver = webdriver.Chrome()
         self.results = {}
 
