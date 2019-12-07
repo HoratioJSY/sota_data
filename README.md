@@ -1,7 +1,10 @@
 ## arXiv 论文数据源提取与分析
 
-- Paper Filtering
-- Paper Information Extraction
+- [Paper Filtering](#paper-filtering)
+- [Paper Information Extraction](#paper-information-extraction)
+- [Paper Counting](#paper-counting)
+- [Sota Data Completing](#sota-data-completing)
+- [Sota Data Deduplication](#sota-data-deduplication)
 
 ### Paper Filtering
 
@@ -9,7 +12,7 @@ Filtering papers by sota information mainly depends on abstract process, if one 
 
 - Input：
 
-  - arXiv daily update： https://arxiv.org/list/cs.AI/recent
+  - arXiv daily update： [https://arxiv.org/list/cs.AI/recent](https://arxiv.org/list/cs.AI/recent)
 
 - Output data：
 
@@ -274,4 +277,120 @@ Extracting evaluation table which contained performance information, if table la
 - Challenge:
   - Too many table format to extracting useful information.
   - Downloading time should be considered.
+
+### Paper Counting
+
+Counting Papers' num by key words, such as algorithms name and research domain.
+
+- Input: key words by English.
+- Output structure:
+  - "TechField"
+    - "total_counts for all keywords in TechField"
+    - "keywords"
+      - "total_counts for all years"
+      - "every year paired with paper counts"
+- Sample output (for one keywords):
+
+```json
+{"Cross-entropy": {
+            "total counts": 58000,
+            "1984": 32,
+            "1985": 38,
+            "1986": 37,
+            "1987": 61,
+            "1988": 79,
+            "1989": 104,
+            "1990": 108,
+            "1991": 106,
+            "1992": 130,
+            "1993": 174,
+            "1994": 183,
+            "1995": 216,
+            "1996": 252,
+            "1997": 345,
+            "1998": 361,
+            "1999": 390,
+            "2000": 386,
+            "2001": 398,
+            "2002": 457,
+            "2003": 488,
+            "2004": 605,
+            "2005": 741,
+            "2006": 771,
+            "2007": 900,
+            "2008": 961,
+            "2009": 1000,
+            "2010": 1190,
+            "2011": 1230,
+            "2012": 1280,
+            "2013": 1520,
+            "2014": 1850,
+            "2015": 2470,
+            "2016": 4040,
+            "2017": 7560,
+            "2018": 13500,
+            "2019": 13500,
+            "2020": 11
+        }}
+```
+
+
+
+- Challenges
+  - Search keywords on Semantic Scholar, rather than Google Scholar, due to the reCAPTCHA.
+  - Although we used multi-processing, scraping data by Selenium was slowly.
+
+### Sota Data Completing
+
+Completing URL by papers' title or some keywords.
+
+- Input:
+  - Papers' title.
+  - Methods' name, issuing date, research domain, datasets' name, metrics' value.
+- Output:
+  - Papers' title (if not exist).
+  - Papers' URL.
+- Two kinds of samples (by title and by keywords):
+
+```json
+{"Recurrent Neural Network-Based Sentence Encoder with Gated Attention for Natural Language Inference": {
+        "Recurrent Neural Network-Based Sentence Encoder with Gated Attention for Natural Language Inference": [
+            "https://www.semanticscholar.org/paper/Recurrent-Neural-Network-Based-Sentence-Encoder-for-Chen-Zhu/ceb7dddbd0c51f511c4ba97d328b48fd10d2a7fc",
+            "https://arxiv.org/pdf/1708.01353.pdf"
+        ]
+    }}
+```
+
+```json
+"BERT-Base (single model)": {
+        "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding": [
+            "https://www.semanticscholar.org/paper/BERT%3A-Pre-training-of-Deep-Bidirectional-for-Devlin-Chang/df2b0e26d0599ce3e70df8a9da02e51594e0e992",
+            "https://arxiv.org/pdf/1810.04805.pdf"
+        ]
+    }
+```
+
+
+
+- Challenges:
+  - For Keywords searching, metrics' value, issuing year, datasets' name were used as constrains, many keywords which can find correct title have been filtered. 
+
+### Sota Data Deduplication
+
+Find items in sota data which are deduplicated. Construct set which all items kept same metrics' value, and then filtering them by dataset's name, i.e. delete items which are not in same dataset.
+
+- Input: sota data.
+- Output: deduplicated items.
+- Samples:
+
+| id                                   | task               | dataset  | model                         | metric                         |
+| ------------------------------------ | ------------------ | -------- | ----------------------------- | ------------------------------ |
+| 33fa1371-c055-496d-b412-4a0026c41475 | Question Answering | bAbi     | Recurrent Relational Networks | {'Mean Error Rate': '0.46'}    |
+| 6a3c145a-9efc-4c0e-98f4-36acabb3c1b0 | Question Answering | bAbi     | RR                            | {'Mean Error Rate': '0.46'}    |
+| b6233f4b-fb80-44d8-ae2d-a38b70cc001a | Question Answering | SQuAD2.0 | {Bert-Span} (single model)    | {'EM': '80.35', 'F1': '83.33'} |
+| be3c18a5-4977-46f0-9c22-00b078767c7b | Question Answering | SQuAD2.0 | Unnamed submission by zw4     | {'EM': '80.35', 'F1': '83.33'} |
+
+
+
+
 
