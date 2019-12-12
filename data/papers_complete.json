@@ -1,587 +1,170 @@
 {
-    "abcNet": {
-        "abcNet: a literacy tool in developing countries": [
-            "https://www.semanticscholar.org/paper/abcNet%3A-a-literacy-tool-in-developing-countries-Pereira-Pinto/7770716c1719e8b2d50af2ec78d7ae3a5091dc08",
-            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1357727"
-        ],
-        "abcnet: Literacy Tool Based on Entities": [
-            "https://www.semanticscholar.org/paper/abcnet%3A-Literacy-Tool-Based-on-Entities-Pereira-Pinto/625dcdccd3a3d30913f390b7c446ebb351115042"
+    "alphapose": {
+        "confidence": 0.4,
+        "Pose Flow: Efficient Online Pose Tracking": [
+            "https://www.semanticscholar.org/paper/Pose-Flow%3A-Efficient-Online-Pose-Tracking-Xiu-Li/6759fd391e3f8a1aea7673d617d3e1b04d069804",
+            "https://arxiv.org/abs/1802.00977"
         ]
     },
     "amoebanet": {
-        "AmoebaNet: An SDN-enabled network service for big data science": [
-            "https://www.semanticscholar.org/paper/AmoebaNet%3A-An-SDN-enabled-network-service-for-big-Shah-Wu/51b4990dee5bc519887dcde88d21ae3768cdba3c",
-            "https://doi.org/10.1016/j.jnca.2018.06.015"
-        ]
-    },
-    "ask your neurons": {
-        "Ask Your Neurons: A Deep Learning Approach to Visual Question Answering": [
-            "https://www.semanticscholar.org/paper/Ask-Your-Neurons%3A-A-Deep-Learning-Approach-to-Malinowski-Rohrbach/f7ddf708442dad7ed2978658b101c797c7c10220",
-            "https://doi.org/10.1007/s11263-017-1038-2"
-        ],
-        "Ask Your Neurons: A Neural-Based Approach to Answering Questions about Images": [
-            "https://www.semanticscholar.org/paper/Ask-Your-Neurons%3A-A-Neural-Based-Approach-to-about-Malinowski-Rohrbach/bd7bd1d2945a58cdcc1797ba9698b8810fe68f60",
-            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7410366"
+        "confidence": 0.3,
+        "AutoAugment: Learning Augmentation Policies from Data": [
+            "https://www.semanticscholar.org/paper/AutoAugment%3A-Learning-Augmentation-Policies-from-Cubuk-Zoph/f723eb3e7159f07b97464c8d947d15e78612abe4",
+            "https://arxiv.org/pdf/1805.09501.pdf"
         ]
     },
     "Auto-Context": {
-        "Auto-context and its application to high-level vision tasks": [
-            "https://www.semanticscholar.org/paper/Auto-context-and-its-application-to-high-level-Tu/969be710d87f31ea323fafa0041b21a6b4cebefc",
-            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4587436"
-        ],
-        "Auto-Context and Its Application to High-Level Vision Tasks and 3D Brain Image Segmentation": [
-            "https://www.semanticscholar.org/paper/Auto-Context-and-Its-Application-to-High-Level-and-Tu-Bai/0ba6f4fb548d8289fb42d68ac64d55f9e3a274ca",
-            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5342426"
-        ],
-        "Auto-Context Convolutional Neural Network (Auto-Net) for Brain Extraction in Magnetic Resonance Imaging": [
-            "https://www.semanticscholar.org/paper/Auto-Context-Convolutional-Neural-Network-for-Brain-Salehi-Erdo%C4%9Fmu%C5%9F/8971ee6b8329f33fec78cf6858dda6e42ad37818",
-            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7961201"
-        ],
+        "confidence": 0.30000000000000004,
         "Efficient 2D and 3D Facade Segmentation Using Auto-Context": [
             "https://www.semanticscholar.org/paper/Efficient-2D-and-3D-Facade-Segmentation-Using-Gadde-Jampani/779e61d18f103091e7b1bfcc2f6cef13ff0c42f2",
             "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7906614"
         ]
     },
-    "Averaged Perceptron": {
-        "Morphological Tagging Based on Averaged Perceptron": [
-            "https://www.semanticscholar.org/paper/Morphological-Tagging-Based-on-Averaged-Perceptron-Votrubec/c2f6f3c8f7026bdc2cd87cf17b2f53cacbfdf5a1",
-            "https://pdfs.semanticscholar.org/c2f6/f3c8f7026bdc2cd87cf17b2f53cacbfdf5a1.pdf"
+    "auxiliary dgm": {
+        "confidence": "only one results",
+        "Auxiliary Deep Generative Models": [
+            "https://www.semanticscholar.org/paper/Auxiliary-Deep-Generative-Models-Maal%C3%B8e-S%C3%B8nderby/729b18d8d91035f4bb84bf2e61b0517824e5d31b",
+            "https://arxiv.org/pdf/1602.05473.pdf"
         ]
     },
-    "averaged perceptron": {
-        "Morphological Tagging Based on Averaged Perceptron": [
-            "https://www.semanticscholar.org/paper/Morphological-Tagging-Based-on-Averaged-Perceptron-Votrubec/c2f6f3c8f7026bdc2cd87cf17b2f53cacbfdf5a1",
-            "https://pdfs.semanticscholar.org/c2f6/f3c8f7026bdc2cd87cf17b2f53cacbfdf5a1.pdf"
+    "bert  mmft  ada": {
+        "confidence": "only one results",
+        "Technical report on Conversational Question Answering": [
+            "https://www.semanticscholar.org/paper/Technical-report-on-Conversational-Question-Ju-Zhao/663f4cc30a69aee07e291299d196806ead12d520",
+            "https://arxiv.org/pdf/1909.10772.pdf"
         ]
     },
-    "basel": {
-        "External Risk Measures and Basel Accords": [
-            "https://www.semanticscholar.org/paper/External-Risk-Measures-and-Basel-Accords-Kou-Peng/e03ef786c8f42d4bf386dc4bedc32ebbef54cca7",
-            "https://pdfs.semanticscholar.org/e03e/f786c8f42d4bf386dc4bedc32ebbef54cca7.pdf"
+    "bert  n-gram masking  synthetic self-training": {
+        "confidence": "only one results",
+        "Frustratingly Easy Natural Question Answering": [
+            "https://www.semanticscholar.org/paper/Frustratingly-Easy-Natural-Question-Answering-Pan-Chakravarti/c7e04335452e988e2be5f1d132e7f6eadad13fd3",
+            "https://arxiv.org/pdf/1909.05286.pdf"
+        ]
+    },
+    "bert  uda": {
+        "confidence": 0.30000000000000004,
+        "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding": [
+            "https://www.semanticscholar.org/paper/BERT%3A-Pre-training-of-Deep-Bidirectional-for-Devlin-Chang/df2b0e26d0599ce3e70df8a9da02e51594e0e992",
+            "https://arxiv.org/pdf/1810.04805.pdf"
+        ]
+    },
+    "BERT": {
+        "confidence": 0.5,
+        "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding": [
+            "https://www.semanticscholar.org/paper/BERT%3A-Pre-training-of-Deep-Bidirectional-for-Devlin-Chang/df2b0e26d0599ce3e70df8a9da02e51594e0e992",
+            "https://arxiv.org/pdf/1810.04805.pdf"
+        ]
+    },
+    "BERT uncased": {
+        "confidence": 0.30000000000000004,
+        "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding": [
+            "https://www.semanticscholar.org/paper/BERT%3A-Pre-training-of-Deep-Bidirectional-for-Devlin-Chang/df2b0e26d0599ce3e70df8a9da02e51594e0e992",
+            "https://arxiv.org/pdf/1810.04805.pdf"
+        ]
+    },
+    "bert-base": {
+        "confidence": 0.30000000000000004,
+        "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding": [
+            "https://www.semanticscholar.org/paper/BERT%3A-Pre-training-of-Deep-Bidirectional-for-Devlin-Chang/df2b0e26d0599ce3e70df8a9da02e51594e0e992",
+            "https://arxiv.org/pdf/1810.04805.pdf"
+        ]
+    },
+    "bidaf  self attention": {
+        "confidence": 0.30000000000000004,
+        "Bidirectional Attention Flow for Machine Comprehension": [
+            "https://www.semanticscholar.org/paper/Bidirectional-Attention-Flow-for-Machine-Seo-Kembhavi/3a7b63b50c64f4ec3358477790e84cbd6be2a0b4",
+            "https://arxiv.org/pdf/1611.01603.pdf"
         ]
     },
     "bidaf": {
-        "Machine Reading Comprehension Based on the Combination of BIDAF Model and Word Vectors": [
-            "https://www.semanticscholar.org/paper/Machine-Reading-Comprehension-Based-on-the-of-BIDAF-Li-Li/e480a0558e202de77b66c99bc3ffd73c17ecb03f",
-            "http://dl.acm.org/citation.cfm?id=3278045"
+        "confidence": 0.5,
+        "Bidirectional Attention Flow for Machine Comprehension": [
+            "https://www.semanticscholar.org/paper/Bidirectional-Attention-Flow-for-Machine-Seo-Kembhavi/3a7b63b50c64f4ec3358477790e84cbd6be2a0b4",
+            "https://arxiv.org/pdf/1611.01603.pdf"
         ]
     },
-    "BiDAF": {
-        "Machine Reading Comprehension Based on the Combination of BIDAF Model and Word Vectors": [
-            "https://www.semanticscholar.org/paper/Machine-Reading-Comprehension-Based-on-the-of-BIDAF-Li-Li/e480a0558e202de77b66c99bc3ffd73c17ecb03f",
-            "http://dl.acm.org/citation.cfm?id=3278045"
+    "BiDAF-No-Answer": {
+        "confidence": 0.30000000000000004,
+        "Bidirectional Attention Flow for Machine Comprehension": [
+            "https://www.semanticscholar.org/paper/Bidirectional-Attention-Flow-for-Machine-Seo-Kembhavi/3a7b63b50c64f4ec3358477790e84cbd6be2a0b4",
+            "https://arxiv.org/pdf/1611.01603.pdf"
+        ]
+    },
+    "BiDAF++": {
+        "confidence": 0.30000000000000004,
+        "Bidirectional Attention Flow for Machine Comprehension": [
+            "https://www.semanticscholar.org/paper/Bidirectional-Attention-Flow-for-Machine-Seo-Kembhavi/3a7b63b50c64f4ec3358477790e84cbd6be2a0b4",
+            "https://arxiv.org/pdf/1611.01603.pdf"
+        ]
+    },
+    "BiDAF++ with pair2vec": {
+        "confidence": "only one results",
+        "pair2vec: Compositional Word-Pair Embeddings for Cross-Sentence Inference": [
+            "https://www.semanticscholar.org/paper/pair2vec%3A-Compositional-Word-Pair-Embeddings-for-Joshi-Choi/5f6a87289ef0977073e49aa4460f6018de89e14c",
+            "https://arxiv.org/pdf/1810.08854.pdf"
         ]
     },
     "Weakly Supervised Deep Detection Networks": {
-        "Weakly Supervised Deep Detection Networks": [
-            "https://www.semanticscholar.org/paper/Weakly-Supervised-Deep-Detection-Networks-Bilen-Vedaldi/60cad74eb4f19b708dbf44f54b3c21d10c19cfb3",
-            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7780680"
+        "confidence": 0.5,
+        "Weakly supervised object detection using pseudo-strong labels": [
+            "https://www.semanticscholar.org/paper/Weakly-supervised-object-detection-using-labels-Yang-Li/e540d0c09b1bcb42cb1e2f7b62c5b72f7460c838",
+            "https://arxiv.org/pdf/1607.04731.pdf"
+        ]
+    },
+    "BSAE AddText": {
+        "confidence": 0.30000000000000004,
+        "Bidirectional Attention Flow for Machine Comprehension": [
+            "https://www.semanticscholar.org/paper/Bidirectional-Attention-Flow-for-Machine-Seo-Kembhavi/3a7b63b50c64f4ec3358477790e84cbd6be2a0b4",
+            "https://arxiv.org/pdf/1611.01603.pdf"
+        ]
+    },
+    "CAEVO": {
+        "confidence": 0.3,
+        "Classifying Temporal Relations by Bidirectional LSTM over Dependency Paths": [
+            "https://www.semanticscholar.org/paper/Classifying-Temporal-Relations-by-Bidirectional-Cheng-Miyao/2a8e11f6b8d90de4a06a7bf29065184e2627acff",
+            "https://pdfs.semanticscholar.org/2a8e/11f6b8d90de4a06a7bf29065184e2627acff.pdf"
         ]
     },
     "CatGAN": {
-        "CatGAN: Coupled Adversarial Transfer for Domain Generation": [
-            "https://www.semanticscholar.org/paper/CatGAN%3A-Coupled-Adversarial-Transfer-for-Domain-Wang-Zhang/41afb30d7512da680e693a77f239d1c8c1555809",
-            "https://arxiv.org/pdf/1711.08904.pdf"
+        "confidence": 0.5,
+        "Unsupervised and Semi-supervised Learning with Categorical Generative Adversarial Networks": [
+            "https://www.semanticscholar.org/paper/Unsupervised-and-Semi-supervised-Learning-with-Springenberg/543f21d81bbea89f901dfcc01f4e332a9af6682d",
+            "https://arxiv.org/pdf/1511.06390.pdf"
         ]
     },
     "CD-DNN": {
-        "Improving wideband speech recognition using mixed-bandwidth training data in CD-DNN-HMM": [
-            "https://www.semanticscholar.org/paper/Improving-wideband-speech-recognition-using-data-in-Li-Yu/72013067fffaa0ec87ca229ee004380dc88d377d",
-            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6424210"
-        ],
-        "Improving low-resource CD-DNN-HMM using dropout and multilingual DNN training": [
-            "https://www.semanticscholar.org/paper/Improving-low-resource-CD-DNN-HMM-using-dropout-and-Miao-Metze/0992d407001c6a681bd4cb571a777d2c2dc274fd",
-            "https://pdfs.semanticscholar.org/e327/816bf6505b6e7c5f4ea08d97526c67d7dc0d.pdf"
-        ],
-        "A useful feature-engineering approach for a LVCSR system based on CD-DNN-HMM algorithm": [
-            "https://www.semanticscholar.org/paper/A-useful-feature-engineering-approach-for-a-LVCSR-Lee-Kang/62c38a482f4441afb6612b80b8627bb9ae2670cb",
-            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7362618"
-        ],
-        "Hybrid context dependent CD-DNN-HMM Keyword Spotting (KWS) in speech conversations": [
-            "https://www.semanticscholar.org/paper/Hybrid-context-dependent-CD-DNN-HMM-Keyword-(KWS)-Tyagi/c06524810cf23740ce352c1cebdf84e601f33ee8",
-            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7738862"
+        "confidence": 0.30000000000000004,
+        "Feature engineering in Context-Dependent Deep Neural Networks for conversational speech transcription": [
+            "https://www.semanticscholar.org/paper/Feature-engineering-in-Context-Dependent-Deep-for-Seide-Li/7599dfed1de67c726f9e4fd372cc9ef03d2cf3e9",
+            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6163899"
+        ]
+    },
+    "CDBN": {
+        "confidence": 0.3,
+        "Recurrent convolutional neural network for object recognition": [
+            "https://www.semanticscholar.org/paper/Recurrent-convolutional-neural-network-for-object-Liang-Hu/4b39a79a1dc8e578e38ee4b7f00b4ec9ded50dd0",
+            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7298958"
+        ]
+    },
+    "clarifai": {
+        "confidence": 0.4,
+        "Saliency detection by multi-context deep learning": [
+            "https://www.semanticscholar.org/paper/Saliency-detection-by-multi-context-deep-learning-Zhao-Ouyang/cd126c7db89f1a66b17a6ef1152412876f4c0cbe",
+            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7298731"
+        ]
+    },
+    "cmu-pose+++": {
+        "confidence": 0.4,
+        "Cascaded Pyramid Network for Multi-person Pose Estimation": [
+            "https://www.semanticscholar.org/paper/Cascaded-Pyramid-Network-for-Multi-person-Pose-Chen-Wang/1deb7f96fc92d5c9e04d2cbb277473fee878e144",
+            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8578840"
         ]
     },
     "context2vec": {
+        "confidence": 0.5,
         "context2vec: Learning Generic Context Embedding with Bidirectional LSTM": [
             "https://www.semanticscholar.org/paper/context2vec%3A-Learning-Generic-Context-Embedding-Melamud-Goldberger/59761abc736397539bdd01ad7f9d91c8607c0457",
             "https://pdfs.semanticscholar.org/0a73/a15bf53da196363058196961cd21bc262e8f.pdf"
         ]
     },
-    "coupled ensemble": {
-        "Coupled Ensemble Flow Line Advection and Analysis": [
-            "https://www.semanticscholar.org/paper/Coupled-Ensemble-Flow-Line-Advection-and-Analysis-Guo-Yuan/6202fbf92467dea1bd8500068fbfec0304341154",
-            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6634188"
-        ],
-        "A Predictable AMO-Like Pattern in the GFDL Fully Coupled Ensemble Initialization and Decadal Forecasting System": [
-            "https://www.semanticscholar.org/paper/A-Predictable-AMO-Like-Pattern-in-the-GFDL-Fully-Yang-Rosati/9a50f71322d71a43febec7edd3b5fbfed68303ad",
-            "https://pdfs.semanticscholar.org/9a50/f71322d71a43febec7edd3b5fbfed68303ad.pdf"
-        ],
-        "Spatially Coupled Ensembles Universally Achieve Capacity Under Belief Propagation": [
-            "https://www.semanticscholar.org/paper/Spatially-Coupled-Ensembles-Universally-Achieve-Kudekar-Richardson/f8a109be16720b748067b16d4eb91c6e0b8301fc",
-            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6589171"
-        ],
-        "Coupled Ensembles of Neural Networks": [
-            "https://www.semanticscholar.org/paper/Coupled-Ensembles-of-Neural-Networks-Dutt-Pellerin/f1c55047a7b8f177f874e7968186e5915e061aa1",
-            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8516453"
-        ]
-    },
-    "deep blue": {
-        "Deep Blue": [
-            "https://www.semanticscholar.org/paper/Deep-Blue-Campbell-Hoane/3e4bc1aa55c752918ae99b1a125f6adef61afad2",
-            "https://doi.org/10.1016/s0004-3702%2801%2900129-1"
-        ],
-        "Deep Blue Retrievals of Asian Aerosol Properties During ACE-Asia": [
-            "https://www.semanticscholar.org/paper/Deep-Blue-Retrievals-of-Asian-Aerosol-Properties-Hsu-Tsay/744fc174b7778d0b8aa2bdcf954a534e2b95fd7f",
-            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1717707"
-        ],
-        "Initial delay vs. interruptions: Between the devil and the deep blue sea": [
-            "https://www.semanticscholar.org/paper/Initial-delay-vs.-interruptions%3A-Between-the-devil-Ho%C3%9Ffeld-Egger/15d98cb7989fca216cf900a33b94548697ccc2ad",
-            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6263849"
-        ],
-        "Deep Blue's Hardware-Software Synergy": [
-            "https://www.semanticscholar.org/paper/Deep-Blue's-Hardware-Software-Synergy-Hamilton-Garber/c6b8673f16e55349b61646bdf6ffcaf5f6779f28",
-            "https://doi.org/10.1109/2.625299"
-        ],
-        "Deep Blue System Overview": [
-            "https://www.semanticscholar.org/paper/Deep-Blue-System-Overview-Hsu-Campbell/4e4fbacceef49efc0e60e900acf7392ea7147f0a",
-            "http://dl.acm.org/citation.cfm?id=224567"
-        ],
-        "Deep Blue's contribution to AI": [
-            "https://www.semanticscholar.org/paper/Deep-Blue's-contribution-to-AI-Newborn/59c827733cf6bb1a35ece7117f48859772618b49",
-            "https://doi.org/10.1023/A%3A1018939819265"
-        ]
-    },
-    "Deep Learning of Invariant Features via Simulated Fixations in Video": {
-        "Deep Learning of Invariant Features via Simulated Fixations in Video": [
-            "https://www.semanticscholar.org/paper/Deep-Learning-of-Invariant-Features-via-Simulated-Zou-Ng/aefc7c708269b874182a5c877fb6dae06da210d4",
-            "https://pdfs.semanticscholar.org/f6f4/60d4a4a5b4c077ab3ac7a972f52af17a4241.pdf"
-        ]
-    },
-    "Deep learning via semi-supervised embedding": {
-        "Deep learning via semi-supervised embedding": [
-            "https://www.semanticscholar.org/paper/Deep-learning-via-semi-supervised-embedding-Weston-Ratle/9dd2138155a0fe39834695057b2f4987181b9dbd",
-            "http://dl.acm.org/citation.cfm?id=1390303"
-        ],
-        "Deep Learning via Semi-supervised Embedding": [
-            "https://www.semanticscholar.org/paper/Deep-Learning-via-Semi-supervised-Embedding-Weston-Ratle/e5013a8b793bc3f9f08411a1b37e571d72491a2a",
-            "https://doi.org/10.1007/978-3-642-35289-8_34"
-        ]
-    },
-    "Deep Representation Learning with Target Coding": {
-        "Deep Representation Learning with Target Coding": [
-            "https://www.semanticscholar.org/paper/Deep-Representation-Learning-with-Target-Coding-Yang-Luo/9f829eb41c2ecb850fe20329e7da06eb369151f9",
-            "https://pdfs.semanticscholar.org/ed0c/7a2c3a9d9d2ebe40316d92e917c7074f2373.pdf"
-        ]
-    },
-    "deep residual learning for image recognition": {
-        "FPGA accelerates deep residual learning for image recognition": [
-            "https://www.semanticscholar.org/paper/FPGA-accelerates-deep-residual-learning-for-image-Li-Ding/0b6f430fcfffd079eac8618877d3ad9a763da5a1",
-            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8284852"
-        ],
-        "Deep Residual Learning for Image Recognition": [
-            "https://www.semanticscholar.org/paper/Deep-Residual-Learning-for-Image-Recognition-He-Zhang/29c808b346526fbb6027e67942b62a40a549f019",
-            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7780459"
-        ]
-    },
-    "Deep Speech": {
-        "Deep Speech 2: End-to-End Speech Recognition in English and Mandarin": [
-            "https://www.semanticscholar.org/paper/Deep-Speech-2%3A-End-to-End-Speech-Recognition-in-and-Amodei-Ananthanarayanan/13497bd108d4412d02050e646235f456568cf822",
-            "https://arxiv.org/pdf/1512.02595.pdf"
-        ],
-        "Deep Speech: Scaling up end-to-end speech recognition": [
-            "https://www.semanticscholar.org/paper/Deep-Speech%3A-Scaling-up-end-to-end-speech-Hannun-Case/24741d280869ad9c60321f5ab6e5f01b7852507d",
-            "https://arxiv.org/pdf/1412.5567.pdf"
-        ]
-    },
-    "deepl": {
-        "Valutazione umana di Google Traduttore e DeepL per le traduzioni di testi giornalistici dall'inglese verso l'italiano (Human evaluation of Google Translator and DeepL for translations of journalistic…": [
-            "https://www.semanticscholar.org/paper/Valutazione-umana-di-Google-Traduttore-e-DeepL-per-Tavosanis/1514eb31e4d93bdb195d414f59349847eb0d91e7",
-            "https://pdfs.semanticscholar.org/1514/eb31e4d93bdb195d414f59349847eb0d91e7.pdf"
-        ],
-        "Statistical vs. Neural Machine Translation: A Comparison of MTH and DeepL at Swiss Post’s Language Service": [
-            "https://www.semanticscholar.org/paper/Statistical-vs.-Neural-Machine-Translation%3A-A-of-at-Volkart-Bouillon/15cc42fe91d202e63e7df04be293e55e93579936",
-            "https://pdfs.semanticscholar.org/15cc/42fe91d202e63e7df04be293e55e93579936.pdf"
-        ]
-    },
-    "deeply supervised net": {
-        "3D Deeply Supervised Network for Automatic Liver Segmentation from CT Volumes": [
-            "https://www.semanticscholar.org/paper/3D-Deeply-Supervised-Network-for-Automatic-Liver-CT-Dou-Chen/9e2d1a10e5732c1d9efca5ec72193a3252869b02",
-            "https://arxiv.org/pdf/1607.00582.pdf"
-        ]
-    },
-    "Deformation Models": {
-        "Deformation Models for Image Recognition": [
-            "https://www.semanticscholar.org/paper/Deformation-Models-for-Image-Recognition-Keysers-Deselaers/675ec5a4542f28fa8c9dbee4b4b6f844a444cac5",
-            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4250467"
-        ]
-    },
-    "dilated cnn": {
-        "Monocular Depth Estimation with Hierarchical Fusion of Dilated CNNs and Soft-Weighted-Sum Inference": [
-            "https://www.semanticscholar.org/paper/Monocular-Depth-Estimation-with-Hierarchical-Fusion-Li-Dai/88ed0c362e21ca11758b2779547e211f454510ba",
-            "https://arxiv.org/pdf/1708.02287.pdf"
-        ]
-    },
-    "Dilated GRU": {
-        "Dilated Convolution with Dilated GRU for Music Source Separation": [
-            "https://www.semanticscholar.org/paper/Dilated-Convolution-with-Dilated-GRU-for-Music-Liu-Yang/77036414bf957f4de90fd9351c50efd6fbc650c9",
-            "https://arxiv.org/pdf/1906.01203.pdf"
-        ]
-    },
-    "DNN-HMM": {
-        "Improving wideband speech recognition using mixed-bandwidth training data in CD-DNN-HMM": [
-            "https://www.semanticscholar.org/paper/Improving-wideband-speech-recognition-using-data-in-Li-Yu/72013067fffaa0ec87ca229ee004380dc88d377d",
-            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6424210"
-        ],
-        "A novel DNN-HMM-based approach for extracting single loads from aggregate power signals": [
-            "https://www.semanticscholar.org/paper/A-novel-DNN-HMM-based-approach-for-extracting-loads-Mauch-Yang/57eb8d014628f9ad4a4ef8cb309e4e9692f1b892",
-            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7472104"
-        ],
-        "Hybrid Deep Neural Network--Hidden Markov Model (DNN-HMM) Based Speech Emotion Recognition": [
-            "https://www.semanticscholar.org/paper/Hybrid-Deep-Neural-Network--Hidden-Markov-Model-Li-Zhao/4a25b36075124e7982076374fd4e33def2d80099",
-            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6681449"
-        ]
-    },
-    "dvae#": {
-        "DVAE#: Discrete Variational Autoencoders with Relaxed Boltzmann Priors": [
-            "https://www.semanticscholar.org/paper/DVAE%23%3A-Discrete-Variational-Autoencoders-with-Vahdat-Andriyash/c940cec9b56a5766c316fb6fc1e4195d70d39ecf",
-            "https://arxiv.org/pdf/1805.07445.pdf"
-        ]
-    },
-    "EraseReLU": {
-        "EraseReLU: A Simple Way to Ease the Training of Deep Convolution Neural Networks": [
-            "https://www.semanticscholar.org/paper/EraseReLU%3A-A-Simple-Way-to-Ease-the-Training-of-Dong-Kang/2cd040a8cdf13abb0aa2543f79324dad1c5e850d",
-            "https://arxiv.org/pdf/1709.07634.pdf"
-        ]
-    },
-    "Fast Dropout": {
-        "Fast dropout training": [
-            "https://www.semanticscholar.org/paper/Fast-dropout-training-Wang-Manning/ec92efde21707ddf4b81f301cd58e2051c1a2443",
-            "https://pdfs.semanticscholar.org/b118/e5ca88647661f27438a76c324db5f04a1b21.pdf"
-        ],
-        "On Fast Dropout and its Applicability to Recurrent Networks": [
-            "https://www.semanticscholar.org/paper/On-Fast-Dropout-and-its-Applicability-to-Recurrent-Bayer-Osendorfer/ba0c34d72dd42ef78c1f1514d92c2c22b9c0d454",
-            "https://arxiv.org/pdf/1311.0701.pdf"
-        ]
-    },
-    "Discriminatively Trained Part-Based": {
-        "Object Detection with Discriminatively Trained Part-Based Models": [
-            "https://www.semanticscholar.org/paper/Object-Detection-with-Discriminatively-Trained-Forsyth/ad5ab85d8f8302e04ec40e139d364574083aa951",
-            "https://pdfs.semanticscholar.org/16fc/1065c296840cb0f8ca62601aa17b7f0a02bf.pdf"
-        ]
-    },
-    "full-capacity unitary recurrent neural networks": {
-        "Full-Capacity Unitary Recurrent Neural Networks": [
-            "https://www.semanticscholar.org/paper/Full-Capacity-Unitary-Recurrent-Neural-Networks-Wisdom-Powers/79c78c98ea317ba8cdf25a9783ef4b8a7552db75",
-            "https://arxiv.org/pdf/1611.00035.pdf"
-        ]
-    },
-    "GA Reader": {
-        "Read and Comprehend by Gated-Attention Reader with More Belief": [
-            "https://www.semanticscholar.org/paper/Read-and-Comprehend-by-Gated-Attention-Reader-with-Deng-Tam/70e21e3234cb7e24b185396ac7b2b3df57848762",
-            "https://pdfs.semanticscholar.org/70e2/1e3234cb7e24b185396ac7b2b3df57848762.pdf"
-        ]
-    },
-    "gumbolt": {
-        "GumBolt: Extending Gumbel trick to Boltzmann priors": [
-            "https://www.semanticscholar.org/paper/GumBolt%3A-Extending-Gumbel-trick-to-Boltzmann-priors-Khoshaman-Amin/037f36390bc61b4cc03eb646a7c00ddddef01d61",
-            "https://arxiv.org/pdf/1805.07349.pdf"
-        ]
-    },
-    "Harmony Potentials": {
-        "Harmony potentials for joint classification and segmentation": [
-            "https://www.semanticscholar.org/paper/Harmony-potentials-for-joint-classification-and-Gonfaus-Boix/24c20c28871fa923c3f45b745b9b9f2d3d280e81",
-            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5540048"
-        ],
-        "Harmony Potentials": [
-            "https://www.semanticscholar.org/paper/Harmony-Potentials-Boix-Gonfaus/673c9465e61e8f8b1bec90ff8ab0a5d2ea5db6f6",
-            "https://doi.org/10.1007/s11263-011-0449-8"
-        ]
-    },
-    "Hierarchical Kernel Descriptors": {
-        "Object recognition with hierarchical kernel descriptors": [
-            "https://www.semanticscholar.org/paper/Object-recognition-with-hierarchical-kernel-Bo-Lai/7c610a7d6f5c89c40fde6b777cae29e45fdb1e30",
-            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5995719"
-        ]
-    },
-    "highway network": {
-        "Pre-disaster investment decisions for strengthening a highway network": [
-            "https://www.semanticscholar.org/paper/Pre-disaster-investment-decisions-for-strengthening-Peeta-Salman/ec95123ba045ffd1374e34e3cb0e65f4d231d454",
-            "https://doi.org/10.1016/j.cor.2009.12.006"
-        ],
-        "Highway Networks": [
-            "https://www.semanticscholar.org/paper/Highway-Networks-Srivastava-Greff/e0945081b5b87187a53d4329cf77cd8bff635795",
-            "https://arxiv.org/pdf/1505.00387.pdf"
-        ],
-        "Highway-LSTM and Recurrent Highway Networks for Speech Recognition": [
-            "https://www.semanticscholar.org/paper/Highway-LSTM-and-Recurrent-Highway-Networks-for-Pundak-Sainath/f84a30bf0554ee3e1c06cad52fe66f072956849b",
-            "https://pdfs.semanticscholar.org/1414/e932f91e414ede88c1a5a427ec6fca424c41.pdf"
-        ],
-        "Recurrent Highway Networks": [
-            "https://www.semanticscholar.org/paper/Recurrent-Highway-Networks-Zilly-Srivastava/7dba53e72c182e25e98e8f73a99d75ff69dda0c2",
-            "https://arxiv.org/pdf/1607.03474.pdf"
-        ],
-        "Highway and Residual Networks learn Unrolled Iterative Estimation": [
-            "https://www.semanticscholar.org/paper/Highway-and-Residual-Networks-learn-Unrolled-Greff-Srivastava/535347e07b2ce5ac229349156db1e7bed0486b91",
-            "https://arxiv.org/pdf/1612.07771.pdf"
-        ],
-        "Knowledge distillation for small-footprint highway networks": [
-            "https://www.semanticscholar.org/paper/Knowledge-distillation-for-small-footprint-highway-Lu-Guo/9991d9ef171cda52b1fdc9fcac93cba80703c067",
-            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7953072"
-        ]
-    },
-    "hsass": {
-        "Integrated Home Service Network on Intelligent Intranet": [
-            "https://www.semanticscholar.org/paper/Integrated-Home-Service-Network-on-Intelligent-Tsai-Wu/9d5e7d0780b8e1b31ddf8ab80b409fae7cd14868",
-            "https://doi.org/10.1109/30.883401"
-        ]
-    },
-    "hybrid cnn": {
-        "A novel hybrid CNN-SVM classifier for recognizing handwritten digits": [
-            "https://www.semanticscholar.org/paper/A-novel-hybrid-CNN-SVM-classifier-for-recognizing-Niu-Suen/c2b2ffb47c7bfaeb04e387a67ba2e3e4a1dc545d",
-            "https://doi.org/10.1016/j.patcog.2011.09.021"
-        ],
-        "Deep Sign: Hybrid CNN-HMM for Continuous Sign Language Recognition": [
-            "https://www.semanticscholar.org/paper/Deep-Sign%3A-Hybrid-CNN-HMM-for-Continuous-Sign-Koller-Zargaran/31b4f2a9fcd8e45a5b4f4cf95e3caa8b460c062f",
-            "https://pdfs.semanticscholar.org/7b2f/db4a2f79a638ad6c5328cd2860b63fdfc100.pdf"
-        ],
-        "End-to-End Training of Hybrid CNN-CRF Models for Stereo": [
-            "https://www.semanticscholar.org/paper/End-to-End-Training-of-Hybrid-CNN-CRF-Models-for-Kn%C3%B6belreiter-Reinbacher/676234ce7af942e926aa67c3695de34fff6cc53d",
-            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8099642"
-        ],
-        "Hybrid CNN and Dictionary-Based Models for Scene Recognition and Domain Adaptation": [
-            "https://www.semanticscholar.org/paper/Hybrid-CNN-and-Dictionary-Based-Models-for-Scene-Xie-Zhang/1fc6cc07b8b4ab041ff9ab45dbfe85ec1f1fc679",
-            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7362156"
-        ]
-    },
-    "introvae": {
-        "IntroVAE: Introspective Variational Autoencoders for Photographic Image Synthesis": [
-            "https://www.semanticscholar.org/paper/IntroVAE%3A-Introspective-Variational-Autoencoders-Huang-Li/ce36b3448cfaf7b5e771fce8aa84475293c51f51",
-            "https://arxiv.org/pdf/1807.06358.pdf"
-        ]
-    },
-    "invariant feature hierarchies": {
-        "Learning Invariant Feature Hierarchies": [
-            "https://www.semanticscholar.org/paper/Learning-Invariant-Feature-Hierarchies-LeCun/e882a6014ac4d66b1035729305ff8aa76ba5d09d",
-            "https://doi.org/10.1007/978-3-642-33863-2_51"
-        ],
-        "Unsupervised Learning of Invariant Feature Hierarchies with Applications to Object Recognition": [
-            "https://www.semanticscholar.org/paper/Unsupervised-Learning-of-Invariant-Feature-with-to-Ranzato-Huang/ccd52aff02b0f902f4ce7247c4fee7273014c41c",
-            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4270182"
-        ]
-    },
-    "Invariant Representations with Local Transformations": {
-        "Learning Invariant Representations with Local Transformations": [
-            "https://www.semanticscholar.org/paper/Learning-Invariant-Representations-with-Local-Sohn-Lee/8f7214bafbed6d4dfd397c35315c7275d5608f61",
-            "https://arxiv.org/pdf/1206.6418.pdf"
-        ]
-    },
-    "Joint Model": {
-        "A Joint Model of Text and Aspect Ratings for Sentiment Summarization": [
-            "https://www.semanticscholar.org/paper/A-Joint-Model-of-Text-and-Aspect-Ratings-for-Titov-McDonald/8c8bf1efdbdbe37bd854192a7ba0716498e1802b",
-            "https://pdfs.semanticscholar.org/9216/0feddc61149872638d4d798c0f2da5ad0a02.pdf"
-        ],
-        "Joint latent topic models for text and citations": [
-            "https://www.semanticscholar.org/paper/Joint-latent-topic-models-for-text-and-citations-Nallapati-Ahmed/c2df74c861fb26f278d9f6c75279a378dc425cbf",
-            "http://dl.acm.org/citation.cfm?id=1401957"
-        ],
-        "Summarization with a Joint Model for Sentence Extraction and Compression": [
-            "https://www.semanticscholar.org/paper/Summarization-with-a-Joint-Model-for-Sentence-and-Martins-Smith/f9a00e41500c5e23fcc1ab3502a2c20acf4b8f6a",
-            "https://pdfs.semanticscholar.org/a710/bb1ae677e832da8da671275c0b7d59b37c1c.pdf"
-        ],
-        "Conditional and joint models for grapheme-to-phoneme conversion": [
-            "https://www.semanticscholar.org/paper/Conditional-and-joint-models-for-conversion-Chen/92fd6075e134594816dcb1fe293e13ac0e3f3e22",
-            "https://pdfs.semanticscholar.org/92fd/6075e134594816dcb1fe293e13ac0e3f3e22.pdf"
-        ],
-        "Joint modelling of repeated measurements and time-to-event outcomes: flexible model specification and exact likelihood inference": [
-            "https://www.semanticscholar.org/paper/Joint-modelling-of-repeated-measurements-and-model-Barrett-Diggle/404ea373b075bfabe8f3116d8462387acb03035b",
-            "https://www.ncbi.nlm.nih.gov/pubmed/25866468"
-        ]
-    },
-    "l2-constrained softmax loss for discriminative face verification": {
-        "L2-constrained Softmax Loss for Discriminative Face Verification": [
-            "https://www.semanticscholar.org/paper/L2-constrained-Softmax-Loss-for-Discriminative-Face-Ranjan-Castillo/57a807f65e61bbba0ea3ba02572cc5843ecef2b6",
-            "https://arxiv.org/pdf/1703.09507.pdf"
-        ]
-    },
-    "ladder networks": {
-        "How to Train Deep Variational Autoencoders and Probabilistic Ladder Networks": [
-            "https://www.semanticscholar.org/paper/How-to-Train-Deep-Variational-Autoencoders-and-S%C3%B8nderby-Raiko/2ad303a88ba4fe57a4a3618aa42be90335481acc",
-            "https://pdfs.semanticscholar.org/0426/408774fea8d724609769d6954dd75454a97e.pdf"
-        ],
-        "Semi-supervised Learning with Ladder Networks": [
-            "https://www.semanticscholar.org/paper/Semi-supervised-Learning-with-Ladder-Networks-Rasmus-Berglund/99487be08cab00554c5c8db73161b2615c694f71",
-            "https://pdfs.semanticscholar.org/64fd/6b7139be4b8b104a9aed768deaf62f71f5c0.pdf"
-        ],
-        "Ladder Networks for Emotion Recognition: Using Unsupervised Auxiliary Tasks to Improve Predictions of Emotional Attributes": [
-            "https://www.semanticscholar.org/paper/Ladder-Networks-for-Emotion-Recognition%3A-Using-to-Parthasarathy-Busso/f8bbe3bd0925a737128eed35de9d1938d92c55e2",
-            "https://arxiv.org/pdf/1804.10816.pdf"
-        ],
-        "Wave-based Analysis and Wave Control of Ladder Networks": [
-            "https://www.semanticscholar.org/paper/Wave-based-Analysis-and-Wave-Control-of-Ladder-Nagase-Ojima/bbc0680ab0678a36c8b6f2068ec3863210848277",
-            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1583004"
-        ],
-        "Wave-based Analysis and Impedance Matching for Ladder Networks": [
-            "https://www.semanticscholar.org/paper/Wave-based-Analysis-and-Impedance-Matching-for-Nagase-Ojima/d44f21ea0497ddce5a70e16b2feb6441d1c13156",
-            "https://pdfs.semanticscholar.org/d44f/21ea0497ddce5a70e16b2feb6441d1c13156.pdf"
-        ]
-    },
-    "Large-Margin kNN": {
-        "Large-Margin kNN Classification Using a Deep Encoder Network": [
-            "https://www.semanticscholar.org/paper/Large-Margin-kNN-Classification-Using-a-Deep-Min-Stanley/f1566f59329e48eb107c98bfb14cd90f6bdee30b",
-            "https://arxiv.org/pdf/0906.1814.pdf"
-        ],
-        "A Deep Non-linear Feature Mapping for Large-Margin kNN Classification": [
-            "https://www.semanticscholar.org/paper/A-Deep-Non-linear-Feature-Mapping-for-Large-Margin-Min-Stanley/d9eae6b9c160cd976d8b5a38c298b766e008e11e",
-            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5360261"
-        ]
-    },
-    "learning from imbalanced data": {
-        "Machine Learning from Imbalanced Data Sets 101": [
-            "https://www.semanticscholar.org/paper/Machine-Learning-from-Imbalanced-Data-Sets-101-Provost/c9d60858f1cbe6b7eb36473b7d37ff4b73c31af8",
-            "https://pdfs.semanticscholar.org/c9d6/0858f1cbe6b7eb36473b7d37ff4b73c31af8.pdf"
-        ],
-        "Experimental perspectives on learning from imbalanced data": [
-            "https://www.semanticscholar.org/paper/Experimental-perspectives-on-learning-from-data-Hulse-Khoshgoftaar/f26bb9a2034b8fb219b5d03546fa71604642b3fd",
-            "http://dl.acm.org/citation.cfm?id=1273614"
-        ],
-        "Learning from Imbalanced Data: Evaluation Matters": [
-            "https://www.semanticscholar.org/paper/Learning-from-Imbalanced-Data%3A-Evaluation-Matters-Raeder-Forman/1852042b867ba252dcd366981910896c9b6d8953",
-            "https://doi.org/10.1007/978-3-642-23166-7_12"
-        ],
-        "Learning from Imbalanced Data Sets": [
-            "https://www.semanticscholar.org/paper/Learning-from-Imbalanced-Data-Sets-Fern%C3%A1ndez-Garc%C3%ADa/88bcdfd021d935a28f245e178792207881b14794",
-            "https://doi.org/10.1007/978-3-319-98074-4"
-        ],
-        "Learning from imbalanced data in surveillance of nosocomial infection": [
-            "https://www.semanticscholar.org/paper/Learning-from-imbalanced-data-in-surveillance-of-Cohen-Hilario/7c4f231bfd569540fc29ce72166281117d2d4129",
-            "https://www.ncbi.nlm.nih.gov/pubmed/16233974"
-        ],
-        "A Multiple Resampling Method for Learning from Imbalanced Data Sets": [
-            "https://www.semanticscholar.org/paper/A-Multiple-Resampling-Method-for-Learning-from-Data-Estabrooks-Jo/1152d9bfb6cbfda1b919ff6e9013f48344f9926f",
-            "https://doi.org/10.1111/j.0824-7935.2004.t01-1-00228.x"
-        ],
-        "ADASYN: Adaptive synthetic sampling approach for imbalanced learning": [
-            "https://www.semanticscholar.org/paper/ADASYN%3A-Adaptive-synthetic-sampling-approach-for-He-Bai/48234756b7cf798bfeb47328f7c5d597fd4838c2",
-            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4633969"
-        ],
-        "Learning from Imbalanced Data in Presence of Noisy and Borderline Examples": [
-            "https://www.semanticscholar.org/paper/Learning-from-Imbalanced-Data-in-Presence-of-Noisy-Napierala-Stefanowski/4ce26c925d3771e2a1e49007273fc21920a888b6",
-            "https://doi.org/10.1007/978-3-642-13529-3_18"
-        ]
-    },
-    "learning to model the tail": {
-        "Learning to Model the Tail": [
-            "https://www.semanticscholar.org/paper/Learning-to-Model-the-Tail-Wang-Ramanan/93f9607034c9b7b7693c60e9d2631adc15a2a524",
-            "https://pdfs.semanticscholar.org/93f9/607034c9b7b7693c60e9d2631adc15a2a524.pdf"
-        ]
-    },
-    "end-to-end uniform": {
-        "Australia’s Strategic Environment: The Problem of Papua": [
-            "https://www.semanticscholar.org/paper/Australia%E2%80%99s-Strategic-Environment%3A-The-Problem-of-Chauvel/e3fed9fd9cc565858d8438cc28a6849a64c46774",
-            "https://doi.org/10.22459/ag.11.01.2004.03"
-        ],
-        "Dependency or Span, End-to-End Uniform Semantic Role Labeling": [
-            "https://www.semanticscholar.org/paper/Dependency-or-Span%2C-End-to-End-Uniform-Semantic-Li-He/ca13f33970bc70d44a6159db5e14f65841abcf5a",
-            "https://arxiv.org/pdf/1901.05280.pdf"
-        ]
-    },
-    "Local Transformations": {
-        "Learning Invariant Representations with Local Transformations": [
-            "https://www.semanticscholar.org/paper/Learning-Invariant-Representations-with-Local-Sohn-Lee/8f7214bafbed6d4dfd397c35315c7275d5608f61",
-            "https://arxiv.org/pdf/1206.6418.pdf"
-        ],
-        "Construction of three-dimensional Delaunay triangulations using local transformations": [
-            "https://www.semanticscholar.org/paper/Construction-of-three-dimensional-Delaunay-using-Joe/94dbc476050d3ba6c04f2bb1556b5f34d5ff91c0",
-            "https://doi.org/10.1016/0167-8396%2891%2990038-D"
-        ],
-        "Logic Synthesis Through Local Transformations": [
-            "https://www.semanticscholar.org/paper/Logic-Synthesis-Through-Local-Transformations-Darringer-Joyner/6e3412e596d590cd1e8cc2f4af10d0b53b6e0145",
-            "https://pdfs.semanticscholar.org/6e34/12e596d590cd1e8cc2f4af10d0b53b6e0145.pdf"
-        ]
-    },
-    "lssvm": {
-        "Mapping LSSVM on digital hardware": [
-            "https://www.semanticscholar.org/paper/Mapping-LSSVM-on-digital-hardware-Anguita-Boni/d48694c11eb35df3b6b2c1b4f673f0a102902912",
-            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1379971"
-        ],
-        "Photovoltaic forecast based on hybrid PCA-LSSVM using dimensionality reducted data": [
-            "https://www.semanticscholar.org/paper/Photovoltaic-forecast-based-on-hybrid-PCA-LSSVM-Malvoni-Giorgi/7946e31c01ef4f59807c786e22e74178819fbfd7",
-            "https://doi.org/10.1016/j.neucom.2016.01.104"
-        ],
-        "Estimating reference crop evapotranspiration using HGA-LSSVM": [
-            "https://www.semanticscholar.org/paper/Estimating-reference-crop-evapotranspiration-using-Guo-Sun/b3e83a8953d078e5f027fc626ad1eb6c52227176",
-            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5584576"
-        ],
-        "Static gesture recognition based on LSSVM": [
-            "https://www.semanticscholar.org/paper/Static-gesture-recognition-based-on-LSSVM-Feng/21d61da0420691dd6e851458eee2a023b3f1b443"
-        ],
-        "IP-LSSVM: A two-step sparse classifier": [
-            "https://www.semanticscholar.org/paper/IP-LSSVM%3A-A-two-step-sparse-classifier-Carvalho-Braga/1f654c3a2cef99682412a2838013495fa5c0f30d",
-            "https://doi.org/10.1016/j.patrec.2009.07.022"
-        ],
-        "LSSVM and hybrid particle swarm optimization for ship motion prediction": [
-            "https://www.semanticscholar.org/paper/LSSVM-and-hybrid-particle-swarm-optimization-for-Zhou-Shi/7c54082e919f75117a16f740a918608cf66dd26b",
-            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5564205"
-        ],
-        "Adaptive PID controller based on online LSSVM identification": [
-            "https://www.semanticscholar.org/paper/Adaptive-PID-controller-based-on-online-LSSVM-Wanfeng-Shengdun/b712f621b11ff3c92ae2084aaf85e9f5e659ee16",
-            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4601744"
-        ],
-        "Short-Term Electricity Load Forecasting Based on ICA and LSSVM": [
-            "https://www.semanticscholar.org/paper/Short-Term-Electricity-Load-Forecasting-Based-on-Zhang-Lin/4e652fa3076011d7fe23c0b266f308687f244678",
-            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5365805"
-        ],
-        "Petroleum Lithology Discrimination Based on PSO-LSSVM Classification Model": [
-            "https://www.semanticscholar.org/paper/Petroleum-Lithology-Discrimination-Based-on-Model-Cheng-Guo/1845cb1040bf18534d330240b8be44ce25b9976e",
-            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5421448"
-        ],
-        "Combining KPCA with LSSVM for the Mooney-Viscosity Forecasting": [
-            "https://www.semanticscholar.org/paper/Combining-KPCA-with-LSSVM-for-the-Mooney-Viscosity-Liu-Huang/24afd754c5345325ec57161117345ed54262c0ca",
-            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4637499"
-        ]
-    },
-    "Mask R-CNN": {
-        "Mask R-CNN": [
-            "https://www.semanticscholar.org/paper/Mask-R-CNN-He-Gkioxari/ea99a5535388196d0d44be5b4d7dd02029a43bb2",
-            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8237584"
-        ],
-        "Mask R-CNN for Ear Detection": [
-            "https://www.semanticscholar.org/paper/Mask-R-CNN-for-Ear-Detection-Bizjak-Peer/96cf3b3f3ca0c14ad6aca97cf23d1ae4b9ba6ded",
-            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8756760"
-        ],
-        "Inshore Ship Detection Based on Mask R-CNN": [
-            "https://www.semanticscholar.org/paper/Inshore-Ship-Detection-Based-on-Mask-R-CNN-Nie-Jiang/20a91b0e7c2598d327169517cdeaafc433caa700",
-            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8519123"
-        ]
-    },
-    "mean shift": {
-        "Mean shift analysis and applications": [
-            "https://www.semanticscholar.org/paper/Mean-shift-analysis-and-applications-Comaniciu-Meer/cebc494c81f85fa9739b049a9930df6cbd68b587",
-            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=790416"
-        ],
-        "Mean Shift, Mode Seeking, and Clustering": [
-            "https://www.semanticscholar.org/paper/Mean-Shift%2C-Mode-Seeking%2C-and-Clustering-Cheng/1c168275c59ba382588350ee1443537f59978183",
-            "https://pdfs.semanticscholar.org/253a/36f0e1e17d53cedc891e35eb6f091dd8f08a.pdf"
-        ],
-        "Mean Shift: A Robust Approach Toward Feature Space Analysis": [
-            "https://www.semanticscholar.org/paper/Mean-Shift%3A-A-Robust-Approach-Toward-Feature-Space-Comaniciu-Meer/74f4ecc3e4e5b91fbb54330b285ed5214afe2001",
-            "https://pdfs.semanticscholar.org/2fad/89d48fa04bca17072f895c86104a710921af.pdf"
-        ],
-        "Real-time tracking of non-rigid objects using mean shift": [
-            "https://www.semanticscholar.org/paper/Real-time-tracking-of-non-rigid-objects-using-mean-Comaniciu-Ramesh/2cfa006b33084abe8160b001f9a24944cda25d05",
-            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=854761"
-        ],
-        "Efficient mean-shift tracking via a new similarity measure": [
-            "https://www.semanticscholar.org/paper/Efficient-mean-shift-tracking-via-a-new-similarity-Yang-Duraiswami/01f886a28fb46de77f902bc034e33c9fc6bf093c",
-            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1467265"
-        ],
-        "Object tracking using SIFT features and mean shift": [
-            "https://www.semanticscholar.org/paper/Object-tracking-using-SIFT-features-and-mean-shift-Zhou-Yuan/260449f28ff2dfc7174c210ed603bde52487492e",
-            "https://doi.org/10.1016/j.cviu.2008.08.006"
-        ],
-        "The variable bandwidth mean shift and data-driven scale selection": [
-            "https://www.semanticscholar.org/paper/The-variable-bandwidth-mean-shift-and-data-driven-DeMenthon-M%C3%A9gret/b67a23e5767df803c215551b0318eae111802696"
-        ]
-    }
 }
