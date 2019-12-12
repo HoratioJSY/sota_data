@@ -7,7 +7,7 @@ import pandas as pd
 from urllib import request
 from tqdm import tqdm
 from selenium import webdriver
-
+from flashtext import KeywordProcessor
 
 dataframe = pd.read_csv('./data/Sota_Evaluations.csv')
 
@@ -169,7 +169,11 @@ class Key2Link(object):
         search_items = driver.find_elements_by_class_name('search-result')
 
         title_abs_url = collections.OrderedDict()
-        for element in search_items:
+
+        index_dict = {0: 0.2, 1: 0.1, 2: 0.1}
+
+        for index, element in enumerate(search_items):
+            confidence = 0
             title_ = element.find_element_by_class_name('search-result-title').text.strip()
             url_ = element.find_element_by_tag_name('a').get_attribute("href")
             abs_ = element.find_element_by_class_name("search-result-abstract")
@@ -180,13 +184,23 @@ class Key2Link(object):
             except:
                 abs_ = abs_.text.strip()
 
-            if title_.lower().find(model_phrase.lower()) > -1 \
-                    or abs_.lower().find(model_phrase.lower()) > -1:
-                try:
-                    pdf_url = element.find_element_by_class_name('paper-link').get_attribute("href")
-                    title_abs_url[title_] = {"abs": abs_, 'url': [url_, pdf_url]}
-                except:
-                    title_abs_url[title_] = {"abs": abs_, 'url': [url_]}
+            if index_dict.get(index) is not None:
+                confidence = index_dict.get(index)
+
+            try:
+                pdf_url = element.find_element_by_class_name('paper-link').get_attribute("href")
+                title_abs_url[title_] = {"abs": abs_, 'url': [url_, pdf_url], 'confidence': confidence}
+            except:
+                title_abs_url[title_] = {"abs": abs_, 'url': [url_], 'confidence': confidence}
+
+            # if title_.lower().find(model_phrase.lower()) > -1 \
+            #         or abs_.lower().find(model_phrase.lower()) > -1:
+            #     try:
+            #         pdf_url = element.find_element_by_class_name('paper-link').get_attribute("href")
+            #         title_abs_url[title_] = {"abs": abs_, 'url': [url_, pdf_url]}
+            #     except:
+            #         title_abs_url[title_] = {"abs": abs_, 'url': [url_]}
+
         return title_abs_url
 
     def get_papers(self, use_date=False, use_author=False, use_task=False):
@@ -194,7 +208,7 @@ class Key2Link(object):
         base_url = 'https://www.semanticscholar.org/search?'
         self.driver = webdriver.Chrome()
 
-        for index, model in enumerate(tqdm(models)):
+        for index, model in enumerate(tqdm(models[:100])):
             if raw_name_dict.get(model) is None: continue
 
             # use date to enforce search
@@ -247,31 +261,49 @@ class Key2Link(object):
         if len(self.results) < 1: self.get_papers()
         _, _, task_dict, raw_name_dict, metric_dict, dataset_dict = self._pre_process()
 
-        # model_name was preprocessed
+        # model_name was preprocessed, value was a dict that included all search results
         for model_name, value in self.results.items():
+            # model key words should more than 2
             if len(model_name) < 3: continue
-            eval_list = []
 
             # key_list: paper's title in searched results
             key_list = list(value.keys())
             abs_list = [i.get("abs") for i in value.values()]
             url_list = [i.get("url") for i in value.values()]
-            assert len(key_list) == len(abs_list) == len(url_list)
+            confidence_list = [i.get("confidence") for i in value.values()]
+            assert len(key_list) == len(abs_list) == len(url_list) == len(confidence_list)
 
-            eval_list.extend(re.findall(r'\d+\.\d+', str(metric_dict.get(model_name))))
-            eval_list.extend(dataset_dict.get(model_name))
-            # eval_list.append(task_dict.get(model_name))
+            # FlashText Processor
+            value_processor = KeywordProcessor()
+            dataset_processor = KeywordProcessor()
+            task_procrssor = KeywordProcessor()
+            keyword_processor = KeywordProcessor()
 
             if len(key_list) == 1:
-                self.filtered_results[model_name] = {key_list[0]: url_list[0]}
+                self.filtered_results[model_name] = {'confidence': 'only one results', key_list[0]: url_list[0]}
             else:
                 # continue
+                value_processor.add_keywords_from_list(re.findall(r'\d+\.\d+', str(metric_dict.get(model_name))))
+                dataset_processor.add_keywords_from_list(dataset_dict.get(model_name))
+                task_procrssor.add_keyword(task_dict.get(model_name))
+                keyword_processor.add_keyword(model_name)
+
+                # len(key_list) are num of searched results
                 for index in range(len(key_list)):
-                    for eval_key in eval_list:
-                        if key_list[index].lower().find(eval_key.lower()) > -1 \
-                                or abs_list[index].lower().find(eval_key.lower()) > -1:
-                            self.filtered_results[model_name] = {key_list[index]: url_list[index]}
-                            break
+                    confidence = confidence_list[index]
+
+                    v = value_processor.extract_keywords(key_list[index] + abs_list[index])
+                    d = dataset_processor.extract_keywords(key_list[index] + abs_list[index])
+                    t = task_procrssor.extract_keywords(key_list[index] + abs_list[index])
+                    k = keyword_processor.extract_keywords(key_list[index] + abs_list[index])
+
+                    if len(v) > 0: confidence += 0.4
+                    if len(d) > 0: confidence += 0.3
+                    if len(k) > 0: confidence += 0.2
+                    if len(t) > 0: confidence += 0.1
+
+                    if confidence > 0.2:
+                        self.filtered_results[model_name] = {'confidence': confidence, key_list[index]: url_list[index]}
 
         return self.filtered_results
 

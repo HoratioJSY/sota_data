@@ -9,23 +9,35 @@ from urllib import request
 from tqdm import tqdm
 
 
-def abs_reader():
+def abs_reader(code_url=True):
     df_a = pd.read_csv('./data/Sota_Evaluations.csv')
     df_a = df_a.dropna(axis=0)
     url = df_a['paperurl']
     total_abs = {}
+    total_code = {}
     try:
+        assert 1 == 2
         with open('./data/saved_abs_test.p', 'rb') as f:
             total_abs = pickle.load(f)
     except:
         i = 1
-        for u in tqdm(url[:100]):
+        url = ['https://arxiv.org/abs/1912.02424v1', "https://arxiv.org/abs/1912.01954v2",
+               "https://arxiv.org/abs/1912.01865v1", "https://arxiv.org/abs/1811.11742v2"]
+        for u in tqdm(url):
             if u.find('arxiv') > -1:
                 try:
                     r = request.urlopen(u).read()
                     content = BeautifulSoup(r, features='html.parser')
-                    abs_ = content.find('blockquote', attrs={'abstract'}).get_text().strip()[11:]
+                    abs_content = content.find('blockquote', attrs={'abstract'})
+                    abs_ = abs_content.get_text().strip()[11:]
                     total_abs[u] = re.sub(r'\n', ' ', abs_)
+
+                    if code_url:
+                        code_ = abs_content.find(class_='link-external')
+                        if code_ is not None:
+                            code_ = code_['href'].strip()
+                            total_code[u] = code_
+
                 except:
                     print(i)
                     i += 1
@@ -33,11 +45,11 @@ def abs_reader():
         with open('./data/saved_abs_test.p', 'wb') as f:
             pickle.dump(total_abs, f)
             print('abs saved, total num are %d' % len(total_abs))
-    return total_abs
+    return total_abs, total_code
 
 
 def abs_filter():
-    total_abs = abs_reader()
+    total_abs,_ = abs_reader()
     print('total abs: ', len(total_abs))
 
     # df_m = pd.read_excel('./data/Metric.xlsx')
