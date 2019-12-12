@@ -53,7 +53,7 @@ class AbsUtils(object):
         pass
 
     @staticmethod
-    def abs_filter(total_abs, evidence=False, strict_mode=True):
+    def abs_filter(total_abs, evidence=False, strict_mode=False):
 
         try:
             with open("./data/metric_tag.json", 'r') as f:

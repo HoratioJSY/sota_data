@@ -24,6 +24,7 @@ class PaperData:
         self.abs_urls = None
         self.pdf_urls = None
         self.content = None
+        self.code_url = {}
         self.title_index = {}
         self.date_index = {}
 
@@ -65,6 +66,7 @@ class PaperData:
         abs_urls = self.content.find_all("a", attrs={'title': 'Abstract'})
         self.abs_urls = ['https://arxiv.org' + url['href'].strip() for url in abs_urls]
         # self.abs_urls.append('https://arxiv.org/abs/1902.01069')
+        self.abs_urls.append('https://arxiv.org/abs/1912.02424')
 
         pdf_urls = self.content.find_all("a", attrs={'title': 'Download PDF'})
         self.pdf_urls = ['https://arxiv.org' + url["href"].strip() + '.pdf' for url in pdf_urls]
@@ -74,17 +76,24 @@ class PaperData:
     def get_abstract(self):
         try:
             with open('./data/saved_abs.p', 'rb') as f:
-                self.abs_list, self.title_index, self.date_index = pickle.load(f)
+                self.abs_list, self.title_index, self.date_index,  self.code_url = pickle.load(f)
         except:
             if self.abs_urls is None: _, _ = self.get_hyperlink()
             for url in tqdm(self.abs_urls):
                 content = self.__get_pages(url)
-                abs_ = content.find('blockquote', attrs={'abstract'}).get_text().strip()[11:]
+                abs_content = content.find('blockquote', attrs={'abstract'})
+                abs_ = abs_content.get_text().strip()[11:]
                 self.abs_list[url] = re.sub(r'\n', ' ', abs_)
+
                 self.title_index[url] = content.find(class_='title').get_text().strip()[6:]
                 self.date_index[url] = content.find(class_='dateline').get_text().strip()[1:-1]
+
+                code_ = abs_content.find(class_='link-external')
+                if code_ is not None:
+                    code_ = code_['href'].strip()
+                    self.code_url[url] = code_
             with open('./data/saved_abs.p', 'wb') as f:
-                pickle.dump((self.abs_list, self.title_index, self.date_index), f)
+                pickle.dump((self.abs_list, self.title_index, self.date_index, self.code_url), f)
 
         return self.abs_list
 
@@ -129,9 +138,6 @@ class Analyses(PaperData):
                 if len(title_r) > 0:
                     results[title] = title_r
         return results
-
-    def title_process_ed(self):
-        pass
 
     def task_recommend(self):
         try:
@@ -282,6 +288,8 @@ def get_sota_data(recent_url):
         final_item = []
         final_item.append(filtered_title[i])
         final_item.append(filtered_date[i])
+        if analysis.code_url.get(key) is not None:
+            final_item.append(('code', analysis.code_url.get(key)))
         results[key] = dict(final_item,
                             **{"Selected Reason": filtered_lines[i]}, **value)
         i += 1
