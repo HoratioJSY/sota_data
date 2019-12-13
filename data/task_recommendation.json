@@ -1,0 +1,160 @@
+{
+    "Language Modeling with Gated Convolutional Networks": {
+        "method": "Gated Convolutional Networks",
+        "task": "Language Modeling",
+        "task recommendation": {
+            "Language Modeling": 90
+        }
+    },
+    "A large annotated corpus for learning natural language inference": {
+        "method": "large annotated corpus",
+        "task": "learning natural language inference",
+        "task recommendation": {
+            "Natural Language Inference": 90
+        }
+    },
+    "Higher-Order Coreference Resolution with Coarse-to-Fine Inference": {
+        "method": "Coarse-to-Fine Inference",
+        "task": "Higher-Order Coreference Resolution",
+        "task recommendation": {
+            "Coreference Resolution": 90
+        }
+    },
+    "Deep Fusion LSTMs for Text Semantic Matching": {
+        "method": "Deep Fusion LSTMs",
+        "task": "Text Semantic Matching",
+        "task recommendation": {
+            "Semantic Equivalence": 86
+        }
+    },
+    "Character-Level Language Modeling with Deeper Self-Attention": {
+        "method": "Deeper Self-Attention",
+        "task": "Character-Level Language Modeling",
+        "task recommendation": {
+            "Language Modeling": 90
+        }
+    },
+    "Multiway Attention Networks for Modeling Sentence Pairs": {
+        "method": "Multiway Attention Networks",
+        "task": "Modeling Sentence Pairs",
+        "task recommendation": {
+            "Language Modeling": 86
+        }
+    },
+    "Cell-aware Stacked LSTMs for Modeling Sentences": {
+        "method": "Cell-aware Stacked LSTMs",
+        "task": "Modeling Sentences",
+        "task recommendation": {
+            "Language Modeling": 86
+        }
+    },
+    "DiSAN: Directional Self-Attention Network for RNN/CNN-Free Language Understanding": {
+        "method": " Directional Self-Attention Network",
+        "task": "RNN/CNN-Free Language Understanding",
+        "task recommendation": {
+            "Cross-Lingual Natural Language Inference": 86
+        }
+    },
+    "Neural Tree Indexers for Text Understanding": {
+        "method": "Neural Tree Indexers",
+        "task": "Text Understanding",
+        "task recommendation": {
+            "Text Generation": 86
+        }
+    },
+    "Long Short-Term Memory-Networks for Machine Reading": {
+        "method": "Long Short-Term Memory-Networks",
+        "task": "Machine Reading",
+        "task recommendation": {
+            "Machine Reading Comprehension": 86
+        }
+    },
+    "Learning Natural Language Inference with LSTM": {
+        "method": "LSTM",
+        "task": "Learning Natural Language Inference",
+        "task recommendation": {
+            "Natural Language Inference": 90
+        }
+    },
+    "Shortcut-Stacked Sentence Encoders for Multi-Domain Inference": {
+        "method": "Shortcut-Stacked Sentence Encoders",
+        "task": "Multi-Domain Inference",
+        "task recommendation": {
+            "Cross-Lingual Natural Language Inference": 86
+        }
+    },
+    "DR-BiLSTM: Dependent Reading Bidirectional LSTM for Natural Language Inference": {
+        "method": " Dependent Reading Bidirectional LSTM",
+        "task": "Natural Language Inference",
+        "task recommendation": {
+            "Natural Language Inference": 90
+        }
+    },
+    "Dynamic Meta-Embeddings for Improved Sentence Representations": {
+        "method": "Dynamic Meta-Embeddings",
+        "task": "Improved Sentence Representations",
+        "task recommendation": {
+            "Knowledge Graph Embeddings": 86
+        }
+    },
+    "Enhancing Sentence Embedding with Generalized Pooling": {
+        "method": "Generalized Pooling",
+        "task": "Enhancing Sentence Embedding",
+        "task recommendation": {
+            "Sentence Modeling": 86
+        }
+    },
+    "Enhanced LSTM for Natural Language Inference": {
+        "method": "Enhanced LSTM",
+        "task": "Natural Language Inference",
+        "task recommendation": {
+            "Natural Language Inference": 90
+        }
+    },
+    "Attribute-Aware Attention Model for Fine-grained Representation Learning": {
+        "method": "Attribute-Aware Attention Model",
+        "task": "Fine-grained Representation Learning",
+        "task recommendation": {
+            "Representation Learning": 90
+        }
+    },
+    "Attention-based Ensemble for Deep Metric Learning": {
+        "method": "Attention-based Ensemble",
+        "task": "Deep Metric Learning",
+        "task recommendation": {
+            "Metric Learning": 90
+        }
+    },
+    "Aggregate channel features for multi-view face detection": {
+        "method": "Aggregate channel features",
+        "task": "multi-view face detection",
+        "task recommendation": {
+            "Face Detection": 90
+        }
+    },
+    "Striving for Simplicity: The All Convolutional Net": {
+        "method": "Striving",
+        "task": "Simplicity"
+    },
+    "Adaptive Input Representations for Neural Language Modeling": {
+        "method": "Adaptive Input Representations",
+        "task": "Neural Language Modeling",
+        "task recommendation": {
+            "Language Modeling": 90
+        }
+    },
+    "Iterative Alternating Neural Attention for Machine Reading": {
+        "method": "Iterative Alternating Neural Attention",
+        "task": "Machine Reading",
+        "task recommendation": {
+            "Machine Reading Comprehension": 86
+        }
+    },
+    "An All-In-One Convolutional Neural Network for Face Analysis": {
+        "method": "An All-In-One Convolutional Neural Network",
+        "task": "Face Analysis",
+        "task recommendation": {
+            "Face Analysis": 90
+        }
+    }
+}
