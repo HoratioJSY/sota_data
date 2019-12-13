@@ -2,6 +2,7 @@ import re
 import pickle
 import json
 import time
+import sqlite3
 import urllib.request
 from bs4 import BeautifulSoup
 from tqdm import tqdm
@@ -56,6 +57,13 @@ class PaperData:
             return title, dateline
 
     def get_hyperlink(self):
+
+        # conn = sqlite3.connect('./test.db')
+        # c = conn.cursor()
+        # cursor = c.execute("SELECT id FROM PaperSelection ORDER BY Date DESC")
+        # newest_id = cursor.fetchone()[0]
+        # conn.close()
+
         if self.content is None:
             self.content = self.__get_pages(self.web_url)
         abs_urls = self.content.find_all("a", attrs={'title': 'Abstract'})
@@ -64,7 +72,8 @@ class PaperData:
 
     def get_abstract(self):
         try:
-            with open('./data/saved_abs.p', 'rb') as f:
+            assert 1==2
+            with open('./data/paper_selection_abs.p', 'rb') as f:
                 self.abs_list, self.title_index, self.date_index = pickle.load(f)
         except:
             if self.abs_urls is None: _ = self.get_hyperlink()
@@ -74,7 +83,7 @@ class PaperData:
                 self.abs_list[url] = re.sub(r'\n', ' ', abs_)
                 self.title_index[url] = content.find(class_='title').get_text().strip()[6:]
                 self.date_index[url] = content.find(class_='dateline').get_text().strip()[1:-1]
-            with open('./data/saved_abs.p', 'wb') as f:
+            with open('./data/paper_selection_abs.p', 'wb') as f:
                 pickle.dump((self.abs_list, self.title_index, self.date_index), f)
 
         return self.abs_list
@@ -84,7 +93,7 @@ class SotaSelection(PaperData):
     def __init__(self, web_url=None):
         super(SotaSelection, self).__init__(web_url)
 
-    def abs_filter(self, evidence=False, strict_mode=True):
+    def abs_filter(self, evidence=False, strict_mode=False):
 
         try:
             with open("./data/sota_tag.json", 'r') as f:
@@ -146,10 +155,55 @@ class SotaSelection(PaperData):
             results[filtered_url[i]] = content
         return results
 
+    @staticmethod
+    def push_database(results):
+        k_pattern = re.compile(r'\d+\.[\dv]+')
+        d_pattern = re.compile(r'(\s)(\d+)(\s|$)')
+
+        mouth = ['jan', "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"]
+        mouth_dict = dict(zip(mouth, range(len(mouth))))
+        m_pattern = re.compile(r'%s' % "|".join(mouth), re.I)
+
+        conn = sqlite3.connect('./test.db')
+        c = conn.cursor()
+
+        c.execute('''CREATE TABLE IF NOT EXISTS PaperSelection
+                    (ID INT PRIMARY KEY,
+                    Paper TEXT,
+                    URL TEXT,
+                    Date DATE,
+                    DateLine TEXT,
+                    SelectedReason TEXT)''')
+        data = []
+        for url, value in results.items():
+            date = []
+            dy = [j.group(2) for j in d_pattern.finditer(value["dateline"])][-2:]
+            mou = [j.group(0) for j in m_pattern.finditer(value["dateline"])][-1]
+            mou = mouth_dict.get(mou.lower(), -1) + 1
+
+            date.append(dy[-1])
+            date.append(str(mou))
+
+            if len(dy[0]) == 1:
+                date.append("0" + dy[0])
+            else:
+                date.append(dy[0])
+            date = "-".join(date)
+
+            key_phrase = k_pattern.search(url)
+            key_phrase = key_phrase.group()
+            data.append((key_phrase, value["paper"], url, date, value["dateline"], value["Selected Reason"][0]))
+
+        statement = 'INSERT OR IGNORE INTO PaperSelection VALUES (?, ?, ?, ?, ?, ?)'
+        conn.executemany(statement, data)
+        conn.commit()
+        conn.close()
+
 
 if __name__ == "__main__":
     sota = SotaSelection('https://arxiv.org/list/cs/pastweek?skip=0&show=100')
     results = sota.paper_selection()
+    sota.push_database(results)
 
     with open('./data/sample.json', 'w', encoding='utf-8') as f:
         json.dump(results, f, ensure_ascii=False, indent=4)

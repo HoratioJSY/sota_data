@@ -4,6 +4,7 @@ import numpy as np
 import json
 import nltk
 from arxiv_analyses import Analyses
+from fuzzywuzzy import process
 
 
 def load():
@@ -49,18 +50,34 @@ def task_recommend():
     results = analyzer.easy_title_process()
 
     for key, value in results.items():
-        task_p = value[1][6:].capitalize()
-        task_p = [task_p] * len(task)
-        scores = list(map(levenshtein_distance, task_p, task))
-        index_s = np.argmin(np.array(scores))
-        if scores[index_s] / len(task[index_s]) < 0.8:
-            results[key].append(
-                'task recommendation: ' + task[index_s] + ' ' + str(scores[index_s] / len(task[index_s])))
-        else:
-            results[key].append('task recommendation: None')
+        recommend = process.extract(key, task, limit=1)
+        recommend = dict(recommend)
+        for k, v in recommend.items():
+            if v > 80:
+                results[key].update({"task recommendation": {k: v}})
 
     with open('./data/task_recommendation.json', 'w') as f:
         json.dump(results, f, indent=4)
+
+# def task_recommend():
+#     title, task = load()
+#     analyzer = Analyses()
+#     analyzer.title_list = title[:1000]
+#     results = analyzer.easy_title_process()
+#
+#     for key, value in results.items():
+#         task_p = value[1][6:].capitalize()
+#         task_p = [task_p] * len(task)
+#         scores = list(map(levenshtein_distance, task_p, task))
+#         index_s = np.argmin(np.array(scores))
+#         if scores[index_s] / len(task[index_s]) < 0.8:
+#             results[key].append(
+#                 'task recommendation: ' + task[index_s] + ' ' + str(scores[index_s] / len(task[index_s])))
+#         else:
+#             results[key].append('task recommendation: None')
+#
+#     with open('./data/task_recommendation.json', 'w') as f:
+#         json.dump(results, f, indent=4)
 
 
 # title_pattern = re.compile(r'\s(for|with)\s', re.I)
