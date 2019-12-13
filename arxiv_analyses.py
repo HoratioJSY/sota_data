@@ -5,8 +5,9 @@ import nltk
 import time
 import urllib.request
 import numpy as np
-from bs4 import BeautifulSoup
 from tqdm import tqdm
+from bs4 import BeautifulSoup
+from fuzzywuzzy import process
 from selenium import webdriver
 from utils import Distance, AbsUtils, ContentReader, ContentProcess
 
@@ -113,7 +114,7 @@ class Analyses(PaperData):
         results = {}
         split_patern = re.compile(r'\s(using|a|an|the|)\s|\:|a\s', re.I)
         for title in self.title_list:
-            title_r = []
+            title_r = {}
             try:
                 tokens = nltk.word_tokenize(title)
             except:
@@ -129,12 +130,14 @@ class Analyses(PaperData):
                     title_split = title.split(' for ')
                     method = split_patern.split(title_split[0])[-1]
                     task = split_patern.split(title_split[1])[0]
-                    title_r.extend(['method: ' + method, 'task: ' + task])
+                    title_r["method"] = method
+                    title_r["task"] = task
                 elif 'with' in tokens:
                     title_split = title.split(' with ')
                     task = split_patern.split(title_split[0])[-1]
                     method = split_patern.split(title_split[1])[0]
-                    title_r.extend(['method: ' + method, 'task: ' + task])
+                    title_r["method"] = method
+                    title_r["task"] = task
                 if len(title_r) > 0:
                     results[title] = title_r
         return results
@@ -150,15 +153,8 @@ class Analyses(PaperData):
         results = self.easy_title_process()
 
         for key, value in results.items():
-            task_p = value[1][6:].capitalize()
-            task_p = [task_p] * len(task)
-            scores = list(map(Distance.levenshtein_distance, task_p, task))
-            index_s = np.argmin(np.array(scores))
-            if scores[index_s] / len(task[index_s]) < 0.8:
-                results[key].append(
-                    'task recommendation: ' + task[index_s] + ' ' + str(scores[index_s] / len(task[index_s])))
-            else:
-                results[key].append('task recommendation: None')
+            recommend = process.extract(key, task, limit=4)
+            results[key].update({"task recommendation": dict(recommend)})
 
         return results
 

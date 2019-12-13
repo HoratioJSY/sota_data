@@ -5,6 +5,12 @@ from tqdm import tqdm
 
 
 def read_csv(path, strict_mode=True):
+    """
+
+    :param path: path to csv file(sota data)
+    :param strict_mode: filtering items by standard that all metrics's value must be equal (only one value be equal by reverse).
+    :return: Value_dict={value:{id_one,id_two,...}}, different id that contained same metric value
+    """
     df = pd.read_csv(path, encoding='utf-8')
     metric_value = df['metric']
 
@@ -41,6 +47,8 @@ def read_csv(path, strict_mode=True):
 
 
 def similar_value():
+    # filtering id set by dataset's name
+
     df, value_dict = read_csv('./data/Sota_Evaluations.csv')
     filtered_list = []
     for key, value in value_dict.items():
@@ -84,10 +92,18 @@ def similar_value():
 if __name__ == "__main__":
     filtered_list, df = similar_value()
 
-    # one value
     filtered_list = [j for i in filtered_list for j in i]
     df_re = pd.DataFrame()
     for i in filtered_list:
         df_re = df_re.append(df.loc[df['id']==i], ignore_index=True)
+
+    df_co = pd.read_csv('./data/Done/completing_results.csv')
+    paper_dict = dict(zip(df_co['id'], df_co['paper']))
+    url_dict = dict(zip(df_co['id'], df_co['paperurl']))
+
+    for id in df_re['id']:
+        if paper_dict.get(id) is not None:
+            df_re.loc[df_re['id'] == id, 'paper'] = paper_dict.get(id)
+            df_re.loc[df_re['id'] == id, 'paperurl'] = url_dict.get(id)
 
     df_re.to_csv('./data/sample2.csv', index=False, sep=',', encoding='utf-8')
