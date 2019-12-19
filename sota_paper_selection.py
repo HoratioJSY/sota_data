@@ -1,5 +1,4 @@
 import re
-import pickle
 import json
 import time
 import sqlite3
@@ -13,11 +12,12 @@ class PaperData:
     """
     get data from arxiv daily update
     """
-    def __init__(self, web_url=None):
+    def __init__(self, web_url=None, iter_update=True):
         self.web_url = web_url
+        self.iter_update = iter_update
         self.abs_list = {}
         self.title_list = None
-        self.abs_urls = None
+        self.abs_urls = []
         self.content = None
         self.title_index = {}
         self.date_index = {}
@@ -42,65 +42,77 @@ class PaperData:
             driver.close()
         return content
 
-    def get_title(self, url_=None, title_process=False):
-        if title_process:
-            if self.content is None:
-                self.content = self.__get_pages(self.web_url)
-            title_list = self.content.find_all("div", attrs={'class': 'list-title'})
-            self.title_list = [title.get_text().strip()[7:] for title in title_list]
-            return self.title_list
-        elif url_ is not None:
-            content = self.__get_pages(url_)
-            title = content.find(class_='title').get_text().strip()[7:]
+    def get_title(self, url_):
+        content = self.__get_pages(url_)
+        title = content.find(class_='title').get_text().strip()[7:]
 
-            dateline = content.find(class_='dateline').get_text().strip()[1:-1]
-            return title, dateline
+        dateline = content.find(class_='dateline').get_text().strip()[1:-1]
+        return title, dateline
 
-    def get_hyperlink(self):
+    def get_hyperlink(self, end_iter=False):
 
-        # conn = sqlite3.connect('./test.db')
-        # c = conn.cursor()
-        # cursor = c.execute("SELECT id FROM PaperSelection ORDER BY Date DESC")
-        # newest_id = cursor.fetchone()[0]
-        # conn.close()
+        if self.iter_update:
+            conn = sqlite3.connect('./test.db')
+            c = conn.cursor()
+            #  ORDER BY Date DESC
+            cursor = c.execute("SELECT ID FROM LatestPaper")
+            latest_id = cursor.fetchone()[0]
+            print(latest_id)
+            conn.close()
 
-        if self.content is None:
-            self.content = self.__get_pages(self.web_url)
-        abs_urls = self.content.find_all("a", attrs={'title': 'Abstract'})
-        self.abs_urls = ['https://arxiv.org' + url['href'].strip() for url in abs_urls]
+            while end_iter is False:
+                content = self.__get_pages(self.web_url)
+                abs_urls = content.find_all("a", attrs={'title': 'Abstract'})
+
+                for u in abs_urls:
+                    u_ = u['href'].strip()
+                    if latest_id not in u_:
+                        self.abs_urls.append('https://arxiv.org' + u_)
+                    else:
+                        end_iter = True
+                        break
+
+                span = [str(int(num)+50) for num in re.findall(r'\d+', self.web_url)]
+                self.web_url = f"https://arxiv.org/list/cs/pastweek?skip={span[0]}&show=50"
+                print(self.web_url)
+        else:
+            content = self.__get_pages(self.web_url)
+            abs_urls = content.find_all("a", attrs={'title': 'Abstract'})
+            self.abs_urls = ['https://arxiv.org' + u['href'].strip() for u in abs_urls]
+
+        if len(self.abs_urls) > 0:
+            new = self.abs_urls[0].split('/')[-1]
+            conn = sqlite3.connect('./test.db')
+            c = conn.cursor()
+            c.execute("DELETE FROM LatestPaper")
+            c.execute("INSERT INTO LatestPaper VALUES (?)", (new,))
+            conn.commit()
+            conn.close()
+
         return self.abs_urls
 
     def get_abstract(self):
-        try:
-            assert 1==2
-            with open('./data/paper_selection_abs.p', 'rb') as f:
-                self.abs_list, self.title_index, self.date_index = pickle.load(f)
-        except:
-            if self.abs_urls is None: _ = self.get_hyperlink()
-            for url in tqdm(self.abs_urls):
-                content = self.__get_pages(url)
-                abs_ = content.find('blockquote', attrs={'abstract'}).get_text().strip()[11:]
-                self.abs_list[url] = re.sub(r'\n', ' ', abs_)
-                self.title_index[url] = content.find(class_='title').get_text().strip()[6:]
-                self.date_index[url] = content.find(class_='dateline').get_text().strip()[1:-1]
-            with open('./data/paper_selection_abs.p', 'wb') as f:
-                pickle.dump((self.abs_list, self.title_index, self.date_index), f)
+
+        if len(self.abs_urls) < 1: _ = self.get_hyperlink()
+
+        for url in tqdm(self.abs_urls):
+            content = self.__get_pages(url)
+            abs_ = content.find('blockquote', attrs={'abstract'}).get_text().strip()[11:]
+            self.abs_list[url] = re.sub(r'\n', ' ', abs_)
+            self.title_index[url] = content.find(class_='title').get_text().strip()[6:]
+            self.date_index[url] = content.find(class_='dateline').get_text().strip()[1:-1]
 
         return self.abs_list
 
 
 class SotaSelection(PaperData):
-    def __init__(self, web_url=None):
-        super(SotaSelection, self).__init__(web_url)
+    def __init__(self, web_url=None, iter_update=True):
+        super(SotaSelection, self).__init__(web_url, iter_update)
 
     def abs_filter(self, evidence=False, strict_mode=False):
 
-        try:
-            with open("./data/sota_tag.json", 'r') as f:
+        with open("./data/sota_tag.json", 'r') as f:
                 sota_name = json.load(f)
-        except BaseException as e:
-            print('failed to load sota tags\n', e)
-            quit()
 
         if strict_mode:
             sota_name = []
@@ -168,7 +180,7 @@ class SotaSelection(PaperData):
         c = conn.cursor()
 
         c.execute('''CREATE TABLE IF NOT EXISTS PaperSelection
-                    (ID INT PRIMARY KEY,
+                    (ID TEXT PRIMARY KEY,
                     Paper TEXT,
                     URL TEXT,
                     Date DATE,
@@ -192,7 +204,8 @@ class SotaSelection(PaperData):
 
             key_phrase = k_pattern.search(url)
             key_phrase = key_phrase.group()
-            data.append((key_phrase, value["paper"], url, date, value["dateline"], value["Selected Reason"][0]))
+            data.append((key_phrase, value["paper"], url, date, value["dateline"],
+                         "<split_mark>".join(value["Selected Reason"])))
 
         statement = 'INSERT OR IGNORE INTO PaperSelection VALUES (?, ?, ?, ?, ?, ?)'
         conn.executemany(statement, data)
@@ -201,7 +214,7 @@ class SotaSelection(PaperData):
 
 
 if __name__ == "__main__":
-    sota = SotaSelection('https://arxiv.org/list/cs/pastweek?skip=0&show=100')
+    sota = SotaSelection('https://arxiv.org/list/cs/pastweek?skip=0&show=50')
     results = sota.paper_selection()
     sota.push_database(results)
 
