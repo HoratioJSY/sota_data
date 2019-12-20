@@ -82,13 +82,13 @@ class PaperData:
 
         if len(self.abs_urls) == 0:
             print('No new papers to selecting')
-            quit()
 
         return self.abs_urls
 
     def get_abstract(self):
 
         if len(self.abs_urls) < 1: _ = self.get_hyperlink()
+        if len(self.abs_urls) < 1: return None
 
         for url in tqdm(self.abs_urls):
             content = self.__get_pages(url)
@@ -145,7 +145,10 @@ class SotaSelection(PaperData):
             return filtered_abs
 
     def paper_selection(self):
-        if len(self.abs_list) < 1: _ = self.get_abstract()
+        if len(self.abs_list) < 1:
+            abs_ = self.get_abstract()
+            if abs_ is None: return None
+
         filtered_abs, filtered_lines = self.abs_filter(evidence=True)
         filtered_url, _ = zip(*filtered_abs)
 

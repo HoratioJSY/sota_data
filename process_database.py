@@ -4,7 +4,7 @@ import nltk
 import time
 import sqlite3
 import numpy as np
-import multiprocessing as mp
+from multiprocessing import Pool
 from fuzzywuzzy import process
 from sota_paper_selection import SotaSelection
 from utils import Distance, AbsUtils, ContentReader, ContentProcess
@@ -173,7 +173,12 @@ class Analyses:
                                     if string == 'by'
                                     or string == 'than'
                                     or string == 'over']
-                        num_index = [str_list.index(value) for value in valid_value_list]
+                        try:
+                            num_index = [str_list.index(value) for value in valid_value_list]
+                        except BaseException as e:
+                            new_valid_value_list = [process.extract(value, str_list, limit=1)[0][0] for value in valid_value_list]
+                            num_index = [str_list.index(value) for value in new_valid_value_list]
+
                         min_d = [min([abs(i - j) for j in num_index]) for i in by_index]
                         if True in (np.array(min_d) < 5): one_result['Need Skip?'] = True
                     else:
@@ -205,11 +210,15 @@ class Analyses:
         self.conn.commit()
         print(f'Abstracts\' Process have been Done: {time.time()-start:.3f}s')
 
-    def content_process(self):
+    def content_process(self, url_list=None, index=None):
 
         start = time.time()
-        cursor_u = self.conn.cursor()
-        url_list = cursor_u.execute('SELECT ID, URL FROM PaperSelection WHERE ConProcess IS NULL')
+
+        if url_list is None and index is None:
+            cursor_u = self.conn.cursor()
+            url_list = cursor_u.execute('SELECT ID, URL FROM PaperSelection WHERE ConProcess IS NULL')
+        else:
+            print(f'content processing {index} begin, need to process {len(url_list)} items.')
 
         cursor_t = self.conn.cursor()
         cursor_t.execute('''CREATE TABLE IF NOT EXISTS ContentProcess
@@ -246,24 +255,66 @@ class Analyses:
             else:
                 self.conn.execute('UPDATE PaperSelection SET ConProcess=(?) WHERE ID=(?)', ('NoExist', u_[0]))
             self.conn.commit()
-        print(f'Contents\' Process have been Done: {time.time()-start:.3f}s')
+
+        if index is not None:
+            print(f'Contents\' Processing {index} have been Done: {time.time()-start:.3f}s')
+        else:
+            print(f'Contents\' Process have been Done: {time.time()-start:.3f}s')
+
+    def content_split(self, processing_num):
+        cursor_u = self.conn.cursor()
+        cursor_u.execute('SELECT URL FROM PaperSelection WHERE ConProcess IS NULL')
+        url_list = [i[0] for i in cursor_u.fetchall() if i[0] is not None]
+        if len(url_list) > 10:
+            item_num = len(url_list) // processing_num
+            final_list = []
+
+            for p_num in range(processing_num-1):
+                final_list.append(url_list[p_num*item_num: (p_num+1)*item_num])
+            final_list.append(url_list[(processing_num-1)*item_num:])
+            return final_list
+        else:
+            return url_list
+
+
+# def start(index, analyzer, url_list=None):
+#     if index == 0:
+#         analyzer.title_process()
+#     elif index == 1:
+#         analyzer.abs_process()
+#     elif index > 1:
+#         analyzer.content_process(url_list, index)
+#     return None
 
 
 def main():
-    sota = SotaSelection('https://arxiv.org/list/cs/pastweek?skip=0&show=50')
-    results = sota.paper_selection()
-    sota.push_database(results)
+    try:
+        sota = SotaSelection('https://arxiv.org/list/cs/pastweek?skip=0&show=50')
+        results = sota.paper_selection()
+        if results is not None:
+            sota.push_database(results)
+    except:
+        pass
 
     analyzer = Analyses()
-    process_pool = mp.Pool(2)
-    func_pool = [analyzer.title_process(), analyzer.abs_process(), analyzer.content_process()]
+    url_list = analyzer.content_split(4)
 
-    for i in range(2):
-        process_pool.apply_async(func_pool[i])
+    process_pool = Pool(2+len(url_list))
+
+    for i in range(2+len(url_list)):
+        if i == 1:
+            process_pool.apply_async(func=analyzer.title_process, args=())
+        elif i == 2:
+            process_pool.apply_async(func=analyzer.abs_process, args=())
+        else:
+            process_pool.apply_async(func=analyzer.content_process, args=(url_list[i-2], i-2))
+
     process_pool.close()
     process_pool.join()
-    quit()
+    process_pool.terminate()
 
 
 if __name__ == "__main__":
     main()
+    # analyzer = Analyses()
+    # analyzer.content_process()

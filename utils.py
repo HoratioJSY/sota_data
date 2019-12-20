@@ -1,8 +1,9 @@
 import re
 import sys
-import json
+# import json
 import time
 import numpy as np
+import sqlite3
 import urllib.request
 from bs4 import BeautifulSoup
 from selenium import webdriver
@@ -56,19 +57,17 @@ class AbsUtils(object):
 
     @staticmethod
     def abs_filter(total_abs, evidence=False, strict_mode=False):
+        conn = sqlite3.connect('./test.db')
+        cursor_s = conn.cursor()
+        cursor_s.execute('SELECT TableTag FROM Tags')
+        sota_name = [i[0] for i in cursor_s.fetchall() if i[0] is not None]
+        conn.close()
 
-        try:
-            with open("./data/metric_tag.json", 'r') as f:
-                metric_name = json.load(f)
-        except BaseException as e:
-            print('failed to load sota tags\n', e)
-            quit()
+        if strict_mode: sota_name = []
 
-        if strict_mode: metric_name = []
+        sota_name.extend(['sota', 'state(\s|-)of(\s|-)the(\s|-)art'])
 
-        metric_name.extend(['sota', 'state(\s|-)of(\s|-)the(\s|-)art'])
-
-        filter_pattern = re.compile(r'\s(%s)\s' % ('|'.join(metric_name)), re.I)
+        filter_pattern = re.compile(r'\s(%s)\s' % ('|'.join(sota_name)), re.I)
         filtered_abs = []
         filtered_lines = []
 
@@ -82,10 +81,10 @@ class AbsUtils(object):
                     filtered_lines.append(evidence_line)
             assert len(filtered_abs) == len(filtered_lines)
 
-            return filtered_abs, filtered_lines, metric_name
+            return filtered_abs, filtered_lines, sota_name
         else:
             filtered_abs = [(url_, abs_) for url_, abs_ in total_abs.items() if filter_pattern.search(abs_) is not None]
-            return filtered_abs, metric_name
+            return filtered_abs, sota_name
 
 
 class ContentReader(object):
@@ -121,7 +120,7 @@ class ContentReader(object):
                     content = driver.find_element_by_xpath("//*").get_attribute("outerHTML")
                     content = BeautifulSoup(content, features='html.parser')
                     driver.close()
-                    
+
                     if len(content) > 1 or \
                         content.find('body').get_text().find('doesn\'t have LaTeX source code') > -1:
                         return content
