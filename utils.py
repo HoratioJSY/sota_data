@@ -1,9 +1,11 @@
 import re
 import sys
 import json
+import time
 import numpy as np
 import urllib.request
 from bs4 import BeautifulSoup
+from selenium import webdriver
 
 
 class Distance(object):
@@ -90,32 +92,41 @@ class ContentReader(object):
 
     @staticmethod
     def arxiv_vanity_reader(url):
-        headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) '
-                                 'AppleWebKit/537.36 (KHTML, like Gecko) '
-                                 'Chrome/78.0.3904.70 Safari/537.36'}
+        try:
+            headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) '
+                                     'AppleWebKit/537.36 (KHTML, like Gecko) '
+                                     'Chrome/78.0.3904.70 Safari/537.36'}
 
-        pattern = re.compile(r'\d+\.[\dv]+')
-        if url.find('arxiv') > -1:
-            err_num = 1
-            while True:
-                try:
-                    key_phrase = pattern.search(url)
-                    key_phrase = key_phrase.group()
-                    if key_phrase is not None:
-                        u = 'https://www.arxiv-vanity.com/papers/' + key_phrase
-                        print(u)
-                        request_ = urllib.request.Request(url=u, headers=headers)
-                        r = urllib.request.urlopen(request_, timeout=120).read()
-                        content = BeautifulSoup(r, features='html.parser')
+            pattern = re.compile(r'\d+\.[\dv]+')
+            if url.find('arxiv') > -1:
+                key_phrase = pattern.search(url)
+                key_phrase = key_phrase.group()
+                if key_phrase is not None:
+                    u = 'https://www.arxiv-vanity.com/papers/' + key_phrase
+                    print(u)
+                    request_ = urllib.request.Request(url=u, headers=headers)
+                    r = urllib.request.urlopen(request_, timeout=60).read()
+                    content = BeautifulSoup(r, features='html.parser')
+                    return content
+        except:
+            pattern = re.compile(r'\d+\.[\dv]+')
+            if url.find('arxiv') > -1:
+                key_phrase = pattern.search(url)
+                key_phrase = key_phrase.group()
+                if key_phrase is not None:
+                    u = 'https://www.arxiv-vanity.com/papers/' + key_phrase
+                    driver = webdriver.Chrome()
+                    driver.get(u)
+                    time.sleep(7)
+                    content = driver.find_element_by_xpath("//*").get_attribute("outerHTML")
+                    content = BeautifulSoup(content, features='html.parser')
+                    driver.close()
+                    
+                    if len(content) > 1 or \
+                        content.find('body').get_text().find('doesn\'t have LaTeX source code') > -1:
                         return content
-                except BaseException as e:
-                    print(e)
-                    if err_num < 2:
-                        err_num += 1
-                        continue
                     else:
-                        break
-        return None
+                        return None
 
     @staticmethod
     def reporthook(block_num, block_size, total_size):
@@ -167,9 +178,9 @@ class ContentReader(object):
                                 data[name] = BeautifulSoup(r, features='html.parser')
                             except:
                                 continue
-                os.remove('./tmp.html')
-                os.remove("./tmp.tex")
-                os.remove("./tmp.xml")
+                # os.remove('./tmp.html')
+                # os.remove("./tmp.tex")
+                # os.remove("./tmp.xml")
                 if len(data) > 0:
                     return data
                 else:

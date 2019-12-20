@@ -80,14 +80,9 @@ class PaperData:
             abs_urls = content.find_all("a", attrs={'title': 'Abstract'})
             self.abs_urls = ['https://arxiv.org' + u['href'].strip() for u in abs_urls]
 
-        if len(self.abs_urls) > 0:
-            new = self.abs_urls[0].split('/')[-1]
-            conn = sqlite3.connect('./test.db')
-            c = conn.cursor()
-            c.execute("DELETE FROM LatestPaper")
-            c.execute("INSERT INTO LatestPaper VALUES (?)", (new,))
-            conn.commit()
-            conn.close()
+        if len(self.abs_urls) == 0:
+            print('No new papers to selecting')
+            quit()
 
         return self.abs_urls
 
@@ -102,6 +97,14 @@ class PaperData:
             self.title_index[url] = content.find(class_='title').get_text().strip()[6:]
             self.date_index[url] = content.find(class_='dateline').get_text().strip()[1:-1]
 
+        new = self.abs_urls[0].split('/')[-1]
+        conn = sqlite3.connect('./test.db')
+        c = conn.cursor()
+        c.execute("DELETE FROM LatestPaper")
+        c.execute("INSERT INTO LatestPaper VALUES (?)", (new,))
+        conn.commit()
+        conn.close()
+
         return self.abs_list
 
 
@@ -111,8 +114,11 @@ class SotaSelection(PaperData):
 
     def abs_filter(self, evidence=False, strict_mode=False):
 
-        with open("./data/sota_tag.json", 'r') as f:
-                sota_name = json.load(f)
+        conn = sqlite3.connect('./test.db')
+        cursor_s = conn.cursor()
+        cursor_s.execute('SELECT TableTag FROM Tags')
+        sota_name = [i[0] for i in cursor_s.fetchall() if i[0] is not None]
+        conn.close()
 
         if strict_mode:
             sota_name = []
@@ -142,7 +148,6 @@ class SotaSelection(PaperData):
         if len(self.abs_list) < 1: _ = self.get_abstract()
         filtered_abs, filtered_lines = self.abs_filter(evidence=True)
         filtered_url, _ = zip(*filtered_abs)
-        print('\ntotal papers: %d, useful papers: %d' % (len(self.abs_list), len(filtered_abs)))
 
         title_list = []
         date_list = []
@@ -162,9 +167,13 @@ class SotaSelection(PaperData):
         for i in range(len(filtered_url)):
             content = {}
             content["paper"] = title_list[i]
+            content["abstract"] = self.abs_list.get(filtered_url[i])
             content["dateline"] = date_list[i]
             content["Selected Reason"] = filtered_lines[i]
             results[filtered_url[i]] = content
+
+        print('\nPapers\' selection have been Done.')
+        print('    - total papers: %d, useful papers: %d' % (len(self.abs_list), len(filtered_abs)))
         return results
 
     @staticmethod
@@ -185,7 +194,12 @@ class SotaSelection(PaperData):
                     URL TEXT,
                     Date DATE,
                     DateLine TEXT,
-                    SelectedReason TEXT)''')
+                    SelectedReason TEXT,
+                    Abstract TEXT,
+                    TitProcess TEXT,
+                    AbsProcess TEXT,
+                    ConProcess TEXT
+                    )''')
         data = []
         for url, value in results.items():
             date = []
@@ -205,9 +219,11 @@ class SotaSelection(PaperData):
             key_phrase = k_pattern.search(url)
             key_phrase = key_phrase.group()
             data.append((key_phrase, value["paper"], url, date, value["dateline"],
-                         "<split_mark>".join(value["Selected Reason"])))
+                         "<split_mark>".join(value["Selected Reason"]), value["abstract"]))
 
-        statement = 'INSERT OR IGNORE INTO PaperSelection VALUES (?, ?, ?, ?, ?, ?)'
+        statement = """INSERT OR IGNORE INTO PaperSelection 
+                       (ID, Paper, URL, Date, DateLine, SelectedReason, Abstract) 
+                       VALUES (?, ?, ?, ?, ?, ?, ?)"""
         conn.executemany(statement, data)
         conn.commit()
         conn.close()
@@ -217,6 +233,3 @@ if __name__ == "__main__":
     sota = SotaSelection('https://arxiv.org/list/cs/pastweek?skip=0&show=50')
     results = sota.paper_selection()
     sota.push_database(results)
-
-    with open('./data/sample.json', 'w', encoding='utf-8') as f:
-        json.dump(results, f, ensure_ascii=False, indent=4)

@@ -3,16 +3,11 @@ import json
 import nltk
 import time
 import sqlite3
-import urllib.request
 import numpy as np
-from tqdm import tqdm
-from bs4 import BeautifulSoup
+import multiprocessing as mp
 from fuzzywuzzy import process
-from selenium import webdriver
 from sota_paper_selection import SotaSelection
 from utils import Distance, AbsUtils, ContentReader, ContentProcess
-
-
 
 
 class Analyses:
@@ -20,15 +15,22 @@ class Analyses:
     get information from title, abstract, paper content
      - task and method from paper title
      - metric, datasets, value from abstraction
-     - table, best methods and value from paper content
+     - table from paper content
     """
     def __init__(self):
         self.conn = sqlite3.connect('./test.db')
 
-    def title_process(self):
+    @staticmethod
+    def dumps_object(object):
+        object_str = json.dumps(object)
+        assert type(object_str) == str
+        return object_str
 
+    def title_process(self):
+        start = time.time()
         cursor_t = self.conn.cursor()
-        title_list = cursor_t.execute('SELECT ID, Paper FROM PaperSelection')
+        title_list = cursor_t.execute("""SELECT ID, Paper FROM PaperSelection 
+                                         WHERE TitProcess IS NULL""")
 
         cursor_task = self.conn.cursor()
         cursor_task.execute('''CREATE TABLE IF NOT EXISTS TitleProcess
@@ -71,12 +73,16 @@ class Analyses:
                     title_r["method"] = method
                     title_r["task"] = task
 
-            recommend = process.extract(title_item[-1], task_list, limit=1)
-            recommend = dict(recommend)
+            recommend = process.extract(title_item[-1], task_list)
+            recommend = [i for i in recommend if i[-1] > 80]
 
-            for k, v in recommend.items():
-                if v > 80:
-                    title_r["recommend"] = k
+            if len(recommend) > 0:
+                recommend = dict(recommend)
+                title_r["recommend"] = self.dumps_object(recommend)
+                self.conn.execute('UPDATE PaperSelection SET TitProcess=(?) WHERE ID=(?)', ('Exist', title_item[0]))
+            else:
+                title_r["recommend"] = None
+                self.conn.execute('UPDATE PaperSelection SET TitProcess=(?) WHERE ID=(?)', ('NoExist', title_item[0]))
 
             try:
                 self.conn.execute('INSERT INTO TitleProcess VALUES (?, ?, ?, ?, ?)',
@@ -92,22 +98,24 @@ class Analyses:
                                    title_r.get("recommend"), title_item[0]))
 
         self.conn.commit()
+        print(f'Titles\' Process have been Done: {time.time()-start:.3f}s')
 
-    def abs_extraction(self, recommend=False):
+    def abs_process(self, recommend=True):
 
+        start = time.time()
         cursor_t = self.conn.cursor()
-        abs_list = cursor_t.execute('SELECT ID, Abstract FROM PaperSelection')
+        abs_list = cursor_t.execute('SELECT ID, Abstract FROM PaperSelection WHERE AbsProcess IS NULL')
         # self.conn.execute('DROP TABLE AbstractProcess')
         cursor_m = self.conn.cursor()
         cursor_m.execute('''CREATE TABLE IF NOT EXISTS AbstractProcess
                                     (InformativeLines TEXT PRIMARY KEY,
                                     ID TEXT,
-                                    Skip TEXT,
+                                    Skip INT2,
                                     Metric TEXT,
                                     RecommendM TEXT,
                                     RecommendD TEXT)''')
 
-        cursor_m.execute('SELECT TaskTag FROM Tags')
+        cursor_m.execute('SELECT MetricTag FROM Tags')
         metric_name = [i[0] for i in cursor_m.fetchall() if i[0] is not None]
 
         cursor_d = self.conn.cursor()
@@ -140,20 +148,23 @@ class Analyses:
 
                         try:
                             assert len(valid_d_list) == len(valid_value_list)
-                            matched = zip(valid_key_list, valid_value_list, valid_d_list)
+                            matched = dict(zip(valid_d_list, dict(zip(valid_key_list, valid_value_list))))
                         except:
-                            matched = zip(valid_key_list, valid_value_list)
+                            matched = dict(zip(valid_key_list, valid_value_list))
                     else:
-                        matched = zip(valid_key_list, valid_value_list)
+                        matched = dict(zip(valid_key_list, valid_value_list))
 
-                    one_result['metric'] = str(list(matched))
+                    matched = self.dumps_object(matched)
+                    one_result['metric'] = matched
 
                     if recommend:
                         metric_recommend = process.extract(infor_line, metric_name, limit=4)
-                        one_result["recommend metric"] = dict(metric_recommend)
+                        metric_recommend = dict(metric_recommend)
+                        one_result["recommend metric"] = self.dumps_object(metric_recommend)
 
                         dataset_recommend = process.extract(infor_line, dataset_name, limit=4)
-                        one_result["recommend dataset"] = dict(dataset_recommend)
+                        dataset_recommend = dict(dataset_recommend)
+                        one_result["recommend dataset"] = self.dumps_object(dataset_recommend)
 
                     if re.search(r'\s(by|than|over)\s', infor_line, re.I) is not None:
                         r_tokens = ',\/:;-=+*#()~'
@@ -164,14 +175,17 @@ class Analyses:
                                     or string == 'over']
                         num_index = [str_list.index(value) for value in valid_value_list]
                         min_d = [min([abs(i - j) for j in num_index]) for i in by_index]
-                        if True in (np.array(min_d) < 5): one_result['Need Skip?'] = 'True'
+                        if True in (np.array(min_d) < 5): one_result['Need Skip?'] = True
                     else:
-                        one_result['Need Skip?'] = "False"
+                        one_result['Need Skip?'] = False
 
-                    if one_result.get('Need Skip?') is None: one_result['Need Skip?'] = 'True'
+                    if one_result.get('Need Skip?') is None: one_result['Need Skip?'] = False
+
                     try:
 
-                        self.conn.execute('INSERT INTO AbstractProcess VALUES (?, ?, ?, ?, ?, ?)',
+                        self.conn.execute("""INSERT INTO AbstractProcess 
+                                             (InformativeLines, ID, Skip, Metric, RecommendM, RecommendD) 
+                                             VALUES (?, ?, ?, ?, ?, ?)""",
                                           (one_result.get('Txt'), abs_item[0], one_result.get('Need Skip?'),
                                            one_result.get('metric'), one_result.get("recommend metric"),
                                            one_result.get("recommend dataset")))
@@ -185,46 +199,71 @@ class Analyses:
                                           (abs_item[0], one_result.get('Need Skip?'),
                                            one_result.get('metric'), one_result.get("recommend metric"),
                                            one_result.get("recommend dataset"), one_result.get('Txt')))
+                self.conn.execute('UPDATE PaperSelection SET AbsProcess=(?) WHERE ID=(?)', ('Exist', abs_item[0]))
             else:
-                self.conn.execute('INSERT INTO AbstractProcess (ID) VALUES (?)', (abs_item[0],))
+                self.conn.execute('UPDATE PaperSelection SET AbsProcess=(?) WHERE ID=(?)', ('NoExist', abs_item[0]))
         self.conn.commit()
+        print(f'Abstracts\' Process have been Done: {time.time()-start:.3f}s')
 
     def content_process(self):
 
+        start = time.time()
         cursor_u = self.conn.cursor()
-        url_list = cursor_u.execute('SELECT ID, URL FROM PaperSelection')
-        # self.conn.execute('DROP TABLE AbstractProcess')
-        cursor_m = self.conn.cursor()
-        cursor_m.execute('''CREATE TABLE IF NOT EXISTS ContentProcess
+        url_list = cursor_u.execute('SELECT ID, URL FROM PaperSelection WHERE ConProcess IS NULL')
+
+        cursor_t = self.conn.cursor()
+        cursor_t.execute('''CREATE TABLE IF NOT EXISTS ContentProcess
                                             (ID TEXT PRIMARY KEY,
                                             HTML TEXT)''')
 
+        cursor_t.execute('SELECT TableTag FROM Tags')
+        key_name = [i[0] for i in cursor_t.fetchall() if i[0] is not None]
+
         for u_ in url_list:
             content_vanity = ContentReader.arxiv_vanity_reader(u_[-1])
-            with open("./data/table_key_tag.json", 'r') as f:
-                key_name = json.load(f)
 
             if content_vanity is None:
                 try:
                     content_raw = ContentReader.raw_data_reader(u_[-1])
 
                     if content_raw is not None:
-                        informative_table, html_list = ContentProcess.get_informative_table(content_raw, key_name, raw_data=True)
+                        _, html_list = ContentProcess.get_informative_table(content_raw, key_name, raw_data=True)
                     else:
-                        informative_table = []
                         html_list = []
                 except:
+                    self.conn.execute('UPDATE PaperSelection SET ConProcess=(?) WHERE ID=(?)', ('NoExist', u_[0]))
                     continue
             else:
-                informative_table, html_list = ContentProcess.get_informative_table(content_vanity, key_name)
+                _, html_list = ContentProcess.get_informative_table(content_vanity, key_name)
 
             if len(html_list) > 2:
                 html_page = "\n".join(html_list)
-                self.conn.execute('INSERT INTO ContentProcess VALUES (?, ?)',
-                                  (u_[0], html_page))
-                self.conn.commit()
+                try:
+                    self.conn.execute('INSERT INTO ContentProcess VALUES (?, ?)', (u_[0], html_page))
+                except:
+                    self.conn.execute('UPDATE ContentProcess SET HTML=(?) WHERE ID =(?)', (html_page, u_[0]))
+                self.conn.execute('UPDATE PaperSelection SET ConProcess=(?) WHERE ID=(?)', ('Exist', u_[0]))
+            else:
+                self.conn.execute('UPDATE PaperSelection SET ConProcess=(?) WHERE ID=(?)', ('NoExist', u_[0]))
+            self.conn.commit()
+        print(f'Contents\' Process have been Done: {time.time()-start:.3f}s')
+
+
+def main():
+    sota = SotaSelection('https://arxiv.org/list/cs/pastweek?skip=0&show=50')
+    results = sota.paper_selection()
+    sota.push_database(results)
+
+    analyzer = Analyses()
+    process_pool = mp.Pool(2)
+    func_pool = [analyzer.title_process(), analyzer.abs_process(), analyzer.content_process()]
+
+    for i in range(2):
+        process_pool.apply_async(func_pool[i])
+    process_pool.close()
+    process_pool.join()
+    quit()
 
 
 if __name__ == "__main__":
-    a = Analyses()
-    a.content_process()
+    main()
